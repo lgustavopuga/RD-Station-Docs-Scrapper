@@ -1,0 +1,45 @@
+Boas vindas
+Integre sua solução ao RD Station, conquiste clientes e amplie negócios no ecossistema RD Station.
+
+
+Todos os nossos recursos foram projetados para você criar integrações robustas e tirar o máximo valor da nossa plataforma. Para isso, preparamos uma documentação completa para você usar as nossas APIs de um jeito simples.
+
+Acesse a documentação de cada um dos produtos abaixo.
+
+
+RD Station Marketing
+A ferramenta de Automação de Marketing mais usada no Brasil e mais bem avaliada pelos profissionais no B2B Stack e G2.
+
+
+Acessar a documentação
+RD Station CRM
+Facilite o trabalho da sua equipe comercial. Tenha visibilidade sobre seus processos, e ganhe produtividade para aumentar as vendas.
+
+
+Acessar a documentação
+RD Station Conversas
+Centralize todo o seu atendimento. Use uma só plataforma para conversar com seu público e integrar todos os canais, inclusive o WhatsApp.
+
+
+Acessar a documentação
+
+ℹ️
+O RD Station Marketing, RD Station CRM e RD Station Conversas possuem APIs distintas.
+Por serem ferramentas diferentes, as APIs funcionam de forma independente e têm métodos de autenticação, endpoints e especificidades próprias.
+
+
+Oferecemos uma plataforma que conecta todos os pontos de forma intuitiva e disponíveis para personalização flexível por meio da tecnologia de APIs. Veja o que podemos fazer por você:
+
+Mais clientes para sua empresa
+Conecte todos os dados do seu cliente desenvolvendo uma integração privada e gere um ecossistema alimentado pelos dados da RD Station.
+
+
+Guia de criação de integrações
+Mais visibilidade para sua marca
+Exponha a sua solução para milhares de empresas na RD Station App Store publicando a sua integração para todo o ecossistema RD Station utilizar.
+
+
+Guia de parceria tecnológica
+
+Updated 13 days ago
+

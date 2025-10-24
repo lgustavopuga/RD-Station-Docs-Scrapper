@@ -1,0 +1,42 @@
+Passo 1: Criar um aplicativo e credenciais
+Criando seu aplicativo
+Você precisa de uma conta RD Station CRM para cadastrar um aplicativo na App Store, você pode criar uma usando esse link.
+
+Acesse o App Publisher, e faça login com a sua conta RD Station.
+
+Você será redirecionado para nossa área de criação e gerenciamento de aplicativos. Clique em "Quero criar um aplicativo".
+
+Preencha as informações adicionais sobre o aplicativo:
+
+Seu aplicativo pode ser disponibilizado em três idiomas: português, inglês e espanhol.
+
+Caso necessário, você também pode adicionar mais de uma URL de callback para qual o seu app irá responder.
+
+Seu aplicativo também precisar ter um produto, RD Station CRM ou RD Station Marketing.
+
+O que é uma URL de callback?
+A URL de Callback é o endereço que sua aplicação utiliza para receber o código de autorização (code) via query param após o usuário consentir com o acesso. Este é o passo fundamental para que sua integração possa, em seguida, solicitar o token de acesso.
+
+Melhores práticas para sua URL de callback
+Certifique-se que seu endereço contém https://
+Caso deseje adicionar mais de uma URL de callback, separe os endereços com quebra de linha:
+
+https://callback_url1.com.br
+https://callback_url2.com.br
+https://callback_url3.com.br
+Por fim, clique em "Salvar e avançar" para criar seu aplicativo.
+
+⚠️
+Atenção
+Certifique-se que o nome do aplicativo que está criando não foi usado anteriormente e não é um nome genérico. Caso você tente cadastrar um aplicativo com o mesmo nome de um já existente, o sistema irá te avisar.
+
+Gerando o seu client_id e client_secret
+ℹ️
+As credenciais de autenticação dão acesso a apenas um produto RD Station escolhido. Para cada produto deverá ter suas próprias credenciais de acesso. Isso é válido para todas as credenciais, como client_id, client_secret e access_token
+
+Assim que seu aplicativo é criado, automaticamente geramos para você as informações de client_id e client_secret que serão usadas para o desenvolvimento da sua integração.
+
+Guarde estas informações, incluindo a sua url de callback. Elas serão necessárias para as próximas etapas de configuração. Caso precise, você poderá consultá-las a qualquer momento no seu painel do Publisher.
+
+Updated about 24 hours ago
+

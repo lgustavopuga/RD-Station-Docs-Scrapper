@@ -1,0 +1,73 @@
+Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret)
+###[Passo 1 de 4]
+
+A App Store possibilita criar dois tipos de aplicativo, Aplicativo Privado e Aplicativo Público:
+
+Aplicativo Privado
+Aplicativo ou integração privada é aquela que somente os clientes irão visualizar, por exemplo, pode ser somente para melhorar o fluxo de trabalho de sua própria empresa ou de um cliente seu que utilize RD Station.
+
+Aplicativo Público
+É quando você criou uma solução e quer que ela fique visível para todos os clientes do RD Station Marketing, por meio da nossa App Store.
+Outro detalhe importante é que você não precisa deixar a sua app/integração pública para ela funcionar para os seus clientes.
+
+Você escolhe o que melhor se encaixa as suas necessidades!
+
+📘
+Todos os aplicativos nascem de forma privada por padrão, para tornar um app público será necessario submetê-lo ao processo de aprovação.
+Crie uma conta RD Station Marketing
+Você precisa de uma conta RD Station Marketing para cadastrar um aplicativo na App Store, escolha qual das opções abaixo mais se enquadra com a sua necessidade.
+
+Aplicativo Privado - Para uso interno
+Para este cenário você pode usar as suas credenciais de acesso ao RD Station Marketing ou criar uma nova conta.
+
+Aplicativo Público - Para Tech Partners
+A conta de parceria é destinada aos Tech Partners servindo como um ambiente de testes, e caso você já seja um cliente RD Station Marketing, não correrá o risco de prejudicar a usabilidade da conta usada por sua empresa. Para isto, entre com contato conosco: 💬 Faça parte do ecossistema RD Station
+
+Criando seu aplicativo
+Acesse o App Publisher, e faça login com a sua conta RD Station.
+Você também pode encontrar o link do App Publisher no menu superior.
+
+Você será redirecionado para nossa área de criação e gerenciamento de aplicativos.
+Clique em "Quero criar um aplicativo", escreva o nome do seu aplicativo e escolha a opção "Aplicativo privado". Por fim clique em "Criar app".
+
+
+Preencha as informações adicionais sobre o aplicativo:
+
+
+Seu aplicativo pode ser disponibilizado em três idiomas: português, inglês e espanhol.
+Caso necessário, você também pode adicionar mais de uma url de callback para qual o seu app irá responder.
+
+O que é uma URL de Callback?
+
+Uma URL de callback é um endereço que você irá fornecer para receber respostas de eventos específicos. É usado para que um aplicativo possa enviar informações ou dados para outro aplicativo ou serviço, permitindo que eles se comuniquem e tomem ações com base nessas informações.
+
+Melhores práticas para sua URL de Callback
+
+Certifique-se que seu endereço contém http
+Caso deseje adicionar mais de uma url de callback, separe os endereços com uma quebra de linha:
+
+https://callback_url1.com.br
+https://callback_url2.com.br
+https://callback_url3.com.br
+Por fim, clique em "Salvar e avançar" para criar seu app.
+
+🚧
+Certifique-se que o nome do aplicativo que está criando não foi usado anteriormente e não é um nome genérico. Caso você tente cadastrar um aplicativo com o mesmo nome de um já existente, o sistema irá te avisar.
+Gerando o seu client_id e client_secret
+Assim que seu aplicativo é criado, automaticamente geramos para você as informações de client_id e client_secret que serão usadas para o desenvolvimento da sua integração.
+
+Salve essas informações juntamente da sua url de callback para uso futuro.
+
+
+Localizando o seu client_id, client_secret e url de callback
+Se você já tem um aplicativo criado, mas precisa consultar as informações referentes ao client_id, client_secret e url de callback, acesse a App Store com a sua conta de tech partner, clique em Meus apps e encontre o seu aplicativo cadastrado.
+
+Clique nos três pontos para abrir o menu, escolha "Obter credenciais". Você será redirecionado para a área em que poderá localizar as informações necessárias:
+
+
+Ainda tem dúvidas?
+Assista o tutorial em vídeo e confira todos os detalhes para criar um aplicativo:
+
+
+Updated 28 days ago
+

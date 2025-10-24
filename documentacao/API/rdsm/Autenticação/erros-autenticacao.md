@@ -1,0 +1,131 @@
+Erros relacionados à Autenticação
+Se o token ou as credenciais forem inválidas, ou o code estiver expirado, ou o usuário não estiver autorizado a requisição retornará o erro Status 401 Unauthorized.
+
+Abaixo explicamos alguns cenários de erros relacionados à Autenticação e como contorná-los.
+
+
+Exemplos de erros relacionados a UNAUTHORIZED Request
+
+Erro "Invalid token."
+Essa mensagem indica que o token utilizado no Header da requisição para autorizar a requisição é inválido.
+
+Exemplo
+
+```{JSON}
+{
+  "error_type": "UNAUTHORIZED",
+  "error_message": "Invalid token."
+}
+```
+
+O erro ocorre quando é utilizado no Header da requisição qualquer token que não tenha seja um access_token válido.
+
+Como contornar o erro:
+É necessário realizar o processo de Autenticação seguindo as orientações da página Autenticação da API do RD Station Marketing.
+
+Caso já tenha iniciado o processo, identifique em qual passo parou e continue o processo até gerar o access_token e refresh_token.
+
+
+
+Erro "Wrong credentials provided."
+Essa mensagem indica que o client_id ou client_secret estão incorretos ao utilizá-los na requisição para gerar os tokens (access_token e refresh_token) ou na requisição para atualizar o access_token.
+
+```{JSON}
+{
+  "error_type": "ACCESS_DENIED",
+  "error_message": "Wrong credentials provided."
+}
+```
+
+
+Como contornar o erro:
+Acesse o seu aplicativo seguindo as instruções do Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret) e verifique se as credenciais geradas estão sendo utilizadas corretamente na requisição.
+
+
+
+Erro "O parâmetro redirect_uri não contém um valor válido."
+Essa mensagem indica que a URL de Callback cadastrada no aplicativo ainda não foi refletida ou está incorreta.
+
+```{JSON}
+{
+  "error_type": "ACCESS_DENIED",
+  "error_message": "O parâmetro redirect_uri não contém um valor válido."
+}
+```
+
+
+Quando a URL de Callback é atualizada no aplicativo, pode ser necessário esperar 1 hora para que a alteração seja refletida e ela possa ser utilizada.
+
+Como contornar o erro:
+Aguarde 1 hora após ter atualizado a URL de Callback e tente novamente. Caso o erro persista, verifique se a URL está correta e foi cadastrada corretamente e no formato "https://callback_url1.com.br", conforme orientamos na página Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret).
+
+Erro "The authorization code grant has expired."
+Essa mensagem indica que o code utilizado na requisição para atualizar o access_token e refresh_token expirou.
+
+```{JSON}
+{
+  "error_type": "EXPIRED_CODE_GRANT",
+  "error_message": "The authorization code grant has expired."
+}
+```
+
+O code expira em seu primeiro uso ou após 60 minutos, pois a sua única função no processo de Autenticação é solicitar o access_token e refresh_token.
+
+Como contornar o erro:
+É necessário recomeçar o processo de Autenticação a partir do Passo 2: Como utilizar as Credenciais para gerar o code e gerar um novo code.
+
+
+
+Erro "The access token is invalid or has expired."
+Essa mensagem indica que o access_token utilizado para autorizar a requisição expirou.
+
+```{JSON}
+{
+  "error_description": "The access token is invalid or has expired",
+  "error_message": "error": "invalid_token"
+}
+```
+
+O access_token possui data de expiração pré-determinada definida pelo atributo expires_in em segundos, que é de 86400 segundos (24 Horas).
+
+Como contornar o erro:
+É necessário utilizar o refresh_token para atualizar o access_token seguindo o Passo 1: Como criar o aplicativo e gerar as Credenciais (client_id e client_secret) e utilizar o novo access_token para autorizar as requisições.
+
+
+
+Erro "The provided refresh token is invalid or was revoked."
+Essa mensagem indica que o refresh_token utilizado na requisição para atualizar o access_token é inválido ou foi revogado.
+
+```{JSON}
+{
+  "error_type": "INVALID_REFRESH_TOKEN",
+  "error_message": "The provided refresh token is invalid or was revoked."
+}
+```
+
+Esse comportamento pode ocorrer em dois casos:
+
+O refresh_token obtido no Passo 3: Como obter os tokens (access_token e refresh_token) foi copiado e utilizado incorretamente na requisição;
+O refresh_token foi revogado seguindo as orientações da página Como revogar o acesso de um token.
+Como contornar o erro:
+Caso não tenha salvo corretamente o refresh_token ou ele tenha sido revogado, é necessário recomeçar o processo de Autenticação a partir do Passo 2: Como utilizar as Credenciais para gerar o code até gerar um novo refresh_token.
+
+
+
+Erro "The access token is missing"
+Essa mensagem indica que o access_token não foi enviado no Header da requisição.
+
+```{JSON}
+{
+  "error": "invalid_request",
+  "error_description": "The access token is missing"
+}
+```
+
+Como contornar o erro:
+O access_token deve ser utilizado para autorizar a troca de mensagens via API. Portanto, ele deverá ser enviado no Cabeçalho ("Header") de cada requisição para a API Pública.
+
+Para saber como utilizá-lo, siga as orientações da página Como utilizar o access_token para autorizar suas requisições.
+
+Updated 28 days ago
+
