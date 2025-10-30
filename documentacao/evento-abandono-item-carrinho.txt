@@ -1,0 +1,116 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Evento de Fechamento de Pedido
+post
+Evento de Fechamento de Pedido com um Item específico
+post
+Evento de Abandono de Carrinho
+post
+Evento de Abandono de um Item do Carrinho
+post
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Evento de Abandono de um Item do Carrinho
+post deprecatedhttps://api.rd.services /platform/events?event_type=cart_abandoned_item
+O RD Station Marketing considera sempre o valor do atributo event_type CART_ABANDONED_ITEM como identificador do evento customizado. Esse evento é registrado sempre que ocorre o abandono de carrinho com um item específico em uma plataforma de e-commerce.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+Esse tipo de evento não aceita Campos Personalizados (parâmetro cf_custom_field_api_identifier)
+Body Params
+event_type
+string
+required
+Defaults to CART_ABANDONED_ITEM
+O event_type diferencia tipo do evento. Para o evento de item de carrinho abandonado, deve ser enviado como "CART_ABANDONED_ITEM"
+CART_ABANDONED_ITEM
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Response body
+object
+event_uuid
+string
+Updated 20 days ago
+Evento de Abandono de Carrinho
+Eventos de Chat
+
+
+xxxxxxxxxx
+16
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=cart_abandoned_item' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "CART_ABANDONED_ITEM",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"email": "contato@email.com",
+11
+"cf_cart_id": "ID do carrinho",
+12
+"cf_cart_product_id": "ID do produto",
+13
+"cf_cart_product_sku": "SKU do produto"
+14
+}
+15
+}
+16
+'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

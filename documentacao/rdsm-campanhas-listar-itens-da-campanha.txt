@@ -1,0 +1,170 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Consultar campanhasget
+Consultar detalhes de uma campanhaget
+Consultar itens de uma campanhaget
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar itens de uma campanha
+get https://api.rd.services /platform/campaigns/{id}/items
+Retorna os itens presentes em uma campanha específica criada no App Gerenciador de Campanhas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+Nota: API disponível apenas para os planos Pro e Advanced.
+Path Params
+id
+string
+required
+Query Params
+page_size
+string
+Número de registros retornados por página (máx:50)
+page
+string
+Número da página atual
+order
+string
+Ordenação dos resultados (added_at/item_type):(asc/desc)
+ids
+string
+Ids(platform_item_id) dos itens separados por vírgulas
+item_type
+string
+Tipo do item (email, form, landing_page, popup, workflow)
+Responses
+200
+Success
+Response body
+object
+items
+array of objects
+object
+added_at
+string
+campaign_item_id
+string
+item_type
+string
+links
+array of objects
+object
+href
+string
+media
+string
+method_type
+string
+rel
+string
+platform_item_id
+string
+400
+BadRequest
+401
+Unauthorized
+404
+Not found
+Updated about 1 month ago
+Consultar detalhes de uma campanha
+Evento de Conversão Padrão
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+JWT
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/campaigns/id/items \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+24
+1
+{
+2
+"items": [
+3
+{
+4
+"platform_item_id": "2121212",
+5
+"campaign_item_id": "45678",
+6
+"item_type": "email",
+7
+"added_at": "2022-11-23T19:28:57.527Z",
+8
+"links": [
+9
+{
+10
+"rel": "CAMPAIGN.ITEM",
+11
+"href": "https://api.rd.services/platform/emails?ids=2121212",
+12
+"media": "application/json",
+13
+"method_type": "GET"
+14
+},
+15
+{
+16
+"rel": "CAMPAIGN",
+17
+"href": "https://api.rd.services/platform/campaigns/7",
+18
+"media": "application/json",
+19
+"method_type": "GET"
+20
+}
+21
+]
+22
+}
+23
+]
+24
+}
+

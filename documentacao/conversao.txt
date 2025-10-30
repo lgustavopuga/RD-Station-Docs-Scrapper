@@ -1,0 +1,135 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Segurança da API Key
+Autenticação API Key
+Conversão via API Keypost
+Catálogo de produtos
+
+
+
+
+Conversão via API Key
+post https://api.rd.services /platform/conversions
+O evento de conversão pode ser utilizado para criar e atualizar contatos na Base de Leads.
+O RD Station Marketing considera o valor do atributo conversion_identifier como identificador da conversão.
+Esse evento é registrado sempre que ocorre uma conversão.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+api_key
+string
+required
+Body Params
+event_type
+string
+required
+Defaults to CONVERSION
+O tipo de evento que diferencia o evento. Para o evento de conversão deve ser enviado como "CONVERSION".
+CONVERSION
+event_family
+string
+required
+Defaults to CDP
+A família do evento para fins de processamento. Atualmente aceita apenas "CDP" como opção válida.
+CDP
+payload
+object
+required
+payload object
+Headers
+Content-Type
+string
+required
+Defaults to application/json
+application/json
+Responses
+200
+200
+Response body
+object
+event_uuid
+string
+400
+400
+Updated about 1 month ago
+Autenticação API Key
+Catálogo de produtos
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+cURL Request
+Examples
+xxxxxxxxxx
+14
+1
+curl --request POST \
+2
+--url https://api.rd.services/platform/conversions \
+3
+--header 'Content-Type: application/json' \
+4
+--header 'accept: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "CONVERSION",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"conversion_identifier": "Conversão exemplo",
+11
+"email": "conversao@exemplo.com"
+12
+}
+13
+}
+14
+'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+1
+{
+2
+"event_uuid": "5408c5a3-4711-4f2e-8d0b-13407a3e30f3"
+3
+}
+

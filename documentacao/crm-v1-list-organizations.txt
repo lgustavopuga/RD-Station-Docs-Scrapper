@@ -1,0 +1,154 @@
+
+
+
+
+
+
+
+
+
+
+
+Empresas
+Listar empresasget
+Criar empresapost
+Obter empresaget
+Atualizar empresaput
+Listar contatos da empresaget
+Produtos
+
+
+
+
+Listar empresas
+get https://crm.rdstation.com/api/v1 /organizations
+Listar empresas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page
+string
+Número atual da página
+limit
+string
+Limite de empresas que virão por listagem. Valor padrão é 20. Valor máximo é 200
+order
+string
+Campo a ser ordenado. Valor padrão é "name"
+direction
+string
+Ordenação da lista. "asc" ou "desc", padrão é "asc"
+organization_segment
+string
+ID do segmento. Busca todas as empresas que têm esse segmento
+user_id
+string
+ID do usuário. Busca as empresas do usuário anterior no parâmetro
+q
+string
+String com o nome da empresa. Busca as empresas com a string anterior no parâmetro
+Response
+200
+Success
+Response body
+object
+has_more
+boolean
+organizations
+array of objects
+object
+_id
+string
+address
+string | null
+contacts
+array of objects
+object
+birthday
+object | null
+Has additional fields
+emails
+array of objects
+object
+email
+string
+facebook
+string | null
+linkedin
+string | null
+name
+string
+notes
+string | null
+phones
+array of objects
+object
+phone
+string
+type
+string | null
+skype
+string | null
+title
+string | null
+created_at
+string
+custom_fields
+array
+id
+string
+lost_count
+number
+name
+string
+opened_count
+number
+organization_segments
+array
+paused_count
+number
+resume
+string | null
+updated_at
+string
+url
+string | null
+user
+object
+user object
+won_count
+number
+total
+number
+Updated 6 days ago
+Empresas
+Criar empresa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/organizations \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tarefas
+Listar tarefasget
+Criar tarefapost
+Obter tarefaget
+Atualizar tarefaput
+Equipes
+
+
+
+Tarefas
+Uma tarefa no RD Station CRM é uma atividade agendada que precisa ser concluída, como uma ligação, um email de acompanhamento ou uma reunião. As tarefas podem ser associadas a negociações e são atribuídas a um usuário específico. Elas são essenciais para organizar o trabalho da equipe de vendas e garantir que nenhuma oportunidade seja esquecida.
+Updated 42 minutes ago
+Atualizar etapa do funil de vendas
+Listar tarefas
+
+

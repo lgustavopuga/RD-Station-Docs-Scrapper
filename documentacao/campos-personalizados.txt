@@ -1,0 +1,80 @@
+
+
+
+
+
+Consultar campo personalizadoget
+Criar campo personalizadopost
+Atualizar campo personalizadopatch
+Excluir campo personalizadodel
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Campos personalizados
+Endpoints para gerenciar a informação de Campos na sua conta do RD Station.
+Ao criar uma conta no RD Station Marketing, alguns campos são apresentados como padrão para serem utilizados na captação de leads, eles podem ser conferidos aqui.
+Caso queira capturar outras informações dos seus leads, você pode criar Campos Personalizados.
+Os Campos Personalizados criados na conta e podem ser preenchidos ao editar o Lead manualmente, em Importações e em todas as ferramentas de captura de leads.
+Como identificar se um campo é padrão ou personalizado
+Ao consultar os campos personalizados, serão listados todos os campos da sua conta. É possível diferenciar os campos da seguinte forma:
+Campo padrão
+Campo personalizado
+custom_fieldfalsetrue
+❗️
+Atenção: Os campos padrão não podem ser excluídos.
+Palavras reservadas/restritas
+Alguns termos são considerados restritos e não podem ser utilizados no parâmetro “Name” ao criar um Campo personalizado, pois já estão sendo utilizados pelo rdsm. Caso sejam enviados na requisição, ocorrerá o erro “error_message": "invalid options”.
+Opções restritas
+_is, _rd_experiment_content_id, account_id, address, already_received_email, asset_id, available_for_mailing, bio, birthdate, c_utmz, cargo, celular, channel, cidade, city, city_id, client_id, client_tracking_id, clusters_ids, company, company_address, company_id, company_name, company_phone, company_sector_id, company_site, company_size, conversion_domain, conversion_id, conversion_identifier, conversion_payload, conversion_url, conversions_sum, country, created_at, ddd-celular, device, e-mail, email, email_lead, employer_identification_number, empresa, endereco-da-empresa, endereco-empresa, estado, estado, facebook, firstname, funnel_uuid, google_analytics_client_id, id, id_bigint, id_old, identificador, import_token, internal_source, ip, job_title, last_conversion_date, last_visit_date, lead_id, leads_manager_id, legacy_id, lifecycle_stage,linkedin, mobile_phone, name, nombre, nome, nomecompleto, numero-de-funcionarios, numero_funcionarios, open_city, open_country, open_state, opportunity, opt-in email, país, personalphone, pg_tags, phone, picture, primeiro_nome, private_token, retries, site, size, social_conversion_source, state, state_id, tags, telefone, token_rdstation, traffic_campaign, traffic_channel, traffic_medium, traffic_source, traffic_source_id, traffic_term, traffic_value, twitter, uf, updated_at, user_agent, user_id, uuid, website, your-email, your-name, zip_code, cf_order_id, cf_order_total_items, cf_order_status, cf_order_payment_method, cf_order_payment_amount, cf_order_product_id, cf_order_product_sku, cf_cart_id, cf_cart_total_items, cf_cart_status, cf_cart_product_id, cf_cart_product_sku
+Campos padrão do RD Station Marketing
+Todas as contas do RD Station Marketing possuem alguns campos apresentados como padrão para serem utilizados na captação de leads. Os campos admitem diferentes tipos de respostas, essa definição toma como base o que é solicitado para o usuário.
+Identificador do campo
+Tipo do campo
+Descrição
+emailstringE-mail do contato
+namestringNome do contato
+job_titlestringCargo do contato
+statestringEstado do contato
+citystringCidade do contato
+countrystringPaís do contato
+personal_phonestringTelefone do contato
+mobile_phonestringCelular do contato
+twitterstringTwitter do contato
+facebookstringFacebook do contato
+linkedinstringLinkedin do contato
+websitestringSite do contato
+company_namestringNome da empresa do contato
+company_sitestringSite da empresa do contato
+company_addressstringEndereço da empresa do contato
+tagsarray of stringsTags que podem ser adicionadas ao contato
+legal_basesarray of objectsBases Legais do contato
+Os campos padrão não podem ser excluídos da conta ou modificados.
+Updated about 1 month ago
+Consultar eventos associado ao contato
+Consultar campo personalizado
+
+Table of Contents
+Como identificar se um campo é padrão ou personalizado
+Palavras reservadas/restritas
+Campos padrão do RD Station Marketing
+

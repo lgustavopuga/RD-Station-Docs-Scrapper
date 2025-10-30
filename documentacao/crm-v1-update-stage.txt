@@ -1,0 +1,137 @@
+
+
+
+
+
+
+
+
+Atualizar etapa do funil de vendas
+put https://crm.rdstation.com/api/v1 /deal_stages/{deal_stage_id}
+Atualizar etapa do funil de vendas
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_stage_id
+string
+required
+Body Params
+deal_pipeline_id
+string
+description
+string
+name
+string
+objective
+string
+order
+number
+Response
+200
+Success
+Response body
+object
+_id
+string
+configuration
+array
+created_at
+string
+deal_pipeline
+object
+id
+string
+name
+string
+order
+number
+description
+string
+id
+string
+instance_id
+string
+name
+string
+nickname
+string
+objective
+string
+order
+number
+updated_at
+string
+Updated 6 days ago
+Obter etapa do funil de vendas
+Negociações
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://crm.rdstation.com/api/v1/deal_stages/deal_stage_id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+18
+1
+{
+2
+"_id": "64ed37bda20856000d7a3b9a",
+3
+"configuration": [],
+4
+"created_at": "2023-08-28T21:11:41.087-03:00",
+5
+"deal_pipeline": {
+6
+"id": "5f0f938f08c0c723ae8c9d3a",
+7
+"name": "Funil de Aquisição",
+8
+"order": 1
+9
+},
+10
+"description": "Descrição X",
+11
+"id": "64ed37bda20856000d7a3b9a",
+12
+"instance_id": "5b75b4235bdc75002b1b656f",
+13
+"name": "Etapa X atualizada",
+14
+"nickname": "EXA",
+15
+"objective": "Objetivo X",
+16
+"order": 2,
+17
+"updated_at": "2023-08-28T21:14:16.964-03:00"
+18
+}
+

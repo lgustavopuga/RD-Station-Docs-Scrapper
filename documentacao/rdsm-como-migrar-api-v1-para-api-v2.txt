@@ -1,0 +1,650 @@
+
+
+
+Introdução
+Boas vindas
+Suporte
+
+Webhook Service
+
+
+
+Bases Legais
+Limite de requisições da API
+Como migrar a API 1.x para API 2.0 do RD Station Marketing
+Mensagens de erro
+Enriquecimento de dados
+Autenticação
+
+
+
+
+Como migrar a API 1.x para API 2.0 do RD Station Marketing
+Caso você possua uma integração com o RD Station Marketing utilizando a API V1.2 ou 1.3, é necessário realizar a migração para a nova versão da API, isso deve-se pelo fato que a API antiga será descontinuada.
+Esse tutorial tem como objetivo auxiliar pessoas desenvolvedoras a migrar suas integrações da versão 1.x para a API V2, assim como seus novos recursos.
+Para lhe auxiliar nessa etapa criamos esse manual de migração para a nova API.
+Acesso rápido:
+Por que a API antiga está sendo descontinuada e uma nova foi criada?
+Como começar?
+Autenticando na nova API
+Como autorizar as requisições
+Migrando minha integração
+Como migrar eventos de conversão?
+Como migrar marcações de oportunidade?
+Como migrar marcações de Oportunidade Perdida (Lost)?
+Como migrar marcações de Oportunidade Ganha (Venda)?
+Como migrar a troca de estágio de funil?
+Como migrar webhooks?
+Por que a API antiga está sendo descontinuada e uma nova foi criada?
+A antiga API do RD Station Marketing está sendo descontinuada pois ela não é mais compatível com as melhorias que estamos implementando no produto como um todo e não oferecer possibilidades de melhorias. Outro ponto muito importante é a segurança, a nova versão da API trabalha com metodologias mais modernas que proporcionam maior segurança, privacidade e confiabilidade nos dados trafegados, utilizando o protocolo OAuth.
+Como começar?
+Antes de começar a migrar a integração, é importante entender um ponto: a nova versão da API tem um conceito diferente da versão antiga, pois na nova versão você cria um aplicativo para comunicar o seu sistema/plataforma com o RD Station Marketing.
+Na nova versão os tokens (Token Público e Token Privado) não são mais utilizados.
+A Autenticação para utilização da API do RD Station Marketing é baseada no protocolo de segurança OAuth2, o que significa que ela trabalha com tokens com prazo de expiração pré-determinados.
+Autenticando na API
+Criando um aplicativo para a sua integração.
+O aplicativo será responsável por autenticar sua conta do RD Station Marketing em nossa API e permitirá que a integração ocorra.
+Após criar o aplicativo você receberá as duas credenciais, que chamamos de client_id e client_secret que são utilizadas no processo de Autenticação da API.
+Veja como criar o aplicativo:
+➡️ Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret)
+Autenticando na nova API
+Com o aplicativo criado já é possível começar o desenvolvimento, o primeiro passo que difere da versão anterior é a forma de logar a sua integração na conta do RD Station Marketing, antes era utilizado os tokens da conta nas requisições para isso, na nova versão é necessário fazer o flow de autenticação OAuth utilizando o aplicativo criado na etapa anterior, abaixo o link da documentação assim como um passo a passo mostrando como é feito a autenticação.
+➡️ Autenticação da API do RD Station Marketing
+Como autorizar as requisições
+Para todos os endpoints é utilizado o access_token nos cabeçalhos das requisições como forma de autenticação de envios juntamente com o tipo de conteúdo enviado, que é JSON.
+Esses dois atributos sempre devem ir no cabeçalho da seguinte forma:
+Key
+Value
+AuthorizationBearer access_token
+Content-Typeapplication/json
+Esse é um exemplo de como os parâmetros devem ser configurados no Header das suas requisições:
+cURL
+curl --request POST \
+--url https://api.rd.services/platform/contacts \
+--header 'accept: application/json' \
+--header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5yZC5zZXJ2aWNlcyIsInN1YiI6InlURlh3ZUxKbkJWVGxaeUk3VEVSQXhQa0pNYkVZT2NHZDVEUXpzcGFQOUlAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vYXBwLnJkc3RhdGlvbi5jb20uYnIvYXBpL3YyLyIsImFwcF9uYW1lIjoiMjIxQiBCYWtlciBTdHJlZXQiLCJleHAiOjE2ODU1NTcxNTAsImlhdCI6MTY4NTQ3MDc1MCwic2NvcGUiOiIifQ.rHgZb-2373-4i8UzzhKAoFhJu4EMPTIwUf6GqHmCLDGTboAzF1AiBZFas-3yKy71WUE7whVXFXg664PwwT8Y18Ruv8ktoqbO0HaXebkZNxN4SxjRmtgcbaMgSxlH1NvwRXhbT6yFWOTzREcj_5zDm8EWs-7KeXe_3BCoD6NPbPpsHblMdVy4oKHwQCcFf8F-pXsWUOGv1_4jNnrONo_nfC8hzo8o7nNMBiZhHQy0BPcgC0u6zdTUakaUO9btX6SB3E_ZOn6Z_U5HSBM9ldTf-s61xmjzRobuUQQrrITkiKm2HMGoAHK_Ak4L97DlVtQMaeXUtdnEQ06Vb-7YIAGs-w' \
+--header 'content-type: application/json'
+Abaixo pontuamos separadamente mudanças que são necessárias realizar no envio das requisições.
+Migrando minha integração
+A nova API oferece diversos novos recursos que podem ser utilizados seguindo as orientações desta documentação.
+Abaixo explicamos especificamente como adaptar as requisições dos recursos da API 1.x para o modelo da nova API.
+Como migrar eventos de conversão?
+O evento de conversão padrão registra um evento de conversão com o ícone do "Troféu" na linha do tempo do contato com todos os campos preenchidos na requisição.
+Documentação da nova API:
+➡️ Eventos de Conversão Padrão
+Confira abaixo a comparação completa das alterações da requisição para realizar o envio na nova API:
+Requisição API 1.x
+Informações da Requisição
+Endpoint
+https://www.rdstation.com.br/api/1.3/conversions
+https://www.rdstation.com.br/api/1.2/conversions
+Payload padrão
+{
+"token_rdstation": "you-token",
+"identificador": "Name of the conversion",
+"email": "email@email.com",
+"nome": "Name of Lead"
+"cargo": "job title value",
+"estado" "state of the contact",
+"cidade": "city of the contact",
+.....
+"tags": [
+"tag-1",
+"tag-2"
+]
+}
+Requisição Nova API
+Informações da Requisição
+Endpoint
+https://api.rd.services/platform/events
+Payload padrão
+{
+"event_type": "CONVERSION",
+"event_family":"CDP",
+"payload": {
+"conversion_identifier": "Name of the conversion",
+"name": "Name of Lead",
+"email": "email@email.com",
+"job_title": "job title value",
+"state": "state of the contact",
+"city": "city of the contact",
+"country": "country of the contact",
+......
+"tags": ["tag-1", "tag-2"]
+}
+}
+Comparação das alterações dos campos/atributos enviados no payload
+API 1.x
+Nova API
+token_rdstationNão é necessário
+email / your-email / e-mailemail
+identificadorconversion_identifier
+nome / name / nombrename
+empresa / companycompany
+cargo / job_titlejob_title
+telefone / personal_phonepersonal_phone
+celular / mobile_phonemobile_phone
+open_countrycountry
+estadostate
+open_statestate
+cidadecity
+open_citycity
+websitewebsite
+twittertwitter
+facebookfacebook
+campo não enviadolinkedin
+c_utmzcampo descontinuado, utilizar traffic_source
+traffic_sourcetraffic_source
+client_idclient_tracking_id
+tagstags
+Observações importantes
+Campos adicionados na Nova API
+O campo event_family existente no payload novo deve possuir o valor padrão CDP.
+Campos personalizados
+Na api 1.x, os campos personalizados são informados no payload de conversão utilizando o nome do campo no RD Station Marketing, na nova API é necessário utilizar o identificador do campo personalizado sempre que você desejar inserir um valor no lead pelo evento de conversão.
+Para saber o identificador de um campo personalizado, pode-se fazer uma pesquisa no endpoint de campos dá conta que será retornando uma lista com todos os campos da conta, o atributo api_identifier é o que identifica o campo.
+Método: GET
+Endpoint:https://api.rd.services/platform/contacts/fields
+Exemplo de retorno na pesquisa de campos personalizados:
+JSON
+...
+{
+"uuid": "55f3fd22-7c6c-4cf5-a9e3-3cbfb9635178",
+"label": {
+"pt-BR": "Tipo de Negociação",
+"default": "Tipo de Negociação"
+},
+"name": {
+"pt-BR": "Tipo de Negociação",
+"default": "Tipo de Negociação"
+},
+"api_identifier": "cf_tipo_de_negociacao",
+"custom_field": true,
+"validation_rules": {},
+"presentation_type": "TEXT_INPUT",
+"data_type": "STRING"
+},
+...
+No exemplo acima um campo personalizado do RD Station Marketing com o nome Tipo de Negociação, retornou com o identificador cf_tipo_de_negociacao, esse identificador é que vou usar no meu payload quando precisar informar um valor no RD Station Marketing.
+Caso sejam enviados atributos no payload de uma conversão que não sejam um campo padrão ou um campo personalizado, essa informação não é gravada como dado de conversão.
+Veja como funciona a gestão de campos personalizados na nova API:
+Documentação da nova API:
+➡️ Campos personalizados
+Exemplo de requisição API 1.x vs Nova API
+API 1.x
+Método: POST
+Endpoint:https://www.rdstation.com.br/api/1.3/conversions
+Header: Content-Type: application/json
+Body:
+JSON
+{
+"token_rdstation": "9f19d4229e7cf73cd9a5ee465e1",
+"identificador": "Name of the conversion",
+"email": "[email@email.com](mailto:email@email.com)",
+"nome": "Name of Lead",
+"cargo": "CEO",
+"estado": "SC",
+"Tipo de Negociacao": "Test",
+"tags": ["tag-1", "tag-2"]
+}
+Nova API
+Método: POST
+Endopint: https://api.rd.services/platform/events
+Header: Content-Type: application/json
+Authorization: Bearer acces_token
+Body:
+JSON
+{
+"event_type": "CONVERSION",
+"event_family":"CDP",
+"payload": {
+"conversion_identifier": "Name of the new conversion",
+"name": "Name of Lead",
+"email": "[email@email.com](mailto:email@email.com)",
+"job_title": "CEO",
+"state": "SC",
+"cf_tipo_de_negociacao":"New Test",
+"tags": ["tag-3", "tag-4"]
+}
+}
+Como migrar marcações de oportunidade?
+O evento de Marcação de Oportunidade, registra a marcação de um contato como oportunidade no RD Station Marketing.
+Documentação da nova API:
+➡️ Evento de Marcação de Oportunidades
+Confira abaixo a comparação completa das alterações da requisição para realizar o envio na nova API:
+Requisição API 1.x
+Informações da Requisição
+Endpoint
+https://www.rdstation.com.br/api/1.2/leads/LEAD_EMAIL
+Payload padrão
+{
+"auth_token": "PRIVATE_TOKEN",
+"lead": {
+"lifecycle_stage": ID_ESTAGIO,
+"opportunity": TRUE_OU_FALSE
+}
+Requisição Nova API
+Informações da Requisição
+Endpoint
+https://api.rd.services/platform/events
+Payload padrão
+{
+"event_type": "OPPORTUNITY",
+"event_family": "CDP",
+"payload": {
+"email": "email@email.com",
+"funnel_name": "default"
+}
+}
+Comparação das alterações dos campos/atributos enviados no payload
+API 1.x
+Nova API
+auth_tokenNão é necessário
+lifecycle_stageNão é necessário
+opportunityevent_type
+Observações importantes
+Perceba que no nova API deve usar o texto OPPORTUNITY ao inves de true no campo que identifica qual evento realizar.
+O endpoint da nova API é fixo, não vai nenhum parâmetro, ao contrário da API 1.x onde era necessário informar o email do lead, agora essa informação fica no próprio payload.
+Na nova versão não é necessário informar o estágio do lead para marcá-lo como oportunidade como era na versão 1.x.
+O campo funnel_name existente no payload novo, atualmente só aceita o valor default.
+O campo event_family existente no payload novo deve possuir o valor padrão CDP.
+Exemplo de requisição API 1.x vs Nova API
+API 1.x
+Método: PUT
+Endpoint: https://www.rdstation.com.br/api/1.2/leads/[email@email.com](mailto:email@email.com)
+Header: Content-Type: application/json
+JSON
+{
+"auth_token":"4e14....642",
+"lead": {
+"lifecycle_stage": 1,
+"opportunity": true
+}
+Nova API
+Método: POST
+Endpoint: https://api.rd.services/platform/events
+Header: Content-Type: application/json
+Authorization: Bearer acces_token
+JSON
+{
+"event_type": "OPPORTUNITY",
+"event_family":"CDP",
+"payload": {
+"email": "email@email.com",
+"funnel_name": "default"
+}
+}
+Como migrar marcações de Oportunidade Perdida (Lost)?
+O evento de Marcação de Oportunidade Perdida, desmarca a oportunidade de um contato no RD Station Marketing.
+Documentação da nova API:
+➡️ Evento de Marcação de Oportunidade Perdida (Lost)
+Confira abaixo a comparação completa das alterações da requisição para realizar o envio na nova API:
+Requisição API 1.x
+Informações da Requisição
+Endpoint
+https://www.rdstation.com.br/api/1.2/services/PRIVATE_TOKEN/generic
+Payload padrão
+{
+"status": "lost",
+"lost_reason": "Motivo do lost",
+"email": "EMAIL_DO_LEAD"
+}
+Requisição Nova API
+Informações da Requisição
+Endpoint
+https://api.rd.services/platform/events
+Payload padrão
+{
+"event_type": "OPPORTUNITY_LOST",
+"event_family": "CDP",
+"payload": {
+"email": "email@email.com",
+"funnel_name": "default",
+"reason": "Lost reason"
+}
+}
+Comparação das alterações dos campos/atributos enviados no payload
+API 1.x
+Nova API
+statusevent_type
+lost_reasonreason
+emailemail
+Observações importantes
+Perceba que no nova API deve usar o texto OPPORTUNITY_LOST ao inves de lost no campo que identifica qual evento realizar.
+O endpoint da nova API é fixo, não vai ter nenhum parâmetro, ao contrário da API 1.x onde era necessário informar token privado.
+O campo funnel_name existente no payload novo, atualmente só aceita o valor default.
+O campo event_family existente no payload novo deve possuir o valor padrão CDP.
+Exemplo de requisição API 1.x vs Nova API
+API 1.x
+Método: POST
+Endpoint: https://www.rdstation.com.br/api/1.2/services/4e14....642/generic
+Header: Content-Type: application/json
+Body:
+JSON
+{
+"status": "lost",
+"lost_reason": "Lost reason",
+"email": "email@email.com"
+}
+Nova API
+Método: POST
+Endpoint: https://api.rd.services/platform/events
+Header: Content-Type: application/json
+Authorization: Bearer acces_token
+Body:
+JSON
+{
+"event_type": "OPPORTUNITY_LOST",
+"event_family":"CDP",
+"payload": {
+"email": "[email@email.com](mailto:email@email.com)",
+"funnel_name": "default",
+"reason":"Lost reason"
+}
+}
+Como migrar marcações de Oportunidade Ganha (Venda)?
+O evento de Marcação de Oportunidade Ganha, registra uma venda em um contato no RD Station Marketing.
+Documentação da nova API:
+➡️ Evento de Marcação de Oportunidade Ganha
+Confira abaixo a comparação completa das alterações da requisição para realizar o envio na nova API:
+Requisição API 1.x
+Informações da Requisição
+Endpoint
+https://www.rdstation.com.br/api/1.2/services/PRIVATE_TOKEN/generic
+Payload padrão
+{
+"status": "won",
+"value": VALOR_DA_VENDA,
+"email": "EMAIL_DO_LEAD"
+}
+Requisição Nova API
+Informações da Requisição
+Endpoint
+https://api.rd.services/platform/events
+Payload padrão
+{
+"event_type": "SALE",
+"event_family": "CDP",
+"payload": {
+"email": "email@email.com",
+"funnel_name": "default",
+"value": 200
+}
+}
+Comparação das alterações dos campos/atributos enviados no payload
+API 1.x
+Nova API
+statusevent_type
+valuevalue
+emailemail
+Observações importantes
+Perceba que no nova API deve usar o texto SALE ao inves de won no campo que identifica qual evento realizar.
+O endpoint da nova API é fixo, não vai nenhum parâmetro, ao contrário da API 1.x onde era necessário informar token privado.
+O campo funnel_name existente no payload novo, atualmente só aceita o valor default.
+O campo event_family existente no payload novo deve possuir o valor padrão CDP.
+Exemplo de requisição API 1.x vs Nova API
+API 1.x
+Método: POST
+Endpoint: https://www.rdstation.com.br/api/1.2/services/4e14....642/generic
+Header:Content-Type: application/json
+Body:
+JSON
+{
+"status": "won",
+"value": 200,
+"email": "[email@email.com](mailto:email@email.com)"
+}
+Nova API
+Método:POST
+Endpoint:https://api.rd.services/platform/events
+Header: Content-Type: application/json
+Authorization: Bearer acces_token
+Body:
+JSON
+{
+"event_type": "SALE",
+"event_family":"CDP",
+"payload": {
+"email": "[email@email.com](mailto:email@email.com)",
+"funnel_name": "default",
+"value": 200
+}
+}
+Como migrar a troca de estágio de funil?
+A API de Funis de Contatos permite que você manipule os estágios de funil de seus Contatos.
+Além disso, é possível consultar e atualizar o Contato como Oportunidade, consultar e atualizar o Dono do Lead, bem como consultar a pontuação de "Perfil" e "Interesse" do Lead Scoring.
+Documentação da nova API:
+➡️ Funis de Contatos
+Confira abaixo a comparação completa das alterações da requisição para realizar o envio na nova API:
+Requisição API 1.x
+Informações da Requisição
+Endpoint
+https://www.rdstation.com.br/api/1.2/leads/LEAD_EMAIL
+Payload padrão
+{
+"auth_token": "PRIVATE_TOKEN",
+"lead": {
+"lifecycle_stage": ID_ESTAGIO,
+"opportunity": TRUE_OU_FALSE
+}
+}
+Requisição Nova API
+Informações da Requisição
+Endpoint
+https://api.rd.services/platform/contacts/email:LEAD_EMAIL/funnels/default
+Payload padrão
+{
+"lifecycle_stage": "Client",
+"opportunity": true_false,
+"contact_owner_email": "email@example.org"
+}
+Comparação das alterações dos campos/atributos enviados no payload
+API 1.x
+Nova API
+auth_tokenNão é necessário
+lifecycle_stagelifecycle_stage
+opportunityopportunity
+--contact_owner_email (opcional)
+Observações importantes
+O campo lifecycle_stage na nova API recebe a descrição do estágio ao invés de código, conforme de/para abaixo:
+API 1.x
+Nova API
+0Lead
+1Qualified Lead
+2Client
+Na nova versão é possível alterar o dono do lead pelo campo opcional contact_owner_email.
+Exemplo de requisição API 1.x vs Nova API (Estágio do funil)
+API 1.x
+Método: PUT
+Endpoint: https://www.rdstation.com.br/api/1.2/leads/[email@email.com](mailto:email@email.com)
+Header: Content-Type: application/json
+Body:
+JSON
+{
+"auth_token":"4e14....642",
+"lead": {
+"lifecycle_stage": 1,
+"opportunity": true
+}
+Nova API
+Método: PUT
+Endpoint: https://api.rd.services/platform/contacts/email:[email@email.com](mailto:email@email.com)/funnels/default
+Header: Content-Type: application/json
+Authorization: Bearer acces_token
+Body:
+JSON
+{
+"lifecycle_stage": "Qualified Lead",
+"opportunity": true
+}
+Como migrar webhooks?
+Os novos webhooks podem ser criados diretamente pela API, ao contrário da versão antiga que era necessário fazer esse passo diretamente pela interface do RD Station Marketing.
+Confira como fazer a gestão dos mesmos (criar, atualizar, deletar e consultar):
+Documentação da nova API:
+➡️ Webhooks
+Alterações do payload padrão
+A estrutura do payload das duas versões da API disponíveis atualmente (1.x e 2.0) são diferentes. Portanto, é importante adequar o seu sistema externo para consumir esses dados, conforme a versão do Webhook criado na sua conta.
+Confira abaixo o payload padrão enviado por cada uma das versões:
+API 1.x
+JSON
+{"leads":
+[{"id":"1",
+"uuid":"c2f3d2b3-......-eef38be32f7f",
+"email":"email@email.com",
+"name":"Lead Name",
+"company":"Company Name",
+"job_title":"Job",
+"bio":"This is my bio",
+"created_at":"2012-06-04T15:31:35-03:00",
+"opportunity":"false",
+"number_conversions":"3",
+"user": "email@example.com",
+"first_conversion": {
+"content": {
+"identificador":"ebook-abc",
+"nome":"Lead Name",
+"email_lead":"email@email.com",
+"telefone":"99999999",
+"empresa":"Company Name",
+"cargo":"IT"
+},
+"created_at":"2012-06-04T15:31:35-03:00",
+"cumulative_sum":"1",
+"source":"source 1",
+"conversion_origin": {
+"source": "source 1",
+"medium": "medium 1",
+"value": "value 1",
+"campaign": "campaign 1",
+"channel": "channel 1"
+}
+},
+"last_conversion": {
+"content": {
+"identificador":"webinar-abc",
+"email_lead":"suporte@resultadosdigitais.com.br"
+},
+"created_at":"2012-06-04T15:31:35-03:00",
+"cumulative_sum":"2",
+"source":"source 2"
+},
+"custom_fields": {},
+"website": "http://www.mywebsite.com",
+"personal_phone":"48 999999999",
+"mobile_phone":"48 999999999",
+"city":"Florianópolis",
+"state": "SC",
+"lead_stage": "Lead",
+"tags": ["tag 1", "tag 2"],
+"fit_score":"d",
+"interest":0
+}]
+}
+Nova API
+JSON
+{
+"event_type": "WEBHOOK.MARKED_OPPORTUNITY",
+"entity_type": "CONTACT",
+"event_identifier": "my-event-identifier",
+"timestamp": "2018-03-13T14:09:02.724-03:00",
+"event_timestamp": "2018-03-13T14:07:04.254-03:00",
+"contact": {
+"uuid":"c2f3d2b3-7250-4d27-97f4-eef38be32f7f",
+"email":"suporte@resultadosdigitais.com.br",
+"name":"Contact Name",
+"job_title":"Developer",
+"bio":"This is my bio",
+"website": "http://rdstation.com.br",
+"personal_phone":"48 30252598",
+"mobile_phone":"48 30252598",
+"city":"Florianópolis",
+"facebook": "Contact Facebook",
+"linkedin": "Contact Linkedin",
+"twitter": "Contact Twitter",
+"tags": ["tag 1", "tag 2"],
+"cf_custom_field_example": ["Option1", "Option2"],
+"company": {
+"name": "Company Example 0"
+},
+"funnel": {
+"name": "default",
+"lifecycle_stage": "Lead",
+"opportunity": false,
+"contact_owner_email": "owner@example.org",
+"interest": 20,
+"fit": 0,
+"origin": "Busca Paga | Google"
+}
+}
+}
+Comparação das alterações dos campos/atributos enviados no payload
+Existe uma diferença nos campos e atributos enviados, bem como, em sua nomenclatura.
+Confira a tabela abaixo para ver uma comparação entre todas as mudanças:
+API 1.x
+Nova API
+idDescontinuada (usar uuid)
+uuiduuid
+emailemail
+namename
+job_titlejob_title
+biobio
+companycompany: { name }
+number_conversionsDescontinuada
+userfunnel: { contact_owner_email }
+first_conversionDescontinuada
+last_conversionevent_identifier (quando gatilho for conversão)
+custom_fieldscampos "cf_"
+websitewebsite
+personal_phonepersonal_phone
+mobile_phonemobile_phone
+citycity
+statestate
+lead_stagefunnel: { lifecycle_stage }
+tagstags
+fit_scorefunnel: { fit }
+interestfunnel: { interest }
+first_conversion.source / last_conversion.sourcefunnel: { origin }
+Observações importantes
+Veja alguns detalhes importantes na mudança do payload padrão:
+first_conversion e last_conversion: Na versão antiga essa propriedade era enviada de forma fixa no pacote de dados do lead, na nova versão do webhook é enviado o estado atual do lead, então sempre que o gatilho de envio do webhook for conversão, o identificador que gerou o envio estará no atributo event_identifier, (que é o identificador que gerou o envio), já os dados são o do perfil do lead, que vai estar atualizado de acordo com a conversão, mas caso você precise desses dados, existe um endpoint de consulta de dados de conversão, basta fazer uma consulta após receber o lead.
+public_url: Por questões de segurança e compliance esse atributo não estará mais disponível, ou seja, não será permitido deixar informações do lead de maneira pública.
+custom_fields: Os campos personalizados não são enviados mais dentro de uma propriedade custom_fields como na versão anterior, agora eles ficam juntos dos dados do lead, identificados com o prefixo “ cf_”, seguindo o padrão de identificadores dos campos personalizados, conforme explicado aqui.
+include_relations: O novo webhook permite que você defina se algumas informações farão parte do pacote de dados enviados a cada disparo, como por exemplo os dados de funil e empresa, para isso no momento de criação do webhook deve-se informar na propriedade include_relations COMPANY e CONTACT_FUNNEL, ambos opcionais.
+Updated about 1 month ago
+Limite de requisições da API
+Mensagens de erro
+
+Table of Contents
+Acesso rápido:
+Por que a API antiga está sendo descontinuada e uma nova foi criada?
+Como começar?
+Autenticando na API
+Criando um aplicativo para a sua integração.
+Autenticando na nova API
+Como autorizar as requisições
+Migrando minha integração
+Como migrar eventos de conversão?
+Comparação das alterações dos campos/atributos enviados no payload
+Observações importantes
+Exemplo de requisição API 1.x vs Nova API
+Como migrar marcações de oportunidade?
+Comparação das alterações dos campos/atributos enviados no payload
+Observações importantes
+Exemplo de requisição API 1.x vs Nova API
+Como migrar marcações de Oportunidade Perdida (Lost)?
+Comparação das alterações dos campos/atributos enviados no payload
+Observações importantes
+Exemplo de requisição API 1.x vs Nova API
+Como migrar marcações de Oportunidade Ganha (Venda)?
+Comparação das alterações dos campos/atributos enviados no payload
+Observações importantes
+Exemplo de requisição API 1.x vs Nova API
+Como migrar a troca de estágio de funil?
+Comparação das alterações dos campos/atributos enviados no payload
+Observações importantes
+Exemplo de requisição API 1.x vs Nova API (Estágio do funil)
+Como migrar webhooks?
+Alterações do payload padrão
+Comparação das alterações dos campos/atributos enviados no payload
+Observações importantes
+

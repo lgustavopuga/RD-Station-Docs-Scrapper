@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+Produtos
+Os produtos e serviços são os itens que são oferecidos aos clientes, ou seja, o que é vendido.
+É importante cadastrar todos os produtos oferecidos, para que eles possam ser adicionados às negociações de venda e constem nos devidos relatórios.
+Os produtos e serviços cadastrados na plataforma não podem ser excluídos, pois isso poderia afetar relatórios gerados anteriormente e causar diversos impactos. Caso um item esteja indisponível ou tenha deixado de ser vendido por sua empresa, basta ocultá-lo.
+❗️
+Atenção
+Toda informação cadastrada deve conter no mínimo 2 caracteres.
+Query params
+Parâmetros utilizados para listar e obter produtos.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+product_idURLID do produto a ser obtida
+pageURLNúmero da página listada. Valor padrão é 1
+limitURLLimite de produtos que virão por listagem. Valor padrão é 20. Valor máximo é 200
+Body params
+Parâmetros utilizados para criar e atualizar produtos.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome do produto✓Deve conter no mínimo 2 caracteres e no máximo 255 caracteres. Não pode se repetir. E obrigatório somente ao criar o produto
+descriptionDescrição do produto✘
+base_pricePreço do produto✘Valor padrão é 0.0
+Updated 6 days ago
+Listar contatos da empresa
+Listar produtos
+
+Table of Contents
+Query params
+Body params
+

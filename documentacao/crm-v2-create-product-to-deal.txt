@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Negociações
+
+
+
+
+
+
+
+
+Criar produto na negociação
+post https://api.rd.services/crm/v2 /deals/{deal_id}/products
+Adiciona um produto do catálogo a uma negociação existente, especificando quantidade, preço e desconto. Permite construir ou modificar a composição de uma venda programaticamente.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Identificador único.
+Body Params
+data
+object
+Dados do recurso relacionado.
+data object
+Responses
+201
+Created
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+string
+Identificador único.
+price
+float
+Preço.
+quantity
+float
+Quantidade.
+discount_type
+string
+enum
+Tipo de desconto.
+amount percentage
+discount
+float
+Desconto.
+total_price
+float
+Total.
+billing_frequency
+string
+enum
+Recorrência.
+one-time monthly annually
+product_id
+string
+ID do produto.
+created_at
+date-time
+Data de criação.
+updated_at
+date-time
+Data de atualização.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+422
+A entidade não pode ser processada.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 30 minutes ago
+Listar produtos na negociação
+Atualizar produto na negociação
+
+
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://api.rd.services/crm/v2/deals/deal_id/products \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+201
+Example
+xxxxxxxxxx
+14
+1
+{
+2
+"data": {
+3
+"id": "string",
+4
+"price": 0,
+5
+"quantity": 0,
+6
+"discount_type": "amount",
+7
+"discount": 0,
+8
+"total_price": 0,
+9
+"billing_frequency": "one-time",
+10
+"product_id": "string",
+11
+"created_at": "2025-10-30T19:44:51.442Z",
+12
+"updated_at": "2025-10-30T19:44:51.442Z"
+13
+}
+14
+}
+

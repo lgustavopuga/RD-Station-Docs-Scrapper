@@ -1,0 +1,25 @@
+
+
+Acesse sua conta
+HomeRecipesAPIChangelog
+Search
+JUMP TO
+
+Passo 4: Como utilizar o refresh_token para atualizar o access_token
+post https://api.rd.services /auth/token
+###[Passo 4 de 4]
+Após gerar os tokens, você deverá utilizar o refresh_token para atualizar o access_token a cada 24 horas; após o recebimento do access_token.
+Renovando o access_token
+Para isso, você vai utilizar o client_id e client_secret obtidos ao criar o App (passo 1) e o refresh_token obtido ao gerar os tokens (passo 3) no envio da sua requisição.
+📘
+A sua aplicação pode armazenar o refresh_token em uma variável e criar uma função condicional para verificar se o access_token retornou “200” (ok!). Caso sim, a integração continua ocorrendo. Caso não, ou seja, se apontou algum erro, você cria uma função para criar um novo access_token (utilizando o refresh_token).
+Você pode utilizar o recurso de "Try It" desta página para atualizar o access_token ou se basear para desenvolver a sua aplicação!
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+RESPONSE
+Click Try It! to start a request and see the response here!
+Português (Brasil) 

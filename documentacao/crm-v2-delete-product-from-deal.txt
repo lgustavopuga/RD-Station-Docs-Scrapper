@@ -1,0 +1,92 @@
+
+
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Negociações
+
+
+
+
+
+
+
+
+Deletar produto na negociação
+delete https://api.rd.services/crm/v2 /deals/{deal_id}/products/{id}
+Deletar permanentemente a associação de um produto com uma negociação.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Identificador único.
+id
+string
+required
+Identificador único.
+Responses
+204
+No Content
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+422
+A entidade não pode ser processada.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 33 minutes ago
+Atualizar produto na negociação
+Negociações
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://api.rd.services/crm/v2/deals/deal_id/products/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+Examples
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+400
+401
+403
+404
+422
+500
+

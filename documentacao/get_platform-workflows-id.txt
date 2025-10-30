@@ -1,0 +1,135 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Consultar fluxos de automaçãoget
+Consultar dados de um fluxo a partir de um idget
+Inserir leads em um fluxopost
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar dados de um fluxo a partir de um id
+get https://api.rd.services /platform/workflows/{id}
+Retorna informações das ações de um fluxo de automação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Tabela com as descrições do parâmetro action:
+Ação
+Descrição
+SDEMAEnviar email
+WTDELEsperar
+ADTAGAdicionar tags
+WTFIXEsperar e agendar hora
+CDEMADividir caminho por email do fluxo
+MKOPPMarcar Oportunidade
+CDSEGDividir caminho por segmentação
+NTEMANotificar email
+CGLSTAlterar estágio dos Leads
+RMTAGRemover tags
+SLOWNAlterar responsável pelos Leads
+SDPWHEnviar Leads para Integração
+NTOWNNotificar responsável pelos Leads
+OWROUDistribuir Leads entre os responsáveis
+ADLTWAdicionar Lead a outros fluxos
+UNOPPDesmarcar Oportunidade
+MKSALMarcar Venda
+RMLFWRemover Lead de outros fluxos
+TWFLWSeguir no Twitter
+JNPTHUnir caminho
+SDWPPEnviar WhatsApp
+CDWTDEsperar e agendar data e hora
+TSTABTeste A/B
+ASLLBAdicionar Base Legal
+RMLLBRemover Base Legal
+CRMOPCriar Oportunidade no CRM
+Path Params
+id
+string
+required
+ID do fluxo de automação
+Responses
+200
+success
+Response body
+object
+workflow_info
+object
+id
+string
+Identificador único do fluxo de automação
+name
+string
+Nome do fluxo de automação
+status
+string
+Status de ativação do fluxo
+created_at
+string
+Data de criação do fluxo de automação
+updated_at
+string
+Data da última atualização do fluxo de automação
+actions
+array of objects
+object
+id
+string
+Identificador da ação
+type
+string
+Sigla da ação
+404
+not found
+Updated about 1 month ago
+Consultar fluxos de automação
+Inserir leads em um fluxo
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/workflows/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+404
+

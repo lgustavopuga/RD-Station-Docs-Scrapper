@@ -1,0 +1,54 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Segurança da API Key
+Autenticação API Key
+Conversão via API Keypost
+Catálogo de produtos
+
+
+
+
+Segurança da API Key
+❗
+Segurança da Chave de API
+As Chaves de API concedem acesso total à sua conta do RD Station Marketing e devem ser protegidas da mesma forma que uma senha.
+Existem alguns cenários comuns que devem ser levados em conta ao trabalhar com Chaves de API, veja cada uma delas abaixo:
+Cada integração deve ter a própria Chave de API
+Nomeie cada Chave corretamente, para saber qual delas funciona com cada aplicativo. Se uma Chave de API específica for comprometida, você poderá desativá-la sem desativar o acesso às demais integrações.
+Não exponha suas Chaves ao público
+Tenha cuidado para que suas Chaves não sejam expostas em capturas de tela, vídeos ou documentação de ajuda. Vale lembrar que desfocar os dados em uma imagem nem sempre é o suficiente, o melhor é recortar parte da imagem removendo completamente os dados.
+Compartilhamento de Chave
+Caso seja necessário compartilhar uma Chave, nossa recomendação é que você gere uma nova Chave e rotule-a de forma correspondente para poder desativá-la, se necessário. Nunca envie a Chave de API por email, pois, caso a conta de email seja invadida por hackers, eles poderão enviar conversões para a conta do RD Station Marketing.
+Acesso a lista de Chaves
+O acesso à lista de Chaves é determinado pela função da pessoa usuária que gerou a Chave de API. Para saber mais sobre as permissões e perfil de cada usuário, acesse suas configurações.
+Updated about 1 month ago
+Evento de Conversão via API Key
+Autenticação API Key
+
+Table of Contents
+Cada integração deve ter a própria Chave de API
+Não exponha suas Chaves ao público
+Compartilhamento de Chave
+Acesso a lista de Chaves
+

@@ -1,0 +1,33 @@
+
+
+
+
+
+
+Bases legais
+Limite de requisições da API
+Mensagens de erro
+
+
+
+
+
+
+
+
+
+
+Limite de requisições da API
+Para preservar a integridade e a confiabilidade da plataforma, as nossas APIs têm o seguinte limite de taxa (rate limit):
+Limite máximo
+Período
+Método HTTP
+Plano
+120 Requisições1 minutoGET, POST, PUT, DELETEBasic, Pro
+ℹ️
+Ao utilizar o método listar de cada entidade (negociação, empresa e contato) é possível listar apenas os 10 mil primeiros registros a cada requisição.
+Updated 6 days ago
+Bases legais
+Mensagens de erro
+
+

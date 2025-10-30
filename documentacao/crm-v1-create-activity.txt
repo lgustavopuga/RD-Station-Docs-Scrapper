@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+Criar anotação
+post https://crm.rdstation.com/api/v1 /activities
+Criar anotação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+activity
+object
+activity object
+Response
+200
+Success
+Response body
+object
+_id
+string
+contact_id
+string | null
+created_at
+string
+date
+string
+deal_id
+string
+deal_stage_id
+string
+description
+string
+preview
+object | null
+Has additional fields
+responsible_description
+string
+text
+string
+type
+string
+updated_at
+string
+user_id
+string
+Updated 6 days ago
+Listar 
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/activities \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

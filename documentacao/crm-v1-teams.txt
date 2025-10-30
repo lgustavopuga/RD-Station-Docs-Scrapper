@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listar equipesget
+Obter equipeget
+
+
+
+Equipes
+As equipes utilizadas para gerenciar seus colaboradores em equipes no RD Station CRM, com suas determinadas permissões dentro da equipe.
+É possível adicionar um mesmo usuário a mais de uma equipe e, caso seja realizada uma análise dos resultados de cada equipe, esse usuário aparecerá nos relatórios de todas as equipes das quais fizer parte.
+O nível de visibilidade de cada usuário pode ser ajustado separadamente, de modo que ele possa, por exemplo, visualizar negociações e empresas de todo o grupo em uma equipe e ter visibilidade restrita em outra.
+❗️
+Atenção
+As equipes estão disponíveis apenas para clientes dos planos Basic e Pro.
+Query params
+Parâmetros utilizados para listar e obter equipes.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+team_idStringID do Time
+Response Body params
+Parâmetros retornados ao listar e obter equipes.
+Nome
+Tipo
+Descrição
+team_idStringID da equipe
+created_atStringData da criação da equipe. Formato: YYYY-MM-DD.
+updated_atStringData da última atualização da equipe. Formato: YYYY-MM-DD.
+emailStringEmail dos usuários da equipe
+team_usersArray of objectsUsuários da equipe
+team_users_idStringID dos usuários da equipe
+team_users_nameStringNome dos usuários da equipe
+team_users_nameStringEmail dos usuários da equipe
+nameStringNome da equipe
+phoneStringTelefone do usuário
+teamsArrayEquipes na qual o usuário faz parte.
+Updated 6 days ago
+Atualizar tarefa
+Listar equipes
+
+Table of Contents
+Query params
+Response Body params
+

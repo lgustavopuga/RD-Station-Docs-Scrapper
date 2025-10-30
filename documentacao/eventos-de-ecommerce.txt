@@ -1,0 +1,97 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Evento de Checkout Iniciadopost
+Evento de Carrinho Abandonadopost
+Evento de Pedido Realizadopost
+Evento de Pedido Pagopost
+Evento de Pedido Canceladopost
+Eventos de Pedido Reembolsadopost
+Eventos de Pedido Enviadopost
+Evento de Pedido Entreguepost
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Eventos de E-commerce
+Os Eventos de E-commerce são responsáveis por descrever o comportamento de um contato no processo de compra de produtos em um E-commerce.
+Por meio desses eventos é possível indicar quando um contato fecha um pedido ou até mesmo abandona um carrinho, informando quais os produtos envolvidos no processo.
+❗️
+Os eventos de Ecommerce serão melhor aproveitados ao usar o RD Station Marketing para Ecommerce junto do plano Pro ou Advanced, solicite a migração no Fale conosco da RD Station.
+Lista de Eventos
+Evento
+Descrição
+ECOMMERCE_CHECKOUT_STARTEDInício do processo de checkout
+ECOMMERCE_CART_ABANDONEDCarrinho abandonado após período de inatividade
+ECOMMERCE_ORDER_PLACEDPedido finalizado (antes do pagamento)
+ECOMMERCE_ORDER_PAIDPagamento confirmado
+ECOMMERCE_ORDER_FULFILLEDPedido parcialmente ou totalmente enviado ao cliente
+ECOMMERCE_SHIPMENT_DELIVEREDEntrega realizada ao cliente
+ECOMMERCE_ORDER_CANCELLEDPedido cancelado pelo cliente ou pela loja
+ECOMMERCE_ORDER_REFUNDEDPedido parcialmente ou totalmente reembolsado
+Bases Legais
+Esse tipo de evento aceita a atualização de Bases Legais:
+Campo
+Tipo
+Parâmetros válidos
+Descrição
+categoryStringcommunicationsA única categoria aceita é "communications".
+typeStringpre_existent_contract, consent, legitimate_interest, judicial_process, vital_interest or public_interestQual base legal autoriza o tratamento de dados pessoais.
+statusStringgranted or declinedValores aceitos: "granted" para confirmar o consentimento e "declined" para indicar que o consentimento foi recusado.
+Saiba mais sobre os conceitos de Bases Legais aqui.
+Validação dos Produtos
+Os eventos que contêm produtos (como ECOMMERCE_CHECKOUT_STARTED, ECOMMERCE_ORDER_PLACED ou ECOMMERCE_CART_ABANDONED) não realizam validação automática contra o catálogo de produtos ativos na conta.
+Essa escolha foi feita para garantir maior flexibilidade e tolerância a inconsistências temporárias de catálogo. Isso significa que:
+• Produtos referenciados nos eventos não precisam existir previamente no feed de catálogo configurado.
+• O envio do evento não será bloqueado mesmo que os atributos sku, product_ids e variant_id não estejam no catálogo.
+Comportamento Específico: ECOMMERCE_CART_ABANDONED
+O evento ECOMMERCE_CART_ABANDONED permite indicar que um cliente iniciou uma jornada de compra e abandonou o processo antes de concluir o pedido. Esse evento é fundamental para ações de remarketing, como e-mails automáticos de recuperação de carrinho.
+O sistema permite utilizar os produtos enviados no evento de carrinho abandonado para preencher dinamicamente blocos de produto nos modelos de e-mails. Para que isso funcione corretamente, é necessário atender aos seguintes requisitos:
+A conta precisa ter configurado a funcionalizade de Sincronização de Catálogo Personalizado.
+→ Consulte o guia de ajuda: Sincronizar catálogo personalizado de produtos no RD Station Marketing para Ecommerce
+O evento deve conter a lista de produtos abandonados, com seus respectivos atributos product_id, variant_id e sku.
+Os produtos referenciados devem estar listados no catálogo de produtos configurado na conta.
+O catálogo deve conter um preço atualizado e estoque para esses produtos.
+⚠️
+Se um produto não for encontrado no catálogo ou não possuir um preço válido, ele não será exibido no e-mail de recuperação de carrinho.
+Esse comportamento visa garantir que apenas produtos com informações completas sejam exibidos, evitando e-mails com blocos vazios ou dados inconsistentes.
+Boas Práticas
+Mantenha a sincronização do seu catálogo sempre que possível.
+Evite enviar eventos com produtos que ainda não estão disponíveis no catálogo personalizado.
+Prefira que os identificadores product_id, variant_id e sku estejam consistentes entre os sistemas que geram os eventos e o sistema que lista os seus produtos para o catálogo personalizado.
+Teste seus e-mails com dados reais para garantir a exibição correta dos produtos.
+Links Úteis
+Sincronizar catálogo personalizado de produtos no RD Station Marketing para Ecommerce
+Como criar fluxo de abandono de carrinho no seu ecommerce
+Updated about 1 month ago
+Evento de Marcação de Oportunidade Perdida
+Evento de Checkout Iniciado
+
+Table of Contents
+Lista de Eventos
+Validação dos Produtos
+Comportamento Específico: ECOMMERCE_CART_ABANDONED
+Boas Práticas
+Links Úteis
+

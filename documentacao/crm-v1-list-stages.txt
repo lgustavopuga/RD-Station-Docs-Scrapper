@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+Listar etapas do funil de vendas
+get https://crm.rdstation.com/api/v1 /deal_stages
+Listar etapas do funil de vendas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+deal_pipeline_id
+string
+ID do Funil de Vendas. Caso o parâmetro não seja passado ou não existe um funil de vendas do ID especificado, será retornada as etapas do funil de vendas padrão
+limit
+string
+Limite de etapas do funil de vendas que virão por listagem. Valor padrão é 12. Valor máximo é 12
+page
+string
+Página da listagem de etapas do funil de vendas
+Response
+200
+Success
+Updated 6 days ago
+Etapas do funil de vendas
+Criar etapa do funil de vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deal_stages \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

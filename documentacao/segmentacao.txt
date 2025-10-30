@@ -1,0 +1,41 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Consultar segmentaçõesget
+Consultar contatos de uma segmentaçãoget
+Mais informações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Segmentações
+A segmentação é um filtro que seleciona os leads da sua base que possuem informações específicas, criando uma lista dinâmica. Com isso, é possível criar e realizar ações de Marketing direcionadas, de acordo com suas necessidades dentro do RD Station Marketing.
+Com essa API, você poderá listar todas as segmentações existentes na sua conta RD Station Marketing e navegar até a lista de todos os leads existentes na segmentação selecionada.
+Com isso, você conseguirá consultar e extrair os Contatos da sua Base de Leads.
+Para saber como obter os resultados corretos com essa API, é necessário consultar as informações da página de Mais informações.
+Updated about 1 month ago
+Atualizar pelo UUID/email do contato
+Consultar segmentações
+
+

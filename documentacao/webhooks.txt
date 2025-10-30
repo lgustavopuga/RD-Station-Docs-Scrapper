@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+Webhook Service
+O Webhook é a funcionalidade da API que possibilita a automatização do envio de dados e atividades de contatos do RD Station Marketing e CRM para sistemas externos. Assim, é possível que você utilize o seu próprio aplicativo personalizado para ler, salvar e realizar ações com esses dados. Esta é uma opção poderosa que permite manter todos os seus dados em sincronia e abre a possibilidade para todos os tipos de integração.
+Sempre que o evento configurado como gatilho no Webhook é acionado, o RD Station Marketing fará o disparo de um LEAD e o RD Station CRM fará o disparo de uma Negociação para integrações externas, contendo o payload padrão em JSON ("pacote de dados") único e imutável para a URL de destino, que vai vai conter todas as informações disponíveis no Perfil do Lead ou todas as informações da Negociação, o que inclui todos os campos padrão e personalizados que foram preenchidos.
+Para informações sobre autenticação (OAUTH) para uso das APIs de Webhooks, consulte a seção de Autenticação da API .
+Eventos que acionam o envio dos Webhooks
+O evento que vai acionar o envio do payload conforme descrição abaixo:
+Eventos do RD Station Marketing:
+Conversão: envia os leads que realizaram alguma conversão no RD Station Marketing. Você pode selecionar quais serão essas conversões ou deixar em branco. Neste caso, todo lead que realizar uma conversão será enviado. Se as conversões forem realizadas em uma Landing Page, Formulário ou Pop-up do RD Station Marketing, o identificador vai ser o título da página/nome do elemento criado; se for integrado (formulários integrados, API, etc), eles podem ser identificados pelo identificador da conversão;
+Oportunidade: envia os leads marcados como Oportunidade (estrelinha). Exemplo: enviar o lead do RD Station Marketing para a ferramenta apenas quando ele for marcado como oportunidade manualmente, por integração ou por um fluxo de automação.
+📘
+O envio será acionado sempre que o contato cumprir o gatilho configurado no Webhook.
+Por exemplo, se o gatilho é "conversão" em qualquer evento,o contato será enviado mais de uma vez; sempre que ocorrer a conversão.
+Evento do RD Station CRM:
+Negociação: envia informações sobre uma negociação presente no CRM. Exemplo.: Se ocorreu uma criação de negociação, atualização de informações ou deleção da negociação.
+🚧
+Nota: Para utilizar o evento de negociação é necessário ter uma conta no RD Station CRM e ser assinante do plano Basic ou PRO.
+📘
+O tipo de evento que aciona a solicitação de webhook é definido pelo campo "entity_type".
+Segue a lista de tipos de eventos suportados:
+"WEBHOOK.CONVERTED", "WEBHOOK.MARKED_OPPORTUNITY"
+"crm_deal_created", "crm_deal_updated", "crm_deal_deleted"
+Requisitos para funcionamento dos Webhooks
+Os Webhooks criados devem obedecer aos seguintes requisitos:
+Ser capaz de receber e consumir dados em formato JSON;
+Possuir certificado de segurança;
+Ter compatibilidade para fazer a leitura do pacote de dados que o RD Station envia;
+Estar funcional, respondendo requisições POST com status 2.xx.
+⚠️
+Importações e atualizações manuais do contato não acionam os Webhooks.
+Gestão de Webhooks
+Nesta documentação, mostramos como fazer a gestão dos Webhooks da API 2.0:
+Listar todos os webhooks
+Criar um webhook
+Lista um webhook
+Atualizar webhook
+Deletar um webhook
+Updated about 1 month ago
+Próximo passo:
+Listar todos os webhooks
+
+Table of Contents
+Eventos que acionam o envio dos Webhooks
+Eventos do RD Station Marketing:
+Evento do RD Station CRM:
+Requisitos para funcionamento dos Webhooks
+Gestão de Webhooks
+

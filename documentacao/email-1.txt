@@ -1,0 +1,39 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Listar todos os emailsget
+Buscar email por idget
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Email
+A funcionalidade de Email possibilita que você se comunique de forma efetiva com os contatos capturados para despertar o interesse, aumentar o engajamento e criar um relacionamento.
+Para isso, é possível realizar o envio de campanhas para grupos de contatos definidos de acordo com as informações que você tem e enviar mensagens direcionadas para esse público.
+Com essa API, é possível consultar todas as campanhas listadas na conta e os detalhes do disparo da campanha.
+Updated about 1 month ago
+Inserir leads em um fluxo
+Listar todos os emails
+
+

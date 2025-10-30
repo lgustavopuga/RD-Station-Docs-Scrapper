@@ -1,0 +1,252 @@
+
+
+
+Consultar contato pelo uuid/emailget
+Criar contatopost
+Atualizar contato pelo uuid/emailpatch
+Excluir contato pelo uuid/emaildel
+Criar uma tag para o lead pelo uuid/emailpost
+Consultar eventos associado ao contatoget
+
+
+
+
+
+Consultar contato pelo uuid/email
+get https://api.rd.services /platform/contacts/{identifier}:{value}
+Retorna dados padrão e personalizados de um contato específico.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Essa API possibilita consultar os Contatos de forma unitária, utilizando o uuid ou email do Lead.
+Para consultar todos os Contatos da sua Base de Leads:
+Utilize a API de Consultar contatos de uma segmentação para obter todos os Contatos da segmentação "Todos os contatos da Base de Leads"
+Utilize o endereço de email dos Contatos obtidos na consulta anterior para realizar uma consulta detalhada dos dados de contatos específicos com a API de Consultar contato pelo uuid/email.
+🚧
+O campo "Empresa" não é retornado pela API de Contatos e Segmentações.
+O valor preenchido no campo pode ser obtido somente pelo payload disparado pelos Webhooks: Webhooks MKT payload
+Path Params
+identifier
+string
+enum
+required
+Identificador (uuid/email) associado a cada contato do RD Station.
+uuid
+Allowed:
+uuid
+email
+value
+string
+required
+Valor do identificador.
+Responses
+200
+Success
+Response body
+object
+uuid
+string
+UUID único do contato gerado no RD Station para controle e gerenciamento
+name
+string
+Nome do contato
+email
+string
+Email do contato
+job_title
+string
+Cargo do contato
+birthdate
+string
+Data de Aniversário
+bio
+string
+Anotações sobre o contato
+website
+string
+Site do contato
+personal_phone
+string
+Telefone do contato
+mobile_phone
+string
+Telefone do contato
+city
+string
+Cidade do contato
+state
+string
+Estado do contato
+country
+string
+País do contato
+twitter
+string
+Twitter do contato
+facebook
+string
+Facebook do contato
+linkedin
+string
+LinkedIn do contato
+tags
+array of strings
+Tags do contato
+extra_emails
+array of strings
+E-mails extras do contato
+legal_bases
+array of objects
+Bases legais do contato
+object
+category
+string
+type
+string
+status
+string
+links
+array of objects
+Lista de hiperlinks
+object
+rel
+string
+href
+string
+media
+string
+type
+string
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month agoCriar contato
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/contacts/uuid:value \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+64
+}
+1
+{
+2
+"uuid": "cdbba2a8-8ccd-4228-9617-6b0257b32077",
+3
+"name": "RD Station Developer",
+4
+"email": "contato@exemplo.com",
+5
+"job_title": "Desenvolvedor",
+6
+"birthdate": "1990-11-23",
+7
+"bio": "Muito engajado",
+8
+"website": "https://site-contato.rdstation.com/",
+9
+"personal_phone": "+55 48 3037-3600",
+10
+"mobile_phone": "+55 48 3037-3600",
+11
+"city": "Florianópolis",
+12
+"state": "SC",
+13
+"country": "Brasil",
+14
+"twitter": "https://twitter.com/contato",
+15
+"facebook": "https://www.facebook.com/contato/",
+16
+"linkedin": "https://www.linkedin.com/in/contato/",
+17
+"tags": [
+18
+"developer",
+19
+"rdstation",
+20
+"api"
+21
+],
+22
+"extra_emails": [
+23
+"contact2@example.com"
+24
+],
+25
+"legal_bases": [
+26
+{
+27
+"category": "communications",
+28
+"type": "consent",
+29
+"status": "granted"
+30
+}
+31
+],
+32
+"links": [
+33
+{
+34
+"rel": "SELF",
+35
+"href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+36
+"media": "application/json",
+37
+"type": "GET"
+38
+},
+39
+{
+40
+"rel": "SELF",
+41
+"href": "https://api.rd.services/platform/contacts/email:contato@exemplo.com",
+42
+"media": "application/json",
+43
+"type": "GET"
+44
+},
+45
+{
+46
+"rel": "CONTACT.DELETE",
+47
+"href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+48
+"media": "application/json",
+

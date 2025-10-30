@@ -1,0 +1,47 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Consultar Estatísticas de E-mail Marketingget
+Consultar Estatísticas de Email via Fluxo de Automaçãoget
+Consultar Estatísticas do Funil de Vendasget
+Consultar Estatísticas dos Ativos de Conversãoget
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Análise
+As APIs de Análise fornecem dados estatísticos que possibilitam analisar o desempenho e eficiência das suas estratégias de marketing, para que você tenha mais autonomia e liberdade para construir suas análises e relatórios.
+Elas ajudam você e sua equipe a integrar os dados estatísticos do RD Station Marketing com a sua solução, automatizando processos para criar uma experiência mais fluida de análise de resultados em outras plataformas.
+Com essa API você pode consultar Estatísticas de:
+E-mail Marketing
+Email via Fluxo de Automação
+Funil de Vendas
+Ativos de Conversão
+🚧
+API disponível apenas para os planos Pro e Advanced.
+Updated about 1 month ago
+Consultar formulários
+Consultar Estatísticas de E-mail Marketing
+
+

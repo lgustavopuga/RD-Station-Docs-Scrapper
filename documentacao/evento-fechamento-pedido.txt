@@ -1,0 +1,116 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Evento de Fechamento de Pedido
+post
+Evento de Fechamento de Pedido com um Item específico
+post
+Evento de Abandono de Carrinho
+post
+Evento de Abandono de um Item do Carrinho
+post
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Evento de Fechamento de Pedido
+post deprecatedhttps://api.rd.services /platform/events?event_type=order_placed
+O RD Station Marketing considera sempre o valor do atributo event_type ORDER_PLACED como identificador deste evento customizado. Esse evento é registrado sempre que ocorre o fechamento de pedido em uma plataforma de e-commerce.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+Esse tipo de evento não aceita Campos Personalizados (parâmetro cf_custom_field_api_identifier)
+Body Params
+event_type
+string
+required
+Defaults to ORDER_PLACED
+O event_type diferencia tipo do evento. Para o evento de pedido realizado, deve ser enviado como "ORDER_PLACED"
+ORDER_PLACED
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Updated 20 days ago
+Eventos de E-commerce (Descontinuados)
+Evento de Fechamento de Pedido com um Item específico
+
+
+xxxxxxxxxx
+18
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=order_placed' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "ORDER_PLACED",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"email": "contato@email.com",
+11
+"cf_order_id": "ID do pedido",
+12
+"cf_order_total_items": 5,
+13
+"cf_order_status": "Status do pedido",
+14
+"cf_order_payment_method": "Credit Card",
+15
+"cf_order_payment_amount": 200.5
+16
+}
+17
+}
+18
+'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

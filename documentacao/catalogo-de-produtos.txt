@@ -1,0 +1,45 @@
+
+
+
+
+Listar catálogosget
+Consultar catálogo por idget
+Cadastrar catálogopost
+Atualizar catálogopatch
+Deletar catálogodel
+
+
+
+
+Catálogo de produtos
+Temos o prazer de apresentar as APIs de Catálogo de Produtos, uma ferramenta poderosa para você gerenciar seus catálogos de produtos de forma eficiente e integrada. Com elas, você terá total controle sobre a criação, edição, consulta e remoção dos seus catálogos.
+O que você pode fazer com as APIs?
+As APIs de Catálogo de Produtos oferecem as seguintes funcionalidades:
+Consultar Catálogos: Recupere os detalhes de seus catálogos cadastrados
+Criar Catálogos: Adicione novos catálogos de produtos à sua conta
+Editar Catálogos: Atualize as informações de catálogos existentes
+Remover Catálogos: Exclua catálogos que não são mais necessários
+Detalhes do Catálogo
+Cada catálogo deve conter as seguintes informações obrigatórias:
+Nome: Um nome descritivo para o seu catálogo.
+URL: O endereço de onde os produtos serão consumidos.
+Formato: O formato dos dados dos produtos, podendo ser JSON ou XML.
+Opcionalmente, você pode incluir usuário e senha para autenticação básica HTTP, caso seu catálogo exija essa camada de segurança.
+Formatos dos catálogos
+Para garantir a compatibilidade e a correta interpretação dos dados, os padrões para os formatos JSON e XML estão detalhadamente documentados em nosso portal do desenvolvedor:
+Documentação: https://github.com/ResultadosDigitais/ecommerce-devportal
+Recomendamos fortemente a consulta a essa documentação para garantir a correta formatação dos seus dados.
+Importante: Limitações Atuais
+Para otimizar a performance e a experiência de uso, observe as seguintes limitações no momento:
+Um catálogo por conta: No momento, cada conta poderá cadastrar apenas 1 catálogo
+Conflito com Integração Nativa: Você só poderá cadastrar, editar ou remover catálogos se não estiver utilizando uma integração nativa em sua conta (exemplo: shopify, tray, vtex, etc).
+Updated about 1 month ago
+Próximo passo:
+Cadastrar catálogo
+
+Table of Contents
+O que você pode fazer com as APIs?
+Detalhes do Catálogo
+Formatos dos catálogos
+Importante: Limitações Atuais
+

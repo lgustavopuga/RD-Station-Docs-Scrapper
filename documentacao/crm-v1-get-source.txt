@@ -1,0 +1,86 @@
+
+
+
+
+Obter fonte
+get https://crm.rdstation.com/api/v1 /deal_sources/{deal_source_id}
+Obter fonte
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_source_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+created_at
+string
+description
+string | null
+id
+string
+instance_id
+string
+name
+string
+updated_at
+string
+Updated 6 days ago
+Criar fonte
+Atualizar fonte
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deal_sources/deal_source_id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: multipart/form-data'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+1
+{
+2
+"_id": "61140ea3c794c70001b7192f",
+3
+"created_at": "2021-08-11T14:53:39.945-03:00",
+4
+"description": null,
+5
+"id": "61140ea3c794c70001b7192f",
+6
+"instance_id": "5b75b4235bdc75002b1b656f",
+7
+"name": "5.0",
+8
+"updated_at": "2021-08-11T14:53:39.945-03:00"
+9
+}
+

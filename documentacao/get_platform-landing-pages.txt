@@ -1,0 +1,143 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Consultar landing pagesget
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar landing pages
+get https://api.rd.services /platform/landing_pages
+Retorna uma lista com todas as landing pages de uma conta
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page_size
+integer
+Número de registros retornados por página
+page
+integer
+Número atual da página
+search
+string
+Busca pelo título da landing page
+ids
+array of integers
+IDs das landing pages retornadas
+ADD integer
+order
+array of strings
+Tipos de ordenação dos resultados
+ADD string
+Responses
+200
+Success
+Response body
+array of objects
+object
+id
+integer
+Identificador único da landing page
+title
+string
+Título da Landing Page
+created_at
+string
+Data de criação da landing page
+upated_at
+string
+Data da última atualização da landing page
+conversion_identifier
+string
+Identificador da conversão
+status
+string
+Status de publicação da landing page
+has_active_experiment
+boolean
+Informa se a landing page possui um teste A/B ativo
+had_experiment
+boolean
+Informa se a landing page já possuiu um teste A/B
+401
+Unauthorized
+Updated about 1 month ago
+Landing Pages
+Pop-ups
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/landing_pages \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+12
+1
+[
+2
+{
+3
+"id": 1,
+4
+"title": "Minha Primeira Landing Page",
+5
+"created_at": "2021-09-22T14:14:04.510-03:00",
+6
+"upated_at": "2021-09-24T14:14:04.510-03:00",
+7
+"conversion_identifier": "dia-das-mães-2022",
+8
+"status": "PUBLISHED",
+9
+"has_active_experiment": false,
+10
+"had_experiment": false
+11
+}
+12
+]
+

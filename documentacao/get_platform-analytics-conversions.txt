@@ -1,0 +1,182 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Consultar Estatísticas de E-mail Marketingget
+Consultar Estatísticas de Email via Fluxo de Automaçãoget
+Consultar Estatísticas do Funil de Vendasget
+Consultar Estatísticas dos Ativos de Conversãoget
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar Estatísticas dos Ativos de Conversão
+get https://api.rd.services /platform/analytics/conversions
+O objetivo desta API é fornecer os indicadores de conversão para ativos de marketing, a fim de trazer mais clareza com relação a performance do seu ativo.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+API disponível apenas para os planos Pro e Advanced.
+🚧
+Plano Advanced não tem limite de consulta. Já o plano Pro tem limite de consulta dos últimos 45 dias. Para ambos os planos o prazo de atualização dos dados é de até 24 horas.
+📘
+Obs: A API de Estatísticas de Ativos de Conversão retorna dados a partir de Junho de 2022 para Landing Pages e a partir de Outubro de 2022 para Forms e Pop-ups. Os dados são consolidados e disponibilizados no padrão UTC.
+Query Params
+start_date
+string
+Data de início a ser consultada. (yyyy-mm-dd)
+end_date
+string
+Data de término a ser consultada. (yyyy-mm-dd)
+assets_type[]
+array of strings
+Filtros para tipo do ativo, opções disponíveis: LandingPage, Popup e Forms
+ADD string
+asset_id
+array of integers
+Filtro para o Id do asset (opcional)
+ADD integer
+Responses
+200
+Success
+Response body
+object
+account_id
+integer
+O id associado a cada conta do RD Station
+query_date
+object
+O período de tempo usado para buscar os dados
+start_date
+date
+end_date
+date
+assets_type
+array of strings
+Filtro para tipo do ativo: LandingPage
+conversions
+array of objects
+object
+asset_id
+integer
+Id do evento de conversão
+asset_identifier
+string
+Identificador do evento de conversão
+asset_type
+string
+Tipo do evento de conversão
+asset_created_at
+date-time
+Data de criação do evento
+asset_updated_at
+date-time
+Ultima atualização no evento
+visits_count
+integer
+Total de visitas no evento
+conversions_count
+integer
+Total conversões no evento
+conversion_rate
+float
+Taxa de conversão no evento
+400
+Bad Request
+401
+Unauthorized or Forbidden
+Updated about 1 month ago
+Consultar Estatísticas do Funil de Vendas
+Campanhas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/analytics/conversions \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+20
+1
+{
+2
+"account_id": 3127612,
+3
+"query_date": {
+4
+"start_date": "2025-10-30",
+5
+"end_date": "2025-10-30"
+6
+},
+7
+"assets_type": "[LandingPage]",
+8
+"conversions": [
+9
+{
+10
+"asset_id": 1495004,
+11
+"asset_identifier": "Como aumentar suas taxas de conversão",
+12
+"asset_type": "LandingPage",
+13
+"asset_created_at": "2022-06-30T19:11:05.191Z",
+14
+"asset_updated_at": "2022-06-30T20:11:05.191Z",
+15
+"visits_count": 1500,
+16
+"conversions_count": 150,
+17
+"conversion_rate": 10
+18
+}
+19
+]
+20
+}
+

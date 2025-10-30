@@ -1,0 +1,133 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Consultar fluxos de automaçãoget
+Consultar dados de um fluxo a partir de um idget
+Inserir leads em um fluxopost
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Inserir leads em um fluxo
+post https://api.rd.services /platform/workflows/{id}/leads
+Permite inserir leads num fluxo de automação
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+📘
+O limite de leads por requisição será de acordo com as definições da tabela abaixo
+Limites de leads por requisição
+Plano
+10 leads por requestLight, Basic
+25 leads por requestPro
+50 leads por requestAdvanced
+Path Params
+id
+string
+required
+Identificador exclusivo do fluxo de automação
+Body Params
+leads
+array of strings
+required
+E-mail do lead
+ADD string
+Responses
+200
+Success
+Response body
+object
+leads_added
+array of strings
+Lista de leads adicionados com sucesso
+leads_not_found
+array of strings
+Lista de leads não encontrados
+400
+not found
+Updated about 1 month ago
+Consultar dados de um fluxo a partir de um id
+Email
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://api.rd.services/platform/workflows/id/leads \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+14
+1
+{
+2
+"leads_added": [
+3
+[
+4
+"lead1@example.com",
+5
+"lead2@example.com"
+6
+]
+7
+],
+8
+"leads_not_found": [
+9
+[
+10
+"lead3@example.com",
+11
+"lead4@example.com"
+12
+]
+13
+]
+14
+}
+

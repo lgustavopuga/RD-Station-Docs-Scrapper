@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+Listar campanhasget
+Criar campanhapost
+Obter campanhaget
+Atualizar campanhaput
+
+
+
+
+
+
+
+
+
+Campanhas
+As campanhas tem como finalidade rastrearem a origem das negociações adicionadas ao CRM.
+Essa informação é fundamental para o direcionamento do marketing, pois, permite medir o retorno de cada ação e saber qual fonte está trazendo melhores resultados.
+A campanha refere-se à entrada de negociações por meio de campanhas de marketing específicas.
+Query params
+Parâmetros utilizados para listar e obter campanhas.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+limitURLLimite de campanhas que virão por listagem. Padrão: 20. Valor máximo: 200.
+pageURLPágina da listagem de campanhas. Padrão: 1.
+qURLNome da campanha a ser buscada. Exemplo: A campanha "Facebook Ads" deve ser buscada como "facebook%20ads".
+Body params
+Parâmetros utilizados para criar e atualizar campanhas.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome da campanha✓
+descriptionStringDescrição da campanha✘
+Updated 6 days ago
+Criar anotação
+Listar campanhas
+
+Table of Contents
+Query params
+Body params
+

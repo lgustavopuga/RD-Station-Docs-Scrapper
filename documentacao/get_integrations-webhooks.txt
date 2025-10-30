@@ -1,0 +1,142 @@
+
+
+
+
+
+
+
+
+
+Listar todos os webhooks
+get https://api.rd.services /integrations/webhooks
+Retorna uma lista com todos os webhooks criados pela sua integração na conta que eles estão vinculados. Os webhooks criados diretamente pela tela do RD Station Marketing não serão listados.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Responses
+200
+Success
+Response body
+object
+webhooks
+array of objects
+object
+created_at
+string
+Data de criação do Webhook
+updated_at
+string
+Data da última atualização do Webhook
+event_identifiers
+array of strings
+Permite filtrar os identificadores do evento que aciona o webhook. Apenas para eventos 'WEBHOOK.CONVERTED'
+event_type
+string
+O tipo de evento que aciona a solicitação de webhook
+http_method
+string
+O método http que o webhook acionará
+include_relations
+array of strings
+Quais itens adicionais serão fornecidos no payload do webhook
+platform_account_id
+number
+Identificador da conta
+source
+string
+Fonte do evento. Temos 2 no momento, MKT ou CRM
+status
+string
+O status do webhook, cujo valor padrão é 'active'.
+url
+string
+A URL de destino do webhook
+entity_type
+string
+A entidade da assinatura do webhook
+uuid
+string
+O uuid exclusivo associado a cada assinatura de webhook do RD Station
+401
+Unauthorized
+Updated about 1 month ago
+Próximo passo:
+Criar um webhook
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+JWT
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/integrations/webhooks \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+23
+1
+{
+2
+"webhooks": [
+3
+{
+4
+"created_at": "2023-09-20T13:51:28.233Z",
+5
+"updated_at": "2023-09-21T13:51:28.233Z",
+6
+"event_identifiers": [
+7
+"WEBHOOK.CONVERTED"
+8
+],
+9
+"event_type": "WEBHOOK.CONVERTED",
+10
+"entity_type": "CONTACT",
+11
+"http_method": "POST",
+12
+"include_relations": [
+13
+"CONTACT_FUNNEL",
+14
+"COMPANY"
+15
+],
+16
+"platform_account_id": 818000000000436400,
+17
+"source": "MKT",
+18
+"status": "active",
+19
+"url": "https://webhook-callback-url.com",
+20
+"uuid": "adc6944d-0c74-4e7c-899e-6d816465b561"
+21
+}
+22
+]
+23
+}
+

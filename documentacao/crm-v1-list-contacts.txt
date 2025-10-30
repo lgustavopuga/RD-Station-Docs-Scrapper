@@ -1,0 +1,182 @@
+
+
+
+
+
+
+Listar contatosget
+Criar contatopost
+Obter contatoget
+Atualizar contatoput
+Campos personalizados
+
+
+
+
+
+
+
+
+Listar contatos
+get https://crm.rdstation.com/api/v1 /contacts
+Listar contatos
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page
+string
+Número atual da página
+limit
+string
+Limite de contatos que serão listados. Valor padrão é 20. Valor máximo é 200
+order
+string
+Campo a ser ordenado. Valor padrão é "name"
+direction
+string
+Ordenação da lista. "asc" ou "desc", padrão é "asc"
+email
+string
+Filtra os resultados pelo email informado
+q
+string
+Nome do contato a ser buscado
+phone
+string
+Filtra os resultados pelo telefone informado
+title
+string
+Filtra os resultados pelo cargo informado
+Response
+200
+Success
+Response body
+object
+contacts
+array of objects
+object
+_id
+string
+birthday
+object | null
+Has additional fields
+contact_custom_fields
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string | null
+created_at
+string
+deals
+array of objects
+object
+_id
+string
+closed_at
+date-time | null
+deal_lost_reason_id
+string | null
+id
+string
+name
+string
+prediction_date
+date | null
+win
+boolean | null
+emails
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+email
+string
+updated_at
+date-time | null
+facebook
+string | null
+id
+string
+legal_bases
+array of objects
+object
+category
+string
+status
+string
+type
+string
+linkedin
+string | null
+name
+string
+notes
+string | null
+organization_id
+string | null
+phones
+array of objects
+object
+created_at
+date-time | null
+phone
+string
+type
+string
+updated_at
+date-time | null
+whatsapp
+boolean
+whatsapp_full_internacional
+string
+whatsapp_url_web
+string
+skype
+string | null
+title
+string | null
+updated_at
+string
+has_more
+boolean
+total
+number
+Updated 6 days agoCriar contato
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/contacts \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

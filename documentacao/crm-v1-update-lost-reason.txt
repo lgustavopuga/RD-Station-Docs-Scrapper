@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+Motivos de perda
+Listar motivos de perdaget
+Criar motivo de perdapost
+Obter motivo de perdaget
+Atualizar motivo de perdaput
+Funis de vendas
+
+
+
+
+
+
+
+Atualizar motivo de perda
+put https://crm.rdstation.com/api/v1 /deal_lost_reasons/{deal_lost_reason_id}
+Atualizar motivo de perda
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_lost_reason_id
+string
+required
+Body Params
+name
+string
+Response
+200
+Success
+Response body
+object
+_id
+string
+created_at
+string
+instance_id
+string
+name
+string
+updated_at
+string
+Updated 6 days ago
+Obter motivo de perda
+Funis de vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://crm.rdstation.com/api/v1/deal_lost_reasons/deal_lost_reason_id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

@@ -1,0 +1,101 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Batch de Eventos
+O endpoint de grupo de eventos permite que o RD Station receba mais de um evento ao mesmo tempo. Isso permite que eventos de pedido fechado e os itens que foram inclusos no pedido sejam enviados por meio de apenas uma chamada para a API.
+📘
+O tamanho do body das requisições nessa rota possui um limite de 0,2Mb.
+POST https://api.rd.services/platform/events/batch
+Request body parameters
+Field
+Type
+Required
+Description
+event_type
+String
+true
+O event_type diferencia o tipo do evento. As opções aceitas são: CONVERSION, OPPORTUNITY, SALE, OPPORTUNITY_LOST, CHAT_STARTED, CHAT_FINISHED, CALL_FINISHED, MEDIA_PLAYBACK_STARTED, MEDIA_PLAYBACK_STOPPED, ECOMMERCE_CHECKOUT_STARTED, ECOMMERCE_CART_ABANDONED, ECOMMERCE_ORDER_PLACED, ECOMMERCE_ORDER_PAID, ECOMMERCE_ORDER_FULFILLED, ECOMMERCE_SHIPMENT_DELIVERED, ECOMMERCE_ORDER_CANCELLED e ECOMMERCE_ORDER_REFUNDED.
+Serão aceitos os eventos de e-commerce (descontinuados) até 31 de dezembro de 2025. São eles: ORDER_PLACED, ORDER_PLACED_ITEM, CART_ABANDONED e CART_ABANDONED_ITEM.
+event_family
+String
+true
+O event_family é definido para fins de processamento.Atualmente, é aceito apenas "CDP" como opção válida.
+payload
+Object
+true
+O payload contendo os atributos do event_type relacionado, conforme definido acima.
+Request body example
+[
+{
+"event_type" : "#type",
+"event_family" : "CDP",
+"payload": {
+/* ... */
+}
+},
+{
+"event_type" : "#type",
+"event_family" : "CDP",
+"payload": {
+/* ... */
+}
+},
+{
+"event_type" : "#type",
+"event_family" : "CDP",
+"payload":
+{
+/* ... */
+}
+},
+/* ... */
+]
+Request response example
+Success | Code: 200
+{
+"event_batch_uuid": "UUID of the batch",
+"events":[
+{ "event_uuid":"Event UUID" },
+{ "event_uuid":"Event UUID" },
+{ "event_uuid":"Event UUID" },
+/* ... */
+]
+}
+The event uuid array is organized according to the the order of the array sent in the request payload.
+Updated about 1 month ago
+Evento de Término do Playback de uma Mídia
+Evento de Conversão via API Key
+
+Table of Contents
+POST https://api.rd.services/platform/events/batch
+Request body parameters
+Request body example
+Request response example
+The event uuid array is organized according to the the order of the array sent in the request payload.
+

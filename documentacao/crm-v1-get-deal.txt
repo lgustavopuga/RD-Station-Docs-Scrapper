@@ -1,0 +1,301 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+Listar contatos da negociaçãoget
+
+
+
+
+
+Obter negociação
+get https://crm.rdstation.com/api/v1 /deals/{deal_id}
+Obter negociação
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+amount_montly
+number
+amount_total
+number
+amount_unique
+number
+best_moment_to_touch
+boolean
+c_cf_errors
+object
+campaign
+object
+_id
+string
+id
+string
+name
+string
+campaign_id
+string
+closed_at
+date-time | null
+contact_errors
+object
+created_at
+string
+deal_custom_fields
+array of objects
+object
+created_at
+string
+custom_field
+object
+custom_field object
+custom_field_id
+string
+updated_at
+string
+value
+string
+array
+deal_lost_reason_id
+string | null
+deal_pipeline
+object
+id
+string
+name
+string
+deal_pipeline_relation
+object
+parent_deal
+object
+parent_deal object
+deal_products
+array
+deal_source
+object
+_id
+string
+id
+string
+name
+string
+deal_source_id
+string
+deal_stage
+object
+_id
+string
+deal_pipeline_id
+string
+id
+string
+name
+string
+nickname
+string
+deal_stage_histories
+array of objects
+object
+_id
+string
+deal_stage_id
+string
+end_date
+date-time | null
+id
+string
+start_date
+string
+errors
+object
+from_rdsm_integration
+boolean
+hold
+boolean | null
+id
+string
+interactions
+number
+last_note_content
+string | null
+name
+string
+prediction_date
+date | null
+rating
+number
+stop_time_limit
+object
+expiration_date_time
+string
+expired
+boolean
+expired_days
+number
+updated_at
+string
+user
+object
+_id
+string
+id
+string
+name
+string
+win
+boolean | null
+Updated 6 days ago
+Criar negociação
+Atualizar negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+129
+}
+1
+{
+2
+"_id": "ID",
+3
+"amount_montly": 0,
+4
+"amount_total": 0,
+5
+"amount_unique": 0,
+6
+"best_moment_to_touch": false,
+7
+"c_cf_errors": {},
+8
+"campaign": {
+9
+"_id": "ID",
+10
+"id": "ID",
+11
+"name": "Marcado como Oportunidade no RD Station Marketing"
+12
+},
+13
+"campaign_id": "ID",
+14
+"closed_at": null,
+15
+"contact_errors": {},
+16
+"created_at": "2023-03-30T16:27:24.764-03:00",
+17
+"deal_custom_fields": [
+18
+{
+19
+"created_at": "2023-03-30T16:23:54.781-03:00",
+20
+"custom_field": {
+21
+"_id": "ID",
+22
+"allow_new": false,
+23
+"created_at": "2020-08-20T17:32:35.618-03:00",
+24
+"for": "deal",
+25
+"instance_id": "ID",
+26
+"label": "Custom date field",
+27
+"opts": [],
+28
+"order": 8,
+29
+"required": true,
+30
+"required_rules": [
+31
+{
+32
+"_id": "ID",
+33
+"always": true,
+34
+"created_at": "2023-03-30T10:52:55.465-03:00",
+35
+"property": null,
+36
+"updated_at": "2023-03-30T10:52:55.465-03:00",
+37
+"value": null
+38
+}
+39
+],
+40
+"type": "date",
+41
+"unique": false,
+42
+"updated_at": "2023-03-30T10:52:55.465-03:00",
+43
+"visible": true
+44
+},
+45
+"custom_field_id": "ID",
+46
+"updated_at": "2023-03-30T16:23:54.781-03:00",
+47
+"value": "31/03/2023"
+48
+}
+49
+],
+

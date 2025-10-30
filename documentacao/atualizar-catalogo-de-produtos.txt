@@ -1,0 +1,22 @@
+
+
+Acesse sua conta
+HomeRecipesAPIChangelog
+Search
+JUMP TO
+
+Atualizar catálogo
+patch https://api.rd.services /platform/catalog_feeds/{CATALOG_FEED_ID}
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+RESPONSE
+Click Try It! to start a request and see the response here!
+Português (Brasil) 

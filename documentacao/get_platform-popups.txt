@@ -1,0 +1,124 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Consultar pop-upsget
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar pop-ups
+get https://api.rd.services /platform/popups
+Retorna uma lista com todos os pop-ups de uma conta
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page_size
+integer
+Número de registros retornados por página
+page
+integer
+Número atual da página
+search
+string
+Busca pelo título do pop-up
+ids
+array of integers
+IDs dos pop-ups retornados
+ADD integer
+order
+array of strings
+Tipos de ordenação dos resultados
+ADD string
+trigger
+array of strings
+Tipo de trigger dos popups retornados
+ADD string
+Responses
+200
+success
+Response body
+array of objects
+object
+id
+integer
+required
+Identificador único do pop-up
+title
+string
+required
+Título do Pop-up
+created_at
+string
+required
+Data de criação do pop-up
+updated_at
+string
+required
+Data da última atualização do pop-up
+conversion_identifier
+string
+required
+Identificador da conversão
+status
+string
+required
+Status de publicação do pop-up
+trigger
+string
+required
+Gatilho para exibição do pop-up
+401
+Unauthorized
+Updated about 1 month ago
+Pop-ups
+Formulários
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/popups \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+401
+

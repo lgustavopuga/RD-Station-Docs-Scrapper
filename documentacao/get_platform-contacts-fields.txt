@@ -1,0 +1,110 @@
+
+
+
+
+
+Consultar campo personalizadoget
+Criar campo personalizadopost
+Atualizar campo personalizadopatch
+Excluir campo personalizadodel
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar campo personalizado
+get https://api.rd.services /platform/contacts/fields
+Retorna os campos e seus atributos. Um campo pode ser default ou customizado:
+- Default: campos padrões que representam as informações básicas do Contato do RD Station.
+- Custom: campos que representam informações exclusivas do contato de acordo com sua organização e que foram criados pelos usuários do RD Station.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Responses
+200
+Success
+Response body
+object
+fields
+array of objects
+object
+uuid
+string
+O uuid exclusivo associado a cada campo do RD Station
+api_identifier
+string
+Identificador exclusivo para referenciar este campo para chamadas de terminais do contato. O 'api identifier' de um campo não pode ser alterado posteriormente. Deve iniciar com o prefixo: cf_.
+custom_field
+boolean
+Ele é definido como 'false' para campos padrão e 'true' para campos personalizados.
+data_type
+string
+O tipo de dados do campo. Os valores possíveis são 'BOOLEAN', 'STRING', 'STRING[]' e 'INTEGER'.
+name
+object
+Nome do campo no RD Station
+name object
+label
+object
+Label do campo nos formulários do RD Station
+label object
+presentation_type
+string
+enum
+O tipo do campo
+TEXT_INPUT EMAIL_INPUT COMBO_BOX URL_INPUT TEXT_AREA RADIO_BUTTON PHONE_INPUT NUMBER_INPUT CHECK_BOX MULTIPLE_CHOICE
+validation_rules
+object
+As regras de validação do campo.
+validation_rules object
+401
+Unauthorized
+Updated about 1 month ago
+Campos personalizados
+Criar campo personalizado
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/contacts/fields \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+401
+

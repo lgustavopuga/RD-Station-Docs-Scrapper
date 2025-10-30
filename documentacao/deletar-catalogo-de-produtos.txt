@@ -1,0 +1,66 @@
+
+
+
+
+Listar catálogosget
+Consultar catálogo por idget
+Cadastrar catálogopost
+Atualizar catálogopatch
+Deletar catálogodel
+
+
+
+
+Deletar catálogo
+delete https://api.rd.services /platform/catalog_feeds/{CATALOG_FEED_ID}
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+CATALOG_FEED_ID
+int32
+required
+ID do catálogo
+Responses
+204
+204
+Response body
+json
+400
+400
+404
+404
+409
+409
+Updated about 1 month ago
+Atualizar catálogo
+Introdução e requisitos
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://api.rd.services/platform/catalog_feeds/CATALOG_FEED_ID \
+3
+--header 'accept: text/plain'
+Try It!
+RESPONSE
+Examples
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+400 - Result
+404 - Result
+409 - Result
+

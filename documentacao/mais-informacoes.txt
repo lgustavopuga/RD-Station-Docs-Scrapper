@@ -1,0 +1,144 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Consultar segmentaçõesget
+Consultar contatos de uma segmentaçãoget
+Mais informações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Mais informações
+Paginação
+A api deve aceitar os parâmetros page e page_size em path_params (?page=1&page_size=25)
+O valor padrão do parâmetro page deve ser 1 e do page_size deve ser 25
+O tamanho máximo do parâmetro page_size definido é 125 e caso seja excedido um erro é retornado
+Os headers pagination-total-rows, pagination-page-size e pagination-page devem ser retornados
+Ordenação
+A api deve aceitar o parâmetro order (?order=name:desc)
+A ordenação aceita asc ou desc, caso não seja informado o valor default é asc
+Os campos aceitos para ordenação das segmentações são: last_conversion_date
+Segmentações Padrão
+São todas aquelas segmentações que já estavam previamente configuradas no RD Station Marketing
+As Segmentações "Todos os contatos da base de Leads", "Clientes (estágio no funil)" e "Leads (estágio no funil)" são exemplos de Segmentações Padrão.
+As segmentações padrão tem o campo standard marcado como true e nas personalizadas o campo standard é nulo
+Busca por nome
+A api deve aceitar o parâmetro search em path_params (?search=name)
+Importante: As Segmentações Padrão não são retornadas pela busca
+Lista das segmentações padrão:
+JSON
+{
+"contacts": [
+{
+"id": 4,
+"name": "Clientes (estágio no funil)",
+"standard": true,
+"created_at": "2021-12-24T11:52:12.046-03:00",
+"updated_at": "2021-12-24T11:52:12.046-03:00",
+"process_status": "processed",
+"links": [
+{
+"rel": "SEGMENTATIONS.CONTACTS",
+"href": "https://api.rd.services/platform/segmentations/4/contacts",
+"media": "application/json",
+"type": "GET"
+}
+]
+},
+{
+"id": 2,
+"name": "Leads (estágio no funil)",
+"standard": true,
+"created_at": "2021-12-24T11:52:12.013-03:00",
+"updated_at": "2021-12-24T11:52:12.013-03:00",
+"process_status": "processed",
+"links": [
+{
+"rel": "SEGMENTATIONS.CONTACTS",
+"href": "https://api.rd.services/platform/segmentations/2/contacts",
+"media": "application/json",
+"type": "GET"
+}
+]
+},
+{
+"id": 5,
+"name": "Oportunidades",
+"standard": true,
+"created_at": "2021-12-24T11:52:12.062-03:00",
+"updated_at": "2021-12-24T11:52:12.062-03:00",
+"process_status": "processed",
+"links": [
+{
+"rel": "SEGMENTATIONS.CONTACTS",
+"href": "https://api.rd.services/platform/segmentations/5/contacts",
+"media": "application/json",
+"type": "GET"
+}
+]
+},
+{
+"id": 3,
+"name": "Leads Qualificados (estágio no funil)",
+"standard": true,
+"created_at": "2021-12-24T11:52:12.030-03:00",
+"updated_at": "2021-12-24T11:52:12.030-03:00",
+"process_status": "processed",
+"links": [
+{
+"rel": "SEGMENTATIONS.CONTACTS",
+"href": "https://api.rd.services/platform/segmentations/3/contacts",
+"media": "application/json",
+"type": "GET"
+}
+]
+},
+{
+"id": 1,
+"name": "Todos os contatos da base de Leads",
+"standard": true,
+"created_at": "2021-12-24T11:52:12.030-03:00",
+"updated_at": "2021-12-24T11:52:12.030-03:00",
+"process_status": "processed",
+"links": [
+{
+"rel": "SEGMENTATIONS.CONTACTS",
+"href": "https://api.rd.services/platform/segmentations/1/contacts",
+"media": "application/json",
+"type": "GET"
+}
+]
+}
+]
+}
+Updated about 1 month ago
+Consultar contatos de uma segmentação
+Fluxos de automação
+
+Table of Contents
+Paginação
+Ordenação
+Segmentações Padrão
+Busca por nome
+

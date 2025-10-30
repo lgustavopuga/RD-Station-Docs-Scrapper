@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+Usuários
+Usuários são os colaboradores da sua empresa que ingressaram ao RD Station CRM mediante o envio e aceite de um convite para criarem seu perfil de usuário. Cada usuário com status ativo preenche uma licença contratada no RD Station CRM.
+Saiba como cadastrar e dar acesso a outros usuários aqui.
+Com esse end-point é possível visualizar todos os usuários da conta, conferir as principais informações como seu status, e equipes que ele faz parte.
+Query params
+Parâmetros utilizados para listar e obter usuários.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+user_idStringID do usuário
+Response Body params
+Parâmetros retornados ao listar e obter usuários.
+Nome
+Tipo
+Descrição
+user_idStringID do usuário a ser obtido.
+activeBooleanSe o usuário está ativo ou desativado.
+created_atStringData da criação do usuário. Formato: YYYY-MM-DD.
+updated_atStringData da última atualização do usuário. Formato: YYYY-MM-DD.
+emailStringEmail do usuário.
+hiddenBooleanSe o usuário está visível ou oculto.
+last_loginStringData do último login do usuário. Formato: YYYY-MM-DD.
+nameStringNome do usuário.
+phoneStringTelefone do usuário.
+teamsArrayEquipes na qual o usuário faz parte.
+Updated 6 days ago
+Obter token
+Listar usuários
+
+Table of Contents
+Query params
+Response Body params
+

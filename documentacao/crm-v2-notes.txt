@@ -1,0 +1,30 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listar anotações da negociaçãoget
+Criar anotação na negociaçãopost
+
+
+
+
+
+
+
+Anotações
+O objeto "Anotação" (Note) é um registro de texto associado a uma "Negociação" (Deal). Ele serve para documentar interações, observações importantes, próximos passos ou qualquer informação relevante que precise ser armazenada no histórico da negociação.
+As anotações são essenciais para manter a equipe alinhada, garantindo que todos os membros tenham acesso ao contexto completo da negociação. A gestão de anotações via API permite integrar o RD Station CRM com outras plataformas de comunicação ou automatizar o registro de atividades.
+Updated 40 minutes ago
+Atualizar motivo de perda
+Listar anotações da negociação
+
+

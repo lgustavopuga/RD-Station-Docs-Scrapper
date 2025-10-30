@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+Webhooks MKT payload
+Corpo da requisição
+Quando o evento configurado no Webhook é acionado, o RD Station envia uma requisição com o método configurado no http_method com o cabeçalho Content-Type: application/json.
+Abaixo seguem os campos disponíveis no payload da requisição:
+Payload padrão
+JSON
+{
+"event_type": "WEBHOOK.CONVERTED",
+"entity_type": "CONTACT",
+"event_identifier": "my-event-identifier",
+"timestamp": "2018-03-13T14:09:02.724-03:00",
+"event_timestamp": "2018-03-13T14:07:04.254-03:00",
+"contact": {
+"uuid":"c2f3d2b3-7250-4d27-97f4-eef38be32f7f",
+"email":"suporte@resultadosdigitais.com.br",
+"name":"Contact Name",
+"job_title":"Developer",
+"bio":"This is my bio",
+"website": "http://rdstation.com.br",
+"personal_phone":"48 30252598",
+"mobile_phone":"48 30252598",
+"city":"Florianópolis",
+"facebook": "Contact Facebook",
+"linkedin": "Contact Linkedin",
+"twitter": "Contact Twitter",
+"tags": ["tag 1", "tag 2"],
+"cf_custom_field_example": ["Option1", "Option2"],
+"legal_bases": [
+{
+"category": "communications",
+"type": "consent",
+"status": "granted"
+}
+],
+"company": {
+"name": "Company Example 0"
+},
+"funnel": {
+"name": "default",
+"lifecycle_stage": "Lead",
+"opportunity": false,
+"contact_owner_email": "owner@example.org",
+"interest": 20,
+"fit": 0,
+"origin": "Busca Paga | Google"
+}
+}
+}
+📘
+Os custom fields são prefixados com "cf_". Caso a entidade não possua o campo personalizado com um valor preenchido, ele não será enviado.
+Legenda dos campos enviados no payload padrão
+Confira abaixo cada campo enviado pelo webhook e o que cada um deles representa:
+Campo
+Tipo
+Descrição
+event_typeStringO tipo de evento que acionou a solicitação do webhook. Atualmente, apenas WEBHOOK.CONVERTED ou WEBHOOK.MARKED_OPPORTUNITY são opções válidas.
+entity_typeStringA entidade enviada no webhook. Atualmente, apenas CONTACT é uma opção válida.
+event_identifierStringO identificador do evento que acionou a solicitação do webhook, quando o event_type é WEBHOOK.CONVERTED. Para WEBHOOK.MARKED_OPPORTUNITY esse campo vai com o valor 'default'.
+timestampDateTimeA hora em que o webhook foi enviado.
+event_timestampDateTimeA hora em que ocorreu o evento que acionou o webhook.
+contactObjectA própria entidade, pode ser company ou qualquer outra entidade suportada.
+uuidIdentificador único do contato.
+emailEmail do contato.
+nameNome do contato.
+job_titleCargo do contato.
+bioAnotações do Perfil do contato.
+websiteSite do contato.
+personal_phoneTelefone do contato.
+mobile_phoneCelular do contato.
+cityCidade.
+facebookFacebook do contato.
+linkedinLinkedin do contato.
+twitterTwitter do contato.
+tagsTags do contato.
+cf_custom_field_exampleCampos personalizados do contato.
+companyEmpresa do contato.
+lifecycle_stageEstágio do funil do contato.
+opportunitySe o contato é oportunidade.
+contact_owner_emailDono do contato.
+interestInteresse do Lead Scoring do contato.
+fitPerfil do Lead Scoring do contato.
+originOrigem do contato (utm_medium e utm_source).
+legal_basesBases Legais do contato.
+❗️
+O webhook envia um payload padrão em JSON único e imutável.
+Não é possível personalizar os dados enviados pelo webhook.
+Updated about 1 month ago
+Webhooks CRM payload
+Retries Logic
+
+Table of Contents
+Corpo da requisição
+Payload padrão
+Legenda dos campos enviados no payload padrão
+

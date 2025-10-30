@@ -1,0 +1,111 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Evento de Marcação de Oportunidadepost
+Evento de Marcação de Oportunidade Ganhapost
+Evento de Marcação de Oportunidade Perdidapost
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Evento de Marcação de Oportunidade Perdida
+post https://api.rd.services /platform/events?event_type=opportunity_lost
+O evento de Marcação de Oportunidade Perdida, registra um contato como oportunidade perdida no RD Station Marketing.
+Este evento não cria um novo contato e requer a existência de um contato prévio para serem processados.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+❗️
+Este evento não registra campos personalizados e não cria um novo contato. Ele requer a existência de um contato prévio na Base de Leads para ser processado.
+Para criar o contato e registrar campos personalizados, pode ser utilizado o Evento de Conversão Padrão e, alguns minutos depois, enviar o evento de qualificação do contato.
+Body Params
+event_type
+string
+required
+Defaults to OPPORTUNITY_LOST
+O event_type diferencia tipo do evento. Para o evento de oportunidade perdida, deve ser enviado como "OPPORTUNITY_LOST"
+OPPORTUNITY_LOST
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Response body
+object
+event_uuid
+string
+Updated about 1 month ago
+Evento de Marcação de Oportunidade Ganha
+Eventos de E-commerce
+
+
+xxxxxxxxxx
+15
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=opportunity_lost' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "OPPORTUNITY_LOST",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"email": "contato@email.com",
+11
+"funnel_name": "default",
+12
+"reason": "Motivo da perda X"
+13
+}
+14
+}
+15
+'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

@@ -1,0 +1,43 @@
+Bases legais
+As principais leis de proteção de dados, como a LGPD (Lei Geral de Proteção de Dados Pessoais, Brasil) e o GDPR (General Data Protection Regulation, União Europeia), estabelecem que, para que qualquer pessoa, física ou jurídica, possa realizar qualquer operação com um dado pessoal − seja coletar, transmitir ou processar −, é necessário possuir uma base legal presente na LGPD, ou seja, uma hipótese da lei que justifique o tratamento desses dados.
+A LGPD prevê bases legais que autorizam o tratamento de dados pessoais. As bases legais não têm dependência ou predominância entre si, e para todo caso de tratamento de dados, existe uma base legal mais apropriada.
+A atribuição das bases legais aos contatos do RD Station CRM para Contato e envio de comunicação engloba envio de emails e a prática de ligações via RD Station CRM.
+É possível adicionar as seguintes bases legais:
+Consentimento ( consent)
+Obrigação legal, processo judicial, proteção do crédito ( judicial_process)
+Legítimo interesse ( legitimate_interest)
+Contrato preexistente ( pre_existent_contract)
+Execução de políticas públicas ( public_interest)
+Proteção da vida, tutela da saúde ( vital_interest)
+Saiba mais sobre os conceitos e cada uma das bases legais aqui.
+Como registrar as bases legais
+O registro das bases legais é realizado a partir dos seguintes parâmetros dentro da entidade alvo, como a de contato:
+Propriedade
+Tipo
+Descrição
+category StringA categoria relativa à base legal, sendo "comunicação" ou "processamento de dados". Opções: communications, data_processing.
+type StringQual base legal autoriza o tratamento dos dados pessoais. Opções: consent, judicial_process, legitimate_interest, pre_existent_contract, public_interest, vital_interest.
+status StringUse granted para confirmar o consentimento e declined para indicar que o consentimento foi recusado. Opções: granted, declined.
+Exemplo de como os parâmetros devem ser enviados:
+JSON
+{
+"legal_bases": [
+{
+"category": "data_processing",
+"type": "consent",
+"status": "granted"
+},
+{
+"category": "communications",
+"type": "vital_interest",
+"status": "granted"
+}
+]
+}
+Updated 36 minutes ago
+Filtrando com RDQL
+Casos de uso
+
+Table of Contents
+Como registrar as bases legais
+

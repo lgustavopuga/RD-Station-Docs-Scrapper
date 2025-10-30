@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+Listar anotações
+get https://crm.rdstation.com/api/v1 /activities
+Listar anotações
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+deal_id
+string
+ID da negociação
+page
+string
+Número da página listada. Valor padrão é 1
+limit
+string
+Limite de anotações que virão por listagem. Valor padrão é 20. Valor máximo é 200
+start_date
+string
+Filtrar por data - início
+end_date
+string
+Filtrar por data - fim
+Response
+200
+Success
+Response body
+object
+activities
+array of objects
+object
+_id
+string
+date
+string
+deal_id
+string
+id
+string
+text
+string
+user_id
+string
+Updated 6 days ago
+Anotações
+Criar anotação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/activities \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

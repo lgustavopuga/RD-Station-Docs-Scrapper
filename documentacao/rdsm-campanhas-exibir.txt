@@ -1,0 +1,113 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Consultar campanhasget
+Consultar detalhes de uma campanhaget
+Consultar itens de uma campanhaget
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar detalhes de uma campanha
+get https://api.rd.services /platform/campaigns/{id}
+Retorna uma campanha específica criada no App Gerenciador de Campanhas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+Nota: API disponível apenas para os planos Pro e Advanced.
+Path Params
+id
+string
+required
+Responses
+200
+Success
+Response body
+object
+campaign
+object
+created_at
+string
+id
+number
+links
+array of objects
+object
+href
+string
+media
+string
+method_type
+string
+rel
+string
+name
+string
+status
+string
+total_items
+number
+updated_at
+string
+user
+object
+user object
+401
+Unauthorized
+404
+Not found
+Updated about 1 month ago
+Consultar campanhas
+Consultar itens de uma campanha
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+JWT
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/campaigns/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+401 - Unauthorized
+404 - Not found
+

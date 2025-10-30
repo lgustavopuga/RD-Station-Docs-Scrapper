@@ -1,0 +1,34 @@
+
+
+
+
+Fontes
+As fontes tem como finalidade rastrear a origem das negociações.
+Essa informação é fundamental para o direcionamento do marketing, pois, permite medir o retorno de cada ação e saber qual fonte está trazendo melhores resultados.
+A fonte refere-se à origem de entrada da negociação.
+Query params
+Parâmetros utilizados para listar e obter fontes.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+limitURLLimite de fontes que virão por listagem. Valor padrão é 20. Valor máximo é 200
+pageURLPágina da listagem de fontes. Valor padrão é 1
+qURLNome da fonte a ser buscada. Ex: a fonte "Facebook Ads" deve ser buscada como "facebook%20ads"
+Body params
+Parâmetros utilizados para criar e atualizar fontes.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome da fonte✓
+descriptionStringDescrição da fonte✘
+Updated 6 days ago
+Deletar produtos na negociação
+Listar fontes
+
+Table of Contents
+Query params
+Body params
+

@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listar funis de vendasget
+Criar funil de vendaspost
+Obter funil de vendasget
+Atualizar funil de vendasput
+
+
+
+
+
+
+Funis de vendas
+No RD Station CRM, um funil de vendas é uma representação visual do processo de vendas, dividido em etapas sequenciais. Os funis de vendas permitem organizar e rastrear negociações à medida que progridem desde o contato inicial até o fechamento.
+Uma conta pode ter múltiplos funis de vendas para diferentes processos de vendas, como "Vendas Inbound", "Vendas Enterprise". As etapas do funil de vendas representam os marcos chave nesse processo, como "Qualificação", "Proposta Enviada", "Negociação". Os end-points de funis de vendas permitem a gestão programática dessas estruturas.
+ℹ️
+As etapas do funil de vendas são gerenciadas em um end-point específico.
+Updated 41 minutes ago
+Atualizar empresa
+Listar funis de vendas
+
+

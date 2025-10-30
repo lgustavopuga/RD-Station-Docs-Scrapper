@@ -1,0 +1,260 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+Listar contatos da negociaçãoget
+
+
+
+
+
+Criar negociação
+post https://crm.rdstation.com/api/v1 /deals
+Criar negociação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+campaign
+object
+campaign object
+contacts
+array of objects
+ADD object
+deal
+object
+deal object
+deal_products
+array of objects
+ADD object
+deal_source
+object
+deal_source object
+distribution_settings
+object
+distribution_settings object
+organization
+object
+organization object
+Response
+200
+Success
+Response body
+object
+_id
+string
+amount_montly
+number
+amount_total
+number
+amount_unique
+number
+best_moment_to_touch
+boolean
+c_cf_errors
+object
+campaign
+object
+_id
+string
+id
+string
+name
+string
+campaign_id
+string
+closed_at
+date-time | null
+contact_errors
+object
+created_at
+string
+deal_custom_fields
+array of objects
+object
+created_at
+date-time | null
+custom_field
+object
+custom_field object
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string
+array
+deal_lost_reason_id
+string | null
+deal_products
+array of objects
+object
+_id
+string
+amount
+number
+base_price
+number
+created_at
+string
+description
+string
+discount
+number
+discount_type
+string
+id
+string
+name
+string
+price
+number
+product_id
+string
+recurrence
+string
+total
+number
+updated_at
+string
+deal_source
+object
+_id
+string
+id
+string
+name
+string
+deal_source_id
+string
+deal_stage
+object
+_id
+string
+deal_pipeline_id
+string
+id
+string
+name
+string
+nickname
+string
+deal_stage_histories
+array of objects
+object
+_id
+string
+deal_stage_id
+string
+end_date
+date-time | null
+id
+string
+start_date
+string
+errors
+object
+from_rdsm_integration
+boolean
+hold
+boolean | null
+id
+string
+interactions
+number
+last_note_content
+string | null
+name
+string
+organization
+object
+_id
+string
+address
+string | null
+address_latitude
+string | null
+address_longitude
+string | null
+id
+string
+name
+string
+organization_custom_fields
+array
+organization_segments
+array
+resume
+string | null
+url
+string | null
+visible
+boolean
+prediction_date
+date | null
+rating
+number
+stop_time_limit
+object
+expiration_date_time
+string
+expired
+boolean
+expired_days
+number
+updated_at
+string
+user
+object
+_id
+string
+id
+string
+name
+string
+win
+boolean | null
+Updated 6 days ago
+Listar negociações
+Obter negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/deals \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

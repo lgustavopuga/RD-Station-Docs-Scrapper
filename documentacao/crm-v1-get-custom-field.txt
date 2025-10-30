@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+Obter campo personalizado
+get https://crm.rdstation.com/api/v1 /custom_fields/{custom_field_id}
+Obter campo personalizado
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+custom_field_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+allow_new
+boolean
+created_at
+string
+for
+string
+id
+string
+label
+string
+opts
+array
+order
+number
+required
+boolean
+required_rules
+array
+type
+string
+unique
+boolean
+updated_at
+string
+visible
+boolean
+Updated 6 days ago
+Criar campo personalizado
+Atualizar campo personalizado
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/custom_fields/custom_field_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

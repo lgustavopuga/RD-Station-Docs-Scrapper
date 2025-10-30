@@ -1,0 +1,57 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Segurança da API Key
+Autenticação API Key
+Conversão via API Keypost
+Catálogo de produtos
+
+
+
+
+Autenticação API Key
+Passo a passo para criar sua Chave
+O processo de Autenticação da API Key consiste em criar uma chave única; que não expira para autorizar o envio das requisições.
+Para criar a sua chave, siga os passos abaixo:
+Acesse a App Publisher na App store do RD Station Marketing e, na página de gerenciamento, faça o login na conta desejada.
+Clique em Gerar chave de API:
+Se for a primeira Chave criada na conta, o sistema automaticamente irá exibir a Chave criada. Se já existir outras Chaves criadas na conta, elas serão exibidas em uma lista e você deve clicar em Gerar chave de API para criar uma nova chave. Pronto! A sua Chave está criada.
+Clique na coluna NOME DA CHAVE para atribuir um nome único para a Chave. Isso irá te auxiliar na hora de gerenciar e localizar as Chaves.
+Escolha se a Chave criada ficará ativa ou inativa clicando no botão de ATIVO/INATIVO.
+Copie o código da Chave para enviá-lo via Query String pelo parâmetro api_key do script do formulário para autorizar o envio de requisições para o RD Station Marketing.que irá utilizar para integrações de conversões com RD Station Marketing.
+⚠️
+Informações importantes
+A Chave de API suporta apenas eventos de conversão;
+Você poderá criar até 5 Chaves;
+Não é possível realizar a exclusão de Chaves, permitimos somente ativação e desativação;
+Não é necessário a implementação do protocolo OAuth para a utilização das Chaves de API;
+O usuário do RD Station Marketing precisa ter o perfil de acesso de Gestor ou Dono para acessar a tela de gerenciamento de Chaves da API.
+Updated about 1 month ago
+Próximo passo:
+Próximo passo:
+Confira como enviar requisições para registrar um Evento de Conversão Padrão utilizando a API Key.
+Conversão via API Key
+
+Table of Contents
+Passo a passo para criar sua Chave
+

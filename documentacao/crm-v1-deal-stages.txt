@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+Etapas do funil de vendas
+As etapas do funil de vendas representam os estágios do andamento de oportunidades criadas na plataforma.
+O plano Free possui 5 etapas predefinidas. Já no plano Basic, é possível ter até 12 etapas editáveis e criar diferentes funis de vendas.
+Ao criar ou utilizar mais de um funil de vendas na mesma conta, é possível organizar e visualizar as negociações de acordo com o funil de vendas e etapa selecionados.
+❗️
+Atenção
+Esta funcionalidade está disponível apenas para clientes dos planos Basic e Pro.
+Query params
+Parâmetros utilizados para listar e obter etapas do funil de vendas.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+deal_pipeline_idStringID do funil de Vendas. Caso o parâmetro não seja passado ou não existe um funil de vendas do ID especificado, será retornada as etapas do funil de vendas padrão
+deal_stage_idURLID da etapa que será obtida
+limitURLLimite de etapas do funil de vendas que virão por listagem. Valor padrão é 12. Valor máximo é 12.
+pageURLPágina da listagem de Funis de vendas. Valor padrão é 1
+Body params
+Parâmetros utilizados para criar e atualizar etapas do funil de Vendas.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+deal_pipeline_idStringID do funil de vendas que será obtido✓
+orderStringOrdem da etapa do funil✘
+nameStringNome da etapa do funil✓
+Updated 6 days ago
+Atualizar fonte
+Listar etapas do funil de vendas
+
+Table of Contents
+Query params
+Body params
+

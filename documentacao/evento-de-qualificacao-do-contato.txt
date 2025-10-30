@@ -1,0 +1,46 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Evento de Marcação de Oportunidadepost
+Evento de Marcação de Oportunidade Ganhapost
+Evento de Marcação de Oportunidade Perdidapost
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Eventos de Qualificação do Contato
+Os eventos de Qualificação do Contato são definidos pelas transições de um Contato em um funil do RD Station. Esses eventos são:
+Evento de Marcação de Oportunidade;
+Evento de Marcação de Oportunidade Ganha;
+Evento de Marcação de Oportunidade Perdida;
+🚧
+Esse tipo de evento não aceita Campos Personalizados (parâmetro cf_custom_field_api_identifier)
+❗️
+Estes eventos não criam um novo contato e requer a existência de um contato prévio para serem processados.
+Para criar o contato, pode ser utilizado o Evento de Conversão Padrão e, alguns minutos depois, enviar o evento de qualificação do contato.
+Updated about 1 month ago
+Evento de conversão padrão
+Evento de Marcação de Oportunidade
+
+

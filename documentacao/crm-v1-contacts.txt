@@ -1,0 +1,64 @@
+
+
+
+
+
+
+Listar contatosget
+Criar contatopost
+Obter contatoget
+Atualizar contatoput
+Campos personalizados
+
+
+
+
+
+
+
+O contato é uma das três entidades chaves do RD Station CRM:
+Contato
+Empresa
+Negociação
+É a pessoa que você irá se relacionar em uma empresa ou diretamente em uma negociação. Em seu cadastro, são informados dados como nome, telefone, email e outras informações complementares.
+Um contato pode ou não estar associado a uma empresa e/ou negociação.
+❗️
+Atenção
+Toda informação cadastrada deve conter no mínimo 2 caracteres.
+Query params
+Parâmetros utilizados para listar e obter contatos.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+pageURLNúmero da página listada. Padrão: 1.
+limitURLLimite de contatos que virão por listagem. Padrão: 20. Valor máximo: 200.
+orderURLCampo a ser ordenado. Opções: name, created_at, updated_at. Padrão: name.
+directionURLOrdenação da lista. Opções: asc ou desc. Padrão: asc.
+emailURLFiltra os resultados pelo email informado
+phoneURLFiltra os resultados pelo telefone informado
+titleURLFiltra os resultados pelo cargo informado.
+qStringString com o nome do contato. Busca os contatos com a string anterior no parâmetro
+Body params
+Parâmetros utilizados para criar e atualizar contatos.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome do contato✓Mínimo 2 caracteres, não pode se repetir. Obrigatório somente ao criar o contato
+titleStringCargo do contato✘
+birthdayStringData de nascimento do contato✘
+emailObjectEmails do contato✘
+phonesObjectTelefones do contato✘Os valores aceitos para o type são: home, work e fax.
+organization_idStringID da empresa à qual este contato pertence✘
+deal_idsArrayIDs das negociações com as quais o contato está envolvido✘
+legal_basesArrayBase legal✘
+Updated 6 days ago
+Atualizar campanha
+Listar contatos
+
+Table of Contents
+Query params
+Body params
+

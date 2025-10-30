@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Motivos de perda
+Listar motivos de perdaget
+Criar motivo de perdapost
+Obter motivo de perdaget
+Atualizar motivo de perdaput
+Anotações
+
+
+
+
+
+
+
+Motivos de perda
+Os motivos de perda são utilizados para padronizar as razões pelas quais uma negociação é marcada como "perdida". Manter uma lista consistente de motivos de perda é crucial para a análise de vendas, permitindo que as equipes identifiquem tendências, entendam as objeções dos clientes e aprimorem seus processos comerciais e produtos.
+Updated 40 minutes ago
+Atualizar negociação
+Listar motivos de perda
+
+

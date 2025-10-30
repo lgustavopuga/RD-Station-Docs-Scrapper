@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+Campos personalizados
+São campos criados para registrar informações nas três entidades: negociação, contato e empresa.
+Cada categoria de campos possui algumas opções (preferências) específicas, que são:
+Visível: campo de preenchimento opcional, indicado para informações que não sejam essenciais para o cadastro ou negociação, como cargo que ocupa, formação, etc;
+Obrigatório: campo de preenchimento obrigatório, indicado para informações imprescindíveis para o cadastro ou negociação;
+Sempre: não será possível criar a negociação sem que o campo seja preenchido.
+Etapa: obrigatório para entrar naquela etapa do funil de vendas. Poderão avançar para a etapa selecionada apenas negociações que estejam com o campo preenchido. Funcionalidade exclusiva do plano Pro.
+Único: campo ideal para informações como CNPJ ou CPF, por exemplo, pois não permite que existam duas entidades com a mesma resposta.
+❗️
+Atenção
+Campos obrigatórios e únicos estão disponíveis somente nos planos Basic e Pro.
+Query params
+Parâmetros utilizados para listar, obter e deletar campos personalizados.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+custom_field_idURLID do campo personalizado a ser obtido
+forURLSelecione os campos personalizados do modelo fornecido
+Body params
+Parâmetros utilizados para criar e atualizar campos personalizados.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+labelStringTexto do campo personalizado✓
+typeStringTipo do campo personalizado✓Opções: option, text, date, multiple_choice.
+forStringEntidade a qual o campo personalizado será anexado✓Opções: deal, contact, organization, product.
+uniqueBooleanDefine se o campo terá valor único, em relação aos outros cadastrados✘
+requiredBooleanDefine se o campo deverá ser preenchido obrigatoriamente✘
+allow_newBooleanDefine se o campo personalizado aceitará novas entradas, caso seja do tipo option e multiple_options✘
+optionsBooleanDefine as opções para o campo personalizado do tipo option e multiple_options✘
+orderIntegerDefine a ordem em que o campo personalizado será listado no modelo✘Menor valor tem maior prioridade.
+❗️
+Campos personalizados do tipo date só permitem o preenchimento de valores no formato: DD/MM/AAAA
+Caso deseje preencher o campo com outras informações da data, utilize um campo do tipo text.
+Updated 6 days ago
+Atualizar contato
+Listar campos personalizados
+
+Table of Contents
+Query params
+Body params
+

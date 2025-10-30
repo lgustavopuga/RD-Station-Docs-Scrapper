@@ -1,0 +1,155 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar campos personalizadosget
+Criar campo personalizadopost
+Obter campo personalizadoget
+Atualizar campo personalizadoput
+Deletar campo personalizadodel
+
+
+
+
+
+
+
+
+
+Atualizar campo personalizado
+put https://api.rd.services/crm/v2 /custom_fields/{id}
+Atualiza as propriedades do campo personalizado existente. É útil para alterar títulos, adicionar novas opções a um campo de múltipla escolha ou modificar regras de visibilidade.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+string
+required
+Identificador único.
+Body Params
+data
+object
+Dados do recurso relacionado.
+data object
+Responses
+200
+OK
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+string
+Identificador único.
+name
+string
+Nome do campo personalizado.
+slug
+string
+Identificador único em texto do campo personalizado.
+type
+string
+enum
+Tipo do campo personalizado
+text date option multiple_choice
+entity
+string
+enum
+Entidade à qual o campo é aplicado.
+deal contact organization product
+options
+array of strings
+Opções do campo personalizado, aplicável para tipos como option e multiple_choice.
+unique
+boolean
+Unicidade do campo personalizado.
+allow_new_option
+boolean
+Permitir novas opções para campos do tipo option e multiple_choice.
+order
+integer
+Ordem do campo personalizado.
+required_rules
+array of objects
+Regras que definem quando o campo é obrigatório.
+object
+property
+string
+Propriedade da regra de obrigatoriedade. Exemplo: deal_stage_id.
+value
+string
+ID da propriedade da regra de obrigatoriedade.
+always
+boolean
+Se verdadeiro, a regra sempre se aplica.
+display_rules
+array of objects
+Regras que definem quando o campo é exibido.
+object
+property
+string
+Propriedade da regra de exibição. Exemplo: deal_pipeline_id.
+value
+string
+ID da propriedade da regra de exibição.
+always
+boolean
+Se verdadeiro, a regra sempre se aplica.
+created_at
+date-time
+Data de criação do campo personalizado.
+updated_at
+date-time
+Data de atualização do campo personalizado.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+422
+A entidade não pode ser processada.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 43 minutes ago
+Obter campo personalizado
+Deletar campo personalizado
+
+
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://api.rd.services/crm/v2/custom_fields/id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+400
+401
+403
+404
+422
+500
+

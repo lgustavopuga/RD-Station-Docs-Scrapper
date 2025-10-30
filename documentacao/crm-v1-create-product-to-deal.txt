@@ -1,0 +1,147 @@
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Criar produtos na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Atualizar produtos na negociaçãopatch
+Deletar produtos na negociaçãodel
+Fontes
+
+
+
+
+
+
+Criar produto na negociação
+post https://crm.rdstation.com/api/v1 /deals/{deal_id}/deal_products
+Criar produto na negociação
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Body Params
+amount
+number
+discount
+number
+discount_type
+string
+price
+number
+product_id
+string
+recurrence
+string
+Response
+201
+Success
+Response body
+object
+_id
+string
+amount
+number
+base_price
+number
+created_at
+string
+description
+string
+discount
+number
+discount_type
+string
+name
+string
+price
+number
+product_id
+string
+recurrence
+string
+total
+number
+updated_at
+string
+Updated 6 days ago
+Listar produtos na negociação
+Criar produtos na negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id/deal_products \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+201 - Success
+Example
+xxxxxxxxxx
+16
+1
+{
+2
+"_id": "ID",
+3
+"amount": 3,
+4
+"amount_decimal": 3.1,
+5
+"base_price": 100,
+6
+"created_at": "2023-08-28T20:59:32.240-03:00",
+7
+"description": "Descrição do Produto X",
+8
+"discount": 50,
+9
+"discount_type": "value",
+10
+"name": "Produto X",
+11
+"price": 150,
+12
+"product_id": "ID",
+13
+"recurrence": "spare",
+14
+"total": 400,
+15
+"updated_at": "2023-08-28T20:59:32.240-03:00"
+16
+}
+

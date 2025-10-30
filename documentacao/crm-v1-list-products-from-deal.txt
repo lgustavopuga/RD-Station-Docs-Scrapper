@@ -1,0 +1,103 @@
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Criar produtos na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Atualizar produtos na negociaçãopatch
+Deletar produtos na negociaçãodel
+Fontes
+
+
+
+
+
+
+Listar produtos na negociação
+get https://crm.rdstation.com/api/v1 /deals/{deal_id}/deal_products
+Listar produtos na negociação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Response
+200
+Success
+Response body
+object
+deal_products
+array of objects
+object
+_id
+string
+amount
+number
+amount_decimal
+number
+base_price
+number
+created_at
+string
+description
+string
+discount
+number
+discount_type
+string
+id
+string
+name
+string
+price
+number
+product_id
+string
+recurrence
+string
+total
+number
+updated_at
+string
+Updated 6 days ago
+Produtos na negociação
+Criar produto na negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id/deal_products \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

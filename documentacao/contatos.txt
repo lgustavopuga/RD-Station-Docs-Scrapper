@@ -1,0 +1,57 @@
+
+
+
+Consultar contato pelo uuid/emailget
+Criar contatopost
+Atualizar contato pelo uuid/emailpatch
+Excluir contato pelo uuid/emaildel
+Criar uma tag para o lead pelo uuid/emailpost
+Consultar eventos associado ao contatoget
+
+
+
+
+No RD Station todos os registros de pessoas são referidos como Contatos, independentemente de serem classificados como Leads, Leads Qualificados ou Clientes a partir de uma perspectiva de vendas.
+Ao criar um Contato ele pode ser qualificado com um conjunto de campos padrão, como email, nome, cargo, empresa, cidade, estado, etc.. O campo padrão chave de identificação dos contatos dentro do RD Station é o "email" deste Contato, que sempre será único.
+Além disso, é possível adicionar informações adicionais ao Contato a partir do preenchimento de Campos Personalizados criados para a sua conta. Os campos personalizados podem ser lidos e gravados como os campos padrão.
+O objetivo dessa API é possibilitar a gestão de informações de Contatos em uma conta do RD Station, para isso, fornecemos algumas rotas que proporcionam flexibilidade de integração com a sua solução.
+Observe os detalhes sobre cada uma das APIs:
+- Criar contato
+Apenas cria um novo contato na Base de Leads; se o contato já existir, ocorrerá o erro EMAIL_ALREADY_IN_USE.
+Não há o registro de um Evento de Conversão no histórico do contato.
+As tags enviadas na requisição são acrescidas no contato.
+- Atualizar contato pelo uuid/email
+Cria ou atualiza um contato existente na Base de Leads.
+Não há o registro de Evento de Conversão no histórico do contato.
+Caso o contato já exista, as Tags inseridas no contato são substituídas pelas novas tags enviadas na requisição.
+Atenção: Ao atualizar o contato pelo email, o parâmetro "email" não deve ser enviado no Body.
+- Criar uma tag para o lead pelo uuid/email
+Apenas atualiza um contato já existente na Base de Leads; se o contato não existir, ocorrerá o erro RESOURCE_NOT_FOUND.
+Não há o registro de Evento de Conversão no histórico do contato.
+As Tags enviadas são acumuladas no Perfil do Lead, ou seja, são acrescentadas em adição às tags existentes.
+📘
+Como registrar conversões:
+Se o seu objetivo for criar ou atualizar o contato com um Evento de Conversão, você pode utilizar os seguintes métodos:
+Eventos padrão
+Evento de Conversão via API Key
+Bases Legais
+A API de Contatos aceita a atualização de Bases Legais:
+Campo
+Tipo
+Parâmetros válidos
+Descrição
+categoryStringcommunicationsA única categoria aceita é "communications".
+typeStringpre_existent_contract, consent, legitimate_interest, judicial_process, vital_interest or public_interestQual base legal autoriza o tratamento de dados pessoais.
+statusStringgranted or declinedValores aceitos: "granted" para confirmar o consentimento e "declined" para indicar que o consentimento foi recusado.
+Saiba mais sobre os conceitos de Bases Legais aqui.
+Updated about 1 month ago
+FAQ de Autenticação
+Consultar contato pelo uuid/email
+
+Table of Contents
+Observe os detalhes sobre cada uma das APIs:
+- Criar contato
+- Atualizar contato pelo uuid/email
+- Criar uma tag para o lead pelo uuid/email
+Bases Legais
+

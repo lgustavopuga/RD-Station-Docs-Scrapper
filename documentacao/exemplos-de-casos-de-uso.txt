@@ -1,0 +1,28 @@
+Exemplos de casos de uso
+Separamos alguns casos de uso que podem ser implementados para te ajudar a planejar o desenvolvimento de sua integração
+Esses exemplos de casos de uso ilustram como a integração multiproduto entre o RD Station CRM e o RD Station Marketing pode melhorar a eficiência operacional e oferecer uma visão geral do ciclo de vida do cliente, desde a sua aquisição até a conversão.
+Sincronização de Contatos:
+Implemente uma rotina de sincronização diária para enviar novos contatos do RD Station CRM para o RD Station Marketing.
+Atualize automaticamente os dados de contato no RD Station CRM quando um contato for atualizado no RD Station Marketing.
+Objetivo: Manter os contatos atualizados entre o RD Station CRM e o RD Station Marketing.
+Rastreamento de Oportunidades:
+Quando uma oportunidade é ganha no RD Station CRM, acione automaticamente uma campanha correspondente no RD Station Marketing para enviar e-mails de agradecimento.
+Atualize o status da oportunidade no RD Station CRM com base nas interações do lead com as campanhas de marketing.
+Objetivo: Acompanhar o progresso das oportunidades e campanhas em ambos os produtos.
+Segmentação Dinâmica:
+Utilize dados do RD Station CRM, como o estágio de compra do lead, para criar segmentos dinâmicos no RD Station Marketing.
+Atualize automaticamente os segmentos à medida que os leads avançam ou retrocedem nos estágios de compra no RD Station CRM.
+Objetivo: Criar segmentos dinâmicos com base em dados de ambos os produtos para campanhas personalizadas.
+Relatório Integrado de Desempenho:
+Crie um relatório consolidado que inclua métricas do RD Station CRM, como taxas de conversão de oportunidades, e do RD Station Marketing, como taxas de abertura de e-mails.
+Atualize automaticamente o relatório conforme novos dados são gerados em ambas as plataformas.
+Objetivo: Consolidar dados de desempenho de marketing e vendas em um único relatório.
+Gestão de Eventos:
+Ao cadastrar um novo participante de evento no RD Station CRM, adicione automaticamente esse contato a uma lista de inscritos em um evento no RD Station Marketing.
+Atualize os dados do participante automaticamente em ambas as plataformas à medida que informações são atualizadas.
+Objetivo: Sincronizar dados de participantes de eventos entre os produtos.
+Updated about 1 month ago
+Boas Práticas
+Introdução e requisitos
+
+

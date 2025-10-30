@@ -1,0 +1,96 @@
+
+
+
+
+
+
+
+
+Obter etapa do funil de vendas
+get https://crm.rdstation.com/api/v1 /deal_stages/{deal_stage_id}
+Obter etapa do funil de vendas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_stage_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+configuration
+array of objects
+object
+_id
+string
+created_at
+string
+extra
+object
+extra object
+format
+string
+type
+string
+updated_at
+string
+value
+number
+created_at
+string
+deal_pipeline
+object
+id
+string
+name
+string
+order
+number
+id
+string
+instance_id
+string
+name
+string
+nickname
+string
+order
+number
+updated_at
+string
+Updated 6 days ago
+Criar etapa do funil de vendas
+Atualizar etapa do funil de vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deal_stages/deal_stage_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

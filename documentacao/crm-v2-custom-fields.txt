@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar campos personalizadosget
+Criar campo personalizadopost
+Obter campo personalizadoget
+Atualizar campo personalizadoput
+Deletar campo personalizadodel
+
+
+
+
+
+
+
+
+
+Campos personalizados
+Os campos personalizados oferecem a flexibilidade de estender os dados padrões do RD Station CRM. Eles permitem que as empresas capturem informações específicas e relevantes para seus processos de negócio, adicionando campos a entidades como negociações, contatos, empresas e produtos. A gestão desses campos via API possibilita a sincronização de estruturas de dados complexas entre o CRM e outros sistemas.
+Updated 31 minutes ago
+Atualizar contato
+Listar campos personalizados
+
+

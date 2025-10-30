@@ -1,0 +1,136 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+Listar contatos da negociaçãoget
+
+
+
+
+
+Listar contatos da negociação
+get https://crm.rdstation.com/api/v1 /deals/{deal_id}/contacts
+Listar contatos da negociação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Query Params
+page
+string
+Página da listagem de contatos da negociação. Valor padrão é 1
+limit
+string
+Limite de contatos que virão por listagem. Valor padrão é 20. Valor máximo é 200
+Response
+200
+Success
+Response body
+object
+contacts
+array of objects
+object
+_id
+string
+birthday
+object | null
+Has additional fields
+contact_custom_fields
+array
+created_at
+string
+emails
+array
+facebook
+string | null
+id
+string
+legal_bases
+array of objects
+object
+category
+string
+status
+string
+type
+string
+linkedin
+string | null
+name
+string
+notes
+string | null
+organization_id
+string
+phones
+array of objects
+object
+created_at
+date-time | null
+phone
+string
+type
+string
+updated_at
+date-time | null
+whatsapp
+boolean
+whatsapp_full_internacional
+string
+whatsapp_url_web
+string
+skype
+string | null
+title
+string
+updated_at
+string
+has_more
+boolean
+total
+number
+Updated 6 days ago
+Atualizar negociação
+Empresas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id/contacts \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

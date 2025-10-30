@@ -1,0 +1,116 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Evento de Checkout Iniciadopost
+Evento de Carrinho Abandonadopost
+Evento de Pedido Realizadopost
+Evento de Pedido Pagopost
+Evento de Pedido Canceladopost
+Eventos de Pedido Reembolsadopost
+Eventos de Pedido Enviadopost
+Evento de Pedido Entreguepost
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Eventos de Pedido Enviado
+post https://api.rd.services /platform/events?event_type=ECOMMERCE_ORDER_FULFILLED
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+event_type
+string
+required
+Defaults to ECOMMERCE_ORDER_FULFILLED
+O event_type diferencia tipo do evento. Para o evento de pedido enviado, deve ser enviado como "ECOMMERCE_ORDER_FULFILLED"
+ECOMMERCE_ORDER_FULFILLED
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Response body
+object
+event_uuid
+string
+Updated 20 days ago
+Eventos de Pedido Reembolsado
+Evento de Pedido Entregue
+
+
+xxxxxxxxxx
+13
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=ECOMMERCE_ORDER_FULFILLED' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "ECOMMERCE_ORDER_FULFILLED",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"email": "contato@email.com"
+11
+}
+12
+}
+13
+'
+Try It!
+RESPONSE
+200 - Result
+Example
+xxxxxxxxxx
+1
+{
+2
+"event_uuid": "5408c5a3-4711-4f2e-8d0b-13407a3e30f3"
+3
+}
+

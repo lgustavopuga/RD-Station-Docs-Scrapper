@@ -1,0 +1,135 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tarefas
+Listar tarefasget
+Criar tarefapost
+Obter tarefaget
+Atualizar tarefaput
+Equipes
+
+
+
+Obter tarefa
+get https://api.rd.services/crm/v2 /tasks/{id}
+Obter tarefa específica pelo seu ID.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+string
+required
+Identificador único.
+Responses
+200
+OK
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+string
+Identificador único.
+name
+string
+Assunto da tarefa.
+description
+string
+Notas ou descrição adicional da tarefa.
+type
+string
+enum
+Tipo da tarefa.
+call email meeting task lunch visit whatsapp
+status
+string
+enum
+Status da tarefa.
+open completed canceled
+due_date
+date-time
+Data limite para conclusão da tarefa.
+created_by_id
+string
+ID do usuário que criou a tarefa.
+completed_at
+date-time
+Data em que a tarefa foi concluída.
+completed_by_id
+string
+ID do usuário que concluiu a tarefa.
+deal_id
+string
+ID da negociação associada.
+owner_ids
+array of strings
+IDs dos usuários responsáveis pela tarefa.
+created_at
+date-time
+Data de criação da tarefa.
+updated_at
+date-time
+Data de atualização da tarefa.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 35 minutes ago
+Criar tarefa
+Atualizar tarefa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/crm/v2/tasks/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+400
+401
+403
+404
+500
+

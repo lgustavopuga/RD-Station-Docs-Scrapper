@@ -1,0 +1,95 @@
+
+
+
+
+
+
+
+
+
+Listar funis de vendasget
+Criar funil de vendaspost
+Obter funil de vendasget
+Atualizar funil de vendasput
+
+
+
+
+
+
+
+Criar funil de vendas
+post https://crm.rdstation.com/api/v1 /deal_pipelines
+Criar funil de vendas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+deal_pipeline
+object
+deal_pipeline object
+Response
+200
+Success
+Response body
+object
+config
+object
+deal_stages
+array of objects
+object
+_id
+string
+configuration
+array
+description
+string | null
+id
+string
+name
+string
+nickname
+string
+objective
+string | null
+order
+number
+id
+string
+name
+string
+order
+number
+Updated 6 days ago
+Listar funis de vendas
+Obter funil de vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/deal_pipelines \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

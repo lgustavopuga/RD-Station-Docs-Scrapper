@@ -1,0 +1,77 @@
+
+
+
+
+
+Consultar campo personalizadoget
+Criar campo personalizadopost
+Atualizar campo personalizadopatch
+Excluir campo personalizadodel
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Excluir campo personalizado
+delete https://api.rd.services /platform/contacts/fields/{uuid}
+Excluir um campo personalizado.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+uuid
+string
+required
+O uuid exclusivo associado a cada campo do RD Station.
+Responses
+204
+No Content
+404
+Not Found
+Updated about 1 month ago
+Atualizar campo personalizado
+Funis de Contatos
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://api.rd.services/platform/contacts/fields/uuid \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+Examples
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+404
+

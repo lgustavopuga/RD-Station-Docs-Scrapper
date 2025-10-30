@@ -1,0 +1,205 @@
+
+
+
+Consultar contato pelo uuid/emailget
+Criar contatopost
+Atualizar contato pelo uuid/emailpatch
+Excluir contato pelo uuid/emaildel
+Criar uma tag para o lead pelo uuid/emailpost
+Consultar eventos associado ao contatoget
+
+
+
+
+
+Atualizar contato pelo uuid/email
+patch https://api.rd.services /platform/contacts/{identifier}:{value}
+Cria ou atualiza um contato existente na Base de Leads.
+Não há o registro de Evento de Conversão no histórico do contato.
+Caso o contato já exista, as Tags inseridas no contato são substituídas pelas novas tags enviadas na requisição.
+Atenção: Ao atualizar o contato pelo email, o parâmetro "email" não deve ser enviado no Body.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+identifier
+string
+enum
+required
+Identificador (uuid/email) associado a cada contato do RD Station.
+uuid
+Allowed:
+uuid
+email
+value
+string
+required
+Valor do identificador.
+Body Params
+name
+string
+Nome do contato
+email
+string
+Email do contato
+job_title
+string
+Cargo do contato
+birthdate
+string
+Data de Aniversário
+bio
+string
+Anotações sobre contato
+website
+string
+Site do contato
+personal_phone
+string
+Telefone do contato
+mobile_phone
+string
+Telefone do contato
+city
+string
+Cidade do contato
+state
+string
+Estado do contato
+country
+string
+País do contato
+twitter
+string
+Twitter do contato
+facebook
+string
+Facebook do contato
+linkedin
+string
+LinkedIn do contato
+tags
+array of strings
+Tags do contato
+ADD string
+legal_bases
+array of objects
+Bases legais do contato
+ADD object
+Responses
+200
+Success
+Response body
+object
+uuid
+string
+UUID único do contato gerado no RD Station para controle e gerenciamento
+name
+string
+Nome do contato
+email
+string
+Email do contato
+job_title
+string
+Cargo do contato
+birthdate
+string
+Data de Aniversário
+bio
+string
+Anotações sobre o contato
+website
+string
+Site do contato
+personal_phone
+string
+Telefone do contato
+mobile_phone
+string
+Telefone do contato
+city
+string
+Cidade do contato
+state
+string
+Estado do contato
+country
+string
+País do contato
+twitter
+string
+Twitter do contato
+facebook
+string
+Facebook do contato
+linkedin
+string
+LinkedIn do contato
+tags
+array of strings
+Tags do contato
+extra_emails
+array of strings
+E-mails extras do contato
+legal_bases
+array of objects
+Bases legais do contato
+object
+category
+string
+type
+string
+status
+string
+links
+array of objects
+Lista de hiperlinks
+object
+rel
+string
+href
+string
+media
+string
+type
+string
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month ago
+Criar contato
+Excluir contato pelo uuid/email
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PATCH \
+2
+--url https://api.rd.services/platform/contacts/uuid:value \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+401
+404
+

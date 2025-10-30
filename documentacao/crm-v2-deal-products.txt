@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Negociações
+
+
+
+
+
+
+
+
+Produtos na negociação
+Os produtos da negociação representam a associação entre uma negociação e um produto do seu catálogo. São fundamentais para detalhar quais itens compõem o valor total de uma negociação.
+Cada vez que um produto é adicionado a uma negociação, um registro de produto da negociação é criado, especificando não apenas o produto, mas também a quantidade e o preço unitário negociado para aquela oportunidade específica. Isso permite um cálculo preciso do valor da negociação e uma gestão de inventário mais eficaz.
+A manipulação deste recurso é essencial para empresas que vendem múltiplos produtos ou serviços e precisam de um controle granular sobre os itens de cada venda.
+Updated 31 minutes ago
+Deletar campo personalizado
+Listar produtos na negociação
+
+

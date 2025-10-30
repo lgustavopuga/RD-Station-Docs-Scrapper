@@ -1,0 +1,55 @@
+
+
+
+
+[Vídeo] Como configurar a Autenticação OAuth na sua aplicação e boas práticas
+Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret)
+Passo 2: Como utilizar as Credenciais para gerar o code
+Passo 3: Como obter os tokens (access_token e refresh_token)post
+Passo 4: Como utilizar o refresh_token para atualizar o access_tokenpost
+Como criar um fluxo de verificação e renovação do token
+Como utilizar o access_token para autorizar suas requisições
+Como revogar o acesso de um tokenpost
+Erros relacionados à Autenticação
+FAQ de Autenticação
+
+
+
+
+FAQ de Autenticação
+Como soluciono os erros de UNAUTHORIZED REQUEST?
+Todos os possíveis erros relacionados á Autenticação (UNAUTHORIZED REQUEST) e a sua solução estão detalhados na página Erros relacionados à Autenticação.
+Como obtenho as credenciais client_id e client_secret?
+As credenciais são geradas ao criar um aplicativo no App Publisher, que é a nossa área de criação e gerenciamento de aplicativos.
+Para obter as credenciais siga as instruções da página Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret).
+Não possuo URL de Callback. O que fazer?
+A URL de callback serve unicamente para obter o code no processo de Autenticação da API.
+Como ela só é utilizada uma vez, caso você não tenha uma URL de callback, ela pode ser criada por um sistema rápido de webhook mockup, como o beeceptor.com assim, obterá esse valor uma única vez e poderá cadastrar no aplicativo.
+Por que está ocorrendo um erro ao gerar o code?
+Alguns dos possíveis motivos que geram o erro ao gerar o code são:
+Os parâmetros client_id e redirect_uri (URL de Callback) foram preenchidos incorretamente na URL de autorização. Saiba mais no tópico 1. Compondo a URL de autorização;
+A URL de Callback não é válida ou não foi cadastrada no formato correto, que é "https://callback_url1.com.br";
+A atualização realizada no aplicativo ainda não foi refletida no sistema, então é necessário aguardar 1 hora para tentar gerar o code.
+Por que o code está expirando?
+O code expira em seu primeiro uso ou após 60 minutos, pois a sua única função no processo de Autenticação é solicitar o access_token e refresh_token.
+Caso o code tenha expirado, é necessário recomeçar o processo de Autenticação a partir do Passo 2: Como utilizar as Credenciais para gerar o code e gerar um novo code.
+Por que o access_token está expirando?
+O access_token possui data de expiração pré-determinada definida pelo atributo expires_in em segundos, que é de 86400 segundos (24 Horas).
+Para mantê-lo válido, deve ser utilizado o refresh_token, cujo seu objetivo é obter um novo access_token quando ele expirar. O refresh_token não expira.
+Caso ele tenha expirado, é necessário utilizar o refresh_token para atualizar o access_token seguindo o Passo 1: Como criar o aplicativo e gerar as Credenciais (client_id e client_secret) e utilizar o novo access_token para autorizar as requisições.
+Como manter o access_token da minha integração válido (não deixar que ele expire)?
+Para manter o access_token válido, você pode criar um fluxo de verificação e renovação do token, para armazenar o refresh_token em uma variável e criar uma função condicional para verificar se o access_token retornou “200” (ok!).
+Caso sim: a integração continua ocorrendo.
+Caso não: ou seja, se apontou algum erro, você cria uma função para criar um novo access_token (utilizando o refresh_token).
+Para saber mais sobre o fluxo de verificação, confira as informações da página Como criar um fluxo de verificação e renovação do token
+Qual token preciso utilizar para autorizar as requisições?
+Para consumir a API do RD Station Marketing é necessário realizar a Autenticação, que é baseada no protocolo de segurança OAuth2, o que significa que ela trabalha com tokens com prazo de expiração pré-determinados.
+Ao realizar a Autenticação, será obtido o access_token e refresh_token, que serão utilizados para autorizar as requisições.
+Para saber como realizar a Autenticação, siga as orientações da página Autenticação da API do RD Station Marketing.
+Por que está ocorrendo um erro de CORS Policy no envio das requisições?
+As APIs do RD Station Marketing que utilizam o access_token para autorizar as requisições permite somente requisições partindo do backend da sua aplicação. Isso ocorre, pois o token aplicado nessa API não pode ser exposto no navegador, visto que ele permite a consulta de informações privadas dos contatos de sua conta.
+O único endpoint que aceita requisições partindo do frontend é o de eventos de conversão via API key, que gera uma conversão padrão na conta.
+Veja mais detalhes sobre a API Key na página Evento de Conversão via API Key
+Updated about 1 month ago
+Erros relacionados à Autenticação
+

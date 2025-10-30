@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+
+Deletar campo personalizado
+delete https://crm.rdstation.com/api/v1 /custom_fields/{custom_field_id}
+Deletar campo personalizado
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+custom_field_id
+string
+required
+Response
+204
+Success
+Response body
+json
+Updated 6 days ago
+Atualizar campo personalizado
+Motivos de perda
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://crm.rdstation.com/api/v1/custom_fields/custom_field_id \
+3
+--header 'accept: text/plain'
+Try It!
+RESPONSE
+Click Try It! to start a request and see the response here!
+

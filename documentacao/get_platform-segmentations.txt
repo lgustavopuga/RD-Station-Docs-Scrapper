@@ -1,0 +1,109 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Consultar segmentaçõesget
+Consultar contatos de uma segmentaçãoget
+Mais informações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar segmentações
+get https://api.rd.services /platform/segmentations
+Retorna uma lista de segmentações da conta.
+Saiba como personalizar a consulta aqui.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Responses
+200
+Success
+Response body
+object
+segmentations
+array of objects
+object
+id
+integer
+Identificador único da segmentação
+name
+string
+Nome da segmentação
+standard
+boolean
+Informa se a segmentação é padrão para a plataforma assim que você cria uma conta no RDSM
+created_at
+string
+Data de criação da segmentação
+updated_at
+string
+Data da última atualização da segmentação
+process_status
+string
+Status do processo da segmentação
+links
+array of objects
+Lista de hiperlinks.
+object
+rel
+string
+href
+string
+media
+string
+type
+string
+401
+Unauthorized
+Updated about 1 month ago
+Segmentações
+Consultar contatos de uma segmentação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/segmentations \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+401
+

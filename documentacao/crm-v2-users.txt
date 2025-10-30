@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Usuários
+Listar usuáriosget
+Obter usuárioget
+Eventos de webhook
+Webhooks
+
+
+Usuários
+O usuário representa um membro da equipe com acesso à conta do RD Station CRM. Cada usuário tem um perfil, permissões e pode ser proprietário de negociações. Os end-points de usuários são de apenas leitura e servem para recuperar informações sobre os membros da equipe, útil para atribuir proprietários a outros objetos ou para sincronizar equipes com sistemas externos.
+Updated about 1 hour ago
+Obter equipe
+Listar usuários
+
+

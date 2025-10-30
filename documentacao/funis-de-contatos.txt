@@ -1,0 +1,43 @@
+
+
+
+
+
+Funis de Contatos
+Consultar pelo UUID/email do contatoget
+Atualizar pelo UUID/email do contatoput
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Funis de Contatos
+Dentro da estratégia de marketing de conteúdo existem estágios importantes, afinal nem todos os seus contatos possuem o mesmo interesse ou estão na mesma fase de relacionamento com seu produto e/ou empresa.
+Esses estágios e a transição entre eles formam o que chamamos de funil de vendas, que também pode ser chamado funil do Marketing, no qual o volume de pessoas que chegam no topo (visitantes) vai diminuindo ao longo do processo de venda até se tornarem clientes, no fundo do funil.
+Essa API possibilita que você manipule os estágios de funil de seus Contatos, atualmente eles podem ser classificados como:
+Lead
+Lead Qualificado
+Cliente
+Além disso, é possível consultar e atualizar o Contato como Oportunidade, consultar e atualizar o Dono do Lead, bem como consultar a pontuação de "Perfil" e "Interesse" do Lead Scoring.
+Updated about 1 month ago
+Excluir campo personalizado
+Consultar pelo UUID/email do contato
+
+

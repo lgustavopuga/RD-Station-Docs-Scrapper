@@ -1,0 +1,51 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Evento de Início do Playback de uma Mídiapost
+Evento de Término do Playback de uma Mídiapost
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Eventos de Mídia
+Os eventos de mídia possibilitam avisar o RD Station sempre que um contato começa ou termina de consumir uma mídia (áudio ou vídeo).
+🚧
+Esse tipo de evento não aceita Campos Personalizados (parâmetro cf_custom_field_api_identifier)
+Bases Legais
+Esse tipo de evento aceita a atualização de Bases Legais:
+Campo
+Tipo
+Parâmetros válidos
+Descrição
+categoryStringcommunicationsA única categoria aceita é "communications".
+typeStringpre_existent_contract, consent, legitimate_interest, judicial_process, vital_interest or public_interestQual base legal autoriza o tratamento de dados pessoais.
+statusStringgranted or declinedValores aceitos: "granted" para confirmar o consentimento e "declined" para indicar que o consentimento foi recusado.
+Saiba mais sobre os conceitos de Bases Legais aqui.
+Updated about 1 month ago
+Evento de Chamada Concluída
+Evento de Início do Playback de uma Mídia
+
+Table of Contents
+Bases Legais
+

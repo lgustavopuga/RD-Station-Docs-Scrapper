@@ -1,0 +1,231 @@
+
+
+
+
+
+Consultar campo personalizadoget
+Criar campo personalizadopost
+Atualizar campo personalizadopatch
+Excluir campo personalizadodel
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Criar campo personalizado
+post https://api.rd.services /platform/contacts/fields
+O campo api_identifier deve ser preenchido seguindo a estrutura: cf_nome_do_campo
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+api_identifier
+string
+required
+Identificador exclusivo para referenciar este campo para chamadas de terminais do contato. O 'api_identifier' de um campo não pode ser alterado posteriormente
+data_type
+string
+enum
+required
+Tipo de dados para o qual o valor do campo deve ser formatado
+STRING
+Allowed:
+STRING
+INTEGER
+BOOLEAN
+STRING[]
+name
+object
+required
+Nome do campo no RD Station
+name object
+label
+object
+required
+Label do campo nos formulários do RD Station
+label object
+presentation_type
+string
+enum
+required
+O tipo do campo nos formulários
+TEXT_INPUT
+Show 10 enum values
+validation_rules
+object
+As regras de validação do campo
+validation_rules object
+Responses
+201
+Created
+Response body
+object
+uuid
+string
+O uuid associado a cada campo do RD Station
+api_identifier
+string
+Identificador exclusivo para referenciar este campo para chamadas de terminais do contato. O 'api identifier' de um campo não pode ser alterado posteriormente. Deve iniciar com o prefixo: cf_.
+custom_field
+boolean
+Ele é definido como 'false' para campos padrão e 'true' para campos personalizados.
+data_type
+string
+O tipo de dados do campo. Os valores possíveis são 'BOOLEAN', 'STRING', 'STRING[]' e 'INTEGER'.
+name
+object
+Nome do campo no RD Station
+default
+string
+pt-BR
+string
+label
+object
+Label do campo nos formulários do RD Station
+default
+string
+pt-BR
+string
+presentation_type
+string
+enum
+O tipo do campo
+TEXT_INPUT EMAIL_INPUT COMBO_BOX URL_INPUT TEXT_AREA RADIO_BUTTON PHONE_INPUT NUMBER_INPUT CHECK_BOX MULTIPLE_CHOICE
+validation_rules
+object
+As regras de validação do campo.
+valid_options
+array of objects
+Opções do campo
+object
+value
+string
+label
+object
+label object
+400
+Bad Request
+Updated about 1 month ago
+Consultar campo personalizado
+Atualizar campo personalizado
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+Examples
+xxxxxxxxxx
+10
+1
+curl --request POST \
+2
+--url https://api.rd.services/platform/contacts/fields \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"data_type": "STRING",
+8
+"presentation_type": "TEXT_INPUT"
+9
+}
+10
+'
+Try It!
+RESPONSE
+201
+Example
+xxxxxxxxxx
+28
+1
+{
+2
+"uuid": "fdeba6ec-f1cf-4b13-b2ea-e93d47c0d828",
+3
+"name": {
+4
+"pt-BR": "Meu campo customizado"
+5
+},
+6
+"label": {
+7
+"pt-BR": "Selecione uma das opções"
+8
+},
+9
+"api_identifier": "cf_my_custom_field",
+10
+"data_type": "STRING",
+11
+"presentation_type": "COMBO_BOX",
+12
+"validation_rules": {
+13
+"valid_options": [
+14
+{
+15
+"value": "opcao_1",
+16
+"label": {
+17
+"pt-BR": "opcao_1"
+18
+}
+19
+},
+20
+{
+21
+"value": "opcao_2",
+22
+"label": {
+23
+"pt-BR": "opcao_2"
+24
+}
+25
+}
+26
+]
+27
+}
+28
+}
+

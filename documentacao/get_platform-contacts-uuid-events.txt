@@ -1,0 +1,130 @@
+
+
+
+Consultar contato pelo uuid/emailget
+Criar contatopost
+Atualizar contato pelo uuid/emailpatch
+Excluir contato pelo uuid/emaildel
+Criar uma tag para o lead pelo uuid/emailpost
+Consultar eventos associado ao contatoget
+
+
+
+
+
+Consultar eventos associado ao contato
+get https://api.rd.services /platform/contacts/{uuid}/events
+Retorna uma lista de eventos associados ao contato.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Instruções de uso
+Essa API exibe, por padrão, um limite de 10 conversões por página.
+Para visualizar todas as conversões, é necessário utilizar os Query Params para paginação, seguindo as regras abaixo:
+Nome
+Descrição
+orderCampo a ser ordenado. O único valor aceito é "created_at"
+directionOrdenação da lista. "asc" ou "desc", padrão é "asc"
+pageNúmero atual da página
+Exemplo de como consultar as conversões mais recentes:
+JSON
+https://api.rd.services/platform/contacts/{UUID}/events?event_type=CONVERSION&order=created_at:desc&page=1
+Path Params
+uuid
+string
+required
+O uuid exclusivo associado a cada contato do RD Station.
+Query Params
+event_type
+string
+enum
+required
+O tipo de evento que você deseja consultar (CONVERSION ou OPPORTUNITY)
+CONVERSION
+Allowed:
+CONVERSION
+OPPORTUNITY
+Responses
+200
+Success
+Response body
+array of objects
+object
+event_type
+string
+O tipo de evento (CONVERSION ou OPPORTUNITY)
+event_family
+string
+Identificador interno do RDSM
+event_identifier
+string
+Identificador do evento
+event_timestamp
+string
+Data/hora de criação do evento, utilizando o formato UTC
+payload
+object
+Dados do contato
+payload object
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month ago
+Criar uma tag para o lead pelo uuid/email
+Campos personalizados
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url 'https://api.rd.services/platform/contacts/uuid/events?event_type=CONVERSION' \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+12
+1
+[
+2
+{
+3
+"event_type": "CONVERSION",
+4
+"event_family": "CDP",
+5
+"event_identifier": "Evento 2022",
+6
+"event_timestamp": "2022-05-19T09:49:54.101-03:00",
+7
+"payload": {
+8
+"name": "João Silva",
+9
+"email": "joao@gmail.com"
+10
+}
+11
+}
+12
+]
+

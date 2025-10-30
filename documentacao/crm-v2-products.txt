@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Produtos
+Listar produtosget
+Criar produtopost
+Obter produtoget
+Atualizar produtoput
+Segmentos
+
+
+
+
+
+Produtos
+Os produtos representam o catálogo de itens ou serviços que a empresa comercializa. Cada produto pode ter um nome, descrição, preço e visibilidade. A gestão do catálogo de produtos via API é essencial para manter a consistência das informações entre o CRM e outros sistemas, como de ERP, faturamento ou e-commerce, garantindo que as negociações reflitam as ofertas atuais.
+Updated 41 minutes ago
+Atualizar funil de vendas
+Listar produtos
+
+

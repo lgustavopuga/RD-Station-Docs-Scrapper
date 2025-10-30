@@ -1,0 +1,190 @@
+
+
+
+Consultar contato pelo uuid/emailget
+Criar contatopost
+Atualizar contato pelo uuid/emailpatch
+Excluir contato pelo uuid/emaildel
+Criar uma tag para o lead pelo uuid/emailpost
+Consultar eventos associado ao contatoget
+
+
+
+
+
+Criar uma tag para o lead pelo uuid/email
+post https://api.rd.services /platform/contacts/{identifier}:{value}/tag
+Apenas atualiza um contato já existente na Base de Leads; se o contato não existir, ocorrerá o erro RESOURCE_NOT_FOUND.
+Não há o registro de Evento de Conversão no histórico do lead.
+As Tags enviadas são acumuladas no Perfil do Lead, ou seja, são acrescentadas em adição às tags existentes.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+identifier
+string
+enum
+required
+Identificador (uuid/email) associado a cada contato do RD Station.
+uuid
+Allowed:
+uuid
+email
+value
+string
+required
+Valor do identificador.
+Body Params
+tags
+array of strings
+required
+Tags para o contato
+ADD string
+Responses
+200
+Success
+Response body
+object
+uuid
+string
+name
+string
+email
+string
+job_title
+string
+bio
+string
+website
+string
+linkedin
+string
+personal_phone
+string
+city
+string
+state
+string
+country
+string
+tags
+array of strings
+extra_emails
+array of strings
+legal_bases
+array of objects
+object
+category
+string
+type
+string
+status
+string
+links
+array of objects
+object
+rel
+string
+href
+string
+media
+string
+type
+string
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month ago
+Excluir contato pelo uuid/email
+Consultar eventos associado ao contato
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://api.rd.services/platform/contacts/uuid:value/tag \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+28
+1
+{
+2
+"uuid": "cdbba2a8-8ccd-4228-9617-6b0257b32077",
+3
+"name": "RD Station Developer",
+4
+"email": "contact@example.com",
+5
+"job_title": "Developer",
+6
+"bio": "This documentation explains the RD Station API.",
+7
+"website": "https://developers.rdstation.com/",
+8
+"linkedin": "rd_station",
+9
+"personal_phone": "+55 48 3037-3600",
+10
+"city": "Florianópolis",
+11
+"state": "SC",
+12
+"country": "Brasil",
+13
+"tags": [
+14
+"developer",
+15
+"rdstation",
+16
+"api"
+17
+],
+18
+"extra_emails": [
+19
+"contact2@example.com"
+20
+],
+21
+"legal_bases": [
+22
+{
+23
+"category": "communications",
+24
+"type": "consent",
+25
+"status": "granted"
+26
+}
+27
+]
+28
+}
+

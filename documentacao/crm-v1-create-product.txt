@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+Criar produto
+post https://crm.rdstation.com/api/v1 /products
+Criar produto
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+product
+object
+product object
+Responses
+200
+Success
+Response body
+object
+_id
+string
+base_price
+string
+created_at
+string
+description
+string
+name
+string
+product_custom_fields
+array of objects
+object
+created_at
+string
+custom_field_id
+string
+id
+string
+updated_at
+string
+value
+string
+updated_at
+string
+visible
+boolean
+422
+Error
+Updated 6 days ago
+Listar produtos
+Obter produto
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/products \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+422 - Error
+

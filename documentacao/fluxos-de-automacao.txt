@@ -1,0 +1,39 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Consultar fluxos de automaçãoget
+Consultar dados de um fluxo a partir de um idget
+Inserir leads em um fluxopost
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Fluxos de automação
+A Automação de Marketing tem o principal objetivo de criar uma experiência personalizada em escala por meio de ações automatizadas de acordo com interações e informações fornecidas pelos seus leads.
+Com essa API, é possível consultar os dados e ações dos seus fluxos, identificar os Leads que iniciaram, receberam determinada ação, e encerraram um fluxo, bem como, inserir Leads em fluxos.
+Updated about 1 month ago
+Mais informações
+Consultar fluxos de automação
+
+

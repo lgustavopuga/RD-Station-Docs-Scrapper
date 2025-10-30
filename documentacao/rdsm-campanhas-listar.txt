@@ -1,0 +1,132 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Consultar campanhasget
+Consultar detalhes de uma campanhaget
+Consultar itens de uma campanhaget
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar campanhas
+get https://api.rd.services /platform/campaigns
+Retorna uma lista com todas as campanhas criadas no App Gerenciador de Campanhas
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+Nota: API disponível apenas para os planos Pro e Advanced.
+Query Params
+start_date
+string
+Data de início a ser consultada. (yyyy-mm-dd)
+end_date
+string
+Data de término a ser consultada. (yyyy-mm-dd)
+page_size
+string
+Número de registros retornados por página (máx:50)
+page
+string
+Número da página atual
+order
+string
+Ordenação dos resultados (name/updated_at/created_at):(desc/asc)
+ids
+string
+Ids das campanhas separados por vírgulas
+search
+string
+Nome da campanha desejada
+Responses
+200
+Success
+Response body
+object
+campaigns
+array of objects
+object
+id
+number
+name
+string
+status
+string
+created_at
+string
+updated_at
+string
+total_items
+number
+user
+object
+user object
+links
+array of objects
+object
+rel
+string
+href
+string
+media
+string
+method_type
+string
+400
+BadRequest
+401
+Unauthorized
+Updated about 1 month ago
+Campanhas
+Consultar detalhes de uma campanha
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+JWT
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/campaigns \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+400 - BadRequest
+401 - Unauthorized
+

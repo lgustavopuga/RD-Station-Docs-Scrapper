@@ -1,0 +1,99 @@
+
+
+
+
+Listar catálogosget
+Consultar catálogo por idget
+Cadastrar catálogopost
+Atualizar catálogopatch
+Deletar catálogodel
+
+
+
+
+Listar catálogos
+get https://api.rd.services /platform/catalog_feeds
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Responses
+200
+200
+Response body
+array of objects
+object
+id
+integer
+Defaults to 0
+name
+string
+url
+string
+status
+string
+format
+string
+created_at
+string
+updated_at
+string
+credentials
+string
+400
+400
+409
+409
+Updated about 1 month ago
+Catálogo de produtos
+Consultar catálogo por id
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/catalog_feeds \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Result
+Example
+xxxxxxxxxx
+12
+1
+[
+2
+{
+3
+"id": 1,
+4
+"name": "Meu catálogo editado",
+5
+"url": "https://meusite.com/catalogo.json",
+6
+"status": "active",
+7
+"format": "json",
+8
+"created_at": "2025-07-24T10:54:42.061-03:00",
+9
+"updated_at": "2025-07-24T10:54:42.061-03:00",
+10
+"credentials": null
+11
+}
+12
+]
+

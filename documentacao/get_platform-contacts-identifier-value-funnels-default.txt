@@ -1,0 +1,100 @@
+
+
+
+
+
+Funis de Contatos
+Consultar pelo UUID/email do contatoget
+Atualizar pelo UUID/email do contatoput
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar pelo UUID/email do contato
+get https://api.rd.services /platform/contacts/{identifier}:{value}/funnels/default
+Retorna uma lista de Funis associados ao contato.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+identifier
+string
+enum
+required
+Identificador (uuid/email) associado a cada contato do RD Station.
+uuid
+Allowed:
+uuid
+email
+value
+string
+required
+Valor do identificador.
+Response
+200
+Success
+Response body
+object
+lifecycle_stage
+string
+O estágio no funil ao qual o contato pertence. Opções válidas: 'Lead', 'Qualified Lead' e 'Client'
+opportunity
+boolean
+Indica se o contato é uma oportunidade ou não no funil
+contact_owner_email
+string
+O e-mail do usuário responsável pelo contato
+fit
+integer
+A pontuação de ajuste do contato no funil atual
+interest
+integer
+A pontuação de interesse do contato no funil atual
+Updated about 1 month ago
+Funis de Contatos
+Atualizar pelo UUID/email do contato
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/contacts/uuid:value/funnels/default \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+

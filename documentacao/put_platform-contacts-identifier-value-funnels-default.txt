@@ -1,0 +1,132 @@
+
+
+
+
+
+Funis de Contatos
+Consultar pelo UUID/email do contatoget
+Atualizar pelo UUID/email do contatoput
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Atualizar pelo UUID/email do contato
+put https://api.rd.services /platform/contacts/{identifier}:{value}/funnels/default
+Atualiza as informações do funil associado ao contato.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+identifier
+string
+enum
+required
+Identificador (uuid/email) associado a cada contato do RD Station.
+uuid
+Allowed:
+uuid
+email
+value
+string
+required
+Valor do identificador.
+Body Params
+lifecycle_stage
+string
+O estágio no funil ao qual o contato pertence. Opções válidas: 'Lead', 'Qualified Lead' e 'Client'
+opportunity
+boolean
+Indica se o contato é uma oportunidade ou não no funil
+contact_owner_email
+string
+O e-mail do usuário responsável pelo contato. Pode ser definido como 'null' para desassociar o proprietário atual
+Responses
+200
+Success
+Response body
+object
+lifecycle_stage
+string
+O estágio no funil ao qual o contato pertence. Opções válidas: 'Lead', 'Qualified Lead' e 'Client'
+opportunity
+boolean
+Indica se o contato é uma oportunidade ou não no funil
+contact_owner_email
+string
+O e-mail do usuário responsável pelo contato
+fit
+integer
+A pontuação de ajuste do contato no funil atual
+interest
+integer
+A pontuação de interesse do contato no funil atual
+400
+Bad Request
+Updated about 1 month ago
+Consultar pelo UUID/email do contato
+Segmentações
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://api.rd.services/platform/contacts/uuid:value/funnels/default \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+1
+{
+2
+"lifecycle_stage": "Client",
+3
+"opportunity": true,
+4
+"contact_owner_email": "email@example.org",
+5
+"fit": 60,
+6
+"interest": 100
+7
+}
+

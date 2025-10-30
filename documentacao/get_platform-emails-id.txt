@@ -1,0 +1,168 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Listar todos os emailsget
+Buscar email por idget
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Buscar email por id
+get https://api.rd.services /platform/emails/{id}
+Consultar um email a partir de um id
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+integer
+required
+ID do email a ser buscado
+Responses
+200
+success
+Response body
+object
+id
+integer
+ID do email
+name
+string
+Nome do email
+created_at
+string
+Data da criação do email
+updated_at
+string
+Data da atualização do email
+send_at
+string | null
+Data do envio do email
+leads_count
+integer | null
+Quantidade de leads do email
+status
+string | null
+Status da campanha
+type
+string
+Tipo do email
+is_predictive_sending
+boolean | null
+Informa se a campanha tem envio preditivo
+sending_is_imminent
+boolean | null
+Informa se o envio é iminente
+behavior_score_info
+object | null
+Behavior score dos leads de email
+disengaged
+boolean
+Informa se estão selecionados leads desengajados
+engaged
+boolean
+Informa se estão selecionados leads engajados
+indeterminate
+boolean
+Informa se estão selecionados leads indeterminados
+campaign_id
+integer | null
+ID da campanha
+component_template_id
+integer | null
+ID do componente do template de email
+401
+Unauthorized
+Updated about 1 month ago
+Listar todos os emails
+Landing Pages
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/emails/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+19
+1
+{
+2
+"id": 123,
+3
+"name": "Marketing email",
+4
+"created_at": "2017-11-21T20:00:00-02:00",
+5
+"updated_at": "2017-11-21T20:00:00-02:00",
+6
+"send_at": "2017-11-21T20:00:00-02:00",
+7
+"leads_count": 55000,
+8
+"status": "FINISHED",
+9
+"type": "email_model",
+10
+"is_predictive_sending": false,
+11
+"sending_is_imminent": false,
+12
+"behavior_score_info": {
+13
+"disengaged": false,
+14
+"engaged": false,
+15
+"indeterminate": false
+16
+},
+17
+"campaign_id": 123,
+18
+"component_template_id": 123
+19
+}
+

@@ -1,0 +1,190 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listar anotações da negociaçãoget
+Criar anotação na negociaçãopost
+
+
+
+
+
+
+
+Listar anotações da negociação
+get https://api.rd.services/crm/v2 /deals/{deal_id}/notes
+Lista as anotações de uma negociação específica. É útil para exibir o histórico de interações durante a jornada de vendas ou para análises de comunicação.
+Filtro
+Propriedades disponíveis para filtro usando RDQL.
+Propriedade
+Tipo
+Descrição
+registered_at DateTimeFiltra por data e hora de registro da anotação.
+user_id StringFiltra pelo ID do usuário que criou a anotação.
+is:pinned BooleanFiltra anotações que foram fixadas.
+Ordenação
+Propriedades disponíveis para ordenação.
+registered_at
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Identificador único.
+Query Params
+filter
+string
+Filtro no formato RDQL. (Saiba mais)
+sort
+object
+Ordenação. (Saiba mais)
+sort object
+page
+object
+Paginação. (Saiba mais)
+page object
+Responses
+200
+OK
+Response body
+object
+data
+array of objects
+Lista de recursos relacionados.
+object
+id
+string
+Identificador único.
+description
+string
+length ≤ 524288
+Texto da anotação.
+user_id
+string
+ID do usuário que criou a anotação.
+registered_at
+date-time
+Data que a anotação foi criada.
+pinned_at
+date-time
+Data que a anotação foi fixada.
+edited_by_id
+string
+ID do usuário que editou a anotação.
+edited_at
+date-time
+Data de edição da anotação.
+links
+object
+Links de navegação da paginação.
+first
+uri
+Link para a primeira página.
+prev
+uri
+Link para a página anterior.
+self
+uri
+Link para a página atual.
+next
+uri
+Link para a próxima página.
+last
+uri
+Link para a última página.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 38 minutes ago
+Anotações
+Criar anotação na negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url 'https://api.rd.services/crm/v2/deals/deal_id/notes?page[number]=1&page[size]=25' \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+20
+1
+{
+2
+"data": [
+3
+{
+4
+"id": "string",
+5
+"description": "string",
+6
+"user_id": "string",
+7
+"registered_at": "2025-10-30T19:52:23.142Z",
+8
+"pinned_at": "2025-10-30T19:52:23.142Z",
+9
+"edited_by_id": "string",
+10
+"edited_at": "2025-10-30T19:52:23.142Z"
+11
+}
+12
+],
+13
+"links": {
+14
+"first": "string",
+15
+"prev": "string",
+16
+"self": "string",
+17
+"next": "string",
+18
+"last": "string"
+19
+}
+20
+}
+

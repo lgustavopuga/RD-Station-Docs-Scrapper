@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+Retries Logic
+Caso nosso serviço de webhooks tenha problemas ao entregar suas notificações, nós tentaremos enviá-las novamente 3 vezes.
+Os possíveis problemas na entrega das notificações são:
+Se seu endpoint de callback demorar mais de 5 segundos para responder.
+Se a resposta do seu endpoint de callback tiver um status code diferente de 2xx.
+Após a falha no envio acontecer, as notificações entram em uma fila para serem re-processadas. Caso o re-envio de uma notificação falhe 3 vezes seguidas, a notificação será marcada como falha e não será re-processada.
+Seguindo essa lógica, se as notificações estejam chegando duplicadamente no seu sistema, é um indício de que o tempo de resposta do endpoint é maior do que 5 segundos.
+Updated about 1 month ago
+Webhooks MKT payload
+Boas Práticas
+
+

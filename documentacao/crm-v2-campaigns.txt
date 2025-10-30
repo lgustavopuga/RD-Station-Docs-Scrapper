@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+Campanhas
+A campanha permite rastrear a origem das negociações a partir de iniciativas de marketing específicas, como eventos, anúncios ou ações de email. Associar uma negociação a uma campanha é fundamental para medir o retorno sobre o investimento (ROI) e entender quais canais estão gerando mais oportunidades de negócio.
+Updated 28 minutes ago
+Casos de uso
+Listar campanhas
+
+

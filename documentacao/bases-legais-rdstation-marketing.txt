@@ -1,0 +1,70 @@
+
+
+
+Introdução
+Boas vindas
+Suporte
+
+Webhook Service
+
+
+
+Bases Legais
+Limite de requisições da API
+Como migrar a API 1.x para API 2.0 do RD Station Marketing
+Mensagens de erro
+Enriquecimento de dados
+Autenticação
+
+
+
+
+Bases Legais
+As principais Leis de Proteção de Dados, como a LGPD (Brasil) e o GDPR (União Europeia), estabelecem que, para que qualquer pessoa, física ou jurídica, possa realizar qualquer operação com um dado pessoal — seja coletar, transmitir ou processar —, é necessário possuir uma base legal presente na LGPD, ou seja, uma hipótese da lei que justifique o tratamento desses dados.
+A LGPD prevê bases legais que autorizam o tratamento de dados pessoais. As bases legais não têm dependência ou predominância entre si, e para todo caso de tratamento de dados, existe uma base legal mais apropriada.
+A atribuição das bases legais aos Contatos do RD Station Marketing para contato e envio de comunicação, engloba envio de e-mails e envio de mensagens de Whatsapp.
+É possível adicionar as seguintes bases legais:
+Consentimento (consent)
+Legítimo interesse (legitimate_interest)
+Contrato preexistente (pre_existent_contract)
+Obrigação legal (judicial_process)
+Execução de políticas públicas (public_interest)
+Processo Judicial (judicial_process)
+Proteção da vida (vital_interest)
+Tutela da saúde (vital_interest)
+Proteção do crédito (judicial_process)
+Saiba mais sobre os conceitos e cada uma das Bases Legais aqui.
+Como registrar as Bases Legais
+O registro das Bases Legais é realizado a partir dos seguintes parâmetros:
+Campo
+Tipo
+Parâmetros válidos
+Descrição
+categoryStringcommunicationsA única categoria aceita é "communications".
+typeStringpre_existent_contract, consent, legitimate_interest, judicial_process, vital_interest or public_interestQual base legal autoriza o tratamento de dados pessoais.
+statusStringgranted or declinedValores aceitos: "granted" para confirmar o consentimento e "declined" para indicar que o consentimento foi recusado.
+Exemplo de como os parâmetros devem ser enviados:
+JSON
+"legal_bases": [
+{
+"category": "communications",
+"type": "consent",
+"status": "granted"
+}
+]
+Quais APIs aceitam as Bases Legais
+As Bases Legais podem ser enviadas pelas seguintes APIs:Evento de conversão padrão
+Evento de Conversão via API Key
+Eventos de E-commerce
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Updated about 1 month ago
+Introdução e requisitos
+Limite de requisições da API
+
+Table of Contents
+Como registrar as Bases Legais
+Quais APIs aceitam as Bases Legais
+

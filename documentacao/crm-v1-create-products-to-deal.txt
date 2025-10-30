@@ -1,0 +1,111 @@
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Criar produtos na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Atualizar produtos na negociaçãopatch
+Deletar produtos na negociaçãodel
+Fontes
+
+
+
+
+
+
+Criar produtos na negociação
+post https://crm.rdstation.com/api/v1 /deals/{deal_id}/deal_products/batch
+Criar produtos na negociação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Body Params
+deal_products
+array of objects
+ADD object
+Responses
+201
+Success
+Response body
+object
+deal
+object
+deal_products
+array of objects
+object
+amount
+number
+discount
+number
+discount_type
+string
+id
+string
+price
+number
+recurrence
+string
+total
+number
+id
+string
+name
+string
+400
+Bad Request
+404
+Not Found
+413
+Payload Too Large
+422
+Unprocessable Entity
+Updated 6 days ago
+Criar produto na negociação
+Atualizar produto na negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id/deal_products/batch \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+201 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+201 - Success
+400 - Bad Request
+404 - Not Found
+413 - Payload Too Large
+422 - Unprocessable Entity
+

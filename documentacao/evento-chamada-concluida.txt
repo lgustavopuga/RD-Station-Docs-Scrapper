@@ -1,0 +1,105 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Evento de Chamada Concluídapost
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Evento de Chamada Concluída
+post https://api.rd.services /platform/events?event_type=call_finished
+O RD Station Marketing considera o valor do atributo event_type CALL_FINISHED como identificador do evento customizado. Esse evento é registrado sempre que uma chamada é concluída.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+event_type
+string
+required
+Defaults to CALL_FINISHED
+O event_type diferencia tipo do evento. Para o evento de término de chamada, deve ser enviado como "CALL_FINISHED"
+CALL_FINISHED
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Response body
+object
+event_uuid
+string
+Updated about 1 month ago
+Eventos de Chamada
+Eventos de Mídia
+
+
+xxxxxxxxxx
+15
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=call_finished' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "CALL_FINISHED",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"email": "contato@email.com",
+11
+"call_from_number": "+55 48 3037-3600",
+12
+"call_status": "Finalizada"
+13
+}
+14
+}
+15
+'
+Try It!
+RESPONSE
+200 - Result
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Result
+

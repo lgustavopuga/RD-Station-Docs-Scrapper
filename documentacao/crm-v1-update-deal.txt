@@ -1,0 +1,370 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+Listar contatos da negociaçãoget
+
+
+
+
+
+Atualizar negociação
+put https://crm.rdstation.com/api/v1 /deals/{deal_id}
+Atualizar negociação
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Body Params
+campaign
+object
+campaign object
+deal
+object
+deal object
+deal_source
+object
+deal_source object
+deal_stage_id
+string
+Response
+200
+Success
+Response body
+object
+_id
+string
+amount_montly
+number
+amount_total
+number
+amount_unique
+number
+best_moment_to_touch
+boolean
+c_cf_errors
+object
+campaign
+object
+_id
+string
+id
+string
+name
+string
+campaign_id
+string
+closed_at
+date-time | null
+contact_errors
+object
+created_at
+string
+deal_custom_fields
+array of objects
+object
+created_at
+date-time | null
+custom_field
+object
+custom_field object
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string
+array
+string | null
+deal_lost_note
+string | null
+deal_lost_reason_id
+string | null
+deal_products
+array of objects
+object
+_id
+string
+amount
+number
+base_price
+number
+created_at
+string
+description
+string
+discount
+number
+discount_type
+string
+id
+string
+name
+string
+price
+number
+product_id
+string
+recurrence
+string
+total
+number
+updated_at
+string
+deal_source
+object
+_id
+string
+id
+string
+name
+string
+deal_source_id
+string
+deal_stage
+object
+_id
+string
+deal_pipeline_id
+string
+id
+string
+name
+string
+nickname
+string
+deal_stage_histories
+array of objects
+object
+_id
+string
+deal_stage_id
+string
+end_date
+string | null
+id
+string
+start_date
+string
+errors
+object
+from_rdsm_integration
+boolean
+hold
+boolean | null
+id
+string
+interactions
+number
+last_note_content
+string | null
+name
+string
+organization
+object
+_id
+string
+address
+string | null
+address_latitude
+string | null
+address_longitude
+string | null
+id
+string
+name
+string
+organization_custom_fields
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string | null
+array
+organization_segments
+array
+resume
+string
+url
+string
+visible
+boolean
+prediction_date
+date | null
+rating
+number
+stop_time_limit
+object
+expiration_date_time
+string
+expired
+boolean
+expired_days
+number
+updated_at
+string
+user
+object
+_id
+string
+id
+string
+name
+string
+win
+boolean | null
+Updated 6 days ago
+Obter negociação
+Listar contatos da negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+366
+}
+1
+{
+2
+"_id": "ID",
+3
+"amount_montly": 0,
+4
+"amount_total": 399.83,
+5
+"amount_unique": 399.83,
+6
+"best_moment_to_touch": false,
+7
+"c_cf_errors": {},
+8
+"campaign": {
+9
+"_id": "ID",
+10
+"id": "ID",
+11
+"name": "Campanha A"
+12
+},
+13
+"campaign_id": "ID",
+14
+"closed_at": null,
+15
+"contact_errors": {},
+16
+"created_at": "2023-08-30T21:55:50.376-03:00",
+17
+"deal_custom_fields": [
+18
+{
+19
+"created_at": null,
+20
+"custom_field": {
+21
+"_id": "ID",
+22
+"allow_new": true,
+23
+"created_at": "2023-01-13T13:36:51.156-03:00",
+24
+"for": "deal",
+25
+"instance_id": "ID",
+26
+"label": "Assuntos relacionados",
+27
+"opts": [
+28
+"Assunto 2",
+29
+"Assunto 3",
+30
+"Opção A"
+31
+],
+32
+"order": 1,
+33
+"required": false,
+34
+"type": "option",
+35
+"unique": false,
+36
+"updated_at": "2023-08-30T21:51:06.034-03:00",
+37
+"visible": false
+38
+},
+39
+"custom_field_id": "ID",
+40
+"updated_at": null,
+41
+"value": "Opção A"
+42
+},
+43
+{
+44
+"created_at": null,
+45
+"custom_field": {
+46
+"_id": "ID",
+47
+"allow_new": true,
+48
+"created_at": "2023-02-09T17:58:49.592-03:00",
+

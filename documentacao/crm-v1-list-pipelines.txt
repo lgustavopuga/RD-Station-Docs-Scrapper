@@ -1,0 +1,213 @@
+
+
+
+
+
+
+
+
+
+Listar funis de vendasget
+Criar funil de vendaspost
+Obter funil de vendasget
+Atualizar funil de vendasput
+
+
+
+
+
+
+
+Listar funis de vendas
+get https://crm.rdstation.com/api/v1 /deal_pipelines
+Listar funis de vendas
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+limit
+string
+Limite de funis de vendas que virão por listagem. Valor padrão é 20. Valor máximo é 200
+page
+string
+Página da listagem de funis de vendas. Valor padrão é 1
+Response
+200
+Success
+Response body
+array of objects
+object
+config
+object
+config object
+deal_stages
+array of objects
+object
+_id
+string
+configuration
+array of objects
+object
+_id
+string
+created_at
+string
+extra
+object
+extra object
+format
+string
+type
+string
+updated_at
+string
+value
+number
+id
+string
+name
+string
+nickname
+string
+order
+number
+id
+string
+name
+string
+order
+number
+Updated 6 days ago
+Funis de vendas
+Criar funil de vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deal_pipelines \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+1247
+]
+1
+[
+2
+{
+3
+"config": {
+4
+"deal_won": {
+5
+"copy_to_pipeline": {
+6
+"deal_pipeline_id": "5fc0285ab5cd6f0012fca156",
+7
+"deal_stage_id": "5fc0285ab5cd6f0012fca158",
+8
+"owner_settings": {
+9
+"group_id": "_team",
+10
+"id": "5bab89733ccdb000201810ea",
+11
+"name": "Meteoro de pégasus"
+12
+}
+13
+}
+14
+}
+15
+},
+16
+"deal_stages": [
+17
+{
+18
+"_id": "54480f523f64f90155000034",
+19
+"configuration": [
+20
+{
+21
+"_id": "63970d03955d440026462995",
+22
+"created_at": "2022-12-12T08:14:11.513-03:00",
+23
+"extra": {
+24
+"skip_days": [],
+25
+"work_time": {
+26
+"00:00:00": "23:59:59"
+27
+}
+28
+},
+29
+"format": "days",
+30
+"type": "deal_stopped",
+31
+"updated_at": "2022-12-12T08:14:11.513-03:00",
+32
+"value": 1
+33
+}
+34
+],
+35
+"id": "54480f523f64f90155000034",
+36
+"name": "Proposta enviada",
+37
+"nickname": "PE",
+38
+"order": 1
+39
+},
+40
+{
+41
+"_id": "54480f523f64f90155000032",
+42
+"configuration": [
+43
+{
+44
+"_id": "63970d062f6c18001a7795ec",
+45
+"created_at": "2022-12-12T08:14:14.687-03:00",
+46
+"extra": {
+47
+"skip_days": [],
+48
+"work_time": {
+49
+"00:00:00": "23:59:59"
+

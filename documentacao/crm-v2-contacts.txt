@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+Listar contatosget
+Criar contatopost
+Obter contatoget
+Atualizar contatoput
+Campos personalizados
+
+
+
+
+
+
+
+
+O contato é uma entidade fundamental no RD Station CRM, representando um indivíduo com quem sua empresa se relaciona. Cada contato armazena informações essenciais como nome, email, telefone e pode estar associado a uma ou mais negociações e a uma empresa. A gestão eficaz de contatos é crucial para qualquer estratégia de relacionamento com o cliente.
+Updated 28 minutes ago
+Atualizar campanha
+Listar contatos
+
+

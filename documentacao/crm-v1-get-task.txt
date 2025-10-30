@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+
+Obter tarefa
+get https://crm.rdstation.com/api/v1 /tasks/{task_id}
+Obter tarefa
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+task_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+created_at
+string
+date
+string
+deal
+object
+_id
+string
+hold
+boolean
+name
+string
+rating
+number
+done
+boolean
+hour
+string
+markup
+string
+notes
+string | null
+subject
+string
+type
+string
+user_ids
+array of strings
+users
+array of objects
+object
+_id
+string
+name
+string
+nickname
+string
+Updated 6 days ago
+Criar tarefa
+Atualizar tarefa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/tasks/task_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+27
+1
+{
+2
+"_id": "ID",
+3
+"created_at": "2023-03-23T10:36:35.879-03:00",
+4
+"date": "2023-03-24T10:36:00.000-03:00",
+5
+"deal": {
+6
+"_id": "ID",
+7
+"hold": true,
+8
+"name": "NAME",
+9
+"rating": 1
+10
+},
+11
+"done": false,
+12
+"hour": "10:36",
+13
+"markup": "past",
+14
+"notes": null,
+15
+"subject": "ligação",
+16
+"type": "call",
+17
+"user_ids": [
+18
+"ID"
+19
+],
+20
+"users": [
+21
+{
+22
+"_id": "ID",
+23
+"name": "NME",
+24
+"nickname": "TB"
+25
+}
+26
+]
+27
+}
+

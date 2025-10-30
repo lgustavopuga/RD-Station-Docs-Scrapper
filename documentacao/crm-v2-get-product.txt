@@ -1,0 +1,144 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Produtos
+Listar produtosget
+Criar produtopost
+Obter produtoget
+Atualizar produtoput
+Segmentos
+
+
+
+
+
+Obter produto
+get https://api.rd.services/crm/v2 /products/{id}
+Recupera as informações completas de um produto específico pelo seu ID.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+string
+required
+Identificador único.
+Responses
+200
+OK
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+string
+Identificador único.
+name
+string
+Nome do produto.
+description
+string
+Descrição do produto.
+price
+float
+Preço do produto.
+visible
+boolean
+Visibilidade do produto.
+custom_fields
+object
+Campos personalizados do produto.
+Has additional fields
+created_at
+date-time
+Data de criação do produto.
+updated_at
+date-time
+Data de atualização do produto.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 34 minutes ago
+Criar produto
+Atualizar produto
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/crm/v2/products/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+14
+1
+{
+2
+"data": {
+3
+"id": "string",
+4
+"name": "string",
+5
+"description": "string",
+6
+"price": 0,
+7
+"visible": true,
+8
+"custom_fields": {
+9
+"additionalProp": "string"
+10
+},
+11
+"created_at": "2025-10-30T19:48:59.953Z",
+12
+"updated_at": "2025-10-30T19:48:59.953Z"
+13
+}
+14
+}
+

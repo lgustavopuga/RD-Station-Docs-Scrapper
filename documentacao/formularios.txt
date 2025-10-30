@@ -1,0 +1,37 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Consultar formuláriosget
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Formulários
+A funcionalidade de Formulários possibilita criar formulários personalizados para insiro-los em páginas do seu site para capturar informações importantes de seus visitantes e convertê-los em Leads no RD Station Marketing.
+Com essa API, é possível consultar as informações dos Formulários criadas na conta, como o identificador interno, o identificador de conversão, status da publicação, entre outras informações.
+Updated about 1 month ago
+Consultar pop-ups
+Consultar formulários
+
+

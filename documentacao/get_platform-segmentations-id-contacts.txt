@@ -1,0 +1,114 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Consultar segmentaçõesget
+Consultar contatos de uma segmentaçãoget
+Mais informações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar contatos de uma segmentação
+get https://api.rd.services /platform/segmentations/{id}/contacts
+Retorna uma lista de contatos associados a uma segmentação.
+Saiba como personalizar a consulta aqui.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+string
+required
+Identificador exclusivo da segmentação
+Responses
+200
+Success
+Response body
+object
+contacts
+array of objects
+object
+uuid
+string
+O uuid exclusivo associado a cada contato do RD Station.
+name
+string
+Nome do contato
+email
+string
+Email do contato
+last_conversion_date
+string
+Data da última conversão do contato
+created_at
+string
+Data de criação do contato
+links
+array of objects
+Lista de hiperlinks.
+object
+rel
+string
+href
+string
+media
+string
+type
+string
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month ago
+Consultar segmentações
+Mais informações
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/segmentations/id/contacts \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+401
+404
+

@@ -1,0 +1,160 @@
+
+
+
+
+
+
+
+
+
+Atualizar um Webhook
+put https://api.rd.services /integrations/webhooks/{uuid}
+Atualiza uma assinatura de webhook na conta que a sua integração está vinculada. Os webhooks atualizados não serão listados na tela do RD Station Marketing. Para atualizar um webhook, utilize o uuid obtido no endpoint de Listar todos os webhooks.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+uuid
+string
+required
+O UUID exclusivo associado a cada webhook do RD Station.
+Body Params
+event_type
+string
+enum
+required
+O tipo de evento que aciona a solicitação de webhook. Atualmente somente eventos de negociação, conversão e oportunidade são suportados
+WEBHOOK.CONVERTED
+Allowed:
+WEBHOOK.CONVERTED
+WEBHOOK.MARKED_OPPORTUNITY
+crm_deal_created
+crm_deal_updated
+crm_deal_deleted
+entity_type
+string
+enum
+required
+A entidade da assinatura do webhook. Por enquanto, 'CONTATO' é a única opção aceita
+CONTACT
+Allowed:
+CONTACT
+event_identifiers
+array of strings
+Os identificadores dos eventos que devem acionar o webhook. Apenas para eventos 'WEBHOOK.CONVERTED'
+ADD string
+url
+string
+required
+A URL de destino do webhook
+http_method
+string
+enum
+required
+O método http que o webhook acionará. Atualmente, apenas o método 'POST' é suportado
+POST
+Allowed:
+POST
+include_relations
+array of strings
+Quais itens adicionais serão fornecidos no payload do webhook. Apenas 'COMPANY' e 'CONTACT_FUNNEL' são opções válidas
+ADD string
+Responses
+200
+Success
+Response body
+object
+created_at
+string
+Data de criação do Webhook
+updated_at
+string
+Data da última atualização do Webhook
+event_identifiers
+array of strings
+Permite filtrar os identificadores do evento que aciona o webhook. Apenas para eventos 'WEBHOOK.CONVERTED'
+event_type
+string
+O tipo de evento que aciona a solicitação de webhook
+entity_type
+string
+A entidade da assinatura do webhook
+http_method
+string
+O método http que o webhook acionará
+include_relations
+array of strings
+Quais itens adicionais serão fornecidos no payload do webhook
+platform_account_id
+number
+Identificador da conta
+source
+string
+Fonte do evento. Temos 2 no momento, MKT ou CRM
+status
+string
+O status do webhook, cujo valor padrão é 'active'
+url
+string
+A URL de destino do webhook
+uuid
+string
+O uuid exclusivo associado a cada assinatura de webhook do RD Station
+400
+Bad Request
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month ago
+Próximo passo:
+Deletar um Webhook
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+JWT
+Bearer
+cURL Request
+Examples
+xxxxxxxxxx
+11
+1
+curl --request PUT \
+2
+--url https://api.rd.services/integrations/webhooks/uuid \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "WEBHOOK.CONVERTED",
+8
+"entity_type": "CONTACT",
+9
+"http_method": "POST"
+10
+}
+11
+'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+400
+401
+404
+

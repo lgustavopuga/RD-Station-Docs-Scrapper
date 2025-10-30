@@ -1,0 +1,109 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Evento de Checkout Iniciadopost
+Evento de Carrinho Abandonadopost
+Evento de Pedido Realizadopost
+Evento de Pedido Pagopost
+Evento de Pedido Canceladopost
+Eventos de Pedido Reembolsadopost
+Eventos de Pedido Enviadopost
+Evento de Pedido Entreguepost
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Eventos de Pedido Reembolsado
+post https://api.rd.services /platform/events?event_type=ECOMMERCE_ORDER_REFUNDED
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+event_type
+string
+required
+Defaults to ECOMMERCE_ORDER_REFUNDED
+O event_type diferencia tipo do evento. Para o evento de pedido reembolsado, deve ser enviado como "ECOMMERCE_ORDER_REFUNDED"
+ECOMMERCE_ORDER_REFUNDED
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Response body
+object
+event_uuid
+string
+Updated 20 days ago
+Evento de Pedido Cancelado
+Eventos de Pedido Enviado
+
+
+xxxxxxxxxx
+14
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=ECOMMERCE_ORDER_REFUNDED' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "ECOMMERCE_ORDER_REFUNDED",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"email": "contato@email.com",
+11
+"currency": "BRL"
+12
+}
+13
+}
+14
+'
+Try It!
+RESPONSE
+200 - Result
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Result
+

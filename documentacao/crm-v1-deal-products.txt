@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Criar produtos na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Atualizar produtos na negociaçãopatch
+Deletar produtos na negociaçãodel
+Fontes
+
+
+
+
+
+
+Produtos na negociação
+Os produtos e serviços são os itens que sua empresa oferece aos clientes, ou seja, o que é vendido. Os produtos nas negociações são os itens negociados naquela negociação de venda.
+Com esses end-points é possível gerenciar os produtos e serviços vinculados a uma negociação.
+Query params
+Parâmetros utilizados para listar produtos na negociação.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+deal_idStringID da negociação
+deal_product_idStringID da referência entre produto e negociação
+Body params
+Parâmetros utilizados para criar ou atualizar produtos na negociação.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+product_idStringID do produto✓Obtido a partir da consulta pela API de Listar produtos
+priceFloatPreço do produto✘Valor padrão é 0.0
+amountIntegerQuantidade de produtos✘Valor padrão é 1
+discount_typeStringTipo de desconto aplicado ao produto✓Opções: value (valor), percent (porcentagem). Não pode ser enviado vazo, se você não quiser aplicar um desconto, basta enviar o discount = 0.
+discountNumberDesconto aplicado ao produto✓Se o tipo de desconto for discount_type = "value", aceita um valor entre 0 e o valor declarado no parâmetro price. Se o discount_type = "percent", aceita um valor entre 0 e 100.
+recurrenceStringRecorrência de compra do produto✘Opções: spare (único), monthly (recorrente)
+⚠️
+Para criar, atualizar ou excluir vários produtos em uma negociação, é necessário utilizar os end-points específicos. O limite é de 100 produtos por requisição.
+Updated 6 days ago
+Atualizar funil de vendas
+Listar produtos na negociação
+
+Table of Contents
+Query params
+Body params
+

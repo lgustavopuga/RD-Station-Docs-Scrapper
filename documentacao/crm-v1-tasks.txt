@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+Tarefas
+A criação de tarefas funciona como um agendamento de interações com o contato que possui uma negociação não fechada.
+Cada tarefa precisará, obrigatoriamente, estar vinculada a uma negociação. Se os alertas automáticos estiverem devidamente configurados, um email será enviado ao usuário, avisando-o de suas tarefas do dia e atrasadas, caso haja.
+As Tarefas possuem os seguintes tipos:
+Ligação ( call)
+Email ( email)
+Visita ( visit)
+Reunião ( meeting)
+Tarefa ( task)
+Almoço ( lunch)
+WhatsApp ( whatsapp)
+❗️
+Atenção
+Não é possível excluir tarefas. Isso ocorrerá somente se for excluída a negociação à qual a tarefa está vinculada.
+O plano Free só pode criar tarefas do tipo "tarefa" ( type: "task").
+Não é possível customizar ou criar novos tipos de tarefas.
+Query params
+Parâmetros utilizados para listar e obter tarefas.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+task_idStringID da tarefa
+pageStringNúmero atual da página. Valor padrão é 1
+limitStringLimite de empresas que virão por listagem. Valor padrão é 20. Valor máximo é 200
+deal_idStringID da negociação que a tarefa está vinculada
+doneStringSe a tarefa está concluída. Opções: true, false.
+typeStringTipo de tarefa. Opções: call, email, meeting, task, lunch, visit, whatsapp.
+user_idStringID do usuário responsável pela tarefa
+date_startStringFiltrar por data de início. Formato: YYYY-MM-DD.
+date_endStringFiltrar por data final. Formato: YYYY-MM-DD.
+done_date_startStringFiltrar por data de conclusão - início. Formato: YYYY-MM-DD.
+done_date_endStringFiltrar por data de conclusão - final. Formato: YYYY-MM-DD.
+Body params
+Parâmetros utilizados para criar e atualizar tarefas.
+Nome
+Tipo
+Descrição
+Obrigatório para criar
+Obrigatório para atualizar
+Observação
+deal_idStringID da negociação cuja tarefa será vinculada✓✓
+user_idArray de StringID do usuário responsável pela tarefa✓✘
+subjectStringAssunto✓✘
+typeStringTipo da anotação✓✘Tipos válidos para os planos Basic e Pro: call, email, meeting, task, lunch, visit, whatsapp
+Tipos válidos para o plano Free: task
+hourStringHora de conclusão✓✘Formato: HH:mm. Exemplo: 14:30.
+dateStringData de conclusão✓✘Formato: YYYY-MM-DD.
+notesStringNotas para a tarefa✘✘
+Updated 6 days ago
+Atualizar produto
+Listar tarefas
+
+Table of Contents
+Query params
+Body params
+

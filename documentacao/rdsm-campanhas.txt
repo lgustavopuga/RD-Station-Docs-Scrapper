@@ -1,0 +1,42 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Consultar campanhasget
+Consultar detalhes de uma campanhaget
+Consultar itens de uma campanhaget
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Campanhas
+As APIs do Gerenciador de Campanhas permitem consultar as campanhas criadas no App e os itens incluídos nessas campanhas. Através das APIs de Análise é possível visualizar os dados estatísticos dos itens incluídos no agrupamento, possibilitando analisar o desempenho e eficiência das suas campanhas de marketing digital, para que você tenha mais autonomia e liberdade para organizar e construir suas análises.
+Com essa API você pode consultar Estatísticas dos seguintes itens adicionados na campanha:
+E-mail Marketing
+Email via Fluxo de Automação
+Ativos de Conversão
+Updated about 1 month ago
+Consultar Estatísticas dos Ativos de Conversão
+Consultar campanhas
+
+

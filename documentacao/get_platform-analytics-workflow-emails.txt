@@ -1,0 +1,160 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Consultar Estatísticas de E-mail Marketingget
+Consultar Estatísticas de Email via Fluxo de Automaçãoget
+Consultar Estatísticas do Funil de Vendasget
+Consultar Estatísticas dos Ativos de Conversãoget
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar Estatísticas de Email via Fluxo de Automação
+get https://api.rd.services /platform/analytics/workflow_emails
+O objetivo desta API é fornecer os indicadores de engajamento e performance dos emails enviados por meio de fluxos de automação no período consultado, que irão te auxiliar a analisar a eficiência dos seus fluxos e emails.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+API disponível apenas para os planos Pro e Advanced.
+🚧
+Plano Advanced não tem limite de consulta. Já o plano Pro tem limite de consulta dos últimos 45 dias.
+📘
+Obs: A API de Estatísticas de Fluxo de Automação retorna dados a partir de Janeiro de 2022. Os dados são consolidados e disponibilizados no padrão UTC.
+Query Params
+start_date
+string
+Data de início a ser consultada. (yyyy-mm-dd)
+end_date
+string
+Data de término a ser consultada. (yyyy-mm-dd)
+workflow_id
+array of strings
+Filtro para o Id do asset (opcional)
+ADD string
+Responses
+200
+Success
+Response body
+object
+account_id
+integer
+O id associado a cada conta do RD Station
+query_date
+object
+O período de tempo usado para buscar os dados
+start_date
+date
+end_date
+date
+workflow_email_statistics
+array of objects
+object
+workflow_id
+string
+Id da automação
+workflow_name
+string
+Nome da automação
+workflow_action_id
+string
+Id do email de automação
+workflow_created_at
+date
+Data de criação do fluxo
+workflow_updated_at
+date
+Data da última atualização do fluxo
+email_name
+string
+Nome da campanha enviada pela automação
+email_dropped_count
+integer
+Total de e-mails descartados
+email_delivered_count
+integer
+Total de e-mails entregues
+email_bounced_unique_count
+integer
+Total de e-mails de rejeitados
+email_opened_unique_count
+integer
+Total de aberturas únicas por lead
+email_clicked_unique_count
+integer
+Total de cliques únicos por lead
+email_unsubscribed_count
+integer
+Total não inscrito
+email_spam_reported_count
+integer
+Total reportado como spam
+email_delivered_rate
+float
+Taxa de entrega
+email_opened_rate
+float
+Taxa de abertura em comparação com o número de e-mails entregues
+email_clicked_rate
+float
+Taxa de cliques em comparação com o número de e-mails entregues
+email_spam_reported_rate
+float
+Taxa de spam em comparação com o número de e-mails entregues
+400
+Bad Request
+401
+Unauthorized or Forbidden
+Updated about 1 month ago
+Consultar Estatísticas de E-mail Marketing
+Consultar Estatísticas do Funil de Vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/analytics/workflow_emails \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+400
+401
+

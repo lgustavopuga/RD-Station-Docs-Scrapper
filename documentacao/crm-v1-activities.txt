@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+Anotações
+É possível adicionar anotações à negociação para registrar informações relevantes de contato ou feedback durante a negociação.
+As anotações registradas podem ser visualizadas por outros usuários que acessarem a negociação, na aba histórico. Além disso, caso outro usuário adicione uma anotação em uma negociação em que você é o responsável, você receberá uma notificação.
+❗️
+Atenção
+Para garantir a integridade das informações, bem como evitar fraudes, não é possível editar, alterar ou excluir anotações.
+Query params
+Parâmetros utilizados para listar anotações.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+deal_idStringID da negociação cuja anotação foi registrada
+user_idStringID do usuário que fez a anotação
+start_dateStringFiltrar pela data que a anotação foi criada - início. Formato: YYYY-MM-DD.
+end_dateStringFiltrar por data que a anotação foi criada - fim. Formato: YYYY-MM-DD.
+Body params
+Parâmetros utilizados para criar anotações.
+Nome
+Tipo
+Descrição
+Obrigatório
+user_idStringID do usuário autor da anotação✓
+deal_idStringID da oportunidade cuja anotação será registrada✓
+textStringTexto da anotação✓
+Updated 6 days ago
+Mensagens de erro
+Listar anotações
+
+Table of Contents
+Query params
+Body params
+

@@ -1,0 +1,118 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Obter webhook
+get https://api.rd.services/crm/v2 /webhooks/{id}
+Obter um webhook específico pelo seu ID.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+uuid
+required
+Identificador único.
+Responses
+200
+OK
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+uuid
+Identificador único.
+name
+string
+Nome do webhook.
+event_name
+string
+enum
+Nome do evento do webhook.
+crm_campaign_created crm_campaign_deleted crm_campaign_updated crm_contact_created crm_contact_deleted crm_contact_updated crm_deal_created crm_deal_deleted crm_deal_updated crm_lost_reason_created crm_lost_reason_deleted crm_lost_reason_updated crm_organization_created crm_organization_deleted crm_organization_updated crm_product_created crm_product_deleted crm_product_updated crm_source_created crm_source_deleted crm_source_updated crm_task_created crm_task_deleted crm_task_updated
+http_method
+string
+enum
+Método HTTP do webhook.
+POST
+url
+url
+URL do webhook.
+status
+string
+enum
+Status do webhook.
+active suspended inactive
+created_at
+date-time
+Data de criação do webhook
+updated_at
+date-time
+Data de atualização do webhook.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 36 minutes ago
+Criar webhook
+Atualizar webhook
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/crm/v2/webhooks/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200
+400
+401
+403
+404
+500
+

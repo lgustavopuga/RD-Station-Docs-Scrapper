@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+Listar campanhasget
+Criar campanhapost
+Obter campanhaget
+Atualizar campanhaput
+
+
+
+
+
+
+
+
+
+Criar campanha
+post https://crm.rdstation.com/api/v1 /campaigns
+Criar campanha
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+campaign
+object
+campaign object
+Response
+200
+Success
+Response body
+object
+_id
+string
+created_at
+string
+description
+string
+id
+string
+instance_id
+string
+name
+string
+updated_at
+string
+Updated 6 days ago
+Listar campanhas
+Obter campanha
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/campaigns \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

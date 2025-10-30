@@ -1,0 +1,167 @@
+
+
+
+
+
+
+Listar contatosget
+Criar contatopost
+Obter contatoget
+Atualizar contatoput
+Campos personalizados
+
+
+
+
+
+
+
+
+Atualizar contato
+put https://crm.rdstation.com/api/v1 /contacts/{contact_id}
+Atualizar contato
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+contact_id
+string
+required
+Body Params
+contact
+object
+contact object
+Response
+200
+Success
+Response body
+object
+_id
+string
+birthday
+object
+_id
+string
+created_at
+date-time | null
+day
+number
+month
+number
+updated_at
+date-time | null
+year
+number
+contact_c_f
+object
+contact_custom_fields
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string
+created_at
+string
+deal_ids
+array of strings
+emails
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+email
+string
+updated_at
+date-time | null
+facebook
+string
+id
+string
+legal_bases
+array of objects
+object
+category
+string
+status
+string
+type
+string
+linkedin
+string
+name
+string
+notes
+string | null
+organization
+object
+_id
+string
+name
+string
+resume
+string | null
+url
+string | null
+organization_id
+string
+phones
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+phone
+string
+type
+string
+updated_at
+date-time | null
+skype
+string
+title
+string
+updated_at
+string
+Updated 6 days ago
+Obter contato
+Campos personalizados
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://crm.rdstation.com/api/v1/contacts/contact_id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

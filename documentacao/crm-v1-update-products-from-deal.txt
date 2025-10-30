@@ -1,0 +1,167 @@
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Criar produtos na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Atualizar produtos na negociaçãopatch
+Deletar produtos na negociaçãodel
+Fontes
+
+
+
+
+
+
+Atualizar produtos na negociação
+patch https://crm.rdstation.com/api/v1 /deals/{deal_id}/deal_products/batch/update
+Atualizar produtos na negociação
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Body Params
+deal_products
+array of objects
+ADD object
+Responses
+204
+Success
+Response body
+object
+deal
+object
+deal_products
+array of objects
+object
+amount
+number
+discount
+number
+discount_type
+string
+id
+string
+price
+number
+recurrence
+string
+total
+number
+id
+string
+name
+string
+400
+Bad Request
+404
+Not Found
+413
+Payload Too Large
+422
+Unprocessable Entity
+Updated 6 days ago
+Deletar produto na negociação
+Deletar produtos na negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PATCH \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id/deal_products/batch/update \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+204 - Success
+Example
+xxxxxxxxxx
+28
+1
+{
+2
+"deal": {
+3
+"deal_products": [
+4
+{
+5
+"amount": 10,
+6
+"amount_decimal": 10.3,
+7
+"discount": 12,
+8
+"discount_type": "percentage",
+9
+"id": "ID1",
+10
+"price": 12.5,
+11
+"recurrence": "monthly",
+12
+"total": 125
+13
+},
+14
+{
+15
+"amount": 6,
+16
+"amount_decimal": 6.1,
+17
+"discount": 10,
+18
+"discount_type": "value",
+19
+"id": "ID2",
+20
+"price": 15.1,
+21
+"recurrence": "annual",
+22
+"total": 90.6
+23
+}
+24
+],
+25
+"id": "ID",
+26
+"name": "Nome"
+27
+}
+28
+}
+

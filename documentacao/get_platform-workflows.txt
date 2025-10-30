@@ -1,0 +1,138 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Consultar fluxos de automaçãoget
+Consultar dados de um fluxo a partir de um idget
+Inserir leads em um fluxopost
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar fluxos de automação
+get https://api.rd.services /platform/workflows
+Retorna uma lista com os fluxos de automação
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page_size
+string
+Número de resgistros retornados por página
+page
+string
+Número atual da página
+ids
+array of strings
+IDs dos fluxos de automação retornados
+ADD string
+order
+array of strings
+Tipos de ordenação dos resultados
+ADD string
+Responses
+200
+Success
+Response body
+object
+wokflows
+array of objects
+object
+id
+string
+Identificador único do fluxo de automação
+name
+string
+Nome do fluxo de automação
+user_email_created
+string
+E-mail do usuário autor do fluxo de automação
+created_at
+string
+Data de criação do fluxo de automação
+user_email_updated
+string
+E-mail do último usuário editor do fluxo de automação
+updated_at
+string
+Data da última atualização do fluxo de automação
+401
+Unauthorized
+Updated about 1 month ago
+Fluxos de automação
+Consultar dados de um fluxo a partir de um id
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/workflows \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+12
+1
+{
+2
+"wokflows": [
+3
+{
+4
+"id": "1c5ba46d-d27f-4263-9373-401632cbd424",
+5
+"name": "Fluxo de conversão da landing page Exemplo",
+6
+"user_email_created": "john@example.com",
+7
+"created_at": "2021-09-24T14:14:04.510-03:00",
+8
+"user_email_updated": "john@example.com",
+9
+"updated_at": "2021-09-24T14:14:04.510-03:00"
+10
+}
+11
+]
+12
+}
+

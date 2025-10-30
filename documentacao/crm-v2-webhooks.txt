@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Webhooks
+Disponibilidade
+RD Station CRM
+Free
+Basic
+Pro
+Advanced
+O webhook é a funcionalidade da API que possibilita a automatização do envio de dados e atividades do RD Station CRM para sistemas externos. Assim, é possível que você utilize ou desenvolva o seu próprio aplicativo personalizado para ler, salvar e realizar ações com esses dados. Esta é uma opção poderosa que permite manter todos os seus dados em sincronia e abre a possibilidade para todos os tipos de integração.
+Sempre que o evento configurado como gatilho no webhook é acionado, o RD Station CRM fará o disparo dos dados da entidade (negociação, fontes, campanhas, motivos de perda, etc) para integrações externas, contendo o payload padrão em JSON único e imutável (não é possível personalizar os dados enviados pelo webhook) para a URL de destino. O payload enviado conterá todas as informações disponíveis referentes à entidade alvo do webhook, o que inclui todos os campos padrão e personalizados, caso possuam, que foram preenchidos.
+Requisitos para funcionamento dos webhooks
+A URL cadastrada para consumo dos webhooks devem seguir os requisitos:
+Ser capaz de receber e consumir dados em formato JSON;
+Possuir certificado de segurança (HTTPS);
+Ter compatibilidade para fazer a leitura do pacote de dados que o RD Station CRM envia.
+Requisição
+Quando o evento configurado no webhook é acionado, o RD Station CRM envia uma requisição com o mesmo método configurado no http_method e com o cabeçalho Content-Type: application/json.
+Retentativas de envio
+Caso nosso serviço de webhooks tenha problemas ao entregar suas notificações, nós tentaremos enviá-las novamente por mais 5 vezes.
+Os possíveis problemas na entrega das notificações podem ser:
+Se o end-point de callback demorar mais de 5 segundos para responder a requisição;
+Se a resposta do end-point de callback retornar um HTTP Status Code diferente de 2XX.
+Após a falha no envio ocorrer, as notificações entram em uma fila para serem reprocessadas. Caso o re-envio da notificação falhar as 5 vezes seguidas, a notificação será marcada como falha permanente e não será mais reenviada.
+Em situações como as descritas acima é possível que eventos anormais possam ocorrer como perceber a duplicidade de chegada de eventos em seu sistema. Caso isto ocorra pode ser um indício de que o tempo de resposta do end-point está superior aos 5 segundos esperados.
+Suspensão de webhooks
+Existem situações em que podem ocorrer uma sequência de erros para uma mesma URL de destino, como por exemplo uma instabilidade na aplicação para qual a URL de destino está apontando.
+Caso o sistema de webhooks receba um volume acima do esperado para a mesma URL ela terá seus status alterado para suspenso. Para que um webhook seja suspenso é necessário que o mesmo esteja sempre retornando erros de forma constante, o que significa que a integração não está funcionando como deveria.
+O sistema de webhooks faz uma análise sobre estes erros, e caso seja constatado que o mesmo não será resolvido sozinho, pode acontecer a suspensão temporária conforme mencionado acima.
+Para mais informações, acesse esse artigo em nossa central de ajuda.
+Updated about 1 hour ago
+Tarefa atualizada
+Listar webhooks
+
+Table of Contents
+Requisitos para funcionamento dos webhooks
+Requisição
+Retentativas de envio
+Suspensão de webhooks
+

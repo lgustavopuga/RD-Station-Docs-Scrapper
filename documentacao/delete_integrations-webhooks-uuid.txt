@@ -1,0 +1,63 @@
+
+
+
+
+
+
+
+
+
+Deletar um Webhook
+delete https://api.rd.services /integrations/webhooks/{uuid}
+Deleta uma assinatura de webhook da conta que a sua integração está vinculada. Os webhooks não serão listados na tela do RD Station Marketing, sendo assim, para deletar um webhook, utilize o uuid obtido no endpoint de Listar todos os webhooks.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+uuid
+string
+required
+O UUID exclusivo associado a cada webhook do RD Station.
+Responses
+204
+No Content
+401
+Unauthorized
+404
+Not Found
+Updated about 1 month ago
+Atualizar um Webhook
+Webhooks CRM payload
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+JWT
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://api.rd.services/integrations/webhooks/uuid \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+Examples
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+401
+404
+

@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+
+
+
+
+
+
+
+
+Negociações
+Uma negociação representa uma oportunidade de venda dentro do RD Station CRM. É a entidade central que rastreia o progresso de uma venda potencial desde o contato inicial até o fechamento. Cada negociação possui um valor monetário, está associada a contatos e/ou empresa, pertence a um proprietário (usuário) e ocupa uma etapa específica dentro de um funil de vendas. A manipulação deste recurso é fundamental para a automação de processos de vendas e a integração com outras ferramentas de negócio.
+Updated 32 minutes ago
+Deletar produto na negociação
+Listar negociações
+
+

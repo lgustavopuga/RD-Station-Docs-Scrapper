@@ -1,0 +1,136 @@
+
+
+
+
+Listar catálogosget
+Consultar catálogo por idget
+Cadastrar catálogopost
+Atualizar catálogopatch
+Deletar catálogodel
+
+
+
+
+Cadastrar catálogo
+post https://api.rd.services /platform/catalog_feeds
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+name
+string
+required
+Defaults to Meu catálogo
+Nome do catálogo
+Meu catálogo
+url
+string
+required
+Defaults to https://meusite.com/catalogo.json
+URL do catálogo
+https://meusite.com/catalogo.json
+format
+string
+enum
+required
+Defaults to json
+Formato do catálogo
+json
+Allowed:
+xml
+json
+google_shopping
+username
+string
+Usuário da autenticação básica
+password
+string
+Senha da autenticação básica
+Responses
+200
+200
+Response body
+object
+id
+integer
+Defaults to 0
+name
+string
+url
+string
+status
+string
+format
+string
+created_at
+string
+updated_at
+string
+credentials
+string
+400
+400
+409
+409
+Updated about 1 month ago
+Próximo passo:
+Atualizar catálogo
+
+
+xxxxxxxxxx
+11
+1
+curl --request POST \
+2
+--url https://api.rd.services/platform/catalog_feeds \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"name": "Meu catálogo",
+8
+"url": "https://meusite.com/catalogo.json",
+9
+"format": "json"
+10
+}
+11
+'
+Try It!
+RESPONSE
+200 - Result
+Example
+xxxxxxxxxx
+10
+1
+{
+2
+"id": 1,
+3
+"name": "Meu catálogo",
+4
+"url": "https://meusite.com/catalogo.json",
+5
+"status": "active",
+6
+"format": "json",
+7
+"created_at": "2025-07-24T10:54:42.061-03:00",
+8
+"updated_at": "2025-07-24T10:54:42.061-03:00",
+9
+"credentials": null
+10
+}
+

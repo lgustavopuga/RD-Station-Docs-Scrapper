@@ -1,0 +1,237 @@
+
+
+
+
+
+
+
+
+
+Listar contatosget
+Criar contatopost
+Obter contatoget
+Atualizar contatoput
+Campos personalizados
+
+
+
+
+
+
+
+
+
+Atualizar contato
+put https://api.rd.services/crm/v2 /contacts/{id}
+Atualiza os campos de um contato existente.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+string
+required
+Identificador único.
+Body Params
+data
+object
+Dados do recurso relacionado.
+data object
+Responses
+200
+OK
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+string
+Identificador único.
+name
+string
+Nome do contato.
+job_title
+string
+Cargo do contato.
+emails
+array of objects
+Emails do contato.
+object
+email
+string
+Endereço de email.
+phones
+array of objects
+Telefones do contato.
+object
+phone
+string
+Telefone.
+type
+string
+enum
+Tipo do telefone.
+work fax home mobile
+birthday
+date
+Data de aniversário do contato. Formato: YYYY-MM-DD. Caso só tenha o mês e o dia, use 0000-MM-DD.
+social_profiles
+array of objects
+Perfis sociais do contato.
+object
+type
+string
+enum
+Tipo de perfil social.
+facebook linkedin skype
+username
+string
+Nome de usuário.
+organization_id
+string
+ID da organização.
+legal_bases
+array of objects
+Bases legais para o contato. (Saiba mais)
+object
+category
+string
+enum
+A categoria relativa à base legal.
+communications
+type
+string
+enum
+Qual base legal autoriza o tratamento dos dados pessoais.
+consent legitimate_interest pre_existent_contract judicial_process vital_interest public_interest
+status
+string
+enum
+Status da base legal.
+granted declined
+Show Details
+grantedConsentimento concedido pelo contato.
+declinedConsentimento recusado pelo contato.
+custom_fields
+object
+Campos personalizados do contato.
+Has additional fields
+created_at
+date-time
+Data de criação do contato.
+updated_at
+date-time
+Data de atualização do contato.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+422
+A entidade não pode ser processada.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 43 minutes ago
+Obter contato
+Campos personalizados
+
+
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://api.rd.services/crm/v2/contacts/id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+38
+1
+{
+2
+"data": {
+3
+"id": "string",
+4
+"name": "string",
+5
+"job_title": "string",
+6
+"emails": [
+7
+{
+8
+"email": "string"
+9
+}
+10
+],
+11
+"phones": [
+12
+{
+13
+"phone": "string",
+14
+"type": "work"
+15
+}
+16
+],
+17
+"birthday": "2025-10-30",
+18
+"social_profiles": [
+19
+{
+20
+"type": "facebook",
+21
+"username": "string"
+22
+}
+23
+],
+24
+"organization_id": "string",
+25
+"legal_bases": [
+26
+{
+27
+"category": "communications",
+28
+"type": "consent",
+29
+"status": "granted"
+30
+}
+31
+],
+32
+"custom_fields": {
+33
+"additionalProp": "string"
+34
+},
+35
+"created_at": "2025-10-30T19:57:37.882Z",
+36
+"updated_at": "2025-10-30T19:57:37.882Z"
+37
+}
+38
+}
+

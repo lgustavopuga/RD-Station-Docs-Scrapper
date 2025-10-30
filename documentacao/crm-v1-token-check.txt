@@ -1,0 +1,66 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Token de autenticação
+Obter tokenget
+Usuários
+Webhooks
+
+
+Obter token
+get https://crm.rdstation.com/api/v1 /token/check
+Obter token.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Response
+200
+Success
+Response body
+object
+email
+string
+name
+string
+organization
+string
+Updated 6 days ago
+Token de autenticação
+Usuários
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/token/check \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

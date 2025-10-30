@@ -1,0 +1,259 @@
+
+
+
+Introdução
+Boas vindas
+Suporte
+
+Webhook Service
+
+
+
+Bases Legais
+Limite de requisições da API
+Como migrar a API 1.x para API 2.0 do RD Station Marketing
+Mensagens de erro
+Enriquecimento de dados
+Autenticação
+
+
+
+
+Enriquecimento de dados
+Este guia irá lhe mostrar como fazer a sua primeira chamada para a API do RD Station.
+Aprenda como fazer a integração de seu aplicativo para enriquecimento de dados usando as APIs RD Station.
+Por definição, um aplicativo de enriquecimento de dados deve ser capaz de, com base em algumas informações, retornar outros dados que serão úteis na qualificação do Contato ou para ativar fluxos de automação.
+Outro caso de uso que pode ser aplicado é quando o aplicativo externo mantém dados "enriquecedores" em segundo plano e, quando uma novo dado é descoberto ou atualizado, pode gerar também atualização de informações no RD Station.
+O processo principal esta resumido neste gráfico:
+A seguir nós iremos lhe mostrar como recuperar um único contato usando o endpoint da API utilizando o método GET com UUID. Para fazer isso, você será guiado pelo processo de autenticação para gerar um token de acesso, o qual você utilizará em todas as chamadas de nossa API. Em seguida, iremos fornecer o código para fazer a solicitação que retorna a informação principal formatada como JSON.
+Como gerar um token de autenticação
+Crie uma conta de teste acessando esse link.
+O token de autenticação deve ser obtido seguindo os passos descritos em Autenticação.
+Como usar Webhooks como um gatilho para o seu aplicativo
+Para conectar à sua conta RD Station siga estes passos: Clique em "Sua Conta" -> "Integrações" -> "Webhooks". Por fim, clique no botão Criar Webhook. Na tela que se abrir defina as seguintes configurações:
+O nome da sua integração. O objetivo aqui é criar um nome que o ajude para identificar a qual ferramenta essas informações estão sendo enviadas.
+A URL do seu aplicativo que receberá a notificação do RD Station com as informações do Contato.
+O gatilho que deve ativar o envio da notificação
+Neste caso, você pode solicitar que a notificação seja enviada em uma das duas situações abaixo:
+Nova conversão: Envie para seu aplicativo Contatos que realizarem alguma conversão no RD Station. Você pode selecionar quais conversões serão ou deixá-las em branco, neste caso a cada nova conversão as informações serão enviadas.
+ou
+Marcação de oportunidade: Envie os Leads marcados como oportunidade. Exemplo: envie o Contato do RD Station para o aplicativo somente quando estiver marcado como uma oportunidade manualmente ou através de um fluxo de automação.
+Como usar fluxos de automação como um gatilho para o seu aplicativo
+O fluxo de automação permitirá que você envie o Contato de acordo com as condições definidas pelo fluxo em si, enquanto que através da integração normal, você só pode escolher enviá-lo a cada nova conversão ou quando for marcado como uma oportunidade.
+Tudo o que você precisa é inserir no seu fluxo de automação a URL para qual deseja que as informações do contato sejam enviadas, usando a opção Enviar Leads para Integração.
+Esta URL é a do seu aplicativo que receberá a solicitação do RD Station com as informações do Contato. A requisição da URL é através de uma solicitação POST via HTTP.
+As informações serão enviadas em formato JSON, um exemplo das informações no JSON pode ser encontrada neste link.
+Como criar um aplicativo para receber um Contato do RD Station
+A criação do aplicativo que receberá os Contatos do RD Station deve atender aos seguintes requisitos:
+Ser capaz de receber um JSON no formato enviado pelo RD Station;
+Ser capaz de receber um parâmetro específico para identificar qual cliente está enviando a solicitação (também pode ser um domínio específico para cada cliente). A URL completa com os parâmetros deve ser fácil para o cliente obter e usar nos Webhooks ou Fluxos de Automação do RD Station ;
+Armazenar o UUID do Contato ( campo UUID do JSON, que é a chave primária para a API) e o email principal (usado como chave para outras aplicações no RD Station).
+Como utilizar a API para consultar informações de Contatos (GET)
+GET https://api.rd.services/platform/contacts/{uuid}
+Returns data about a specific Contact
+Request Parameter
+Field
+Type
+Description
+uuidType: StringThe unique uuid associated to each RD Station Contact.
+Response Body Parameters
+Field
+Type
+Description
+uuidStringThe unique uuid associated to each RD Station Contact.
+nameStringName of the Contact.
+emailStringEmail of the Contact.
+bioStringNotes about the Contact.
+websiteStringWebsite of the Contact.
+job_titleStringJob title of the Contact.
+personal_phoneStringPhone of the Contact.
+mobile_phoneStringMobile phone of the Contact.
+cityStringCity of the Contact.
+stateStringState of the Contact.
+countryStringCountry of the Contact.
+twitterStringTwitter of the Contact.
+facebookStringFacebook of the Contact.
+linkedinStringLinkedin of the Contact.
+tagsArrayStringsTags of the Contact.
+extra_emailsArrayStringsExtra emails of the Contact.
+legal_basesArrayObjectsLegal Bases of the Contact.
+linksArrayObjectsThe hyperlink list.
+Empty Fields
+For empty value fields the following behavior will be adopted:
+Field
+Type
+String and Numbersattributes will not be returned
+Arrayan empty array will be returned []
+BooleanAlways true or false will be returned
+Example:
+{
+"uuid": "cdbba2a8-8ccd-4228-9617-6b0257b32077",
+"name": "RD Station Developer",
+"email": "contact@example.com",
+"job_title": "Developer",
+"bio": "This documentation explains the RD Station API.",
+"website": "https://developers.rdstation.com/",
+"linkedin": "rd_station",
+"personal_phone": "+55 48 3037-3600",
+"city": "Florianópolis",
+"state": "SC",
+"country": "Brasil",
+"tags": ["developer", "rdstation", "api"],
+"extra_emails": ["contact2@example.com"],
+"cf_custom_field_2": "custom field value2",
+"legal_bases": [
+{
+"category": "communications",
+"type": "consent",
+"status": "granted"
+}
+],
+"links": [
+{
+"rel": "SELF",
+"href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+"media": "application/json",
+"type": "GET"
+},
+{
+"rel": "SELF",
+"href": "https://api.rd.services/platform/contacts/email:contact@example.com",
+"media": "application/json",
+"type": "GET"
+},
+{
+"rel": "CONTACT.DELETE",
+"href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+"media": "application/json",
+"type": "DELETE"
+},
+{
+"rel": "CONTACT.FUNNEL",
+"href": "https://api.rd.services/platform/contacts/cdbba2a8-8ccd-4228-9617-6b0257b32077/funnels/{funnel_name}",
+"media": "application/json",
+"type": "GET"
+},
+{
+"rel": "CONTACTS.EVENTS",
+"href": "https://api.rd.services/platform/contacts/cdbba2a8-8ccd-4228-9617-6b0257b32077/events?event_type={event_type}",
+"media": "application/json",
+"type": "GET"
+}
+]
+}
+Como utilizar a API para atualizar informações de Contatos (PATCH)
+PATCH https://api.rd.services/platform/contacts/uuid:{uuid}
+Updates the properties of a Contact by UUID.
+Request Parameter
+Field
+Type
+Description
+uuidType: StringThe unique uuid associated to each RD Station Contact.
+Response Body Parameters
+Field
+Type
+Description
+uuidStringThe unique uuid associated to each RD Station Contact.
+nameStringName of the Contact.
+emailStringEmail of the Contact.
+bioStringNotes about the Contact.
+websiteStringWebsite of the Contact.
+job_titleStringJob title of the Contact.
+personal_phoneStringPhone of the Contact.
+mobile_phoneStringMobile phone of the Contact.
+cityStringCity of the Contact.
+stateStringState of the Contact.
+countryStringCountry of the Contact.
+twitterStringTwitter of the Contact.
+facebookStringFacebook of the Contact.
+linkedinStringLinkedin of the Contact.
+tagsArrayStringsTags of the Contact.
+extra_emailsArrayStringsExtra emails of the Contact.
+legal_basesArrayObjectsLegal Bases of the Contact.
+linksArrayObjectsThe hyperlink list.
+Empty Fields
+For empty value fields the following behavior will be adopted:
+Field
+Type
+String and Numbersattributes will not be returned
+Arrayan empty array will be returned []
+BooleanAlways true or false will be returned
+Example:
+{
+"uuid": "cdbba2a8-8ccd-4228-9617-6b0257b32077",
+"name": "RD Station Developer",
+"email": "contact@example.com",
+"job_title": "Developer",
+"bio": "This documentation explains the RD Station API.",
+"website": "https://developers.rdstation.com/",
+"linkedin": "rd_station",
+"personal_phone": "+55 48 3037-3600",
+"city": "Florianópolis",
+"state": "SC",
+"country": "Brasil",
+"tags": ["developer", "rdstation", "api"],
+"extra_emails": ["contact2@example.com"],
+"cf_custom_field_2": "custom field value2",
+"legal_bases": [
+{
+"category": "communications",
+"type": "consent",
+"status": "granted"
+}
+],
+"links": [
+{
+"rel": "SELF",
+"href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+"media": "application/json",
+"type": "GET"
+},
+{
+"rel": "SELF",
+"href": "https://api.rd.services/platform/contacts/email:contact@example.com",
+"media": "application/json",
+"type": "GET"
+},
+{
+"rel": "CONTACT.DELETE",
+"href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+"media": "application/json",
+"type": "DELETE"
+},
+{
+"rel": "CONTACT.FUNNEL",
+"href": "https://api.rd.services/platform/contacts/cdbba2a8-8ccd-4228-9617-6b0257b32077/funnels/{funnel_name}",
+"media": "application/json",
+"type": "GET"
+},
+{
+"rel": "CONTACTS.EVENTS",
+"href": "https://api.rd.services/platform/contacts/cdbba2a8-8ccd-4228-9617-6b0257b32077/events?event_type={event_type}",
+"media": "application/json",
+"type": "GET"
+}
+]
+}
+Legal Bases
+Field
+Type
+Valid params
+categoryStringcommunications
+typeStringpre_existent_contract, consent, legitimate_interest, judicial_process, vital_interest or public_interest
+statusStringgranted or declined
+Como usar a API de campos personalizados para verificar e criar os campos necessários
+Para poder atualizar as informações principais, é necessário que os campos que estão sendo atualizados sejam devidamente criados no RD Station. Se eles não forem criados, ou não existirem, a informação não poderá ser usada para fins específicos (ex: segmentações, fluxos de automação ou lead scoring).
+Idealmente, no momento da configuração de integração, o sistema externo deve verificar a existência dos campos necessários para o enriquecimento de dados nos casos de uso mapeados e se não forem encontrados, o aplicativo deve criar esses campos sem a necessidade de configuração manual. Esses detalhes podem ser verificados na seção Campos personalizados.
+Updated about 1 month ago
+Mensagens de erro
+Autenticação
+
+Table of Contents
+Como gerar um token de autenticação
+Como usar Webhooks como um gatilho para o seu aplicativo
+Como usar fluxos de automação como um gatilho para o seu aplicativo
+Como criar um aplicativo para receber um Contato do RD Station
+Como utilizar a API para consultar informações de Contatos (GET)
+Como utilizar a API para atualizar informações de Contatos (PATCH)
+Como usar a API de campos personalizados para verificar e criar os campos necessários
+

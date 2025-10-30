@@ -1,0 +1,43 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Consultar pop-upsget
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Pop-ups
+Essa funcionalidade possibilita exibir pop-ups e botão de whatsapp em seu site para destacar seus materiais, promoções e avisos em páginas selecionadas e capturar as informações do contato automaticamente pelo RD Station Marketing.
+Os pop-ups podem ser de dois tipos:
+Rolagem: tem o objetivo de oferecer um conteúdo rico ou direcionar o seu visitante para alguma página específica do seu site. Ele é exibido quando o visitante desce a barra de rolagem até 50% da página.
+Saída: tem o objetivo de recuperar o visitante quando ele está prestes a deixar a sua página sem finalizar a compra ou deixar um contato para que você possa enviar um material rico. Ele é exibido no seu site quando o visitante tentar sair da página.
+Botão de Whatsapp: tem o objetivo de possibilitar que os visitantes do seu site entrem em contato com a sua empresa pelo WhatsApp para tirar dúvidas, pedir orçamentos ou saber mais sobre os seus produtos e serviços. Os dados que ele cadastrar no formulário ficarão salvos em sua base de leads, para que você possa manter o relacionamento com esses leads por email ou automação. O Botão de WhatsApp é um botão flutuante que é exibido no canto da tela no momento em que o visitante entra em seu site.
+Com essa API, é possível consultar as informações dos Pop-ups e Botões de Whatsapp criados na conta, como o identificador interno, o identificador de conversão, o gatilho para exibição, status da publicação, entre outras informações.
+Updated about 1 month ago
+Consultar landing pages
+Consultar pop-ups
+
+Table of Contents
+Os pop-ups podem ser de dois tipos:
+

@@ -1,0 +1,208 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+
+
+
+
+
+
+
+
+Obter negociação
+get https://api.rd.services/crm/v2 /deals/{id}
+Obter negociação específica pelo seu ID. Essencial para obter o estado atual de uma oportunidade antes de atualizá-la ou para obter suas informações em uma interface externa.
+Log in to see full request history
+time
+status
+user agent
+Make a request to see history.
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+id
+string
+required
+Identificador único.
+Responses
+200
+OK
+Response body
+object
+data
+object
+Dados do recurso relacionado.
+id
+string
+Identificador único.
+name
+string
+Nome da negociação.
+recurrence_price
+float
+Valor recorrente da negociação.
+one_time_price
+float
+Valor único da negociação.
+total_price
+float
+Valor total da negociação.
+expected_close_date
+date
+Data de previsão de fechamento da negociação.
+rating
+integer
+Qualificação da negociação.
+status
+string
+enum
+Status da negociação.
+won lost ongoing paused
+closed_at
+date-time
+Data de fechamento da negociação.
+pipeline_id
+string
+ID do funil de vendas da negociação.
+stage_id
+string
+ID da etapa do funil de vendas da negociação.
+owner_id
+string
+ID do usuário responsável pela negociação.
+source_id
+string
+ID da fonte da negociação.
+campaign_id
+string
+ID da campanha da negociação.
+lost_reason_id
+string
+ID do motivo de perda da negociação.
+organization_id
+string
+ID da empresa associada à negociação.
+contact_ids
+array of strings
+IDs dos contatos associados à negociação.
+custom_fields
+object
+Campos personalizados da negociação.
+Has additional fields
+created_at
+date-time
+Data de criação da negociação.
+updated_at
+date-time
+Data de atualização da negociação.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+404
+O recurso solicitado não existe.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 34 minutes ago
+Criar negociação
+Atualizar negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/crm/v2/deals/id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+28
+1
+{
+2
+"data": {
+3
+"id": "string",
+4
+"name": "string",
+5
+"recurrence_price": 0,
+6
+"one_time_price": 0,
+7
+"total_price": 0,
+8
+"expected_close_date": "2025-10-30",
+9
+"rating": 0,
+10
+"status": "won",
+11
+"closed_at": "2025-10-30T19:48:07.042Z",
+12
+"pipeline_id": "string",
+13
+"stage_id": "string",
+14
+"owner_id": "string",
+15
+"source_id": "string",
+16
+"campaign_id": "string",
+17
+"lost_reason_id": "string",
+18
+"organization_id": "string",
+19
+"contact_ids": [
+20
+"string"
+21
+],
+22
+"custom_fields": {
+23
+"additionalProp": "string"
+24
+},
+25
+"created_at": "2025-10-30T19:48:07.042Z",
+26
+"updated_at": "2025-10-30T19:48:07.042Z"
+27
+}
+28
+}
+

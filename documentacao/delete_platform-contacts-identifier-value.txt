@@ -1,0 +1,68 @@
+
+
+
+Consultar contato pelo uuid/emailget
+Criar contatopost
+Atualizar contato pelo uuid/emailpatch
+Excluir contato pelo uuid/emaildel
+Criar uma tag para o lead pelo uuid/emailpost
+Consultar eventos associado ao contatoget
+
+
+
+
+
+Excluir contato pelo uuid/email
+delete https://api.rd.services /platform/contacts/{identifier}:{value}
+Deleta um contato específico.
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+identifier
+string
+enum
+required
+Identificador (uuid/email) associado a cada contato do RD Station.
+uuid
+Allowed:
+uuid
+email
+value
+string
+required
+Valor do identificador.
+Responses
+204
+No Content
+404
+Not Found
+Updated about 1 month ago
+Atualizar contato pelo uuid/email
+Criar uma tag para o lead pelo uuid/email
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://api.rd.services/platform/contacts/uuid:value \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+Examples
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+404
+

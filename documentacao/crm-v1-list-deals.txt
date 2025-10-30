@@ -1,0 +1,252 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+Listar contatos da negociaçãoget
+
+
+
+
+
+Listar negociações
+get https://crm.rdstation.com/api/v1 /deals
+Listar negociações
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page
+string
+Número atual da página
+limit
+string
+Limite de negociações que serão listadas. Valor padrão é 20. Valor máximo é 200
+order
+string
+Ordenação. Valor padrão é "created_at"
+direction
+string
+Ordenação da lista. "asc" ou "desc", padrão é "desc"
+name
+string
+Nome da negociação. Para buscas com nome exato, usar o parâmetro exact_name=true
+win
+string
+Negociações ganhas. O valor true (retorna as negociações "ganhas"), false (retorna as negociações "perdidas") e null (retorna as negociações "em aberto")
+user_id
+string
+ID do usuário relacionado à negociação
+closed_at
+string
+Ao informar true (retorna as negociações "ganhas" ou "perdidas"). Ao informar false (retorna as negociações "em aberto" OU "pausadas")
+closed_at_period
+string
+Data de fechamento da negociação: se true deve ser informado start_date e end_date
+created_at_period
+string
+Data de criação da negociação: se true, deve ser informado start_date e end_date
+prediction_date_period
+string
+Data de previsão de fechamento da negociação: se true, deve ser informado start_date e end_date
+start_date
+string
+Primeiro dia/hora em que deve ser aplicado o filtro para o parâmetro closed_at_period ou created_at_period. Ex.: "start_date": "2020-12-14T15:00:00"
+end_date
+string
+Último dia/hora em que deve ser aplicado o filtro para o parâmetro closed_at_period ou created_at_period. Ex.: "end_date": "2020-12-14T15:00:00"
+campaign_id
+string
+ID da campanha
+deal_stage_id
+string
+ID da etapa do funil de vendas
+deal_lost_reason_id
+string
+ID do motivo de perda
+deal_pipeline_id
+string
+ID do funil de vendas
+organization
+string
+ID da empresa
+hold
+string
+Estado da negociação pausada. Se marcado como true (retorna todas negociações "pausadas"). Para outros casos, não deve-se utilizar esse parâmetro
+product_presence
+string
+Negociações que contenham produtos/serviços relacionados. Se false (nenhum produto relacionado), true (um ou mais produtos relacionados) ou uma lista de IDs de produto. A lista de IDs deve ser informada com os valores separados por vírgula. Ex.: 5esdsds, d767dsdssd, c6e40fd2f000972a083
+next_page
+string
+O parâmetro next_page serve para consultar a próxima página de resultados da busca corrente. Ele é obtido através da primeira consulta feita por esta API, porém todos os demais resultados apresentam este campo que se utilizado na requisição, navegam para sua próxima página.
+Responses
+200
+Success
+Response body
+object
+deals
+array of objects
+object
+_id
+string
+amount_montly
+number
+amount_total
+number
+amount_unique
+number
+closed_at
+date-time | null
+contacts
+array of objects
+object
+birthday
+object
+birthday object
+emails
+array of objects
+object
+email
+string
+facebook
+string | null
+linkedin
+string | null
+name
+string
+notes
+string | null
+phones
+array of objects
+object
+phone
+string
+type
+string
+skype
+string
+title
+string
+created_at
+string
+deal_custom_fields
+array
+deal_products
+array of objects
+object
+_id
+string
+amount
+number
+amount_decimal
+number
+base_price
+number
+created_at
+string
+description
+string
+discount
+number
+discount_type
+string
+id
+string
+name
+string
+price
+number
+product_id
+string
+recurrence
+string
+total
+number
+updated_at
+string
+deal_stage
+object
+deal_stage object
+hold
+boolean | null
+id
+string
+interactions
+number
+last_activity_at
+date-time | null
+last_activity_content
+string | null
+markup
+string
+markup_created
+string
+markup_last_activities
+string | null
+name
+string
+prediction_date
+date | null
+rating
+number
+stop_time_limit
+object
+updated_at
+string
+user
+object
+user object
+user_changed
+boolean
+win
+boolean | null
+has_more
+boolean
+next_page
+string
+total
+number
+400
+Error
+Updated 6 days ago
+Negociações
+Criar negociação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deals \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+400 - Error
+

@@ -1,0 +1,117 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Evento de Início da Conversapost
+Evento de Término da Conversapost
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Evento de Término da Conversa
+post https://api.rd.services /platform/events?event_type=chat_finished
+O RD Station Marketing considera sempre o valor do atributo event_type CHAT_FINISHED como identificador do evento customizado. Esse evento é registrado sempre que ocorre o término de uma conversa em um chat.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+event_type
+string
+required
+Defaults to CHAT_FINISHED
+O event_type diferencia tipo do evento. Para o evento de término de chamada, deve ser enviado como "CHAT_FINISHED"
+CHAT_FINISHED
+event_family
+string
+required
+Defaults to CDP
+O event_family é definido para fins de processamento. Atualmente, é aceito apenas "CDP" como opção válida
+CDP
+payload
+object
+required
+payload object
+Response
+200
+200
+Response body
+object
+event_uuid
+string
+Updated about 1 month ago
+Evento de Início da Conversa
+Eventos de Chamada
+
+
+xxxxxxxxxx
+16
+1
+curl --request POST \
+2
+--url 'https://api.rd.services/platform/events?event_type=chat_finished' \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json' \
+5
+--data '
+6
+{
+7
+"event_type": "CHAT_FINISHED",
+8
+"event_family": "CDP",
+9
+"payload": {
+10
+"chat_subject": "Assunto X",
+11
+"cf_chat_status": "online",
+12
+"cf_chat_transcript_message": "Transcrição",
+13
+"email": "contato@email.com"
+14
+}
+15
+}
+16
+'
+Try It!
+RESPONSE
+200 - Result
+Example
+xxxxxxxxxx
+1
+{
+2
+"event_uuid": "5408c5a3-4711-4f2e-8d0b-13407a3e30f3"
+3
+}
+

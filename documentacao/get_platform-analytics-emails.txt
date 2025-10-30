@@ -1,0 +1,208 @@
+
+
+
+
+
+Funis de Contatos
+Segmentações
+Fluxos de automação
+Email
+Landing Pages
+Pop-ups
+Formulários
+Análise
+Consultar Estatísticas de E-mail Marketingget
+Consultar Estatísticas de Email via Fluxo de Automaçãoget
+Consultar Estatísticas do Funil de Vendasget
+Consultar Estatísticas dos Ativos de Conversãoget
+Campanhas
+Evento de Conversão Padrão
+Eventos de Qualificação do Contato
+Eventos de E-commerce
+Eventos de E-commerce (Descontinuados)
+Eventos de Chat
+Eventos de Chamada
+Eventos de Mídia
+Batch de Eventos
+Evento de Conversão via API Key
+Catálogo de produtos
+
+
+
+
+Consultar Estatísticas de E-mail Marketing
+get https://api.rd.services /platform/analytics/emails
+O objetivo desta API é fornecer os indicadores de engajamento e performance das campanhas de Email Marketing enviadas no período consultado, que irão te auxiliar a analisar a eficiência das suas campanhas.
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+🚧
+API disponível apenas para os planos Pro e Advanced.
+🚧
+Plano Advanced não tem limite de consulta. Já o plano Pro tem limite de consulta dos últimos 45 dias.
+📘
+Obs: A API de Estatísticas de E-mail Marketing retorna dados a partir de Agosto de 2021. Os dados são consolidados, sempre até o dia anterior à data da análise (D-1) e disponibilizados no padrão UTC.
+Query Params
+start_date
+string
+Data de início a ser consultada. (yyyy-mm-dd)
+end_date
+string
+Data de término a ser consultada. (yyyy-mm-dd)
+campaign_id
+array of integers
+Filtro para o Id do asset (opcional)
+ADD integer
+Responses
+200
+Success
+Response body
+object
+account_id
+integer
+O id associado a cada conta do RD Station
+query_date
+object
+O período de tempo usado para buscar os dados
+start_date
+date
+end_date
+date
+emails
+array of objects
+object
+campaign_id
+integer
+Id da campanha
+campaign_name
+string
+Nome da campanha de e-mail
+send_at
+date-time
+Data de envio do e-mail
+contacts_count
+integer
+Quantidade de contatos selecionados
+email_dropped_count
+integer
+Total de e-mails descartados
+email_delivered_count
+integer
+Total de e-mails entregues
+email_bounced_count
+integer
+Total de e-mails de rejeitados
+email_opened_count
+integer
+Total de aberturas únicas por lead
+email_clicked_count
+integer
+Total de cliques únicos por lead
+email_unsubscribed_count
+integer
+Total não inscrito
+email_spam_reported_count
+integer
+Total reportado como spam
+email_delivered_rate
+float
+Taxa de entrega
+email_opened_rate
+float
+Taxa de abertura em comparação com o número de e-mails entregues
+email_clicked_rate
+float
+Taxa de cliques em comparação com o número de e-mails entregues
+email_spam_reported_rate
+float
+Taxa de spam em comparação com o número de e-mails entregues
+400
+Bad Request
+401
+Unauthorized or Forbidden
+Updated about 1 month ago
+Análise
+Consultar Estatísticas de Email via Fluxo de Automação
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Bearer
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://api.rd.services/platform/analytics/emails \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+26
+1
+{
+2
+"account_id": 1,
+3
+"query_date": {
+4
+"start_date": "2025-10-30",
+5
+"end_date": "2025-10-30"
+6
+},
+7
+"emails": [
+8
+{
+9
+"campaign_id": 6061281,
+10
+"campaign_name": "Desconto",
+11
+"send_at": "2021-08-06T17:26:39-03:00",
+12
+"contacts_count": 1000,
+13
+"email_dropped_count": 3,
+14
+"email_delivered_count": 997,
+15
+"email_bounced_count": 5,
+16
+"email_opened_count": 500,
+17
+"email_clicked_count": 500,
+18
+"email_unsubscribed_count": 4,
+19
+"email_spam_reported_count": 1,
+20
+"email_delivered_rate": 98.7,
+21
+"email_opened_rate": 46.9,
+22
+"email_clicked_rate": 36.5,
+23
+"email_spam_reported_rate": 0
+24
+}
+25
+]
+26
+}
+

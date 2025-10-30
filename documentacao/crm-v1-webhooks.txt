@@ -1,0 +1,871 @@
+
+
+
+
+
+
+
+
+
+Webhooks
+O webhook é a funcionalidade da API que possibilita a automatização do envio de dados e atividades do RD Station CRM para sistemas externos. Assim, é possível que você utilize ou desenvolva o seu próprio aplicativo personalizado para receber, salvar e realizar ações com esses dados. Esta é uma opção poderosa que permite manter todos os seus dados em sincronia e abre a possibilidade para todos os tipos de integração.
+Sempre que o evento configurado como gatilho no webhook é acionado, o RD Station CRM fará o disparo dos dados (negociação, fontes, campanhas, motivos de perda, etc) para integrações externas, contendo o payload padrão em JSON único e imutável para a URL de destino. O payload enviado conterá todas as informações disponíveis referentes à entidade alvo do webhook, o que inclui todos os campos padrões e customizados, caso possuam, que foram preenchidos.
+⚠️
+Atenção
+Para utilizar os eventos de webhook é necessário ter uma conta no RD Station CRM e ser assinante do plano Basic, Pro ou Advanced. Os webhooks enviam um payload padrão em formato JSON único e imutável. Não é possível personalizar os dados enviados pelo webhook.
+Requisitos para funcionamento dos Webhooks
+A URL cadastrada para consumo dos webhooks devem seguir os requisitos:
+Ser capaz de receber e consumir dados em formato JSON pela Internet;
+Possuir certificado de segurança (HTTPS);
+Ter compatibilidade para fazer a leitura do pacote de dados que o RD Station CRM envia.
+Query params
+Parâmetros utilizados para listar, obter e deletar webhooks.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+uuidStringO UUID exclusivo associado a cada webhook
+Body params
+Parâmetros utilizados para criar e atualizar webhook.
+Nome
+Tipo
+Descrição
+Obrigatório para criar
+Obrigatório para atualizar
+Observação
+tokenStringToken do usuário✓✓
+uuidStringO UUID exclusivo associado a cada webhook✓
+event_typeStringO tipo de evento que aciona a solicitação de webhook.✓✓Vide eventos suportados em cada um dos webhooks disponíveis, nas seções abaixo
+urlStringA URL de destino dos webhooks✓✓
+http_methodStringMétodo HTTP que será utilizado para chamar a URL de destino.✓✓Métodos suportados: POST
+Eventos e gatilhos dos webhooks
+Os webhooks do RD Station CRM são enviados conforme gatilhos ou ações que ocorrem na aplicação. Quando estes eventos ocorrem um fluxo automático é acionado e o fluxo de envio de webhooks é acionado conforme a configuração.
+Atualmente os eventos macros suportados são de criação, atualização e deleção das entidades. É possível identificar cada um dos eventos através da propriedade event_name presente no payload enviado no webhook.
+Payload
+Quando o evento configurado no webhook é acionado, o RD Station CRM envia uma requisição com o método configurado no http_method com o cabeçalho Content-Type: application/json.
+Descrição do payload padrão
+Todos os webhooks possuem uma estrutura em comum, definida aqui como envelope, que contém informações sobre o webhook. Dentro do envelope existe o objeto document que conterá os dados da entidade conforme o evento.
+Estrutura do payload envelope
+Nome
+Tipo
+Descrição
+event_nameStringO tipo de evento que acionou a solicitação do webhook
+event_timestampDateTimeA data/hora em que ocorreu o evento que acionou o webhook
+transaction_uuidUUIDIdentificador único do evento
+documentObjectObjeto contendo as informações de da entidade, como por exemplo de uma negociação
+Em cada um dos webhooks descritos abaixo serão descritos a estrutura do objeto document conforme dados da entidade.
+Eventos
+Negociação
+crm_deal_created
+Este webhook é disparado apenas quando uma nova negociação é criada. Seu event_name é o crm_deal_created.
+JSON
+{
+"event_name": "crm_deal_created",
+"document": {
+"id": "650878567482d9c0c7002050a475",
+"name": "Teste",
+"amount_monthly": 0.0,
+"amount_unique": 0.0,
+"amount_total": 0.0,
+"prediction_date": null,
+"created_at": "2023-09-18T15:04:34.515-03:00",
+"updated_at": "2023-09-18T15:04:34.515-03:00",
+"rating": 1,
+"status": "ongoing",
+"closed_at": null,
+"user": {
+"id": "622e7fb2f678470c001576f4a4",
+"name": "Hian Almada",
+"email": "hian.almada@rn.com",
+"avatar_url": null
+},
+"deal_stage": {
+"id": "622e4cee412e87000d2f52a6",
+"name": "Sem contato",
+"nickname": "SC",
+"created_at": "2022-03-13T16:58:38.951-03:00",
+"updated_at": "2022-03-13T16:58:38.951-03:00",
+"order": 1
+},
+"deal_pipeline": {
+"id": "622e4cee111e87000d2f52a5",
+"name": "Funil Padr\u00e3o"
+},
+"deal_source": {},
+"campaign": {},
+"deal_lost_reason": {},
+"deal_custom_fields": [
+{
+"value": null,
+"custom_field": {
+"id": "611e89b0f269d0000b3bb2c2",
+"label": "Whatsapp",
+"required": false,
+"unique": false,
+"opts": [],
+"type": "text"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "112e89ca673c7300162f15b3",
+"label": "Instagram",
+"required": false,
+"unique": false,
+"opts": [],
+"type": "text"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "622e89e9f329d0000f3bb17a",
+"label": "Qual a sua idade?",
+"required": false,
+"unique": false,
+"opts": [],
+"type": "text"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "622e8a32f269d0011f3bb17d",
+"label": "De onde voc\u00ea conhece a Issues?",
+"required": false,
+"unique": false,
+"opts": [
+"Selecione",
+"Redes Sociais",
+"Indica\u00e7\u00e3o",
+"Pesquisa no Goole",
+"Evento",
+"Pista de skate"
+],
+"type": "option"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "6258480fd71568001128705a",
+"label": "Unidade",
+"required": false,
+"unique": false,
+"opts": [
+"Florian\u00f3polis",
+"S\u00e3o Paulo"
+],
+"type": "multiple_choice"
+}
+}
+],
+"deal_products": []
+},
+"event_timestamp": "2023-09-18T18:04:34.000Z",
+"transaction_uuid": "f111b90-ec81-4353-8d52-ffd3b8df412d"
+}
+crm_deal_updated
+Este webhook é disparado sempre que uma negociação recebe atualizações. Seu event_name é o crm_deal_updated.
+JSON
+{
+"event_name": "crm_deal_updated",
+"document": {
+"id": "650878567482d9c0c7002050a475",
+"name": "Teste Negociação",
+"amount_monthly": 0.0,
+"amount_unique": 0.0,
+"amount_total": 0.0,
+"prediction_date": null,
+"created_at": "2023-09-18T15:04:34.515-03:00",
+"updated_at": "2023-09-18T15:04:34.515-03:00",
+"rating": 1,
+"status": "ongoing",
+"closed_at": null,
+"user": {
+"id": "622e7fb2f678470c001576f4a4",
+"name": "Hian Almada",
+"email": "hian.almada@rn.com",
+"avatar_url": null
+},
+"deal_stage": {
+"id": "622e4cee412e87000d2f52a6",
+"name": "Sem contato",
+"nickname": "SC",
+"created_at": "2022-03-13T16:58:38.951-03:00",
+"updated_at": "2022-03-13T16:58:38.951-03:00",
+"order": 1
+},
+"deal_pipeline": {
+"id": "622e4cee111e87000d2f52a5",
+"name": "Funil Padrão"
+},
+"deal_source": {
+},
+"campaign": {
+},
+"deal_lost_reason": {
+},
+"deal_custom_fields": [
+{
+"value": null,
+"custom_field": {
+"id": "611e89b0f269d0000b3bb2c2",
+"label": "Whatsapp",
+"required": false,
+"unique": false,
+"opts": [
+],
+"type": "text"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "112e89ca673c7300162f15b3",
+"label": "Instagram",
+"required": false,
+"unique": false,
+"opts": [
+],
+"type": "text"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "622e89e9f329d0000f3bb17a",
+"label": "Qual a sua idade?",
+"required": false,
+"unique": false,
+"opts": [
+],
+"type": "text"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "622e8a32f269d0011f3bb17d",
+"label": "De onde você conhece a Issues?",
+"required": false,
+"unique": false,
+"opts": [
+"Selecione",
+"Redes Sociais",
+"Indicação",
+"Pesquisa no Goole",
+"Evento",
+"Pista de skate"
+],
+"type": "option"
+}
+},
+{
+"value": null,
+"custom_field": {
+"id": "6258480fd71568001128705a",
+"label": "Unidade",
+"required": false,
+"unique": false,
+"opts": [
+"Florianópolis",
+"São Paulo"
+],
+"type": "multiple_choice"
+}
+}
+],
+"deal_products": [
+]
+},
+"event_timestamp": "2023-09-18T18:04:34.000Z",
+"transaction_uuid": "f111b90-ec81-4353-8d52-ffd3b8df412d"
+}
+crm_deal_deleted
+Este webhook é disparado apenas quando uma negociação é excluída. Seu event_name é o crm_deal_deleted.
+JSON
+{
+"event_name": "crm_deal_deleted",
+"document": {
+"id": "64df7a11113f80018644923",
+"name": "Teste Negociação"
+},
+"event_timestamp": "2023-11-14T18:43:09.000Z",
+"transaction_uuid": "b2daa3cb-23b1-497f-afb5-a5e4acda9374"
+}
+Payload de negociação
+Nome
+Tipo
+Descrição
+userObjectUsuário relacionado a negociação
+deal_stageObjectEstágio da negociação no fluxo
+deal_pipelineObjectFunil do CRM em que a negociação se encontra
+deal_sourceObjectFonte da negociação
+campaignObjectInformação das campanhas referente à entrada das negociações
+deal_lost_reasonObjectMotivo de perda da negociação
+deal_custom_fieldsObjectCampos personalizados da negociação
+deal_productsObjectProdutos e serviços presentes na negociação
+amount_uniqueNumberValor único
+amount_monthlyNumberValor recorrente
+amount_annualNumberValor total (soma do valor único e valor recorrente)
+ratingNumberQualificação (de 1 a 5)
+namestringNome da negociação
+prediction_dateStringData de previsão de fechamento
+created_atStringData de criação
+updated_atStringData da última atualização
+statusStringStatus da negociação. Podendo ser: ongoing (em andamento), won (ganha), lost (perdida), paused (pausada)
+closed_atStringData de fechamento. Apenas quando a negociação encontra-se no estado won ou lost
+Motivos de perda
+crm_lost_reason_created
+Este webhook é disparado apenas quando um novo motivo de perda é criado. Seu event_name é o crm_lost_reason_created.
+JSON
+{
+"event_name": "crm_lost_reason_created",
+"document": {
+"id": "67e6950e6555a5001984c936",
+"name": "Demorou demais",
+"created_at": "2025-03-28T09:24:46.688-03:00",
+"updated_at": "2025-03-28T09:24:46.688-03:00"
+},
+"event_timestamp": "2025-03-28T12:24:46.000Z",
+"transaction_uuid": "198603e3-c2de-4b12-9e12-9bd4b2eb28c6"
+}
+crm_lost_reason_updated
+Este webhook é disparado apenas quando um motivo recebe atualizações. Seu event_name é o crm_lost_reason_updated.
+JSON
+{
+"event_name": "crm_lost_reason_updated",
+"document": {
+"id": "67e6950e6555a5001984c936",
+"name": "Prazo de entrega",
+"created_at": "2025-03-28T09:24:46.688-03:00",
+"updated_at": "2025-03-28T09:27:25.204-03:00"
+},
+"event_timestamp": "2025-03-28T12:27:25.000Z",
+"transaction_uuid": "5a09500a-2769-47fd-8c99-2b26a12388d6"
+}
+crm_lost_reason_deleted
+Este webhook é disparado apenas quando um motivo é deletado. Seu event_name é o crm_lost_reason_deleted.
+JSON
+{
+"event_name": "crm_lost_reason_deleted",
+"document": {
+"id": "671052c7852de9003970f02a",
+"name": "Teste"
+},
+"event_timestamp": "2025-03-28T12:27:48.000Z",
+"transaction_uuid": "5c67ab1a-f223-4ca5-aec5-588fc67503c0"
+}
+Payload de motivo de perda
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+descriptionStringDescrição
+created_atStringData de criação
+updated_atStringData da última atualização
+Campanha
+crm_campaign_created
+Este webhook é disparado apenas quando um novo motivo de perda é criado. Seu event_name é o crm_campaign_created.
+JSON
+{
+"event_name": "crm_campaign_created",
+"document": {
+"id": "67e698da77ca600014198b58",
+"name": "Páscoa",
+"description": null,
+"created_at": "2025-03-28T09:40:58.932-03:00",
+"updated_at": "2025-03-28T09:40:58.932-03:00"
+},
+"event_timestamp": "2025-03-28T12:40:58.000Z",
+"transaction_uuid": "4cecef87-41c7-4731-8a3c-54b8b6eec446"
+}
+crm_campaign_updated
+Este webhook é disparado apenas quando um motivo recebe atualizações. Seu event_name é o crm_campaign_updated.
+JSON
+{
+"event_name": "crm_campaign_updated",
+"document": {
+"id": "67e698da77ca600014198b58",
+"name": "Páscoa 2025",
+"description": null,
+"created_at": "2025-03-28T09:40:58.932-03:00",
+"updated_at": "2025-03-28T09:41:24.474-03:00"
+},
+"event_timestamp": "2025-03-28T12:41:24.000Z",
+"transaction_uuid": "0cfec7b5-9ed3-4eca-bcf3-fd1b7e1ba932"
+}
+crm_campaign_deleted
+Este webhook é disparado apenas quando um motivo é deletado. Seu event_name é o crm_campaign_deleted.
+JSON
+{
+"event_name": "crm_campaign_deleted",
+"document": {
+"id": "6654c89f62e4cf000154671e",
+"name": "Criar Tarefa"
+},
+"event_timestamp": "2025-03-28T12:41:43.000Z",
+"transaction_uuid": "ee431aa0-89a5-4b2a-9c76-bfdb5f507b1d"
+}
+Payload de campanha
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+descriptionStringDescrição
+created_atStringData de criação
+updated_atStringData da última atualização
+Fonte
+crm_source_created
+Este webhook é disparado apenas quando uma nova Fonte é criada. Seu event_name é o crm_source_created.
+JSON
+{
+"event_name": "crm_source_created",
+"document": {
+"id": "67e699e577ca600014198b59",
+"name": "Instagram",
+"created_at": "2025-03-28T09:45:25.791-03:00",
+"updated_at": "2025-03-28T09:45:25.791-03:00"
+},
+"event_timestamp": "2025-03-28T12:45:25.000Z",
+"transaction_uuid": "c34e955b-f62a-43b8-b7e0-24d6a914655c"
+}
+crm_source_updated
+Este webhook é disparado apenas quando uma Fonte recebe atualizações. Seu event_name é o crm_source_updated.
+JSON
+{
+"event_name": "crm_source_updated",
+"document": {
+"id": "660d97d931bc1f001f76f339",
+"name": "Redes Sociais",
+"created_at": "2024-04-03T14:54:33.400-03:00",
+"updated_at": "2025-03-28T09:46:11.796-03:00"
+},
+"event_timestamp": "2025-03-28T12:46:11.000Z",
+"transaction_uuid": "a80c7cdd-ba54-472f-ba13-29d689f92249"
+}
+crm_source_deleted
+Este webhook é disparado apenas quando uma Fonte é excluída. Seu event_name é o crm_source_deleted.
+JSON
+{
+"event_name": "crm_source_deleted",
+"document": {
+"id": "67e699e577ca600014198b59",
+"name": "Instagram"
+},
+"event_timestamp": "2025-03-28T12:49:16.000Z",
+"transaction_uuid": "a0744735-74d1-4eed-b194-ab128e1aa60c"
+}
+Payload de fonte
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+created_atStringData de criação
+updated_atStringData da última atualização
+Tarefa
+crm_task_created
+Este webhook é disparado apenas quando uma nova tarefa é criada. Seu event_name é o crm_task_created.
+JSON
+{
+"event_name": "crm_task_created",
+"document": {
+"id": "67e69b7277ca600017198b60",
+"name": "Fazer ligação",
+"description": "Agendar reunião de apresentação do orçamento",
+"type": "task",
+"status": "open",
+"due_date": "2025-03-28T09:50:00.000-03:00",
+"created_by_id": "5c954731d8fb6100335a00b6",
+"completed_at": null,
+"completed_by_id": null,
+"deal_id": "666c7f6d1731ac000195e39e",
+"owner_ids": [
+"5c954731d8fb6100335a00b6"
+],
+"created_at": "2025-03-28T09:52:02.454-03:00",
+"updated_at": "2025-03-28T09:52:02.454-03:00"
+},
+"event_timestamp": "2025-03-28T12:52:02.000Z",
+"transaction_uuid": "4c8054c9-bd5a-4b66-95c5-52e9efd80402"
+}
+crm_task_updated
+Este webhook é disparado apenas quando uma tarefa recebe atualizações. Seu event_name é o crm_task_updated.
+JSON
+{
+"event_name": "crm_task_updated",
+"document": {
+"id": "66900a9d9f0fe20020d59b69",
+"name": "Entrar em contato",
+"description": "Entrar em contato com a pessoa",
+"type": "email",
+"status": "completed",
+"due_date": "2025-03-29T09:52:00.000-03:00",
+"created_by_id": "",
+"completed_at": "2025-03-28T09:53:09.274-03:00",
+"completed_by_id": "5c954731d8fb6100335a00b6",
+"deal_id": "668fe3f61de646000fada936",
+"owner_ids": [
+"5c954731d8fb6100335a00b6"
+],
+"created_at": "2024-07-11T13:38:53.405-03:00",
+"updated_at": "2025-03-28T09:53:09.288-03:00"
+},
+"event_timestamp": "2025-03-28T12:53:09.000Z",
+"transaction_uuid": "6a9eb2a7-6bf1-483f-8d71-349a0b02a545"
+}
+Payload de tarefa
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+descriptionStringDescrição
+typeStringTipo. Opções: call, email, meeting, task, visit, lunch, whatsapp.
+statusStringStatus. Opções: open, completed, canceled.
+due_dateStringPrazo para conclusão da tarefa
+created_by_idStringID do usuário que criou a tarefa
+completed_atStringData de conclusão da tarefa, null caso esteja em aberto
+completed_by_idStringID do usuário que concluiu a tarefa
+deal_idStringID da negociação a qual a tarefa está relacionada
+owner_idsArrayLista contendo os IDs dos usuários responsáveis pela tarefa
+created_atStringData de criação
+updated_atStringData da última atualização
+Produto
+crm_product_created
+Este webhook é disparado apenas quando um novo Produto é criado. Seu event_name é o crm_product_created.
+JSON
+{
+"event_name": "crm_product_created",
+"document": {
+"id": "67e6a12577ca600017198b77",
+"name": "Shampoo Purificante",
+"description": "O shampoo é o seu principal aliado para cabelos saudáveis e bonitos. Para além da limpeza, ele oferece um tratamento adequado de acordo com a necessidade dos seus fios.",
+"visible": true,
+"price": 33.9,
+"custom_fields": {},
+"created_at": "2025-03-28T10:16:21.999-03:00",
+"updated_at": "2025-03-28T10:16:21.999-03:00"
+},
+"event_timestamp": "2025-03-28T13:16:22.000Z",
+"transaction_uuid": "ed1dd2fa-c0cb-487f-a9d1-e72b318f876e"
+}
+crm_product_updated
+Este webhook é disparado apenas quando um Produto recebe atualizações. Seu event_name é o crm_product_updated.
+JSON
+{
+"event_name": "crm_product_updated",
+"document": {
+"id": "67e6a12577ca600017198b77",
+"name": "Shampoo Purificante",
+"description": "O shampoo é o seu principal aliado para cabelos saudáveis e bonitos. Para além da limpeza, ele oferece um tratamento adequado de acordo com a necessidade dos seus fios.",
+"visible": false,
+"price": 33.9,
+"custom_fields": {},
+"created_at": "2025-03-28T10:16:21.999-03:00",
+"updated_at": "2025-03-28T10:17:03.018-03:00"
+},
+"event_timestamp": "2025-03-28T13:17:03.000Z",
+"transaction_uuid": "f23de530-3456-40d0-a79f-674eb046b3c1"
+}
+crm_product_deleted
+Este webhook é disparado apenas quando um Produto é deletado. Seu event_name é o crm_product_deleted.
+JSON
+{
+"event_name": "crm_product_deleted",
+"document": {
+"id": "6668bd51abb0fa0001163ea3",
+"name": "Vinegar - White Wine"
+},
+"event_timestamp": "2025-03-28T13:17:48.000Z",
+"transaction_uuid": "4efc83c8-9285-4198-ab1b-32d98146d061"
+}
+Payload de produto
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+descriptionStringDescrição
+visibleBooleanSe o produto é visível true ou se não está visível false
+priceNumberValor base do produto
+custom_fieldsObjectCampos personalizados do produto
+created_atStringData de criação
+updated_atStringData da última atualização
+Empresa
+crm_organization_created
+Este webhook é disparado apenas quando uma nova Empresa é criada. Seu event_name é o crm_organization_created.
+JSON
+{
+"event_name": "crm_organization_created",
+"document": {
+"id": "67eac0256282af00182eae63",
+"name": "RD Station CRM",
+"description": "",
+"url": "https://www.rdstation.com/produto/crm",
+"address": {
+"line": null,
+"latitude": null,
+"longitude": null
+},
+"segment_ids": [
+"660d97d931bc1f001f76f331"
+],
+"owner_id": "5c954731d8fb6100335a00b6",
+"follower_ids": [
+"5c954731d8fb6100335a00b6"
+],
+"custom_fields": {
+"teste": [],
+"teste-2": null,
+"teste-3": ""
+},
+"created_at": "2025-03-31T13:17:41.613-03:00",
+"updated_at": "2025-03-31T13:17:41.613-03:00"
+},
+"event_timestamp": "2025-03-31T16:17:41.000Z",
+"transaction_uuid": "13390fbb-f6a9-453d-a28a-16cffc88383a"
+}
+crm_organization_updated
+Este webhook é disparado apenas quando uma Empresa recebe atualizações. Seu event_name é o crm_organization_updated.
+JSON
+{
+"event_name": "crm_organization_updated",
+"document": {
+"id": "67eac0256282af00182eae63",
+"name": "RD Station CRM",
+"description": "",
+"url": "https://www.rdstation.com/produto/crm",
+"address": {
+"line": null,
+"latitude": null,
+"longitude": null
+},
+"segment_ids": [
+"660d97d931bc1f001f76f331"
+],
+"owner_id": "5c954731d8fb6100335a00b6",
+"follower_ids": [
+"5c954731d8fb6100335a00b6",
+"611abc212df3bf001334f429"
+],
+"custom_fields": {
+"teste": [],
+"teste-2": null,
+"teste-3": ""
+},
+"created_at": "2025-03-31T13:17:41.613-03:00",
+"updated_at": "2025-03-31T13:19:04.140-03:00"
+},
+"event_timestamp": "2025-03-31T16:19:04.000Z",
+"transaction_uuid": "e2fdad2a-635b-4f14-a22a-ef8b75c6f9f2"
+}
+crm_organization_deleted
+Este webhook é disparado apenas quando uma Empresa é excluída. Seu event_name é o crm_organization_deleted.
+JSON
+{
+"event_name": "crm_organization_deleted",
+"document": {
+"id": "663cd90cd54be9001890f7de",
+"name": "ABC"
+},
+"event_timestamp": "2025-03-31T16:20:59.000Z",
+"transaction_uuid": "6c6fb9e6-0a95-4036-9584-d7a56411ad00"
+}
+Payload de empresa
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+descriptionStringDescrição
+urlStringURL/Site relacionado a empresa
+addressObjectObjeto contendo o endereço da empresa. Contém os campos line para endereço completo, além das coordenadas latitude e longitude
+segment_idsArrayLista contendo os IDs dos segmentos relacionados a empresa
+owner_idStringUsuário responsável pela empresa
+follower_idsArrayLista contendo os IDs dos usuários que estão como seguidores da empresa
+custom_fieldsObjectCampos personalizados da Empresa
+created_atStringData de criação
+updated_atStringData da última atualização
+Contato
+crm_contact_created
+Este webhook é disparado apenas quando um contato é criado. Seu event_name é o crm_contact_created.
+JSON
+{
+"event_name": "crm_contact_created",
+"document": {
+"id": "67eac31f6282af00162eae80",
+"name": "Contato do cliente",
+"job_title": "Gerente administrativo",
+"emails": [
+{
+"email": "email@email.net"
+}
+],
+"phones": [
+{
+"phone": "+552712341234",
+"type": "work"
+}
+],
+"birthday": null,
+"social_profiles": [],
+"organization_id": "6717ec11a22fcd0001ebf60b",
+"custom_fields": {},
+"legal_bases": [],
+"created_at": "2025-03-31T13:30:23.793-03:00",
+"updated_at": "2025-03-31T13:30:23.793-03:00"
+},
+"event_timestamp": "2025-03-31T16:30:23.000Z",
+"transaction_uuid": "fc5c192d-589a-4497-8928-107ebd55d116"
+}
+crm_contact_updated
+Este webhook é disparado apenas quando um contato recebe atualizações. Seu event_name é o crm_contact_updated.
+JSON
+{
+"event_name": "crm_contact_updated",
+"document": {
+"id": "67eac31f6282af00162eae80",
+"name": "Contato do cliente",
+"job_title": "Gerente administrativo",
+"emails": [
+{
+"email": "email@email.net"
+},
+{
+"email": "email2@email.net"
+}
+],
+"phones": [
+{
+"phone": "+552712341234",
+"type": "work"
+},
+{
+"phone": "+552798769876",
+"type": "work"
+}
+],
+"birthday": null,
+"social_profiles": [],
+"organization_id": "6717ec11a22fcd0001ebf60b",
+"custom_fields": {
+"teste-1": null,
+"teste-2": null,
+"teste-3": "",
+"teste-4": null,
+"testes": ""
+},
+"legal_bases": [],
+"created_at": "2025-03-31T13:30:23.793-03:00",
+"updated_at": "2025-03-31T13:32:29.001-03:00"
+},
+"event_timestamp": "2025-03-31T16:32:29.000Z",
+"transaction_uuid": "6c095c41-564a-4340-8707-cecf9d3dd2a4"
+}
+crm_contact_deleted
+Este webhook é disparado apenas quando um contato é deletado. Seu event_name é o crm_contact_deleted.
+JSON
+{
+"event_name": "crm_contact_deleted",
+"document": {
+"id": "67eac31f6282af00162eae80",
+"name": "Contato do cliente"
+},
+"event_timestamp": "2025-03-31T16:32:48.000Z",
+"transaction_uuid": "b81e495a-0398-4ce8-9a7d-af87dba9e475"
+}
+Payload de contato
+Nome
+Tipo
+Descrição
+idStringIdentificador único
+nameStringNome
+job_titleStringDescrição da função da pessoa
+emailsArrayLista de objetos contendo os emails relacionados à pessoa. Cada objeto contém a propriedade email contendo o email em si
+phonesArrayLista de objetos contendo os telefones relacionados a pessoa. Cada objeto contém as propriedades phone e type contendo o telefone e o tipo respectivamente
+birthdayStringData de nascimento cadastrada
+social_profilesArrayLista contendo as redes sociais relacionados à pessoa
+organization_idStringID da empresa a que este contato está relacionado
+custom_fieldsObjectCampos personalizados do Contato
+legal_basesArrayLista contendo a definição da base legal atribuído ao contato
+created_atStringData de criação
+updated_atStringData da última atualização
+Lógica de retentativas
+Caso nosso serviço de webhooks tenha problemas ao entregar suas notificações, nós tentaremos enviá-las novamente por mais 5 vezes.
+Os possíveis problemas na entrega das notificações podem ser:
+Se o end-point de callback demorar mais de 5 segundos para responder a requisição.
+Se a resposta do end-point de callback retornar um HTTP Status Code diferente de 2xx.
+Após a falha no envio ocorrer, as notificações entram em uma fila para serem reprocessadas. Caso o re-envio da notificação falhar as 5 vezes seguidas, a notificação será marcada como falha e não será mais re-processada.
+Em situações como as descritas acima é possível que eventos anormais possam ocorrer como perceber a duplicidade de chegada de eventos em seu sistema. Caso isto ocorra pode ser um indício de que o tempo de resposta do end-point está superior aos 5 segundos esperados.
+Suspensão de webhooks
+Existem situações em que podem ocorrer uma sequência de erros para uma mesma URL de destino, como por exemplo uma instabilidade na aplicação para qual a URL de destino está apontando.
+Caso o sistema de webhooks receba um volume acima do esperado para a mesma URL ela terá seus status alterado para suspenso. Para que um webhook seja suspenso é necessário que o mesmo esteja sempre retornando ERROS de forma constante, o que significa que a integração não está funcionando como deveria.
+O sistema de webhooks faz uma análise sobre estes erros, e caso seja constatado que o mesmo não será resolvido sozinho, pode acontecer a suspensão temporária conforme mencionado acima.
+Para mais informações, acesse o artigo em nossa central de ajuda.
+Sugestões de uso dos webhooks do RD Station CRM
+Abaixo está uma lista de sugestões para usar os webhooks no RD Station CRM.
+Webhook de fonte (source)
+Atualização automática de fontes de negociações em sistemas externos.
+Notificação para times de marketing sobre alterações nas fontes de negociações.
+Geração de relatórios sobre a evolução das fontes de captação.
+Webhook de campanha (campaign)
+Atualização automática de dashboards de campanhas em tempo real.
+Envio de notificações para times internos sobre alterações em campanhas.
+Webhook de motivos de perda (lost reason)
+Geração de relatórios automáticos sobre os principais motivos de perda.
+Envio de alertas para times de vendas e CS sobre mudanças nos motivos de perda.
+Webhook de tarefa (task)
+Integração com ferramentas de gestão de tarefas, como Trello e Asana.
+Envio de alertas automáticos para os responsáveis por tarefas alteradas.
+Sincronização com calendários para melhor planejamento das atividades.
+Webhook de contato (contact)
+Atualização automática de uma ferramenta externa quando um contato for atualizado.
+Disparo de comunicação personalizada (ex.: email de boas-vindas ao criar um novo contato).
+Sincronização de dados para atendimento, garantindo remoção em plataformas de suporte.
+Webhook de empresa (organization)
+Atualização de base de dados, notificando sistemas de billing sobre mudanças.
+Gestão de relacionamento, criando automaticamente um novo perfil no software de gestão de contas.
+Remoção de empresas inativas, garantindo consistência de dados entre sistemas.
+Webhook de negociação (deal)
+Atualização de forecast de vendas em tempo real ao criar ou alterar uma negociação.
+Integração com sistemas de cobrança, garantindo que uma venda concluída gere uma fatura automaticamente.
+Envio de notificações para gestores sempre que uma negociação avançar ou for perdida.
+Disparo de workflows automáticos no time de CS quando uma negociação for fechada.
+Sincronização com ferramentas de BI para análises mais detalhadas sobre oportunidades.
+Updated 6 days ago
+Obter usuário
+Listar webhooks
+
+Table of Contents
+Requisitos para funcionamento dos Webhooks
+Query params
+Body params
+Eventos e gatilhos dos webhooks
+Payload
+Descrição do payload padrão
+Eventos
+Negociação
+Motivos de perda
+Campanha
+Fonte
+Tarefa
+Produto
+Empresa
+Contato
+Lógica de retentativas
+Suspensão de webhooks
+Sugestões de uso dos webhooks do RD Station CRM
+Webhook de fonte (source)
+Webhook de campanha (campaign)
+Webhook de motivos de perda (lost reason)
+Webhook de tarefa (task)
+Webhook de contato (contact)
+Webhook de empresa (organization)
+Webhook de negociação (deal)
+

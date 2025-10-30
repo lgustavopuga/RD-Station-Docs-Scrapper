@@ -1,0 +1,70 @@
+
+
+Acesse sua conta
+HomeRecipesAPIChangelog
+Search
+JUMP TO
+
+Empresas
+A empresa é uma das três entidades chaves do RD Station CRM:
+Empresa
+Negociação
+Contato
+A empresa é a entidade jurídica que pode ser vinculada a uma negociação.
+❗️
+Atenção
+Toda informação cadastrada deve conter no mínimo 2 caracteres.
+Query params
+Parâmetros utilizados para listar e obter empresas.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+organization_idURLID da empresa a ser obtida
+pageStringPágina da listagem de empresas. Valor padrão é 1
+limitURLLimite de empresas que virão por listagem. Valor padrão é 20. Valor máximo é 200
+orderURLCampo a ser ordenado. Valor padrão é name. Também são aceitos os valores created_at e updated_at
+directionURLOrdenação da lista. asc ou desc. O padrão é asc
+organization_segmentURLID do segmento. Busca todas as empresas que têm esse segmento
+user_idURLID do usuário. Busca as empresas do usuário anterior no parâmetro
+qStringString com o nome da empresa. Busca as empresas com a string anterior no parâmetro
+Body params
+Parâmetros utilizados para criar e atualizar empresas.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome da empresa✓Mínimo 2 caracteres. Não pode se repetir. Obrigatório somente ao criar a empresa
+organization_custom_fieldsArray of objectsCampos personalizados da empresa✘Obrigatório, se o campo estiver marcado como obrigatório nas configurações do sistema
+resumeStringResumo da empresa✘
+urlStringURL da empresa✘
+addressStringEndereço da empresa✘
+organization_segmentsArray of stringsSegmentos da empresa✘Área de atuação da empresa. Caso exista no sistema, associa-o à empresa. Caso contrário, cria um novo segmento e associa-o à empresa
+user_idStringID do usuário responsável pela empresa✘
+Response Body params
+Parâmetros retornados ao listar e obter empresas.
+Campo
+Tipo
+Descrição
+has moreBoolean
+organizationsArray of objectsListagem de empresas
+organizations_idStringID da empresa
+organizations_nameStringNome da empresa
+addressStringEndereço da empresa
+facebookStringFacebook da empresa
+linkedinStringLinkedIn da empresa
+notesStringAnotações
+emailStringEmail dos usuários da equipe
+team_usersArray of objectsUsuários da equipe
+team_users_idStringID dos usuários da equipe
+team_users_nameStringNome dos usuários da equipe
+team_users_nameStringEmail dos usuários da equipe
+nameStringNome da equipe
+phoneStringTelefone do usuário
+teamsArrayEquipes na qual o usuário faz parte.
+Table of Contents
+Query params
+Body params
+Response Body params
+Português (Brasil) 

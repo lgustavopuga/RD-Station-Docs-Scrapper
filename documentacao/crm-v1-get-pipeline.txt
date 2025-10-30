@@ -1,0 +1,209 @@
+
+
+
+
+
+
+
+
+
+Listar funis de vendasget
+Criar funil de vendaspost
+Obter funil de vendasget
+Atualizar funil de vendasput
+
+
+
+
+
+
+
+Obter funil de vendas
+get https://crm.rdstation.com/api/v1 /deal_pipelines/{deal_pipeline_id}
+Obter funil de vendas
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_pipeline_id
+string
+required
+Response
+200
+Success
+Response body
+object
+config
+object
+deal_won
+object
+deal_won object
+deal_stages
+array of objects
+object
+_id
+string
+configuration
+array of objects
+object
+_id
+string
+created_at
+string
+extra
+object
+extra object
+format
+string
+type
+string
+updated_at
+string
+value
+number
+id
+string
+name
+string
+nickname
+string
+order
+number
+id
+string
+name
+string
+order
+number
+Updated 6 days ago
+Criar funil de vendas
+Atualizar funil de vendas
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deal_pipelines/deal_pipeline_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+144
+}
+1
+{
+2
+"config": {
+3
+"deal_won": {
+4
+"copy_to_pipeline": {
+5
+"deal_pipeline_id": "5fc0285ab5cd6f0012fca156",
+6
+"deal_stage_id": "5fc0285ab5cd6f0012fca158",
+7
+"owner_settings": {
+8
+"group_id": "_team",
+9
+"id": "5bab89733ccdb000201810ea",
+10
+"name": "Meteoro de pégasus"
+11
+}
+12
+}
+13
+}
+14
+},
+15
+"deal_stages": [
+16
+{
+17
+"_id": "54480f523f64f90155000034",
+18
+"configuration": [
+19
+{
+20
+"_id": "63970d03955d440026462995",
+21
+"created_at": "2022-12-12T08:14:11.513-03:00",
+22
+"extra": {
+23
+"skip_days": [],
+24
+"work_time": {
+25
+"00:00:00": "23:59:59"
+26
+}
+27
+},
+28
+"format": "days",
+29
+"type": "deal_stopped",
+30
+"updated_at": "2022-12-12T08:14:11.513-03:00",
+31
+"value": 1
+32
+}
+33
+],
+34
+"id": "54480f523f64f90155000034",
+35
+"name": "Proposta enviada",
+36
+"nickname": "PE",
+37
+"order": 1
+38
+},
+39
+{
+40
+"_id": "54480f523f64f90155000032",
+41
+"configuration": [
+42
+{
+43
+"_id": "63970d062f6c18001a7795ec",
+44
+"created_at": "2022-12-12T08:14:14.687-03:00",
+45
+"extra": {
+46
+"skip_days": [],
+47
+"work_time": {
+48
+"00:00:00": "23:59:59"
+

@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+Atualizar tarefa
+put https://crm.rdstation.com/api/v1 /tasks/{task_id}
+Atualizar tarefa
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+task_id
+string
+required
+Body Params
+task
+object
+task object
+Responses
+200
+Success
+Response body
+object
+_id
+string
+date
+string
+done
+boolean
+hour
+string
+markup
+string
+notes
+string
+subject
+string
+type
+string
+user_ids
+array of strings
+404
+Not Found
+Updated 6 days ago
+Obter tarefa
+Equipes
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request PUT \
+2
+--url https://crm.rdstation.com/api/v1/tasks/task_id \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+404 - Not Found
+

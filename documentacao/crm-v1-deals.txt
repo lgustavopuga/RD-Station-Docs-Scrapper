@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+
+
+
+
+Listar negociaçõesget
+Criar negociaçãopost
+Obter negociaçãoget
+Atualizar negociaçãoput
+Listar contatos da negociaçãoget
+
+
+
+
+
+Negociações
+A negociação é uma das três entidades chaves do RD Station CRM:
+Negociação
+Contato
+Empresa
+Ela representa a possibilidade de negociar uma venda e contém todas as fases do processo de negociação.
+Toda negociação cadastrada percorre o funil de vendas e, a cada atualização, as informações referentes ao avanço da negociação podem ser registradas em campos específicos.
+Assim, todo o histórico de negociações, sejam elas ganhas (venda realizada) ou perdidas, fica armazenado no cadastro da empresa à qual pertencem, independente do vendedor responsável e do tipo de produto ou serviço negociado.
+❗️
+Atenção
+Toda informação cadastrada deve conter no mínimo 2 caracteres.
+Query params
+Parâmetros utilizados para listar e obter negociações.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+deal_idStringID da negociação a ser obtida
+pageStringNúmero da página listada. Valor padrão é 1
+limitStringLimite de negociações que virão por listagem. Valor padrão é 20. Valor máximo é 200
+orderStringOrdenação. Valor padrão é created_at.
+directionStringOrdenação da lista. asc ou desc, padrão é desc
+nameStringNome da negociação
+exact_nameStringPara buscas com nome exato, usar o parâmetro exact_name=true
+winStringNegociações ganhas. Com o valor true para trazer as negociações ganhas, false para trazer as negociações perdidas e null para retornar as negociações em aberto.
+user_idStringID do usuário relacionado à negociação.
+start_dateStringPrimeiro dia/hora em que deve ser aplicado o filtro para o parâmetro closed_at_period ou created_at_period. Ex.: "start_date": "2020-12-14T15:00:00"
+end_dateStringÚltimo dia/hora em que deve ser aplicado o filtro para o parâmetro closed_at_period ou created_at_period. Ex.: "end_date": "2020-12-14T15:00:00"
+closed_atBooleanAo informar true, retorna as negociações ganhas e perdidas. Ao informar false, retorna as negociações em aberto ou pausadas.
+closed_at_periodBooleanData de fechamento da negociação: se true deve ser informado start_date e end_date.
+created_at_periodBooleanData de criação da negociação: se true, deve ser informado start_date e end_date.
+prediction_date_periodBooleanData de previsão de fechamento da negociação: se true, deve ser informado start_date e end_date.
+closed_by_idStringID do usuário que fechou a venda
+deal_stage_idStringID da etapa
+deal_lost_reason_idStringID do motivo de perda
+organizationStringID da empresa
+holdStringEstado da negociação pausada. Se marcado como true, retorna todas negociações pausadas. Para outros casos, não deve-se utilizar esse parâmetro.
+product_presenceStringNegociações que contenham produtos e serviços relacionados: false (nenhum produto relacionado), true (um ou mais produtos relacionados) ou uma lista de IDs de produto. A lista de IDs deve ser informada com os valores separados por vírgula. Ex.: 677c217ae3abc4001404bb15, 67916786e3a0f30015e26537.
+deal_pipeline_idStringID do funil de vendas
+Body params
+Parâmetros utilizados para criar e atualizar negociações.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome da negociação a ser obtida✓Obrigatório somente ao criar uma negociação.
+deal_stage_idStringID da etapa do funil✘
+deal_custom_fieldsObjectCampos customizados da negociação✘
+deal_sourceObjectFonte da negociação✘
+contactsArray of objectsNovos Contatos associados a negociação✘Cria novos contatos vinculados a negociação
+set_contactsObjectContatos existentes associados a negociação✘Vincula contatos existentes a negociação
+deal_productsArray of objectsProdutos vinculados a negociação✘
+campaignObjectCampanha da negociação✘
+organizationObjectEmpresa à qual a negociação pertence✘
+user_idObjectUsuário responsável pela negociação✘Se esse parâmetro não for enviado na requisição, o dono do token (utilizado para autorizar a requisição) será atribuído como responsável pela negociação.
+holdBooleanStatus da negociação✘Opções: true (negociação pausada), null (negociação em aberto).
+ratingIntegerAvaliação da negociação✘
+winBooleanStatus da negociação✘Opções: true (negociação ganha), false (negociação perdida), null (negociação em aberto).
+prediction_dateDateData da previsão de fechamento da negociação✘Formato: YYYY-MM-DD.
+deal_lost_reason_idStringID do motivo de perda✘
+contacts.legal_baseArrayBase legal✘
+Updated 6 days ago
+Atualizar etapa do funil de vendas
+Listar negociações
+
+Table of Contents
+Query params
+Body params
+

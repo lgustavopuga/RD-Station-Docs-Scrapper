@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listar etapas do funil de vendasget
+Criar etapa do funil de vendaspost
+Obter etapa do funil de vendasget
+Atualizar etapa do funil de vendasput
+
+
+
+
+Etapas do funil de vendas
+Uma etapa do funil de vendas representa um passo definido dentro de um processo de vendas, que é organizado em um funil de vendas. As negociações progridem através dessas etapas, desde a prospecção inicial até serem marcadas como ganhas ou perdidas.
+Cada etapa do funil de vendas possui um nome (exemplos: "Primeiro Contato", "Proposta Apresentada", "Negociação"), uma ordem que define sua posição no funil de vendas e descrições do que fazer nessa etapa.
+A correta configuração das etapas do funil de vendas é vital para a organização do processo comercial, a identificação de gargalos e a análise da eficiência da equipe de vendas em cada fase da jornada de compra do cliente.
+Updated 42 minutes ago
+Atualizar fonte
+Listar etapas do funil de vendas
+
+

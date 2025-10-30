@@ -1,0 +1,123 @@
+
+
+
+
+
+
+
+
+Listar campos personalizados
+get https://crm.rdstation.com/api/v1 /custom_fields
+Listar campos personalizados
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+for
+string
+Seleciona os campos personalizados da entidade fornecida. Os valores permitidos são: deal, contact e organization
+Response
+200
+Success
+Response body
+array of objects
+object
+_id
+string
+allow_new
+boolean
+created_at
+string
+for
+string
+id
+string
+label
+string
+opts
+array
+order
+number
+required
+boolean
+required_rules
+array
+type
+string
+unique
+boolean
+updated_at
+string
+visible
+boolean
+Updated 6 days ago
+Campos personalizados
+Criar campo personalizado
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/custom_fields \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+18
+1
+[
+2
+{
+3
+"_id": "62684cbc6caff8000c8b6b00",
+4
+"allow_new": false,
+5
+"created_at": "2022-04-26T16:49:16.583-03:00",
+6
+"for": "contact",
+7
+"id": "62684cbc6caff8000c8b6b00",
+8
+"label": "Telefone fixo",
+9
+"opts": [],
+10
+"order": 1,
+11
+"required": false,
+12
+"required_rules": [],
+13
+"type": "text",
+14
+"unique": false,
+15
+"updated_at": "2022-04-26T16:49:16.583-03:00",
+16
+"visible": true
+17
+}
+18
+]
+

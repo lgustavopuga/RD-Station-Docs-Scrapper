@@ -1,0 +1,230 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tarefas
+Listar tarefasget
+Criar tarefapost
+Obter tarefaget
+Atualizar tarefaput
+Equipes
+
+
+
+Listar tarefas
+get https://api.rd.services/crm/v2 /tasks
+Recupera uma lista paginada de tarefas, com filtros para status, tipo e responsável.
+Filtro
+Propriedades disponíveis para filtro usando RDQL.
+Propriedade
+Tipo
+Descrição
+deal_id StringFiltra por um ID de negócio específico.
+type StringFiltra pelo tipo da tarefa.
+owner_ids StringFiltra por um ou mais IDs de proprietários (donos).
+completed_at DateTimeFiltra por data e hora de conclusão da tarefa.
+due_date DateTimeFiltra por data e hora de vencimento da tarefa.
+status StringFiltra pelo status da tarefa.
+Ordenação
+Propriedades disponíveis para ordenação.
+due_date
+deal_id
+completed_at
+updated_at
+Log in to see full request history
+time
+status
+user agent
+Make a request to see history.
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+filter
+string
+Filtro no formato RDQL. (Saiba mais)
+sort
+object
+Ordenação. (Saiba mais)
+sort object
+page
+object
+Paginação. (Saiba mais)
+page object
+Responses
+200
+OK
+Response body
+object
+data
+array of objects
+Lista de recursos relacionados.
+object
+id
+string
+Identificador único.
+name
+string
+Assunto da tarefa.
+description
+string
+Notas ou descrição adicional da tarefa.
+type
+string
+enum
+Tipo da tarefa.
+call email meeting task lunch visit whatsapp
+status
+string
+enum
+Status da tarefa.
+open completed canceled
+due_date
+date-time
+Data limite para conclusão da tarefa.
+created_by_id
+string
+ID do usuário que criou a tarefa.
+completed_at
+date-time
+Data em que a tarefa foi concluída.
+completed_by_id
+string
+ID do usuário que concluiu a tarefa.
+deal_id
+string
+ID da negociação associada.
+owner_ids
+array of strings
+IDs dos usuários responsáveis pela tarefa.
+created_at
+date-time
+Data de criação da tarefa.
+updated_at
+date-time
+Data de atualização da tarefa.
+links
+object
+Links de navegação da paginação.
+first
+uri
+Link para a primeira página.
+prev
+uri
+Link para a página anterior.
+self
+uri
+Link para a página atual.
+next
+uri
+Link para a próxima página.
+last
+uri
+Link para a última página.
+400
+A requisição está malformada e não consegue ser processada.
+401
+O token da API está ausente ou inválido.
+403
+O token não tem permissão para acessar o recurso solicitado.
+429
+O limite de requisições foi excedido.
+500
+Erro interno ou inesperado no servidor.
+Updated 40 minutes ago
+Tarefas
+Criar tarefa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+OAuth2
+OAuth2
+Bearer
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url 'https://api.rd.services/crm/v2/tasks?page[number]=1&page[size]=25' \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200
+Example
+xxxxxxxxxx
+28
+1
+{
+2
+"data": [
+3
+{
+4
+"id": "string",
+5
+"name": "string",
+6
+"description": "string",
+7
+"type": "call",
+8
+"status": "open",
+9
+"due_date": "2025-10-30T19:54:08.832Z",
+10
+"created_by_id": "string",
+11
+"completed_at": "2025-10-30T19:54:08.832Z",
+12
+"completed_by_id": "string",
+13
+"deal_id": "string",
+14
+"owner_ids": [
+15
+"string"
+16
+],
+17
+"created_at": "2025-10-30T19:54:08.832Z",
+18
+"updated_at": "2025-10-30T19:54:08.832Z"
+19
+}
+20
+],
+21
+"links": {
+22
+"first": "string",
+23
+"prev": "string",
+24
+"self": "string",
+25
+"next": "string",
+26
+"last": "string"
+27
+}
+28
+}
+

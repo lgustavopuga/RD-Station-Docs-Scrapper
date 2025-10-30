@@ -1,0 +1,92 @@
+
+
+
+
+
+
+
+
+
+Produtos na negociação
+Listar produtos na negociaçãoget
+Criar produto na negociaçãopost
+Criar produtos na negociaçãopost
+Atualizar produto na negociaçãoput
+Deletar produto na negociaçãodel
+Atualizar produtos na negociaçãopatch
+Deletar produtos na negociaçãodel
+Fontes
+
+
+
+
+
+
+Deletar produtos na negociação
+delete https://crm.rdstation.com/api/v1 /deals/{deal_id}/deal_products/batch/destroy
+Deletar produtos na negociação
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+deal_id
+string
+required
+Body Params
+deal_products
+array of objects
+ADD object
+Responses
+200
+Success
+Response body
+object
+deal
+object
+deal_products
+array
+id
+string
+name
+string
+400
+Bad Request
+404
+Not Found
+413
+Payload Too Large
+Updated 6 days ago
+Atualizar 
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request DELETE \
+2
+--url https://crm.rdstation.com/api/v1/deals/deal_id/deal_products/batch/destroy \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+400 - Bad Request
+404 - Not Found
+413 - Payload Too Large
+

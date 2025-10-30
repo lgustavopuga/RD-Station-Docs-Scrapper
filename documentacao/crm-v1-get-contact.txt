@@ -1,0 +1,249 @@
+
+
+
+
+
+
+Listar contatosget
+Criar contatopost
+Obter contatoget
+Atualizar contatoput
+Campos personalizados
+
+
+
+
+
+
+
+
+Obter contato
+get https://crm.rdstation.com/api/v1 /contacts/{contact_id}
+Obter contato
+Log in to see full request history
+time
+status
+user agent
+Make a request to see history.
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+contact_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+birthday
+object | null
+Has additional fields
+contact_c_f
+object
+contact_custom_fields
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string | null
+created_at
+string
+deal_ids
+array of strings
+emails
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+email
+string
+updated_at
+date-time | null
+facebook
+string | null
+id
+string
+legal_bases
+array of objects
+object
+category
+string
+status
+string
+type
+string
+linkedin
+string | null
+name
+string
+notes
+string | null
+organization
+object
+_id
+string
+name
+string
+resume
+string | null
+url
+string | null
+organization_id
+string
+phones
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+phone
+string
+type
+string
+updated_at
+date-time | null
+skype
+string | null
+title
+string
+updated_at
+string
+Updated 6 days ago
+Criar contato
+Atualizar contato
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/contacts/contact_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+175
+}
+1
+{
+2
+"_id": "62bef505b1b6e300209c91f4",
+3
+"birthday": null,
+4
+"contact_c_f": {},
+5
+"contact_custom_fields": [
+6
+{
+7
+"_id": "63beb0bd710cac001ce30a6d",
+8
+"created_at": null,
+9
+"custom_field_id": "60dcc845f69fae0016b79f53",
+10
+"updated_at": null,
+11
+"value": null
+12
+},
+13
+{
+14
+"_id": "63beb0bd710cac001ce30a6f",
+15
+"created_at": null,
+16
+"custom_field_id": "5fd103d1ab1bf3001d8e9e73",
+17
+"updated_at": null,
+18
+"value": null
+19
+},
+20
+{
+21
+"_id": "63beb0bd710cac001ce30a6e",
+22
+"created_at": null,
+23
+"custom_field_id": "5fc66c8b1594ca0013d962b5",
+24
+"updated_at": null,
+25
+"value": null
+26
+},
+27
+{
+28
+"_id": "63beb0bd710cac001ce30a70",
+29
+"created_at": null,
+30
+"custom_field_id": "5fd105045d1961001be63a7c",
+31
+"updated_at": null,
+32
+"value": null
+33
+},
+34
+{
+35
+"_id": "63beb0bd710cac001ce30a8d",
+36
+"created_at": null,
+37
+"custom_field_id": "5fc66d78ffb2340009593d83",
+38
+"updated_at": null,
+39
+"value": null
+40
+},
+41
+{
+42
+"_id": "63beb0bd710cac001ce30a71",
+43
+"created_at": null,
+44
+"custom_field_id": "5fbd0aa25273a700091d0fbc",
+45
+"updated_at": null,
+46
+"value": null
+47
+},
+48
+{
+

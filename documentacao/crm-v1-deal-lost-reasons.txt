@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+
+Motivos de perda
+Listar motivos de perdaget
+Criar motivo de perdapost
+Obter motivo de perdaget
+Atualizar motivo de perdaput
+Funis de vendas
+
+
+
+
+
+
+
+Motivos de perda
+O motivo de perda representa a razão de uma determinada negociação não ter sido ganha. Sempre que uma negociação é marcada como perdida, é solicitado o motivo de perda.
+Query params
+Parâmetros utilizados para listar e obter motivos de perda.
+Nome
+Tipo
+Descrição
+tokenStringToken do usuário
+limitStringLimite de motivos de perda que virão por listagem. Valor padrão é 20. Valor máximo é 200
+pageStringPágina da listagem de motivos de perda. Valor padrão é 1
+qStringNome do motivo de perda a ser buscado. Ex: a fonte "Motivo 1" deve ser buscada como "motivo%201"
+orderStringCampo a ser ordenado. Valor padrão e aceito é "name"
+Body params
+Parâmetros utilizados para criar e atualizar motivos de perda.
+Nome
+Tipo
+Descrição
+Obrigatório
+Observação
+nameStringNome do motivo de perda✓Deve conter no mínimo 2 e no máximo 40 caracteres
+Updated 6 days ago
+Deletar campo personalizado
+Listar motivos de perda
+
+Table of Contents
+Query params
+Body params
+

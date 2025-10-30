@@ -1,0 +1,179 @@
+
+
+
+
+Listar fontes
+get https://crm.rdstation.com/api/v1 /deal_sources
+Listar fontes
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+limit
+string
+Limite de fontes que virão por listagem. Valor padrão é 20. Valor máximo é 200
+page
+string
+Número atual da página. Valor padrão é 1
+q
+string
+Nome da fonte a ser buscada. Ex: a fonte "Facebook Ads" deve ser buscada como "facebook%20ads"
+Response
+200
+Success
+Response body
+object
+deal_sources
+array of objects
+object
+_id
+string
+created_at
+string
+description
+string | null
+id
+string
+instance_id
+string
+name
+string
+updated_at
+string
+has_more
+boolean
+total
+number
+Updated 6 days ago
+Fontes
+Criar fonte
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/deal_sources \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: multipart/form-data'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+51
+}
+1
+{
+2
+"deal_sources": [
+3
+{
+4
+"_id": "61140eacc794c70001b71a25",
+5
+"created_at": "2021-08-11T14:53:48.352-03:00",
+6
+"description": null,
+7
+"id": "61140eacc794c70001b71a25",
+8
+"instance_id": "5b75b4235bdc75002b1b656f",
+9
+"name": "2.0",
+10
+"updated_at": "2021-08-11T14:53:48.352-03:00"
+11
+},
+12
+{
+13
+"_id": "61140ea5c794c70001b71985",
+14
+"created_at": "2021-08-11T14:53:41.331-03:00",
+15
+"description": null,
+16
+"id": "61140ea5c794c70001b71985",
+17
+"instance_id": "5b75b4235bdc75002b1b656f",
+18
+"name": "3.0",
+19
+"updated_at": "2021-08-11T14:53:41.331-03:00"
+20
+},
+21
+{
+22
+"_id": "61140ea4c794c70001b7195a",
+23
+"created_at": "2021-08-11T14:53:40.764-03:00",
+24
+"description": null,
+25
+"id": "61140ea4c794c70001b7195a",
+26
+"instance_id": "5b75b4235bdc75002b1b656f",
+27
+"name": "4.0",
+28
+"updated_at": "2021-08-11T14:53:40.764-03:00"
+29
+},
+30
+{
+31
+"_id": "61140ea3c794c70001b7192f",
+32
+"created_at": "2021-08-11T14:53:39.945-03:00",
+33
+"description": null,
+34
+"id": "61140ea3c794c70001b7192f",
+35
+"instance_id": "5b75b4235bdc75002b1b656f",
+36
+"name": "5.0",
+37
+"updated_at": "2021-08-11T14:53:39.945-03:00"
+38
+},
+39
+{
+40
+"_id": "61ae0c8e2827a4000132dd83",
+41
+"created_at": "2021-12-06T10:13:50.086-03:00",
+42
+"description": null,
+43
+"id": "61ae0c8e2827a4000132dd83",
+44
+"instance_id": "5b75b4235bdc75002b1b656f",
+45
+"name": "Base Vivacorp 12/21",
+46
+"updated_at": "2021-12-06T10:13:50.086-03:00"
+47
+}
+48
+],
+

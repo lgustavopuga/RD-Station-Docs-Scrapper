@@ -1,0 +1,134 @@
+
+
+
+
+
+
+
+
+
+
+
+Empresas
+Listar empresasget
+Criar empresapost
+Obter empresaget
+Atualizar empresaput
+Listar contatos da empresaget
+Produtos
+
+
+
+
+Criar empresa
+post https://crm.rdstation.com/api/v1 /organizations
+Criar empresa
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Body Params
+organization
+object
+organization object
+Response
+200
+Success
+Response body
+object
+_id
+string
+address
+string | null
+address_latitude
+string | null
+address_longitude
+string | null
+contacts
+array
+created_at
+string
+follower_ids
+array
+followers
+array
+last_activity_at
+date-time | null
+name
+string
+organization_custom_fields
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+custom_field_id
+string
+updated_at
+date-time | null
+value
+string
+organization_segments
+array of objects
+object
+_id
+string
+created_at
+string
+instance_id
+string
+integration_id
+string | null
+name
+string
+organization_ids
+array of strings
+updated_at
+string
+resume
+string
+updated_at
+string
+url
+string
+user
+object
+_id
+string
+name
+string
+user_id
+string
+Updated 6 days ago
+Listar empresas
+Obter empresa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://crm.rdstation.com/api/v1/organizations \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

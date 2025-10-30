@@ -1,0 +1,232 @@
+
+
+
+
+
+
+
+
+Listar tarefas
+get https://crm.rdstation.com/api/v1 /tasks
+Listar tarefas
+Log in to see full request history
+time
+status
+user agent
+Make a request to see history.
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Query Params
+page
+string
+Número da página listada. Valor padrão é 1
+limit
+string
+Limite de tarefas que virão por listagem. Valor padrão é 20. Valor máximo é 200
+deal_id
+string
+ID da negociação
+done
+string
+Se a tarefa está concluída
+type
+string
+Tipo de tarefa. Valores possíveis: (call, email, meeting, task, lunch, visit, whatsapp)
+user_id
+string
+ID do usuário
+date_start
+string
+Filtrar por data de início
+date_end
+string
+Filtrar por data de fim
+done_date_start
+string
+Filtrar por data de conclusão - início
+done_date_end
+string
+Filtrar por data de conclusão - final
+Response
+200
+Success
+Response body
+object
+has_more
+boolean
+tasks
+array of objects
+object
+_id
+string
+created_at
+string
+date
+string
+deal
+object
+deal object
+deal_id
+string
+done
+boolean
+done_date
+date-time | null
+hour
+string
+id
+string
+markup
+string
+notes
+string | null
+subject
+string
+type
+string
+user_ids
+array of strings
+users
+array of objects
+object
+_id
+string
+email
+string
+id
+string
+name
+string
+nickname
+string
+total
+number
+Updated 6 days ago
+Tarefas
+Criar tarefa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/tasks \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+72
+}
+1
+{
+2
+"has_more": false,
+3
+"tasks": [
+4
+{
+5
+"_id": "ID",
+6
+"created_at": "2023-02-23T16:00:50.675-03:00",
+7
+"date": "2021-12-31T03:00:00.000Z",
+8
+"deal": {
+9
+"_id": "ID",
+10
+"hold": null,
+11
+"id": "ID",
+12
+"name": "Oportunidade Emp1",
+13
+"rating": 1
+14
+},
+15
+"deal_id": "DEAL_ID",
+16
+"done": false,
+17
+"done_date": null,
+18
+"hour": "00:00",
+19
+"id": "ID",
+20
+"markup": "past",
+21
+"notes": "Anotações",
+22
+"subject": "Assunto 01",
+23
+"type": "call",
+24
+"user_ids": [
+25
+"USER_ID"
+26
+],
+27
+"users": [
+28
+{
+29
+"_id": "ID",
+30
+"email": "EMAIL",
+31
+"id": "ID",
+32
+"name": "NAME",
+33
+"nickname": "RP"
+34
+}
+35
+]
+36
+},
+37
+{
+38
+"_id": "ID",
+39
+"created_at": "2023-02-23T15:59:14.474-03:00",
+40
+"date": "2023-02-23T04:00:00.000Z",
+41
+"deal": {
+42
+"_id": "ID",
+43
+"hold": null,
+44
+"id": "ID",
+45
+"name": "NAME",
+46
+"rating": 1
+47
+},
+48
+"deal_id": "ID",
+49
+"done": false,
+

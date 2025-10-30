@@ -1,0 +1,70 @@
+
+
+
+
+[Vídeo] Como configurar a Autenticação OAuth na sua aplicação e boas práticas
+Passo 1: Como criar um aplicativo na App Store e gerar as Credenciais (client_id e client_secret)
+Passo 2: Como utilizar as Credenciais para gerar o code
+Passo 3: Como obter os tokens (access_token e refresh_token)post
+Passo 4: Como utilizar o refresh_token para atualizar o access_tokenpost
+Como criar um fluxo de verificação e renovação do token
+Como utilizar o access_token para autorizar suas requisições
+Como revogar o acesso de um tokenpost
+Erros relacionados à Autenticação
+FAQ de Autenticação
+
+
+
+
+Como revogar o acesso de um token
+post https://api.rd.services /auth/revoke
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Existem algumas razões pelas quais você pode precisar revogar o acesso de um aplicativo à conta de um usuário, por isso, o acesso dos clientes com Autenticação do tipo OAuth pode ser revogado sempre que necessário.
+Ao revogar o acesso, os tokens ( access_token e refresh_token) se tornarão inválidos e resultarão em uma solicitação 401 (Unauthorized).
+Para isso, você vai utilizar o valor do token e o tipo do token no envio da sua requisição.
+Você pode utilizar o recurso de "Try It" desta página para revogar o acesso dos tokens ou se basear para desenvolver a sua aplicação!
+Form Data
+token
+string
+Defaults to TOKEN
+valor do token
+TOKEN
+token_type_hint
+string
+Defaults to TOKEN_TYPE
+O tipo de token que você está revogando (refresh_token ou access_token)
+TOKEN_TYPE
+Response
+200
+200
+Response body
+object
+Updated about 1 month ago
+Como utilizar o access_token para autorizar suas requisições
+Erros relacionados à Autenticação
+
+
+xxxxxxxxxx
+1
+curl --request POST \
+2
+--url https://api.rd.services/auth/revoke \
+3
+--header 'accept: application/json' \
+4
+--header 'content-type: application/x-www-form-urlencoded' \
+5
+--data token=TOKEN \
+6
+--data token_type_hint=TOKEN_TYPE
+Try It!
+RESPONSE
+200 - Result
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Result
+

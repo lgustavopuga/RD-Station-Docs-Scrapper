@@ -1,0 +1,296 @@
+
+
+
+
+
+
+
+
+
+
+
+Empresas
+Listar empresasget
+Criar empresapost
+Obter empresaget
+Atualizar empresaput
+Listar contatos da empresaget
+Produtos
+
+
+
+
+Obter empresa
+get https://crm.rdstation.com/api/v1 /organizations/{organization_id}
+Obter empresa
+Log in to see full request history
+time
+status
+user agent
+Retrieving recent requests…
+Loading…
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+organization_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+address
+string | null
+address_latitude
+string | null
+address_longitude
+string | null
+contacts
+array of objects
+object
+_id
+string
+created_at
+string
+deal_ids
+array of strings
+emails
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+email
+string
+updated_at
+date-time | null
+facebook
+string
+import_id
+string | null
+instance_id
+string
+integration_id
+string
+integration_type
+string
+legal_bases
+array of objects
+object
+_id
+string
+category
+string
+created_at
+string
+status
+string
+type
+string
+updated_at
+string
+linkedin
+string
+name
+string
+notes
+string | null
+organization_id
+string
+phones
+array of objects
+object
+_id
+string
+created_at
+date-time | null
+phone
+string
+type
+string | null
+updated_at
+date-time | null
+skype
+string | null
+title
+string
+updated_at
+string
+user_id
+string
+user_ids
+array of strings
+created_at
+string
+follower_ids
+array of strings
+followers
+array of objects
+object
+_id
+string
+created_at
+string
+email
+string
+name
+string
+phone
+string
+team_ids
+array
+updated_at
+string
+last_activity_at
+date-time | null
+name
+string
+organization_custom_fields
+array
+organization_segments
+array
+resume
+string | null
+updated_at
+string
+url
+string
+user
+object
+_id
+string
+name
+string
+user_id
+string
+Updated 6 days ago
+Criar empresa
+Atualizar empresa
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/organizations/organization_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+xxxxxxxxxx
+92
+}
+1
+{
+2
+"_id": "ID",
+3
+"address": null,
+4
+"address_latitude": null,
+5
+"address_longitude": null,
+6
+"contacts": [
+7
+{
+8
+"_id": "ID",
+9
+"created_at": "2022-04-26T16:40:47.653-03:00",
+10
+"deal_ids": [
+11
+"ID"
+12
+],
+13
+"emails": [
+14
+{
+15
+"_id": "ID",
+16
+"created_at": null,
+17
+"email": "conversion_ev31012022-2@email.com",
+18
+"updated_at": null
+19
+}
+20
+],
+21
+"facebook": "facebook name of the contact",
+22
+"import_id": null,
+23
+"instance_id": "6268453dc9315700177a7765",
+24
+"integration_id": "dff817d6-0b76-44bf-b593-cb05603a0163",
+25
+"integration_type": "RD_STATION",
+26
+"legal_bases": [
+27
+{
+28
+"_id": "ID",
+29
+"category": "communications",
+30
+"created_at": "2022-04-26T16:40:47.653-03:00",
+31
+"status": "granted",
+32
+"type": "consent",
+33
+"updated_at": "2022-04-26T16:40:47.653-03:00"
+34
+}
+35
+],
+36
+"linkedin": "linkedin user name of the contact",
+37
+"name": "conversion_ev31012022-2",
+38
+"notes": null,
+39
+"organization_id": "62684abf6b92b70001be1682",
+40
+"phones": [
+41
+{
+42
+"_id": "ID",
+43
+"created_at": null,
+44
+"phone": "phone of the contact",
+45
+"type": null,
+46
+"updated_at": null
+47
+},
+48
+{
+

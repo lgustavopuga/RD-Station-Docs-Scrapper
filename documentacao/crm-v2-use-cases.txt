@@ -1,0 +1,93 @@
+Casos de uso
+Cada caso de uso é apresentado como um tutorial autocontido, descrevendo um cenário de negócio, o fluxo de trabalho passo a passo e como as entidades da API v2 do RD Station CRM são utilizadas para resolver o problema.
+Estes casos de uso cobrem fluxos de trabalho comuns e de alto valor, conectando o RD Station CRM a outras ferramentas essenciais do ecossistema SaaS.
+Dicionário de termos
+Webhook: É uma notificação automática que um sistema envia para outro quando algo acontece. Em vez de você perguntar por novidades, o sistema te avisa sozinho e em tempo real.
+End-point: É o "endereço" exato onde um sistema busca uma informação ou executa uma tarefa específica. Pense nele como um ramal direto para falar com o setor certo de uma empresa.
+Payload: É o pacote de dados real que você envia em uma comunicação. Se a comunicação fosse uma carta, o payload seria a mensagem escrita dentro dela.
+Middleware: Pense nele como uma plataforma de segurança para a comunicação entre dois ou mais sistemas, encarregada de verificar permissões para requisições e de correlacionar entidades idênticas em diversas plataformas.
+Sincronização bidirecional de contatos com uma plataforma de automação de marketing
+Cenário de negócio
+Uma empresa utiliza uma ferramenta de automação de marketing (como Mailchimp ou ActiveCampaign) para capturar leads e nutrir sua base de contatos. Ao mesmo tempo, a equipe de vendas gerencia esses contatos no RD Station CRM. É crucial que ambas as plataformas estejam sempre sincronizadas: novos assinantes da ferramenta de marketing devem ser criados no CRM, e as atualizações feitas no CRM (como uma mudança de cargo ou estágio no funil) devem ser refletidas na ferramenta de marketing para segmentação de campanhas.
+Fluxo de trabalho e mapeamento da API
+Este fluxo de trabalho demonstra uma sincronização bidirecional e orientada a eventos, que é mais eficiente do que a verificação periódica (polling), ou seja: o sistema trabalha quando é acionado e não a cada 10 em 10 minutos, por exemplo.
+Passo 1: Novo assinante na plataforma de marketing → Criar contato no RD Station CRM
+Gatilho: Um novo usuário subscreve a uma newsletter no site da empresa. A plataforma de marketing captura essa informação.
+Ação: A plataforma de marketing (ou um middleware como o Zapier) aciona uma chamada para o end-point POST /contacts da API v2.
+Mapeamento de entidades:
+Contato: O corpo da requisição deve conter os dados básicos do novo assinante. O campo email é essencial. Campos como name e custom_fields podem ser preenchidos com informações adicionais coletadas no formulário de inscrição.
+Bases legais: Um ponto crucial para a conformidade com LGPD/GDPR é o preenchimento do objeto legal_bases. A requisição deve incluir a base legal para o contato, como consentimento para emails de marketing. Exemplo: { "legal_bases": [{ "category": "consent", "type": "marketing_email", "status": "active" }] }.
+Passo 2: Contato atualizado no RD Station CRM → Atualizar assinante na plataforma de marketing
+Gatilho: Um vendedor no RD Station CRM atualiza o cargo ( job_title) de um contato ou altera um campo personalizado que indica um novo interesse de produto.
+Ação: Esta atualização dispara o webhook crm_contact_updated, que foi previamente subscrito pela integração.
+Mapeamento de entidades:
+Webhook: A integração recebe um payload do webhook contendo o objeto do contacto completo e atualizado.
+Contato: O sistema de integração extrai o ID ou email do contato do payload e os campos que foram alterados. Em seguida, ele usa a API da plataforma de marketing para encontrar e atualizar o assinante correspondente.
+Passo 3: Lead qualificado para vendas → Criar negociação no RD Station CRM
+Gatilho: Um contato na plataforma de marketing atinge um determinado score de engajamento (lead scoring), tornando-se um "Marketing Qualified Lead" (MQL).
+Ação: A automação de marketing aciona uma chamada para o end-point POST /deals da API v2.
+Mapeamento de entidades:
+Negociação: Uma nova negociação é criada. O nome da negociação pode ser padronizado (ex: "Nova negociação para Nome do Contato"). A negociação deve ser associada ao contato existente (via contact_id, que pode ser obtido no passo 1 ou 2), a um owner_id (o vendedor responsável) e a um pipeline_id e stage_id iniciais.
+Fonte: O source_id pode ser definido para indicar que a negociação originou-se da campanha de marketing específica, permitindo uma análise de ROI mais precisa.
+Sincronização de negociações com um sistema ERP
+Cenário de negócio
+Uma empresa gerencia seu processo comercial inicial no RD Station CRM, onde as negociações são criadas e qualificadas. Ao chegar em um determinado ponto do funil de vendas, como a solicitação de um orçamento, é necessário transferir as informações da empresa e da negociação para o sistema de gestão (ERP), onde o orçamento ou pedido de venda é formalmente gerado. Para manter a visibilidade e o controle do vendedor no CRM, o número do orçamento gerado no ERP precisa ser registrado de volta na negociação. Além disso, o status final da negociação (ganha ou perdida) no CRM deve refletir no status do orçamento no ERP, garantindo que ambos os sistemas estejam sincronizados.
+Fluxo de trabalho e mapeamento da API
+Este fluxo de trabalho demonstra uma sincronização bidirecional e orientada a eventos, garantindo que as informações fluam do CRM para o ERP e vice-versa em momentos chave do processo de vendas.
+Passo 1: Oportunidade atinge estágio de orçamento → Criar orçamento no ERP
+Gatilho: Um vendedor no RD Station CRM move uma negociação para uma etapa específica do funil, como "orçamento solicitado".
+Ação: Esta atualização dispara o webhook crm_deal_updated, que foi previamente subscrito pela integração. O middleware (plataforma de integração) recebe a notificação e utiliza os dados da negociação e da empresa associada para criar um novo orçamento no sistema ERP.
+Mapeamento de entidades:
+Webhook: A integração recebe um payload contendo o objeto de negociação completo e atualizado.
+Negociação: O sistema de integração extrai o ID da negociação, seus contact_ids e outras informações pertinentes.
+Contato e empresa: A partir dos contact_ids, a integração pode buscar os dados dos contatos associados (via GET /contacts/{id}) e, a partir deles, obter o organization_id para buscar os detalhes da empresa (via GET /organizations/{id}). Essas informações são então usadas para cadastrar a empresa no ERP, se ela ainda não existir.
+Passo 2: Orçamento criado no ERP → Atualizar negociação no RD Station CRM
+Gatilho: O sistema ERP finaliza a criação do orçamento e retorna um número de identificação único.
+Ação: O middleware recebe essa informação do ERP e realiza uma chamada para o end-point PATCH /deals/{id} da API v2 para atualizar a negociação original no RD Station CRM.
+Mapeamento de entidades:
+Deal: O corpo da requisição de atualização deve conter o objeto custom_fields. Para que isso funcione, um campo personalizado (ex: "ID do Orçamento no ERP") precisa ser previamente criado na entidade Negociação no CRM.
+Campo personalizado: A chave do objeto deve ser o identificador do campo personalizado, e o valor será o número do orçamento retornado pelo ERP. Exemplo: { "custom_fields": { "id_orcamento_erp": "ORC-2025-00123" } }.
+Passo 3: Negociação ganha/perdida no RD Station CRM → Atualizar status do orçamento no ERP
+Gatilho: Um vendedor altera o status de uma negociação no RD Station CRM para won (ganha) ou lost (perdida).
+Ação: A alteração de status dispara novamente o webhook crm_deal_updated. O middleware recebe a notificação, identifica o novo status da negociação e o ID do orçamento no ERP (armazenado no campo personalizado) e, em seguida, aciona a API do ERP para atualizar o status do orçamento correspondente para "vendido", "cancelado" ou "perdido".
+Mapeamento de entidades:
+Webhook: A integração recebe o payload com o objeto de negociação completo.
+Negociaç!ao: O sistema de integração extrai o valor do campo status, que pode ser won ou lost, e também o valor do campo personalizado que contém o ID do orçamento no ERP para saber qual registro específico deve ser atualizado no outro sistema.
+Criação de ticket de suporte e sincronização de contexto do cliente
+Cenário de negócio
+Quando um cliente abre um ticket de suporte numa plataforma de helpdesk (como Zendesk ou Freshdesk), o agente de suporte precisa de uma visão completa desse cliente para oferecer um atendimento rápido e contextualizado. O agente deve ver as informações de contato, a empresa e, crucialmente, se existem negociações de vendas em andamento com aquele cliente, tudo dentro da interface do helpdesk.
+Fluxo de trabalho e mapeamento da API
+Este fluxo de trabalho demonstra como o RD Station CRM pode atuar como a "fonte da verdade" para o contexto do cliente, enriquecendo outros sistemas de negócio.
+Passo 1: Novo ticket criado na plataforma de helpdesk
+Gatilho: Um cliente envia um email para o suporte, que gera um novo ticket no sistema de helpdesk.
+Ação: A plataforma de helpdesk, através de uma aplicação de integração (middleware), extrai o endereço de email do cliente do novo ticket.
+Passo 2: Buscar contexto do cliente no RD Station CRM
+Ação: A integração faz uma chamada para GET /contacts?filter=email:email_do_cliente para encontrar o registro do contato correspondente no CRM.
+Mapeamento de entidades:
+Contato: Se um contato for encontrado, a integração obtém seu id, name, job_title, e, mais importante, os IDs de suas associações, como organization_id e o array deal_ids, que contém informações sobre empresa e negociações deste contato.
+Passo 3: Exibir o contexto completo na interface do helpdesk
+Ação: Com os IDs obtidos no passo anterior, a integração faz chamadas adicionais à API v2 para enriquecer o perfil do cliente na tela do agente de suporte.
+Mapeamento de entidades:
+Empresa: Faz uma chamada GET /organizations/{id} para obter o nome e outros detalhes da empresa do cliente.
+Negociação: Itera sobre o array deal_ids do objeto de contato. Para cada deal_id, faz uma chamada GET /deals/{id} para buscar detalhes da negociação, como name, total_price e status. A integração pode optar por exibir apenas as negociações com status ongoing.
+Passo 4: Registrar a interação de suporte no RD Station CRM
+Gatilho: O agente de suporte resolve e fecha o ticket.
+Ação: A integração cria um registro dessa interação no RD Station CRM para que a equipe de vendas tenha visibilidade.
+Mapeamento de entidades:
+Anotação ou tarefa: A integração faz uma chamada para POST /deals/{deal_id}/notes ou POST /tasks. O corpo da requisição ( description) pode conter um resumo do ticket ou um link para ele. O registro deve ser associado ao contact_id e, se relevante, ao deal_id da negociação mais importante, garantindo que o histórico do cliente seja completo e acessível para todas as equipes.
+Updated about 1 hour ago
+Bases legais
+Campanhas
+
+Table of Contents
+Dicionário de termos
+Sincronização bidirecional de contatos com uma plataforma de automação de marketing
+Cenário de negócio
+Fluxo de trabalho e mapeamento da API
+Sincronização de negociações com um sistema ERP
+Cenário de negócio
+Fluxo de trabalho e mapeamento da API
+Criação de ticket de suporte e sincronização de contexto do cliente
+Cenário de negócio
+Fluxo de trabalho e mapeamento da API
+

@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listar equipesget
+Obter equipeget
+
+
+
+Equipes
+As equipes representam um agrupamento de usuários dentro do RD Station CRM. As equipes são comumente usadas para organizar a força de vendas por território, especialidade ou qualquer outra estrutura organizacional. Os end-points de equipes são apenas leitura e serve para consultar a composição das equipes, o que é útil para lógicas de distribuição de negociações ou para relatórios de desempenho segmentados.
+Updated 42 minutes ago
+Atualizar tarefa
+Listar equipes
+
+

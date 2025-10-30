@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+Obter usuário
+get https://crm.rdstation.com/api/v1 /users/{user_id}
+Obter usuário
+Log in to see full request history
+URL Expired
+The URL for this request expired after 30 days.
+Close
+Path Params
+user_id
+string
+required
+Response
+200
+Success
+Response body
+object
+_id
+string
+active
+boolean
+created_at
+string
+email
+string
+hidden
+boolean
+id
+string
+last_login
+date-time | null
+name
+string
+phone
+string
+teams
+array of objects
+object
+_id
+string
+id
+string
+name
+string
+updated_at
+string
+Updated 6 days ago
+Listar usuários
+Webhooks
+
+Language
+Shell
+Node
+Ruby
+PHP
+Python
+Credentials
+Query
+Query
+cURL Request
+Examples
+xxxxxxxxxx
+1
+curl --request GET \
+2
+--url https://crm.rdstation.com/api/v1/users/user_id \
+3
+--header 'accept: application/json'
+Try It!
+RESPONSE
+200 - Success
+Example
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+200 - Success
+

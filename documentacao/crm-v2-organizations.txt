@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Empresas
+Listar empresasget
+Criar empresapost
+Obter empresaget
+Atualizar empresaput
+Funis de vendas
+
+
+
+
+
+
+Empresas
+A empresa representa uma entidade de negócio com a qual sua empresa se relaciona. Ela serve como um contêiner para agrupar informações relacionadas a uma mesma companhia, proporcionando uma visão completa do cliente.
+Updated 40 minutes ago
+Criar anotação na negociação
+Listar empresas
+
+
