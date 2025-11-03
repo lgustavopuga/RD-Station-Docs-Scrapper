@@ -1,0 +1,11 @@
+{
+    "data": {
+        "team_id": "string",
+        "name": "string",
+        "user_ids": [
+            "string"
+        ],
+        "created_at": "2025-11-03T17:06:47.557Z",
+        "updated_at": "2025-11-03T17:06:47.557Z"
+    }
+}

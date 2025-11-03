@@ -1,0 +1,146 @@
+{
+    "deal_lost_reasons": [
+        {
+            "_id": "64ecbd494a685000305d811b",
+            "created_at": "2023-08-28T12:29:13.080-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 1",
+            "updated_at": "2023-08-28T12:31:40.120-03:00"
+        },
+        {
+            "_id": "64ecbd744ae1f40024b39ab5",
+            "created_at": "2023-08-28T12:29:56.646-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 10",
+            "updated_at": "2023-08-28T12:31:42.102-03:00"
+        },
+        {
+            "_id": "64ecbd82e5926f0015da3b0c",
+            "created_at": "2023-08-28T12:30:10.509-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 11",
+            "updated_at": "2023-08-28T12:31:43.954-03:00"
+        },
+        {
+            "_id": "64ecbd864ae1f4000fb39bad",
+            "created_at": "2023-08-28T12:30:14.566-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 12",
+            "updated_at": "2023-08-28T12:31:46.423-03:00"
+        },
+        {
+            "_id": "6290e444702d3d0014956dc9",
+            "created_at": "2022-05-27T11:46:28.891-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 13",
+            "updated_at": "2023-08-28T12:32:09.768-03:00"
+        },
+        {
+            "_id": "648076a48646d10019ce009d",
+            "created_at": "2023-06-07T09:23:00.068-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 14",
+            "updated_at": "2023-08-28T12:31:06.315-03:00"
+        },
+        {
+            "_id": "64de82a76bb268000dc6fac0",
+            "created_at": "2023-08-17T17:27:19.340-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 15",
+            "updated_at": "2023-08-28T12:31:09.643-03:00"
+        },
+        {
+            "_id": "63fdf52bba4cca002c83be01",
+            "created_at": "2023-02-28T09:35:55.342-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 16",
+            "updated_at": "2023-08-28T12:31:12.369-03:00"
+        },
+        {
+            "_id": "63fdf5315faf19000c086c5a",
+            "created_at": "2023-02-28T09:36:01.640-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 17",
+            "updated_at": "2023-08-28T12:31:16.117-03:00"
+        },
+        {
+            "_id": "63fdf53512a6ab000d839c38",
+            "created_at": "2023-02-28T09:36:05.597-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 18",
+            "updated_at": "2023-08-28T12:31:19.612-03:00"
+        },
+        {
+            "_id": "62058c3339d4c6000c92e159",
+            "created_at": "2022-02-10T19:05:39.310-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 19",
+            "updated_at": "2023-08-28T12:31:24.266-03:00"
+        },
+        {
+            "_id": "64ecbd4d492afc000f40ec73",
+            "created_at": "2023-08-28T12:29:17.481-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 2",
+            "updated_at": "2023-08-28T12:31:48.359-03:00"
+        },
+        {
+            "_id": "605b51986939e0001328e8de",
+            "created_at": "2021-03-24T11:50:00.183-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 20",
+            "updated_at": "2023-08-28T12:31:28.670-03:00"
+        },
+        {
+            "_id": "60a6a08dd21cf50014f7be50",
+            "created_at": "2021-05-20T14:46:53.960-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 21",
+            "updated_at": "2023-08-28T12:31:31.658-03:00"
+        },
+        {
+            "_id": "64ecbd51d217db001653201e",
+            "created_at": "2023-08-28T12:29:21.181-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 3",
+            "updated_at": "2023-08-28T12:31:50.926-03:00"
+        },
+        {
+            "_id": "64ecbd554a685000105d8502",
+            "created_at": "2023-08-28T12:29:25.694-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 4",
+            "updated_at": "2023-08-28T12:31:53.015-03:00"
+        },
+        {
+            "_id": "64ecbd5958cff40019dcf217",
+            "created_at": "2023-08-28T12:29:29.346-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 5",
+            "updated_at": "2023-08-28T12:31:55.585-03:00"
+        },
+        {
+            "_id": "64ecbd5c8aea330014d5b843",
+            "created_at": "2023-08-28T12:29:32.467-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 6",
+            "updated_at": "2023-08-28T12:31:58.171-03:00"
+        },
+        {
+            "_id": "64ecbd622f83e5000e751b73",
+            "created_at": "2023-08-28T12:29:38.575-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 7",
+            "updated_at": "2023-08-28T12:32:00.178-03:00"
+        },
+        {
+            "_id": "64ecbd68f7b0d2000d3ae6df",
+            "created_at": "2023-08-28T12:29:44.133-03:00",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Motivo 8",
+            "updated_at": "2023-08-28T12:32:02.821-03:00"
+        }
+    ],
+    "has_more": true,
+    "total": 21
+}

@@ -1,0 +1,28 @@
+{
+    "activities": [
+        {
+            "_id": "ID",
+            "date": "2023-02-23T16:03:57.679-03:00",
+            "deal_id": "ID",
+            "id": "ID",
+            "text": "Texto da anotação",
+            "user_id": "ID"
+        },
+        {
+            "_id": "ID",
+            "date": "2023-02-23T16:04:16.919-03:00",
+            "deal_id": "ID",
+            "id": "ID",
+            "text": "Texto da anotação 2",
+            "user_id": "ID"
+        },
+        {
+            "_id": "ID",
+            "date": "2023-02-23T16:05:19.273-03:00",
+            "deal_id": "ID",
+            "id": "ID",
+            "text": "Texto da anotação 3",
+            "user_id": "ID"
+        }
+    ]
+}

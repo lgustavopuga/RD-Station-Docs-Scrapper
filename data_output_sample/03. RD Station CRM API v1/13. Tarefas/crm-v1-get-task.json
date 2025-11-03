@@ -1,0 +1,27 @@
+{
+    "_id": "ID",
+    "created_at": "2023-03-23T10:36:35.879-03:00",
+    "date": "2023-03-24T10:36:00.000-03:00",
+    "deal": {
+        "_id": "ID",
+        "hold": true,
+        "name": "NAME",
+        "rating": 1
+    },
+    "done": false,
+    "hour": "10:36",
+    "markup": "past",
+    "notes": null,
+    "subject": "ligação",
+    "type": "call",
+    "user_ids": [
+        "ID"
+    ],
+    "users": [
+        {
+            "_id": "ID",
+            "name": "NME",
+            "nickname": "TB"
+        }
+    ]
+}

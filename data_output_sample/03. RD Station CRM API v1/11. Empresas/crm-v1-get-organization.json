@@ -1,0 +1,92 @@
+{
+    "_id": "ID",
+    "address": null,
+    "address_latitude": null,
+    "address_longitude": null,
+    "contacts": [
+        {
+            "_id": "ID",
+            "created_at": "2022-04-26T16:40:47.653-03:00",
+            "deal_ids": [
+                "ID"
+            ],
+            "emails": [
+                {
+                    "_id": "ID",
+                    "created_at": null,
+                    "email": "conversion_ev31012022-2@email.com",
+                    "updated_at": null
+                }
+            ],
+            "facebook": "facebook name of the contact",
+            "import_id": null,
+            "instance_id": "6268453dc9315700177a7765",
+            "integration_id": "dff817d6-0b76-44bf-b593-cb05603a0163",
+            "integration_type": "RD_STATION",
+            "legal_bases": [
+                {
+                    "_id": "ID",
+                    "category": "communications",
+                    "created_at": "2022-04-26T16:40:47.653-03:00",
+                    "status": "granted",
+                    "type": "consent",
+                    "updated_at": "2022-04-26T16:40:47.653-03:00"
+                }
+            ],
+            "linkedin": "linkedin user name of the contact",
+            "name": "conversion_ev31012022-2",
+            "notes": null,
+            "organization_id": "62684abf6b92b70001be1682",
+            "phones": [
+                {
+                    "_id": "ID",
+                    "created_at": null,
+                    "phone": "phone of the contact",
+                    "type": null,
+                    "updated_at": null
+                },
+                {
+                    "_id": "ID",
+                    "created_at": null,
+                    "phone": "mobile_phone of the contact",
+                    "type": null,
+                    "updated_at": null
+                }
+            ],
+            "skype": null,
+            "title": "job title value",
+            "updated_at": "2022-04-26T16:40:47.653-03:00",
+            "user_id": "ID",
+            "user_ids": [
+                "ID"
+            ]
+        }
+    ],
+    "created_at": "2022-04-26T16:40:47.449-03:00",
+    "follower_ids": [
+        "ID"
+    ],
+    "followers": [
+        {
+            "_id": "ID",
+            "created_at": "2022-04-26T16:17:17.383-03:00",
+            "email": "EMAIL",
+            "name": "NAME",
+            "phone": "+48 (98) 41085-16",
+            "team_ids": [],
+            "updated_at": "2023-02-16T10:20:08.023-03:00"
+        }
+    ],
+    "last_activity_at": null,
+    "name": "Empresa 02",
+    "organization_custom_fields": [],
+    "organization_segments": [],
+    "resume": null,
+    "updated_at": "2022-04-26T16:40:47.449-03:00",
+    "url": "website of the contact",
+    "user": {
+        "_id": "ID",
+        "name": "NAME"
+    },
+    "user_id": "ID"
+}

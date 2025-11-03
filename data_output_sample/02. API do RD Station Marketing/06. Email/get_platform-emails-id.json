@@ -1,0 +1,19 @@
+{
+    "id": 123,
+    "name": "Marketing email",
+    "created_at": "2017-11-21T20:00:00-02:00",
+    "updated_at": "2017-11-21T20:00:00-02:00",
+    "send_at": "2017-11-21T20:00:00-02:00",
+    "leads_count": 55000,
+    "status": "FINISHED",
+    "type": "email_model",
+    "is_predictive_sending": false,
+    "sending_is_imminent": false,
+    "behavior_score_info": {
+        "disengaged": false,
+        "engaged": false,
+        "indeterminate": false
+    },
+    "campaign_id": 123,
+    "component_template_id": 123
+}

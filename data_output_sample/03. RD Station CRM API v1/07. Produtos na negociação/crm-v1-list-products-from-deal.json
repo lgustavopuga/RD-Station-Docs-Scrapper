@@ -1,0 +1,38 @@
+{
+    "deal_products": [
+        {
+            "_id": "ID",
+            "amount": 1,
+            "amount_decimal": 1.33,
+            "base_price": 199.91,
+            "created_at": "2023-02-23T18:20:40.928-03:00",
+            "description": "Description Product 1",
+            "discount": 0,
+            "discount_type": "value",
+            "id": "ID",
+            "name": "Product 01",
+            "price": 199.91,
+            "product_id": "ID",
+            "recurrence": "spare",
+            "total": 199.91,
+            "updated_at": "2023-02-23T18:20:40.928-03:00"
+        },
+        {
+            "_id": "ID",
+            "amount": 1,
+            "amount_decimal": 1.33,
+            "base_price": 199.92,
+            "created_at": "2023-02-23T18:20:40.969-03:00",
+            "description": "Description Product 2",
+            "discount": 0,
+            "discount_type": "value",
+            "id": "ID",
+            "name": "Product 02",
+            "price": 199.92,
+            "product_id": "ID",
+            "recurrence": "spare",
+            "total": 199.92,
+            "updated_at": "2023-02-23T18:20:40.969-03:00"
+        }
+    ]
+}

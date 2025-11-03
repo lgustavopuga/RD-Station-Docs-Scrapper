@@ -1,0 +1,21 @@
+{
+  "campaign": {
+    "id": 7,
+    "name": "Natal",
+    "status": "active",
+    "created_at": "2022-11-23T19:28:57.527Z",
+    "updated_at": "2022-11-23T19:28:57.527Z",
+    "total_items": 4,
+    "user": {
+      "email": "email@teste.com"
+    },
+    "links": [
+      {
+        "rel": "CAMPAIGN.ITEMS",
+        "href": "https://api.rd.services/platform/campaigns/7/assets",
+        "media": "application/json",
+        "method_type": "GET"
+      }
+    ]
+  }
+}

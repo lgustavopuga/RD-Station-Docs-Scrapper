@@ -1,0 +1,18 @@
+{
+    "account_id": 1,
+    "query_date": {
+        "start_date": "2025-11-03",
+        "end_date": "2025-11-03"
+    },
+    "grouped_by": "daily",
+    "funnel": [
+        {
+            "reference_day": "2023-01-15",
+            "visitors_count": 1000,
+            "contacts_count": 100,
+            "qualified_contacts_count": 85,
+            "opportunities_count": 50,
+            "sales_count": 10
+        }
+    ]
+}

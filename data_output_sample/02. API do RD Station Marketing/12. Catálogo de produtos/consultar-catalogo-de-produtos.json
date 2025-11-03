@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "name": "Meu catálogo editado",
+    "url": "https://meusite.com/catalogo.json",
+    "status": "active",
+    "format": "json",
+    "created_at": "2025-07-24T10:54:42.061-03:00",
+    "updated_at": "2025-07-24T10:54:42.061-03:00",
+    "credentials": null
+}

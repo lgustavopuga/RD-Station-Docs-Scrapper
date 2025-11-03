@@ -1,0 +1,129 @@
+{
+    "_id": "ID",
+    "amount_montly": 0,
+    "amount_total": 0,
+    "amount_unique": 0,
+    "best_moment_to_touch": false,
+    "c_cf_errors": {},
+    "campaign": {
+        "_id": "ID",
+        "id": "ID",
+        "name": "Marcado como Oportunidade no RD Station Marketing"
+    },
+    "campaign_id": "ID",
+    "closed_at": null,
+    "contact_errors": {},
+    "created_at": "2023-03-30T16:27:24.764-03:00",
+    "deal_custom_fields": [
+        {
+            "created_at": "2023-03-30T16:23:54.781-03:00",
+            "custom_field": {
+                "_id": "ID",
+                "allow_new": false,
+                "created_at": "2020-08-20T17:32:35.618-03:00",
+                "for": "deal",
+                "instance_id": "ID",
+                "label": "Custom date field",
+                "opts": [],
+                "order": 8,
+                "required": true,
+                "required_rules": [
+                    {
+                        "_id": "ID",
+                        "always": true,
+                        "created_at": "2023-03-30T10:52:55.465-03:00",
+                        "property": null,
+                        "updated_at": "2023-03-30T10:52:55.465-03:00",
+                        "value": null
+                    }
+                ],
+                "type": "date",
+                "unique": false,
+                "updated_at": "2023-03-30T10:52:55.465-03:00",
+                "visible": true
+            },
+            "custom_field_id": "ID",
+            "updated_at": "2023-03-30T16:23:54.781-03:00",
+            "value": "31/03/2023"
+        }
+    ],
+    "deal_lost_reason_id": null,
+    "deal_pipeline": {
+        "id": "ID",
+        "name": "Funil de Vendas 01"
+    },
+    "deal_pipeline_relation": {
+        "parent_deal": {
+            "amount_montly": 0,
+            "amount_unique": 0,
+            "closed_at": "2023-03-30T16:53:39.754-03:00",
+            "created_at": "2021-08-12T17:03:26.063-03:00",
+            "deal_pipeline": {
+                "id": "ID",
+                "name": "Funil de vendas 3333"
+            },
+            "deal_stage": {
+                "id": "ID",
+                "name": "Identificação do interesse"
+            },
+            "id": "ID",
+            "name": "NAME",
+            "prediction_date": null,
+            "user": {
+                "id": "ID",
+                "name": "NAME"
+            }
+        }
+    },
+    "deal_products": [],
+    "deal_source": {
+        "_id": "ID",
+        "id": "ID",
+        "name": "Desconhecido"
+    },
+    "deal_source_id": "ID",
+    "deal_stage": {
+        "_id": "ID",
+        "deal_pipeline_id": "ID",
+        "id": "ID",
+        "name": "Proposta enviada",
+        "nickname": "PE"
+    },
+    "deal_stage_histories": [
+        {
+            "_id": "ID",
+            "deal_stage_id": "ID",
+            "end_date": null,
+            "id": "ID",
+            "start_date": "2023-03-30T16:27:24.759-03:00"
+        },
+        {
+            "_id": "ID",
+            "deal_stage_id": "54480f523f64f90155000034",
+            "end_date": null,
+            "id": "ID",
+            "start_date": "2023-03-30T16:27:24.767-03:00"
+        }
+    ],
+    "errors": {},
+    "from_rdsm_integration": true,
+    "hold": null,
+    "id": "ID",
+    "interactions": 0,
+    "last_note_content": null,
+    "name": "NAME",
+    "prediction_date": null,
+    "rating": 1,
+    "stop_time_limit": {
+        "expiration_date_time": "2023-03-31T16:27:24.764-03:00",
+        "expired": true,
+        "expired_days": 9
+    },
+    "updated_at": "2023-03-30T16:27:33.819-03:00",
+    "user": {
+        "_id": "ID",
+        "id": "ID",
+        "name": "NAME"
+    },
+    "win": null
+}

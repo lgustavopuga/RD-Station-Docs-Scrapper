@@ -1,0 +1,72 @@
+{
+    "has_more": false,
+    "tasks": [
+        {
+            "_id": "ID",
+            "created_at": "2023-02-23T16:00:50.675-03:00",
+            "date": "2021-12-31T03:00:00.000Z",
+            "deal": {
+                "_id": "ID",
+                "hold": null,
+                "id": "ID",
+                "name": "Oportunidade Emp1",
+                "rating": 1
+            },
+            "deal_id": "DEAL_ID",
+            "done": false,
+            "done_date": null,
+            "hour": "00:00",
+            "id": "ID",
+            "markup": "past",
+            "notes": "Anotações",
+            "subject": "Assunto 01",
+            "type": "call",
+            "user_ids": [
+                "USER_ID"
+            ],
+            "users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME",
+                    "nickname": "RP"
+                }
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2023-02-23T15:59:14.474-03:00",
+            "date": "2023-02-23T04:00:00.000Z",
+            "deal": {
+                "_id": "ID",
+                "hold": null,
+                "id": "ID",
+                "name": "NAME",
+                "rating": 1
+            },
+            "deal_id": "ID",
+            "done": false,
+            "done_date": null,
+            "hour": "01:00",
+            "id": "ID",
+            "markup": "past",
+            "notes": null,
+            "subject": "Assunto 02",
+            "type": "call",
+            "user_ids": [
+                "ID"
+            ],
+            "users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME",
+                    "nickname": "RP"
+                }
+            ]
+        }
+    ],
+    "total": 2
+}

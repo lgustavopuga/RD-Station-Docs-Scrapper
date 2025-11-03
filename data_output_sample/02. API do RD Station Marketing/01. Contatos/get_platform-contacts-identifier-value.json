@@ -1,0 +1,64 @@
+{
+    "uuid": "cdbba2a8-8ccd-4228-9617-6b0257b32077",
+    "name": "RD Station Developer",
+    "email": "contato@exemplo.com",
+    "job_title": "Desenvolvedor",
+    "birthdate": "1990-11-23",
+    "bio": "Muito engajado",
+    "website": "https://site-contato.rdstation.com/",
+    "personal_phone": "+55 48 3037-3600",
+    "mobile_phone": "+55 48 3037-3600",
+    "city": "Florianópolis",
+    "state": "SC",
+    "country": "Brasil",
+    "twitter": "https://twitter.com/contato",
+    "facebook": "https://www.facebook.com/contato/",
+    "linkedin": "https://www.linkedin.com/in/contato/",
+    "tags": [
+        "developer",
+        "rdstation",
+        "api"
+    ],
+    "extra_emails": [
+        "contact2@example.com"
+    ],
+    "legal_bases": [
+        {
+            "category": "communications",
+            "type": "consent",
+            "status": "granted"
+        }
+    ],
+    "links": [
+        {
+            "rel": "SELF",
+            "href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+            "media": "application/json",
+            "type": "GET"
+        },
+        {
+            "rel": "SELF",
+            "href": "https://api.rd.services/platform/contacts/email:contato@exemplo.com",
+            "media": "application/json",
+            "type": "GET"
+        },
+        {
+            "rel": "CONTACT.DELETE",
+            "href": "https://api.rd.services/platform/contacts/uuid:cdbba2a8-8ccd-4228-9617-6b0257b32077",
+            "media": "application/json",
+            "type": "DELETE"
+        },
+        {
+            "rel": "CONTACT.FUNNEL",
+            "href": "https://api.rd.services/platform/contacts/cdbba2a8-8ccd-4228-9617-6b0257b32077/funnels/{funnel_name}",
+            "media": "application/json",
+            "type": "GET"
+        },
+        {
+            "rel": "CONTACT.EVENTS",
+            "href": "https://api.rd.services/platform/contacts/cdbba2a8-8ccd-4228-9617-6b0257b32077/events?event_type={event_type}",
+            "media": "application/json",
+            "type": "GET"
+        }
+    ]
+}

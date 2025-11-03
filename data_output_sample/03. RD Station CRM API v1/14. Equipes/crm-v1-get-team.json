@@ -1,0 +1,53 @@
+{
+    "_id": "ID",
+    "created_at": "2016-09-05T15:41:53.564-03:00",
+    "id": "ID",
+    "name": "NAME",
+    "team_users": [
+        {
+            "_id": "ID1",
+            "email": "EMAIL",
+            "id": "ID1",
+            "name": "NAME"
+        },
+        {
+            "_id": "ID2",
+            "email": "EMAIL",
+            "id": "ID2",
+            "name": "NAME"
+        },
+        {
+            "_id": "ID3",
+            "email": "EMAIL",
+            "id": "ID3",
+            "name": "NAME"
+        },
+        {
+            "_id": "ID4",
+            "email": "EMAIL",
+            "id": "ID4",
+            "name": "NAME"
+        },
+        {
+            "_id": "ID5",
+            "email": "EMAIL",
+            "id": "ID5",
+            "name": "NAME"
+        },
+        {
+            "_id": "ID6",
+            "email": "EMAIL",
+            "id": "ID6",
+            "name": "NAME"
+        }
+    ],
+    "updated_at": "2021-09-13T14:20:23.446-03:00",
+    "user_ids": [
+        "ID1",
+        "ID2",
+        "ID3",
+        "ID4",
+        "ID5",
+        "ID6"
+    ]
+}

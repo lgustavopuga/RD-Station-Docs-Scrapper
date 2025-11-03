@@ -1,0 +1,513 @@
+{
+    "has_more": false,
+    "teams": [
+        {
+            "_id": "ID",
+            "created_at": "2ID16-ID9-ID5T15:41:53.564-ID3:IDID",
+            "id": "ID",
+            "name": "Comercial",
+            "team_users": [
+                {
+                    "_id": "ID1",
+                    "email": "klairton.brito@spam4.me",
+                    "id": "ID1",
+                    "name": "klairton"
+                },
+                {
+                    "_id": "ID2",
+                    "email": "EMAIL",
+                    "id": "ID2",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID3",
+                    "email": "adriano.torres@rdstation.com",
+                    "id": "ID3",
+                    "name": "Adriano"
+                },
+                {
+                    "_id": "ID4",
+                    "email": "aline.vasselai@rdstation.com",
+                    "id": "ID4",
+                    "name": "Aline Vasselai"
+                },
+                {
+                    "_id": "ID5",
+                    "email": "andre.junior+rollout1@rdstation.com",
+                    "id": "ID5",
+                    "name": "André Jr"
+                },
+                {
+                    "_id": "ID6",
+                    "email": "anderson.mota@rdstation.com",
+                    "id": "ID6",
+                    "name": "Anderson Mota"
+                }
+            ],
+            "updated_at": "2ID21-ID9-13T14:2ID:23.446-ID3:IDID",
+            "user_ids": [
+                "ID1",
+                "ID2",
+                "ID3",
+                "ID4",
+                "ID5",
+                "ID6"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID16-ID9-2IDT12:12:38.988-ID3:IDID",
+            "id": "ID",
+            "name": "TI - teste",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID21-ID9-1IDT15:29:36.4ID2-ID3:IDID",
+            "user_ids": [
+                "ID",
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID18-ID9-26T1ID:27:27.969-ID3:IDID",
+            "id": "ID",
+            "name": "eiTAI",
+            "team_users": [],
+            "updated_at": "2ID23-ID1-24T22:23:32.465-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID18-ID9-26T1ID:28:19.ID15-ID3:IDID",
+            "id": "ID",
+            "name": "Meteoro de pégasus",
+            "team_users": [
+                {
+                    "_id": "ID2",
+                    "email": "EMAIL",
+                    "id": "ID2",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID21-ID9-1IDT12:1ID:47.151-ID3:IDID",
+            "user_ids": [
+                "ID2",
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID2ID-1ID-13T11:35:52.423-ID3:IDID",
+            "id": "ID",
+            "name": "Sul",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "matheus.anjos@rdstation.com",
+                    "id": "ID",
+                    "name": "Matheus Anjos"
+                }
+            ],
+            "updated_at": "2ID22-ID3-ID9T1ID:4ID:ID2.ID58-ID3:IDID",
+            "user_ids": [
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID21-ID6-ID2T1ID:34:31.7ID5-ID3:IDID",
+            "id": "ID",
+            "name": "NAME",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID3",
+                    "email": "EMAIL",
+                    "id": "ID3",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID21-ID9-ID9T21:17:19.3ID9-ID3:IDID",
+            "user_ids": [
+                "ID",
+                "ID3"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID21-ID9-13T14:2ID:15.624-ID3:IDID",
+            "id": "ID",
+            "name": "Foo",
+            "team_users": [],
+            "updated_at": "2ID21-ID9-13T14:2ID:15.624-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID21-ID9-13T14:39:1ID.65ID-ID3:IDID",
+            "id": "ID",
+            "name": "New Equip",
+            "team_users": [
+                {
+                    "_id": "ID2",
+                    "email": "EMAIL",
+                    "id": "ID2",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID21-ID9-13T14:39:43.ID28-ID3:IDID",
+            "user_ids": [
+                "ID2",
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID21-1ID-ID8T13:32:IDID.336-ID3:IDID",
+            "id": "ID",
+            "name": "Equipe responsável por monitorar o relacionamento pós venda",
+            "team_users": [],
+            "updated_at": "2ID21-1ID-ID8T13:32:IDID.336-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID21-11-17T14:32:11.356-ID3:IDID",
+            "id": "ID",
+            "name": "Teste",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID21-11-17T14:32:4ID.541-ID3:IDID",
+            "user_ids": [
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-ID5-11T14:48:12.772-ID3:IDID",
+            "id": "ID",
+            "name": "Equipe Silvana",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID22-ID5-11T14:48:31.862-ID3:IDID",
+            "user_ids": [
+                "ID",
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-ID5-13T16:37:35.9ID6-ID3:IDID",
+            "id": "ID",
+            "name": "a",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID22-ID5-17T16:25:11.797-ID3:IDID",
+            "user_ids": [
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-ID5-13T16:37:39.917-ID3:IDID",
+            "id": "ID",
+            "name": "b",
+            "team_users": [
+                {
+                    "_id": "ID3",
+                    "email": "EMAIL",
+                    "id": "ID3",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID22-ID5-17T16:25:ID7.89ID-ID3:IDID",
+            "user_ids": [
+                "ID3"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-ID5-13T16:37:43.658-ID3:IDID",
+            "id": "ID",
+            "name": "c",
+            "team_users": [
+                {
+                    "_id": "ID3",
+                    "email": "EMAIL",
+                    "id": "ID3",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID22-1ID-31T11:19:ID7.488-ID3:IDID",
+            "user_ids": [
+                "ID3",
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-ID5-13T16:37:47.ID18-ID3:IDID",
+            "id": "ID",
+            "name": "z",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                },
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID22-12-ID6T13:48:5ID.893-ID3:IDID",
+            "user_ids": [
+                "ID",
+                "ID"
+            ]
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:ID8:37.259-ID3:IDID",
+            "id": "ID",
+            "name": "Marvel",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:ID8:37.259-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:ID8:42.396-ID3:IDID",
+            "id": "ID",
+            "name": "DC",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:ID8:42.396-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:ID9:19.122-ID3:IDID",
+            "id": "ID",
+            "name": "Manual do Mundo",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:ID9:19.122-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:ID9:32.659-ID3:IDID",
+            "id": "ID",
+            "name": "Patati Patata",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:ID9:32.659-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:ID9:41.368-ID3:IDID",
+            "id": "ID",
+            "name": "Galinha Pintadinha",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:ID9:41.368-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:ID9:55.ID24-ID3:IDID",
+            "id": "ID",
+            "name": "Ford",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:ID9:55.ID24-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:1ID:IDID.484-ID3:IDID",
+            "id": "ID",
+            "name": "Ferrari",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:1ID:IDID.484-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:1ID:ID8.943-ID3:IDID",
+            "id": "ID",
+            "name": "Power Rangers",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:1ID:ID8.943-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:1ID:22.123-ID3:IDID",
+            "id": "ID",
+            "name": "Clube da Luluzinha",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:1ID:22.123-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:1ID:29.116-ID3:IDID",
+            "id": "ID",
+            "name": "Clube do Bolinha",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:1ID:29.116-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:11:ID5.921-ID3:IDID",
+            "id": "ID",
+            "name": "A turma do Chaves",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:11:ID5.921-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:11:17.175-ID3:IDID",
+            "id": "ID",
+            "name": "A turma da Mônica",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:11:17.175-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:11:28.179-ID3:IDID",
+            "id": "ID",
+            "name": "Bananas de Pijamas",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:11:28.179-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:11:49.211-ID3:IDID",
+            "id": "ID",
+            "name": "Mundo Bita",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:11:49.211-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:12:23.81ID-ID3:IDID",
+            "id": "ID",
+            "name": "Os Vingadores",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:12:23.81ID-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:12:32.374-ID3:IDID",
+            "id": "ID",
+            "name": "Liga da Justiça",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:12:32.374-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:12:5ID.7ID4-ID3:IDID",
+            "id": "ID",
+            "name": "Família Adams",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:12:5ID.7ID4-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:13:IDID.125-ID3:IDID",
+            "id": "ID",
+            "name": "Os Simpsons",
+            "team_users": [],
+            "updated_at": "2ID22-12-15T14:13:IDID.125-ID3:IDID",
+            "user_ids": []
+        },
+        {
+            "_id": "ID",
+            "created_at": "2ID22-12-15T14:13:ID9.949-ID3:IDID",
+            "id": "ID",
+            "name": "Balão Mágico",
+            "team_users": [
+                {
+                    "_id": "ID",
+                    "email": "EMAIL",
+                    "id": "ID",
+                    "name": "NAME"
+                }
+            ],
+            "updated_at": "2ID23-ID2-16T13:49:17.136-ID3:IDID",
+            "user_ids": [
+                "ID"
+            ]
+        }
+    ],
+    "total": 34
+}

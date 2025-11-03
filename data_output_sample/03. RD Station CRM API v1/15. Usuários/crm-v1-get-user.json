@@ -1,0 +1,19 @@
+{
+    "_id": "ID",
+    "active": true,
+    "created_at": "2019-07-04T11:50:18.140-03:00",
+    "email": "EMAIL",
+    "hidden": false,
+    "id": "ID",
+    "last_login": null,
+    "name": "NAME",
+    "phone": "+31 (97) 16139-61",
+    "teams": [
+        {
+            "_id": "ID",
+            "id": "ID",
+            "name": "Equipe São Paulo"
+        }
+    ],
+    "updated_at": "2023-03-15T12:47:33.861-03:00"
+}

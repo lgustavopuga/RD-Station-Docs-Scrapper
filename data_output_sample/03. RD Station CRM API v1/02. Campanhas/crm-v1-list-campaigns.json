@@ -1,0 +1,51 @@
+{
+    "campaigns": [
+        {
+            "_id": "63dd5b8f3c579b00012eb51c",
+            "created_at": "2023-02-03T16:07:59.710-03:00",
+            "description": null,
+            "id": "63dd5b8f3c579b00012eb51c",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "CRM - envio de leads FAVOR NÃO EDITAR 23/08 SOL",
+            "updated_at": "2023-02-03T16:07:59.710-03:00"
+        },
+        {
+            "_id": "63d83e4f8cc2e6000f8e91c8",
+            "created_at": "2023-01-30T19:01:51.027-03:00",
+            "description": null,
+            "id": "63d83e4f8cc2e6000f8e91c8",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Campanha A",
+            "updated_at": "2023-01-30T19:03:03.566-03:00"
+        },
+        {
+            "_id": "63d83e86486546000b87e5f3",
+            "created_at": "2023-01-30T19:02:46.486-03:00",
+            "description": null,
+            "id": "63d83e86486546000b87e5f3",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Campanha B",
+            "updated_at": "2023-01-30T19:03:07.990-03:00"
+        },
+        {
+            "_id": "63d83e8c7bb0b6000c8e2e98",
+            "created_at": "2023-01-30T19:02:52.159-03:00",
+            "description": null,
+            "id": "63d83e8c7bb0b6000c8e2e98",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Campanha C",
+            "updated_at": "2023-01-30T19:03:12.289-03:00"
+        },
+        {
+            "_id": "63d83e55160664001e14382e",
+            "created_at": "2023-01-30T19:01:57.491-03:00",
+            "description": null,
+            "id": "63d83e55160664001e14382e",
+            "instance_id": "5b75b4235bdc75002b1b656f",
+            "name": "Campanha D",
+            "updated_at": "2023-01-30T19:03:16.302-03:00"
+        }
+    ],
+    "has_more": true,
+    "total": 30
+}

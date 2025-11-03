@@ -1,0 +1,20 @@
+{
+    "segmentations": [
+        {
+            "id": 1,
+            "name": "Todos os contatos da base",
+            "standard": true,
+            "created_at": "2021-09-24T14:14:04.510-03:00",
+            "updated_at": "2021-09-24T14:14:04.510-03:00",
+            "process_status": "processed",
+            "links": [
+                {
+                    "rel": "SELF",
+                    "href": "https://api.rd.services/platform/segmentations/1/contacts",
+                    "media": "application/json",
+                    "type": "GET"
+                }
+            ]
+        }
+    ]
+}

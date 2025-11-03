@@ -1,0 +1,144 @@
+{
+    "config": {
+        "deal_won": {
+            "copy_to_pipeline": {
+                "deal_pipeline_id": "5fc0285ab5cd6f0012fca156",
+                "deal_stage_id": "5fc0285ab5cd6f0012fca158",
+                "owner_settings": {
+                    "group_id": "_team",
+                    "id": "5bab89733ccdb000201810ea",
+                    "name": "Meteoro de pégasus"
+                }
+            }
+        }
+    },
+    "deal_stages": [
+        {
+            "_id": "54480f523f64f90155000034",
+            "configuration": [
+                {
+                    "_id": "63970d03955d440026462995",
+                    "created_at": "2022-12-12T08:14:11.513-03:00",
+                    "extra": {
+                        "skip_days": [],
+                        "work_time": {
+                            "00:00:00": "23:59:59"
+                        }
+                    },
+                    "format": "days",
+                    "type": "deal_stopped",
+                    "updated_at": "2022-12-12T08:14:11.513-03:00",
+                    "value": 1
+                }
+            ],
+            "id": "54480f523f64f90155000034",
+            "name": "Proposta enviada",
+            "nickname": "PE",
+            "order": 1
+        },
+        {
+            "_id": "54480f523f64f90155000032",
+            "configuration": [
+                {
+                    "_id": "63970d062f6c18001a7795ec",
+                    "created_at": "2022-12-12T08:14:14.687-03:00",
+                    "extra": {
+                        "skip_days": [],
+                        "work_time": {
+                            "00:00:00": "23:59:59"
+                        }
+                    },
+                    "format": "days",
+                    "type": "deal_stopped",
+                    "updated_at": "2022-12-12T08:14:14.687-03:00",
+                    "value": 1
+                }
+            ],
+            "id": "54480f523f64f90155000032",
+            "name": "Sem Contato",
+            "nickname": "SC",
+            "order": 2
+        },
+        {
+            "_id": "5f0f4fccd7473d0016249a5d",
+            "configuration": [],
+            "id": "5f0f4fccd7473d0016249a5d",
+            "name": "Primeiro Contato",
+            "nickname": "PC",
+            "order": 3
+        },
+        {
+            "_id": "59b033023f64f93f04000560",
+            "configuration": [],
+            "id": "59b033023f64f93f04000560",
+            "name": "Em Negociações",
+            "nickname": "EN",
+            "order": 4
+        },
+        {
+            "_id": "60d1ffe057ba4d001014fd61",
+            "configuration": [
+                {
+                    "_id": "63c8543fd93156000c463d2a",
+                    "created_at": "2023-01-18T17:19:11.183-03:00",
+                    "extra": {
+                        "skip_days": [],
+                        "work_time": {
+                            "00:00:00": "23:59:59"
+                        }
+                    },
+                    "format": "days",
+                    "type": "deal_stopped",
+                    "updated_at": "2023-01-18T17:19:11.183-03:00",
+                    "value": 1
+                }
+            ],
+            "id": "60d1ffe057ba4d001014fd61",
+            "name": "Teste da tarde",
+            "nickname": "TDT",
+            "order": 5
+        },
+        {
+            "_id": "59b033163f64f9dc2a0005f8",
+            "configuration": [],
+            "id": "59b033163f64f9dc2a0005f8",
+            "name": "Fechamento da Proposta",
+            "nickname": "FDP",
+            "order": 6
+        },
+        {
+            "_id": "59b033203f64f94e9c000513",
+            "configuration": [],
+            "id": "59b033203f64f94e9c000513",
+            "name": "Finalizado",
+            "nickname": "F",
+            "order": 7
+        },
+        {
+            "_id": "6331c9a4600e51001a935129",
+            "configuration": [
+                {
+                    "_id": "6391f78e8c9240000c393f27",
+                    "created_at": "2022-12-08T11:41:18.236-03:00",
+                    "extra": {
+                        "skip_days": [],
+                        "work_time": {
+                            "00:00:00": "23:59:59"
+                        }
+                    },
+                    "format": "days",
+                    "type": "deal_stopped",
+                    "updated_at": "2022-12-08T11:41:18.236-03:00",
+                    "value": 1
+                }
+            ],
+            "id": "6331c9a4600e51001a935129",
+            "name": "teste",
+            "nickname": "T",
+            "order": 8
+        }
+    ],
+    "id": "5f0f576f08c0c768b2dd4759",
+    "name": "Funil Produto 1",
+    "order": 1
+}

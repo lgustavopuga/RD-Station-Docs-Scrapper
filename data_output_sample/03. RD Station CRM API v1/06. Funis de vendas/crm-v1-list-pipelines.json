@@ -1,0 +1,1247 @@
+[
+    {
+        "config": {
+            "deal_won": {
+                "copy_to_pipeline": {
+                    "deal_pipeline_id": "5fc0285ab5cd6f0012fca156",
+                    "deal_stage_id": "5fc0285ab5cd6f0012fca158",
+                    "owner_settings": {
+                        "group_id": "_team",
+                        "id": "5bab89733ccdb000201810ea",
+                        "name": "Meteoro de pégasus"
+                    }
+                }
+            }
+        },
+        "deal_stages": [
+            {
+                "_id": "54480f523f64f90155000034",
+                "configuration": [
+                    {
+                        "_id": "63970d03955d440026462995",
+                        "created_at": "2022-12-12T08:14:11.513-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-12T08:14:11.513-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "54480f523f64f90155000034",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 1
+            },
+            {
+                "_id": "54480f523f64f90155000032",
+                "configuration": [
+                    {
+                        "_id": "63970d062f6c18001a7795ec",
+                        "created_at": "2022-12-12T08:14:14.687-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-12T08:14:14.687-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "54480f523f64f90155000032",
+                "name": "Sem Contato",
+                "nickname": "SC",
+                "order": 2
+            },
+            {
+                "_id": "5f0f4fccd7473d0016249a5d",
+                "configuration": [],
+                "id": "5f0f4fccd7473d0016249a5d",
+                "name": "Primeiro Contato",
+                "nickname": "PC",
+                "order": 3
+            },
+            {
+                "_id": "59b033023f64f93f04000560",
+                "configuration": [],
+                "id": "59b033023f64f93f04000560",
+                "name": "Em Negociações",
+                "nickname": "EN",
+                "order": 4
+            },
+            {
+                "_id": "60d1ffe057ba4d001014fd61",
+                "configuration": [
+                    {
+                        "_id": "63c8543fd93156000c463d2a",
+                        "created_at": "2023-01-18T17:19:11.183-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2023-01-18T17:19:11.183-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "60d1ffe057ba4d001014fd61",
+                "name": "Teste da tarde",
+                "nickname": "TDT",
+                "order": 5
+            },
+            {
+                "_id": "59b033163f64f9dc2a0005f8",
+                "configuration": [],
+                "id": "59b033163f64f9dc2a0005f8",
+                "name": "Fechamento da Proposta",
+                "nickname": "FDP",
+                "order": 6
+            },
+            {
+                "_id": "59b033203f64f94e9c000513",
+                "configuration": [],
+                "id": "59b033203f64f94e9c000513",
+                "name": "Finalizado",
+                "nickname": "F",
+                "order": 7
+            },
+            {
+                "_id": "6331c9a4600e51001a935129",
+                "configuration": [
+                    {
+                        "_id": "6391f78e8c9240000c393f27",
+                        "created_at": "2022-12-08T11:41:18.236-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-08T11:41:18.236-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "6331c9a4600e51001a935129",
+                "name": "teste",
+                "nickname": "T",
+                "order": 8
+            }
+        ],
+        "id": "5f0f576f08c0c768b2dd4759",
+        "name": "Funil Produto 1",
+        "order": 1
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "5fbd462f7e8161001d18b554",
+                "configuration": [],
+                "id": "5fbd462f7e8161001d18b554",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "5fbd462f7e8161001d18b55d",
+                "configuration": [],
+                "id": "5fbd462f7e8161001d18b55d",
+                "name": "Teste",
+                "nickname": "T",
+                "order": 2
+            },
+            {
+                "_id": "5fbd462f7e8161001d18b555",
+                "configuration": [],
+                "id": "5fbd462f7e8161001d18b555",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 3
+            },
+            {
+                "_id": "5fbd462f7e8161001d18b557",
+                "configuration": [],
+                "id": "5fbd462f7e8161001d18b557",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 4
+            },
+            {
+                "_id": "5fbd462f7e8161001d18b558",
+                "configuration": [],
+                "id": "5fbd462f7e8161001d18b558",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 5
+            },
+            {
+                "_id": "6195402dbde9260012435e11",
+                "configuration": [],
+                "id": "6195402dbde9260012435e11",
+                "name": "Proposta recusada",
+                "nickname": "PR",
+                "order": 6
+            }
+        ],
+        "id": "5fbd462f7e8161001d18b553",
+        "name": "Funil de vendas 2222ssss",
+        "order": 2
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "5fc0285ab5cd6f0012fca157",
+                "configuration": [
+                    {
+                        "_id": "6391f7367d93ca00174feb2c",
+                        "created_at": "2022-12-08T11:39:50.341-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-08T11:39:50.341-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "5fc0285ab5cd6f0012fca157",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "5fc0285ab5cd6f0012fca158",
+                "configuration": [],
+                "id": "5fc0285ab5cd6f0012fca158",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "5fc0285ab5cd6f0012fca159",
+                "configuration": [],
+                "id": "5fc0285ab5cd6f0012fca159",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "5fc0285ab5cd6f0012fca15a",
+                "configuration": [
+                    {
+                        "_id": "6391f783f1415e0020666831",
+                        "created_at": "2022-12-08T11:41:07.298-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-08T11:41:07.298-03:00",
+                        "value": 2
+                    }
+                ],
+                "id": "5fc0285ab5cd6f0012fca15a",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "5fc0285ab5cd6f0012fca15b",
+                "configuration": [],
+                "id": "5fc0285ab5cd6f0012fca15b",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            },
+            {
+                "_id": "5fc0286e3569e9000bef3d27",
+                "configuration": [],
+                "id": "5fc0286e3569e9000bef3d27",
+                "name": "Nova Etapa",
+                "nickname": "NE",
+                "order": 6
+            },
+            {
+                "_id": "5fc028729269f90019ce120e",
+                "configuration": [],
+                "id": "5fc028729269f90019ce120e",
+                "name": "Nova Etapa",
+                "nickname": "NE",
+                "order": 7
+            }
+        ],
+        "id": "5fc0285ab5cd6f0012fca156",
+        "name": "Funil de vendas 3333",
+        "order": 3
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "5fc549cca148fa001440175e",
+                "configuration": [],
+                "id": "5fc549cca148fa001440175e",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "5fc549cca148fa001440175f",
+                "configuration": [],
+                "id": "5fc549cca148fa001440175f",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "5fc549cca148fa0014401760",
+                "configuration": [],
+                "id": "5fc549cca148fa0014401760",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "5fc549cca148fa0014401761",
+                "configuration": [],
+                "id": "5fc549cca148fa0014401761",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "5fc549cca148fa0014401762",
+                "configuration": [],
+                "id": "5fc549cca148fa0014401762",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "5fc549cca148fa001440175d",
+        "name": "Funil de vendas 4",
+        "order": 4
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "602bdd7c23fa630023f8f413",
+                "configuration": [],
+                "id": "602bdd7c23fa630023f8f413",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "602bdd7c23fa630023f8f414",
+                "configuration": [],
+                "id": "602bdd7c23fa630023f8f414",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "602bdd7c23fa630023f8f415",
+                "configuration": [],
+                "id": "602bdd7c23fa630023f8f415",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "602bdd7c23fa630023f8f416",
+                "configuration": [],
+                "id": "602bdd7c23fa630023f8f416",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "602bdd7c23fa630023f8f417",
+                "configuration": [],
+                "id": "602bdd7c23fa630023f8f417",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "602bdd7c23fa630023f8f412",
+        "name": "Testedasdasd",
+        "order": 5
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "60f721ebeee1a4000d33ec36",
+                "configuration": [],
+                "id": "60f721ebeee1a4000d33ec36",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "60f721ebeee1a4000d33ec37",
+                "configuration": [],
+                "id": "60f721ebeee1a4000d33ec37",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "60f721ebeee1a4000d33ec38",
+                "configuration": [],
+                "id": "60f721ebeee1a4000d33ec38",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "60f721ebeee1a4000d33ec39",
+                "configuration": [],
+                "id": "60f721ebeee1a4000d33ec39",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "60f721ebeee1a4000d33ec3a",
+                "configuration": [],
+                "id": "60f721ebeee1a4000d33ec3a",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "60f721ebeee1a4000d33ec35",
+        "name": "Funil de vendas 11 k",
+        "order": 6
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "60f721ee06f5a8000c6cdccf",
+                "configuration": [],
+                "id": "60f721ee06f5a8000c6cdccf",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "60f721ee06f5a8000c6cdcd0",
+                "configuration": [],
+                "id": "60f721ee06f5a8000c6cdcd0",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "60f721ee06f5a8000c6cdcd1",
+                "configuration": [],
+                "id": "60f721ee06f5a8000c6cdcd1",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "60f721ee06f5a8000c6cdcd2",
+                "configuration": [],
+                "id": "60f721ee06f5a8000c6cdcd2",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "60f721ee06f5a8000c6cdcd3",
+                "configuration": [],
+                "id": "60f721ee06f5a8000c6cdcd3",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "60f721ee06f5a8000c6cdcce",
+        "name": "Funil de vendas 12d",
+        "order": 7
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "6103108f52c78e000cb78373",
+                "configuration": [],
+                "id": "6103108f52c78e000cb78373",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "6103108f52c78e000cb78374",
+                "configuration": [],
+                "id": "6103108f52c78e000cb78374",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "6103108f52c78e000cb78375",
+                "configuration": [],
+                "id": "6103108f52c78e000cb78375",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "6103108f52c78e000cb78376",
+                "configuration": [],
+                "id": "6103108f52c78e000cb78376",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "6103108f52c78e000cb78377",
+                "configuration": [],
+                "id": "6103108f52c78e000cb78377",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "6103108f52c78e000cb78372",
+        "name": "Funil de vendas 8",
+        "order": 8
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "6128e6008819100014f0829b",
+                "configuration": [
+                    {
+                        "_id": "63970cb32e740d002abfe6ce",
+                        "created_at": "2022-12-12T08:12:51.488-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-12T08:12:51.488-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "6128e6008819100014f0829b",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "6128e6018819100014f0829c",
+                "configuration": [],
+                "id": "6128e6018819100014f0829c",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "6128e6018819100014f0829d",
+                "configuration": [],
+                "id": "6128e6018819100014f0829d",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "6128e6018819100014f0829e",
+                "configuration": [],
+                "id": "6128e6018819100014f0829e",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "6128e6018819100014f0829f",
+                "configuration": [],
+                "id": "6128e6018819100014f0829f",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "6128e6008819100014f0829a",
+        "name": "Funil de vendas 1",
+        "order": 9
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "61a7a3929ae2a900168f7007",
+                "configuration": [],
+                "id": "61a7a3929ae2a900168f7007",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "61a7a3929ae2a900168f7008",
+                "configuration": [],
+                "id": "61a7a3929ae2a900168f7008",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "61a7a3929ae2a900168f7009",
+                "configuration": [],
+                "id": "61a7a3929ae2a900168f7009",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "61a7a3929ae2a900168f700a",
+                "configuration": [],
+                "id": "61a7a3929ae2a900168f700a",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "61a7a3929ae2a900168f700b",
+                "configuration": [],
+                "id": "61a7a3929ae2a900168f700b",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "61a7a3929ae2a900168f7006",
+        "name": "Funil de vendas 11akspoaksodddpaks",
+        "order": 10
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "62fe9565b6a04c00126fa44c",
+                "configuration": [],
+                "id": "62fe9565b6a04c00126fa44c",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "62fe9565b6a04c00126fa44d",
+                "configuration": [],
+                "id": "62fe9565b6a04c00126fa44d",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "62fe9565b6a04c00126fa44e",
+                "configuration": [],
+                "id": "62fe9565b6a04c00126fa44e",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "62fe9566b6a04c00126fa44f",
+                "configuration": [],
+                "id": "62fe9566b6a04c00126fa44f",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "62fe9566b6a04c00126fa453",
+                "configuration": [],
+                "id": "62fe9566b6a04c00126fa453",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "62fe9565b6a04c00126fa448",
+        "name": "Funil de venda Ana",
+        "order": 11
+    },
+    {
+        "config": {},
+        "deal_stages": [],
+        "id": "63617007ceef5300172f1b4e",
+        "name": "Funil de vendas 12",
+        "order": 12
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "6386155369a5160015f56773",
+                "configuration": [],
+                "id": "6386155369a5160015f56773",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "6386155369a5160015f56774",
+                "configuration": [],
+                "id": "6386155369a5160015f56774",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "6386155369a5160015f56775",
+                "configuration": [],
+                "id": "6386155369a5160015f56775",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "6386155369a5160015f56776",
+                "configuration": [],
+                "id": "6386155369a5160015f56776",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "6386155369a5160015f56777",
+                "configuration": [],
+                "id": "6386155369a5160015f56777",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "6386155369a5160015f56772",
+        "name": "Funil de vendas",
+        "order": 13
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "6391f7ca040a43000b5d6146",
+                "configuration": [
+                    {
+                        "_id": "63f619cba287e20024db7691",
+                        "created_at": "2023-02-22T10:34:03.456-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2023-02-22T10:34:03.456-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "6391f7ca040a43000b5d6146",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "6391f7ca040a43000b5d6147",
+                "configuration": [
+                    {
+                        "_id": "63f68217a194e5000c4bfc11",
+                        "created_at": "2023-02-22T17:59:03.755-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2023-02-22T17:59:03.755-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "6391f7ca040a43000b5d6147",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "6391f7ca040a43000b5d6148",
+                "configuration": [
+                    {
+                        "_id": "6391f8a52b7ac9001187363f",
+                        "created_at": "2022-12-08T11:45:57.936-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-08T11:45:57.936-03:00",
+                        "value": 2
+                    }
+                ],
+                "id": "6391f7ca040a43000b5d6148",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "6391f7ca040a43000b5d6149",
+                "configuration": [
+                    {
+                        "_id": "6391f8bc040a43000b5d62aa",
+                        "created_at": "2022-12-08T11:46:20.922-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-08T11:46:20.922-03:00",
+                        "value": 2
+                    }
+                ],
+                "id": "6391f7ca040a43000b5d6149",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "6391f7ca040a43000b5d614a",
+                "configuration": [],
+                "id": "6391f7ca040a43000b5d614a",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "6391f7ca040a43000b5d6145",
+        "name": "Funil de vendas 15",
+        "order": 14
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "6391f8e5957b130027491a24",
+                "configuration": [
+                    {
+                        "_id": "63ee7c73c0b4e7001a8e984b",
+                        "created_at": "2023-02-16T15:56:51.165-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2023-02-16T15:56:51.165-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "6391f8e5957b130027491a24",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "6391f8e5957b130027491a25",
+                "configuration": [
+                    {
+                        "_id": "6391f921b96dd20015a2e240",
+                        "created_at": "2022-12-08T11:48:01.975-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2022-12-08T11:48:01.975-03:00",
+                        "value": 1
+                    }
+                ],
+                "id": "6391f8e5957b130027491a25",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "6391f8e5957b130027491a26",
+                "configuration": [
+                    {
+                        "_id": "63d05eed214da50012d7ffdb",
+                        "created_at": "2023-01-24T19:42:53.502-03:00",
+                        "extra": {
+                            "skip_days": [],
+                            "work_time": {
+                                "00:00:00": "23:59:59"
+                            }
+                        },
+                        "format": "days",
+                        "type": "deal_stopped",
+                        "updated_at": "2023-01-24T19:42:53.502-03:00",
+                        "value": 4
+                    }
+                ],
+                "id": "6391f8e5957b130027491a26",
+                "name": "Identificação do interesse teste",
+                "nickname": "IDIT",
+                "order": 3
+            },
+            {
+                "_id": "6391f8e5957b130027491a27",
+                "configuration": [],
+                "id": "6391f8e5957b130027491a27",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "6391f8e5957b130027491a28",
+                "configuration": [],
+                "id": "6391f8e5957b130027491a28",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "6391f8e5957b130027491a23",
+        "name": "Funil de vendas 16",
+        "order": 15
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "63a07a2eb202160015c72dd3",
+                "configuration": [],
+                "id": "63a07a2eb202160015c72dd3",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "63a07a2eb202160015c72dd4",
+                "configuration": [],
+                "id": "63a07a2eb202160015c72dd4",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "63a07a2eb202160015c72dd5",
+                "configuration": [],
+                "id": "63a07a2eb202160015c72dd5",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "63a07a2eb202160015c72dd6",
+                "configuration": [],
+                "id": "63a07a2eb202160015c72dd6",
+                "name": "Apresentação teste",
+                "nickname": "AT",
+                "order": 4
+            },
+            {
+                "_id": "63a07a2eb202160015c72dd7",
+                "configuration": [],
+                "id": "63a07a2eb202160015c72dd7",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "63a07a2eb202160015c72dd2",
+        "name": "Integração RDSM",
+        "order": 16
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "63a07e24566c5d000c7463e3",
+                "configuration": [],
+                "id": "63a07e24566c5d000c7463e3",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "63a07e24566c5d000c7463e4",
+                "configuration": [],
+                "id": "63a07e24566c5d000c7463e4",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "63a07e24566c5d000c7463e5",
+                "configuration": [],
+                "id": "63a07e24566c5d000c7463e5",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "63a07e24566c5d000c7463e6",
+                "configuration": [],
+                "id": "63a07e24566c5d000c7463e6",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "63a07e24566c5d000c7463e7",
+                "configuration": [],
+                "id": "63a07e24566c5d000c7463e7",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "63a07e24566c5d000c7463e2",
+        "name": "Funil Wes 1.0",
+        "order": 17
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "63a31b34ae22130018760c02",
+                "configuration": [],
+                "id": "63a31b34ae22130018760c02",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "63a31b34ae22130018760c03",
+                "configuration": [],
+                "id": "63a31b34ae22130018760c03",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "63a31b34ae22130018760c04",
+                "configuration": [],
+                "id": "63a31b34ae22130018760c04",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "63a31b34ae22130018760c05",
+                "configuration": [],
+                "id": "63a31b34ae22130018760c05",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "63a31b34ae22130018760c06",
+                "configuration": [],
+                "id": "63a31b34ae22130018760c06",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            },
+            {
+                "_id": "63a31c18e71e92000c732481",
+                "configuration": [],
+                "id": "63a31c18e71e92000c732481",
+                "name": "Esse texto possui 60 caracteres no nome. Nome da etapa funil",
+                "nickname": "ETP6CNNNDEF",
+                "order": 6
+            }
+        ],
+        "id": "63a31b34ae22130018760c01",
+        "name": "Esse texto possui 40 caracteres no nome.",
+        "order": 18
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "63c9a6a58639ab000c3eacf5",
+                "configuration": [],
+                "id": "63c9a6a58639ab000c3eacf5",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "63c9a6a58639ab000c3eacf6",
+                "configuration": [],
+                "id": "63c9a6a58639ab000c3eacf6",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "63c9a6a58639ab000c3eacf7",
+                "configuration": [],
+                "id": "63c9a6a58639ab000c3eacf7",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "63c9a6a58639ab000c3eacf8",
+                "configuration": [],
+                "id": "63c9a6a58639ab000c3eacf8",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "63c9a6a58639ab000c3eacf9",
+                "configuration": [],
+                "id": "63c9a6a58639ab000c3eacf9",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "63c9a6a58639ab000c3eacf4",
+        "name": "Funil de vendas 19",
+        "order": 19
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "63e6b3cc6c71860013ef6390",
+                "configuration": [],
+                "id": "63e6b3cc6c71860013ef6390",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "order": 1
+            },
+            {
+                "_id": "63e6b3cc6c71860013ef6391",
+                "configuration": [],
+                "id": "63e6b3cc6c71860013ef6391",
+                "name": "Contato feito",
+                "nickname": "CF",
+                "order": 2
+            },
+            {
+                "_id": "63e6b3cc6c71860013ef6392",
+                "configuration": [],
+                "id": "63e6b3cc6c71860013ef6392",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "63e6b3cc6c71860013ef6393",
+                "configuration": [],
+                "id": "63e6b3cc6c71860013ef6393",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "63e6b3cc6c71860013ef6394",
+                "configuration": [],
+                "id": "63e6b3cc6c71860013ef6394",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "63e6b3cc6c71860013ef638f",
+        "name": "Funil de vendas 20",
+        "order": 20
+    },
+    {
+        "config": {},
+        "deal_stages": [
+            {
+                "_id": "63f68227d453490016d55624",
+                "configuration": [],
+                "id": "63f68227d453490016d55624",
+                "name": "Oportunidade Criada",
+                "nickname": "OC",
+                "order": 1
+            },
+            {
+                "_id": "63f68227d453490016d55625",
+                "configuration": [],
+                "id": "63f68227d453490016d55625",
+                "name": "Primeiro Contato",
+                "nickname": "PC",
+                "order": 2
+            },
+            {
+                "_id": "63f68227d453490016d55626",
+                "configuration": [],
+                "id": "63f68227d453490016d55626",
+                "name": "Identificação do interesse",
+                "nickname": "IDI",
+                "order": 3
+            },
+            {
+                "_id": "63f68227d453490016d55627",
+                "configuration": [],
+                "id": "63f68227d453490016d55627",
+                "name": "Apresentação",
+                "nickname": "A",
+                "order": 4
+            },
+            {
+                "_id": "63f68227d453490016d55628",
+                "configuration": [],
+                "id": "63f68227d453490016d55628",
+                "name": "Proposta enviada",
+                "nickname": "PE",
+                "order": 5
+            }
+        ],
+        "id": "63f68227d453490016d55623",
+        "name": "Funil de vendas 21",
+        "order": 21
+    }
+]

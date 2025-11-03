@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Minha Primeira Landing Page",
+        "created_at": "2021-09-22T14:14:04.510-03:00",
+        "upated_at": "2021-09-24T14:14:04.510-03:00",
+        "conversion_identifier": "dia-das-mães-2022",
+        "status": "PUBLISHED",
+        "has_active_experiment": false,
+        "had_experiment": false
+    }
+]

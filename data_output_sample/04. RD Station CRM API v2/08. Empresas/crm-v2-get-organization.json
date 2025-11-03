@@ -1,0 +1,25 @@
+{
+    "data": {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "url": "string",
+        "address": {
+            "line": "string",
+            "latitude": "string",
+            "longitude": "string"
+        },
+        "segment_ids": [
+            "string"
+        ],
+        "follower_ids": [
+            "string"
+        ],
+        "owner_id": "string",
+        "custom_fields": {
+            "additionalProp": "string"
+        },
+        "created_at": "2025-11-03T17:06:47.557Z",
+        "updated_at": "2025-11-03T17:06:47.557Z"
+    }
+}

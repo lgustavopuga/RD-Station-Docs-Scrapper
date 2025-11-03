@@ -1,0 +1,12 @@
+[
+  {
+    "event_type": "CONVERSION",
+    "event_family": "CDP",
+    "event_identifier": "Evento 2022",
+    "event_timestamp": "2022-05-19T09:49:54.101-03:00",
+    "payload": {
+      "name": "João Silva",
+      "email": "joao@gmail.com"
+    }
+  }
+]

@@ -1,0 +1,111 @@
+{
+    "has_more": false,
+    "organizations": [
+        {
+            "_id": "ID",
+            "address": null,
+            "contacts": [
+                {
+                    "birthday": null,
+                    "emails": [
+                        {
+                            "email": "EMAIL"
+                        }
+                    ],
+                    "facebook": "facebook name of the contact",
+                    "linkedin": "linkedin user name of the contact",
+                    "name": "NAME",
+                    "notes": null,
+                    "phones": [
+                        {
+                            "phone": "phone of the contact",
+                            "type": null
+                        },
+                        {
+                            "phone": "mobile_phone of the contact",
+                            "type": null
+                        }
+                    ],
+                    "skype": null,
+                    "title": "job title value"
+                }
+            ],
+            "created_at": "2022-04-26T16:40:47.449-03:00",
+            "custom_fields": [],
+            "id": "ID",
+            "lost_count": 0,
+            "name": "NAME",
+            "opened_count": 1,
+            "organization_segments": [],
+            "paused_count": 0,
+            "resume": null,
+            "updated_at": "2022-04-26T16:40:47.449-03:00",
+            "url": "website of the contact",
+            "user": {
+                "_id": "ID",
+                "email": "EMAIL",
+                "id": "ID",
+                "name": "NAME",
+                "nickname": "RP"
+            },
+            "won_count": 0
+        },
+        {
+            "_id": "ID",
+            "address": null,
+            "contacts": [
+                {
+                    "birthday": null,
+                    "emails": [
+                        {
+                            "email": "EMAIL"
+                        }
+                    ],
+                    "facebook": null,
+                    "linkedin": null,
+                    "name": "NAME",
+                    "notes": null,
+                    "phones": [
+                        {
+                            "phone": "4848484848484848484848484",
+                            "type": "work"
+                        }
+                    ],
+                    "skype": null,
+                    "title": "Programador"
+                },
+                {
+                    "birthday": null,
+                    "emails": [],
+                    "facebook": null,
+                    "linkedin": null,
+                    "name": "NAME",
+                    "notes": null,
+                    "phones": [],
+                    "skype": null,
+                    "title": null
+                }
+            ],
+            "created_at": "2022-04-26T16:46:20.285-03:00",
+            "custom_fields": [],
+            "id": "ID",
+            "lost_count": 0,
+            "name": "NAME",
+            "opened_count": 1,
+            "organization_segments": [],
+            "paused_count": 0,
+            "resume": null,
+            "updated_at": "2022-04-26T16:46:20.285-03:00",
+            "url": null,
+            "user": {
+                "_id": "ID",
+                "email": "EMAIL",
+                "id": "ID",
+                "name": "NAME",
+                "nickname": "RP"
+            },
+            "won_count": 0
+        }
+    ],
+    "total": 2
+}

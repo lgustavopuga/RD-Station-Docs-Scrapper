@@ -1,0 +1,26 @@
+{
+    "account_id": 1,
+    "query_date": {
+        "start_date": "2025-11-03",
+        "end_date": "2025-11-03"
+    },
+    "emails": [
+        {
+            "campaign_id": 6061281,
+            "campaign_name": "Desconto",
+            "send_at": "2021-08-06T17:26:39-03:00",
+            "contacts_count": 1000,
+            "email_dropped_count": 3,
+            "email_delivered_count": 997,
+            "email_bounced_count": 5,
+            "email_opened_count": 500,
+            "email_clicked_count": 500,
+            "email_unsubscribed_count": 4,
+            "email_spam_reported_count": 1,
+            "email_delivered_rate": 98.7,
+            "email_opened_rate": 46.9,
+            "email_clicked_rate": 36.5,
+            "email_spam_reported_rate": 0
+        }
+    ]
+}

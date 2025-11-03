@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "platform_item_id": "2121212",
+            "campaign_item_id": "45678",
+            "item_type": "email",
+            "added_at": "2022-11-23T19:28:57.527Z",
+            "links": [
+                {
+                    "rel": "CAMPAIGN.ITEM",
+                    "href": "https://api.rd.services/platform/emails?ids=2121212",
+                    "media": "application/json",
+                    "method_type": "GET"
+                },
+                {
+                    "rel": "CAMPAIGN",
+                    "href": "https://api.rd.services/platform/campaigns/7",
+                    "media": "application/json",
+                    "method_type": "GET"
+                }
+            ]
+        }
+    ]
+}

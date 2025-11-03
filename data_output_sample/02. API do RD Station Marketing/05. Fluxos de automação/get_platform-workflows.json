@@ -1,0 +1,12 @@
+{
+    "wokflows": [
+        {
+            "id": "1c5ba46d-d27f-4263-9373-401632cbd424",
+            "name": "Fluxo de conversão da landing page Exemplo",
+            "user_email_created": "john@example.com",
+            "created_at": "2021-09-24T14:14:04.510-03:00",
+            "user_email_updated": "john@example.com",
+            "updated_at": "2021-09-24T14:14:04.510-03:00"
+        }
+    ]
+}

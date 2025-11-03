@@ -1,0 +1,28 @@
+{
+    "account_id": 1,
+    "query_date": {
+        "start_date": "2025-11-03",
+        "end_date": "2025-11-03"
+    },
+    "workflow_email_statistics": [
+        {
+            "workflow_id": "68e7aefe-d22d-11ec-9d64-0242ac120002",
+            "workflow_name": "Qualified Leads",
+            "workflow_action_id": "7959d2da-d22d-11ec-9d64-0242ac120002",
+            "workflow_created_at": "2022-01-01",
+            "workflow_updated_at": "2022-01-25",
+            "email_name": "Interesse Renovado",
+            "email_dropped_count": 10,
+            "email_delivered_count": 477,
+            "email_bounced_unique_count": 2,
+            "email_opened_unique_count": 300,
+            "email_clicked_unique_count": 75,
+            "email_unsubscribed_count": 2,
+            "email_spam_reported_count": 0,
+            "email_delivered_rate": 95.2,
+            "email_opened_rate": 50.2,
+            "email_clicked_rate": 15.1,
+            "email_spam_reported_rate": 0
+        }
+    ]
+}

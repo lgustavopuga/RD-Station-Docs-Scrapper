@@ -1,0 +1,137 @@
+{
+    "has_more": true,
+    "products": [
+        {
+            "_id": "5d67f9ea5d27c100308f83d1",
+            "base_price": "15.44",
+            "created_at": "2019-08-29T13:14:34.457-03:00",
+            "description": "Caneta fina 0,4 Preta",
+            "name": "Caneta",
+            "product_custom_fields": [
+                {
+                    "created_at": "2019-08-29T13:14:34.457-03:00",
+                    "custom_field_id": "66e99d06a2d970001d5bfd18",
+                    "id": "66e99d06a2d970001d5bfd18",
+                    "updated_at": "2019-08-29T13:14:34.457-03:00",
+                    "value": "12cm"
+                },
+                {
+                    "created_at": "2019-08-29T13:14:34.457-03:00",
+                    "custom_field_id": "66e99df3a2d970001d5bfd19",
+                    "id": "66e9a02ca2d970001d5bfd1e",
+                    "updated_at": "2019-08-29T13:14:34.457-03:00",
+                    "value": "Acrílico"
+                }
+            ],
+            "updated_at": "2021-10-22T16:53:17.072-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f79",
+            "base_price": "150.00",
+            "created_at": "2021-02-16T14:29:37.205-03:00",
+            "description": "Para alunos que já são bem avançados",
+            "name": "Curso Avançado I",
+            "product_custom_fields": [
+                {
+                    "created_at": "2019-08-29T13:14:34.457-03:00",
+                    "custom_field_id": "66e99d06a2d970001d5bfd18",
+                    "id": "66e99d06a2d970001d5bfd18",
+                    "updated_at": "2019-08-29T13:14:34.457-03:00",
+                    "value": "40 horas"
+                }
+            ],
+            "updated_at": "2021-02-16T14:29:37.205-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f7a",
+            "base_price": "170.00",
+            "created_at": "2021-02-16T14:29:37.237-03:00",
+            "description": "Para alunos que já são bem avançados",
+            "name": "Curso Avançado II",
+            "updated_at": "2021-02-16T14:29:37.237-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f74",
+            "base_price": "100.00",
+            "created_at": "2021-02-16T14:29:37.051-03:00",
+            "description": "Para alunos que estão começando",
+            "name": "Curso Básico I",
+            "updated_at": "2021-02-16T14:29:37.051-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f75",
+            "base_price": "150.00",
+            "created_at": "2021-02-16T14:29:37.090-03:00",
+            "description": "Para alunos que estão começando",
+            "name": "Curso Básico II",
+            "updated_at": "2021-02-16T14:29:37.090-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f76",
+            "base_price": "150.00",
+            "created_at": "2021-02-16T14:29:37.107-03:00",
+            "description": "Para alunos que já conhecem um pouco",
+            "name": "Curso Intermediário I",
+            "updated_at": "2021-02-16T14:29:37.107-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f77",
+            "base_price": "150.00",
+            "created_at": "2021-02-16T14:29:37.135-03:00",
+            "description": "Para alunos que já conhecem um pouco",
+            "name": "Curso Intermediário II",
+            "updated_at": "2021-02-16T14:29:37.135-03:00",
+            "visible": true
+        },
+        {
+            "_id": "602c010185ada300019f9f78",
+            "base_price": "170.00",
+            "created_at": "2021-02-16T14:29:37.166-03:00",
+            "description": "Para alunos que já conhecem um pouco",
+            "name": "Curso Intermediário III",
+            "updated_at": "2021-02-16T14:29:37.166-03:00",
+            "visible": true
+        },
+        {
+            "_id": "60d37d3f413cc80014e7953a",
+            "base_price": "25.00",
+            "created_at": "2021-06-23T15:28:15.823-03:00",
+            "description": null,
+            "name": "Curso de CRM",
+            "product_custom_fields": [
+                {
+                    "created_at": "2019-08-29T13:14:34.457-03:00",
+                    "custom_field_id": "66e99d06a2d970001d5bfd18",
+                    "id": "66e99d06a2d970001d5bfd18",
+                    "updated_at": "2019-08-29T13:14:34.457-03:00",
+                    "value": "Prata"
+                },
+                {
+                    "created_at": "2019-08-29T13:14:34.457-03:00",
+                    "custom_field_id": "66e99df3a2d970001d5bfd19",
+                    "id": "66e9a02ca2d970001d5bfd1e",
+                    "updated_at": "2019-08-29T13:14:34.457-03:00",
+                    "value": "12 meses"
+                }
+            ],
+            "updated_at": "2021-06-23T15:28:15.823-03:00",
+            "visible": true
+        },
+        {
+            "_id": "5fff47bb1d7625000131f1fc",
+            "base_price": "0.00",
+            "created_at": "2021-01-13T16:19:23.233-03:00",
+            "description": "Contato",
+            "name": "Empresa/Cliente",
+            "updated_at": "2021-01-13T16:19:23.233-03:00",
+            "visible": true
+        }
+    ],
+    "total": 43
+}

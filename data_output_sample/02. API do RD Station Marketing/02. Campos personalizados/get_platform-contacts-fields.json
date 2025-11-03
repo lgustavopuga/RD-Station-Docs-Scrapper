@@ -1,0 +1,35 @@
+{
+    "fields": [
+        {
+            "uuid": "fdeba6ec-f1cf-4b13-b2ea-e93d47c0d828",
+            "api_identifier": "name",
+            "custom_field": false,
+            "data_type": "STRING",
+            "name": {
+                "default": "string",
+                "pt-BR": "string"
+            },
+            "label": {
+                "default": "string",
+                "pt-BR": "string"
+            },
+            "presentation_type": "TEXT_INPUT",
+            "validation_rules": {
+                "valid_options": [
+                    {
+                        "value": "opcao_1",
+                        "label": {
+                            "pt-BR": "opcao_1"
+                        }
+                    },
+                    {
+                        "value": "opcao_2",
+                        "label": {
+                            "pt-BR": "opcao_2"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

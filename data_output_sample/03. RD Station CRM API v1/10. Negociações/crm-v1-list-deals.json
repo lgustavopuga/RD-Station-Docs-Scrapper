@@ -1,0 +1,114 @@
+{
+    "deals": [
+        {
+            "_id": "ID",
+            "amount_montly": 0,
+            "amount_total": 399.83,
+            "amount_unique": 399.83,
+            "closed_at": null,
+            "contacts": [
+                {
+                    "birthday": {
+                        "_id": "ID",
+                        "created_at": null,
+                        "day": 11,
+                        "month": 9,
+                        "updated_at": null,
+                        "year": 1979
+                    },
+                    "emails": [
+                        {
+                            "email": "email1@empresa.com"
+                        },
+                        {
+                            "email": "email2@empresa.com"
+                        }
+                    ],
+                    "facebook": null,
+                    "linkedin": null,
+                    "name": "NAME",
+                    "notes": null,
+                    "phones": [
+                        {
+                            "phone": "3165585457",
+                            "type": "cellphone"
+                        }
+                    ],
+                    "skype": "EMAIL",
+                    "title": "Gerente"
+                }
+            ],
+            "created_at": "2023-02-16T10:29:36.600-03:00",
+            "deal_custom_fields": [],
+            "deal_products": [
+                {
+                    "_id": "ID",
+                    "amount": 1,
+                    "amount_decimal": 1.1,
+                    "base_price": 199.91,
+                    "created_at": "2023-02-16T10:29:36.778-03:00",
+                    "description": "Description Product 1",
+                    "discount": 0,
+                    "discount_type": "value",
+                    "id": "ID",
+                    "name": "Product 01",
+                    "price": 199.91,
+                    "product_id": "ID",
+                    "recurrence": "spare",
+                    "total": 199.91,
+                    "updated_at": "2023-02-16T10:29:36.778-03:00"
+                },
+                {
+                    "_id": "ID",
+                    "amount": 1,
+                    "amount_decimal": 1.1,
+                    "base_price": 199.92,
+                    "created_at": "2023-02-16T10:29:36.816-03:00",
+                    "description": "Description Product 2",
+                    "discount": 0,
+                    "discount_type": "value",
+                    "id": "ID",
+                    "name": "Product 02",
+                    "price": 199.92,
+                    "product_id": "ID",
+                    "recurrence": "spare",
+                    "total": 199.92,
+                    "updated_at": "2023-02-16T10:29:36.816-03:00"
+                }
+            ],
+            "deal_stage": {
+                "_id": "ID",
+                "created_at": "2022-04-26T16:17:58.214-03:00",
+                "id": "ID",
+                "name": "Sem contato",
+                "nickname": "SC",
+                "updated_at": "2022-04-26T16:17:58.214-03:00"
+            },
+            "hold": null,
+            "id": "ID",
+            "interactions": 0,
+            "last_activity_at": null,
+            "last_activity_content": null,
+            "markup": "future",
+            "markup_created": "8 days",
+            "markup_last_activities": null,
+            "name": "nome da oportunidade 1",
+            "prediction_date": null,
+            "rating": 1,
+            "stop_time_limit": {},
+            "updated_at": "2023-02-16T10:30:05.171-03:00",
+            "user": {
+                "_id": "ID",
+                "email": "EMAIL",
+                "id": "ID",
+                "name": "NAME",
+                "nickname": "RP"
+            },
+            "user_changed": true,
+            "win": null
+        }
+    ],
+    "has_more": false,
+    "next_page": "i-1726778672521,s-66ec8d30f2f11000139ab5ff",
+    "total": 1
+}

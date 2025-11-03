@@ -1,0 +1,28 @@
+{
+    "data": {
+        "id": "string",
+        "name": "string",
+        "recurrence_price": 0,
+        "one_time_price": 0,
+        "total_price": 0,
+        "expected_close_date": "2025-11-03",
+        "rating": 0,
+        "status": "won",
+        "closed_at": "2025-11-03T17:06:47.557Z",
+        "pipeline_id": "string",
+        "stage_id": "string",
+        "owner_id": "string",
+        "source_id": "string",
+        "campaign_id": "string",
+        "lost_reason_id": "string",
+        "organization_id": "string",
+        "contact_ids": [
+            "string"
+        ],
+        "custom_fields": {
+            "additionalProp": "string"
+        },
+        "created_at": "2025-11-03T17:06:47.557Z",
+        "updated_at": "2025-11-03T17:06:47.557Z"
+    }
+}
