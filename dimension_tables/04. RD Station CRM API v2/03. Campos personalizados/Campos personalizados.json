@@ -1,0 +1,34 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/custom_fields",
+        "method": "GET",
+        "resource": "custom_field",
+        "parameters": "filter (entity, slug, is:required, is:visible), sort (slug, order), page",
+        "response_fields": "data (id, name, slug, type, entity, options, unique, allow_new_option, order, required_rules, display_rules, created_at, updated_at), links (first, prev, self, next, last)",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/crm/v2/custom_fields/{id}"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Campos Personalizados",
+        "versao_api": "V2",
+        "descricao": "Listar campos personalizados da conta, permitindo filtrar por entidade (negociação, contato, etc.)"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/custom_fields/{id}",
+        "method": "GET",
+        "resource": "custom_field",
+        "parameters": "id",
+        "response_fields": "data (id, name, slug, type, entity, options, unique, allow_new_option, order, required_rules, display_rules, created_at, updated_at)",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/crm/v2/custom_fields"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Campos Personalizados",
+        "versao_api": "V2",
+        "descricao": "Obter campo personalizado pelo seu ID."
+    }
+]

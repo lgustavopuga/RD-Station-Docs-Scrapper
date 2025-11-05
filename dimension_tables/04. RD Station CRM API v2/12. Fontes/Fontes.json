@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/sources",
+        "method": "GET",
+        "resource": "source",
+        "parameters": "filter, sort, page",
+        "response_fields": "data (array: id, name, description, created_at, updated_at), links (object: first, prev, self, next, last)",
+        "metrics": null,
+        "related_endpoints": null,
+        "produto": "crm",
+        "categoria": "Fontes",
+        "versao_api": "v2",
+        "descricao": "Recupera a lista de todas as fontes de negociação configuradas na conta."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/sources/{id}",
+        "method": "GET",
+        "resource": "source",
+        "parameters": "id (path param)",
+        "response_fields": "data (object: id, name, description, created_at, updated_at)",
+        "metrics": null,
+        "related_endpoints": null,
+        "produto": "crm",
+        "categoria": "Fontes",
+        "versao_api": "v2",
+        "descricao": "Obter fonte específica pelo seu ID."
+    }
+]

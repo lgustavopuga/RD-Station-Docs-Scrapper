@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/products/{id}",
+        "method": "GET",
+        "resource": "product",
+        "parameters": "id",
+        "response_fields": "data (id, name, description, price, visible, custom_fields, created_at, updated_at)",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/products, /products (POST), /products/{id} (PUT)",
+        "produto": "RD Station CRM",
+        "categoria": "Produtos",
+        "versao_api": "V2",
+        "descricao": "Recupera as informações completas de um produto específico pelo seu ID."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/products",
+        "method": "GET",
+        "resource": "product",
+        "parameters": "filter, sort, page",
+        "response_fields": "data (id, name, description, price, visible, custom_fields, created_at, updated_at), links (first, prev, self, next, last)",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/products/{id} (GET), /products (POST), /products/{id} (PUT)",
+        "produto": "RD Station CRM",
+        "categoria": "Produtos",
+        "versao_api": "V2",
+        "descricao": "Lista os produtos do catálogo de itens ou serviços que a empresa comercializa."
+    }
+]

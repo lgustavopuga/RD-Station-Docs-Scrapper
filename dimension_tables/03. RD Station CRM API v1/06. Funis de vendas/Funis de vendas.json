@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/api/v1/deal_pipelines",
+        "method": "GET",
+        "resource": "deal_pipeline",
+        "parameters": "limit, page",
+        "response_fields": "config, deal_stages, id, name, order",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/api/v1/deal_pipelines/{deal_pipeline_id}",
+        "produto": "RD Station CRM",
+        "categoria": "Funis de vendas",
+        "versao_api": "v1",
+        "descricao": "Listar funis de vendas"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/api/v1/deal_pipelines/{deal_pipeline_id}",
+        "method": "GET",
+        "resource": "deal_pipeline",
+        "parameters": "deal_pipeline_id",
+        "response_fields": "config, deal_stages, id, name, order",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/api/v1/deal_pipelines",
+        "produto": "RD Station CRM",
+        "categoria": "Funis de vendas",
+        "versao_api": "v1",
+        "descricao": "Obter funil de vendas"
+    }
+]

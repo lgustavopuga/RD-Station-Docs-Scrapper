@@ -1,0 +1,34 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/segmentations",
+        "method": "GET",
+        "resource": "segmentation",
+        "parameters": null,
+        "response_fields": "id, name, standard, created_at, updated_at, process_status, links",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/platform/segmentations/{id}/contacts"
+        ],
+        "produto": "RD Station Marketing",
+        "categoria": "Segmentações",
+        "versao_api": null,
+        "descricao": "Retorna uma lista de segmentações da conta."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/platform/segmentations/{id}/contacts",
+        "method": "GET",
+        "resource": "contact",
+        "parameters": "id",
+        "response_fields": "uuid, name, email, last_conversion_date, created_at, links",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/platform/segmentations"
+        ],
+        "produto": "RD Station Marketing",
+        "categoria": "Segmentações",
+        "versao_api": null,
+        "descricao": "Retorna uma lista de contatos associados a uma segmentação."
+    }
+]

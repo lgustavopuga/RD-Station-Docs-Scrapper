@@ -1,0 +1,58 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/analytics/conversions",
+        "method": "GET",
+        "resource": "conversion",
+        "parameters": "start_date, end_date, assets_type[], asset_id",
+        "response_fields": "account_id, query_date, assets_type, conversions (asset_id, asset_identifier, asset_type, asset_created_at, asset_updated_at, visits_count, conversions_count, conversion_rate)",
+        "metrics": "",
+        "related_endpoints": "",
+        "produto": "RD Station Marketing",
+        "categoria": "Análise",
+        "versao_api": "",
+        "descricao": "Consultar Estatísticas dos Ativos de Conversão"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/platform/analytics/emails",
+        "method": "GET",
+        "resource": "email",
+        "parameters": "start_date, end_date, campaign_id",
+        "response_fields": "account_id, query_date, emails (campaign_id, campaign_name, send_at, contacts_count, email_dropped_count, email_delivered_count, email_bounced_count, email_opened_count, email_clicked_count, email_unsubscribed_count, email_spam_reported_count, email_delivered_rate, email_opened_rate, email_clicked_rate, email_spam_reported_rate)",
+        "metrics": "",
+        "related_endpoints": "",
+        "produto": "RD Station Marketing",
+        "categoria": "Análise",
+        "versao_api": "",
+        "descricao": "Consultar Estatísticas de E-mail Marketing"
+    },
+    {
+        "endpoint_id": 3,
+        "path": "/platform/analytics/funnel",
+        "method": "GET",
+        "resource": "funnel",
+        "parameters": "start_date, end_date, grouped_by",
+        "response_fields": "account_id, query_date, grouped_by, funnel (reference_day, visitors_count, contacts_count, qualified_contacts_count, opportunities_count, sales_count)",
+        "metrics": "",
+        "related_endpoints": "",
+        "produto": "RD Station Marketing",
+        "categoria": "Análise",
+        "versao_api": "",
+        "descricao": "Consultar Estatísticas do Funil de Vendas"
+    },
+    {
+        "endpoint_id": 4,
+        "path": "/platform/analytics/workflow_emails",
+        "method": "GET",
+        "resource": "workflow_email",
+        "parameters": "start_date, end_date, workflow_id",
+        "response_fields": "account_id, query_date, workflow_email_statistics (workflow_id, workflow_name, workflow_action_id, workflow_created_at, workflow_updated_at, email_name, email_dropped_count, email_delivered_count, email_bounced_unique_count, email_opened_unique_count, email_clicked_unique_count, email_unsubscribed_count, email_spam_reported_count, email_delivered_rate, email_opened_rate, email_clicked_rate, email_spam_reported_rate)",
+        "metrics": "",
+        "related_endpoints": "",
+        "produto": "RD Station Marketing",
+        "categoria": "Análise",
+        "versao_api": "",
+        "descricao": "Consultar Estatísticas de Email via Fluxo de Automação"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/teams",
+        "method": "GET",
+        "resource": "team",
+        "parameters": null,
+        "response_fields": "has_more, teams, total, teams._id, teams.created_at, teams.id, teams.name, teams.team_users, teams.updated_at, teams.user_ids, teams.team_users._id, teams.team_users.email, teams.team_users.id, teams.team_users.name",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/teams/{team_id}",
+        "produto": "RD Station CRM",
+        "categoria": "Equipes",
+        "versao_api": "V1",
+        "descricao": "Listar equipes"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/teams/{team_id}",
+        "method": "GET",
+        "resource": "team",
+        "parameters": "team_id",
+        "response_fields": "_id, created_at, id, name, team_users, updated_at, user_ids, team_users._id, team_users.email, team_users.id, team_users.name",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/teams",
+        "produto": "RD Station CRM",
+        "categoria": "Equipes",
+        "versao_api": "V1",
+        "descricao": "Obter equipe"
+    }
+]

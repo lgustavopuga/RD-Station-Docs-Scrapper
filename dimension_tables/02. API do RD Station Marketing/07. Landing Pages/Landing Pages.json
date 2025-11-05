@@ -1,0 +1,35 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/landing_pages",
+        "method": "GET",
+        "resource": "landing_page",
+        "parameters": [
+            "page_size",
+            "page",
+            "search",
+            "ids",
+            "order"
+        ],
+        "response_fields": [
+            "id",
+            "title",
+            "created_at",
+            "upated_at",
+            "conversion_identifier",
+            "status",
+            "has_active_experiment",
+            "had_experiment"
+        ],
+        "metrics": [
+            "qtd_chamadas",
+            "latencia_ms",
+            "taxa_erro"
+        ],
+        "related_endpoints": [],
+        "produto": "RD Station Marketing",
+        "categoria": "Landing Pages",
+        "versao_api": null,
+        "descricao": "Retorna uma lista com todas as landing pages de uma conta"
+    }
+]

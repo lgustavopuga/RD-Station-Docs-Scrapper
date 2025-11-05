@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/deals",
+        "method": "GET",
+        "resource": "deal",
+        "parameters": "filter, sort, page",
+        "response_fields": "id, name, total_price, status, pipeline_id, stage_id, owner_id, organization_id, created_at, updated_at, links",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/crm/v2/deals/{id}",
+        "produto": "RD Station CRM",
+        "categoria": "Negociações",
+        "versao_api": "V2",
+        "descricao": "Recupera uma lista paginada de todas as negociações na conta."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/deals/{id}",
+        "method": "GET",
+        "resource": "deal",
+        "parameters": "id",
+        "response_fields": "id, name, total_price, status, pipeline_id, stage_id, owner_id, organization_id, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/crm/v2/deals",
+        "produto": "RD Station CRM",
+        "categoria": "Negociações",
+        "versao_api": "V2",
+        "descricao": "Obter negociação específica pelo seu ID."
+    }
+]

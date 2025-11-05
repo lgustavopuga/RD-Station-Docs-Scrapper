@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/catalog_feeds",
+        "method": "GET",
+        "resource": "catalog_feed",
+        "parameters": null,
+        "response_fields": "id, name, url, status, format, created_at, updated_at, credentials",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/platform/catalog_feeds/{CATALOG_FEED_ID}",
+        "produto": "Catálogo de produtos",
+        "categoria": "Catálogos",
+        "versao_api": "V1",
+        "descricao": "Listar catálogos"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/platform/catalog_feeds/{CATALOG_FEED_ID}",
+        "method": "GET",
+        "resource": "catalog_feed",
+        "parameters": "CATALOG_FEED_ID",
+        "response_fields": "id, name, url, status, format, created_at, updated_at, credentials",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/platform/catalog_feeds",
+        "produto": "Catálogo de produtos",
+        "categoria": "Catálogos",
+        "versao_api": "V1",
+        "descricao": "Consultar catálogo por id"
+    }
+]

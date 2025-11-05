@@ -1,0 +1,44 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/organizations",
+        "method": "GET",
+        "resource": "organization",
+        "parameters": "page, limit, order, direction, organization_segment, user_id, q",
+        "response_fields": "has_more, organizations, _id, address, contacts, birthday, emails, email, facebook, linkedin, name, notes, phones, phone, type, skype, title, created_at, custom_fields, id, lost_count, opened_count, organization_segments, paused_count, resume, updated_at, url, user, won_count, total",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/organizations/{organization_id}, /organizations/{organization_id}/contacts",
+        "produto": "RD Station CRM",
+        "categoria": "Empresas",
+        "versao_api": "V1",
+        "descricao": "Listar empresas"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/organizations/{organization_id}/contacts",
+        "method": "GET",
+        "resource": "organization",
+        "parameters": "organization_id, page, limit",
+        "response_fields": "contacts, _id, birthday, contact_custom_fields, created_at, custom_field_id, updated_at, value, emails, facebook, id, legal_bases, category, status, type, linkedin, name, notes, organization_id, phones, phone, whatsapp, whatsapp_full_internacional, whatsapp_url_web, skype, title, has_more, total",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/organizations/{organization_id}",
+        "produto": "RD Station CRM",
+        "categoria": "Empresas",
+        "versao_api": "V1",
+        "descricao": "Listar contatos da empresa"
+    },
+    {
+        "endpoint_id": 3,
+        "path": "/organizations/{organization_id}",
+        "method": "GET",
+        "resource": "organization",
+        "parameters": "organization_id",
+        "response_fields": "_id, address, address_latitude, address_longitude, contacts, created_at, deal_ids, emails, email, facebook, import_id, instance_id, integration_id, integration_type, legal_bases, category, status, type, linkedin, name, notes, organization_id, phones, phone, skype, title, updated_at, user_id, user_ids, follower_ids, followers, last_activity_at, organization_custom_fields, organization_segments, resume, url, user",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/organizations, /organizations/{organization_id}/contacts",
+        "produto": "RD Station CRM",
+        "categoria": "Empresas",
+        "versao_api": "V1",
+        "descricao": "Obter empresa"
+    }
+]

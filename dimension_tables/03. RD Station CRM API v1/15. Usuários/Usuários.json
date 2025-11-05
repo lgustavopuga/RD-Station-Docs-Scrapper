@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/users",
+        "method": "GET",
+        "resource": "user",
+        "parameters": "active",
+        "response_fields": "users, _id, active, created_at, email, hidden, id, last_login, name, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/users/{user_id}",
+        "produto": "RD Station CRM",
+        "categoria": "Usuários",
+        "versao_api": "V1",
+        "descricao": "Listar usuários"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/users/{user_id}",
+        "method": "GET",
+        "resource": "user",
+        "parameters": "user_id",
+        "response_fields": "_id, active, created_at, email, hidden, id, last_login, name, phone, teams, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/users",
+        "produto": "RD Station CRM",
+        "categoria": "Usuários",
+        "versao_api": "V1",
+        "descricao": "Obter usuário"
+    }
+]

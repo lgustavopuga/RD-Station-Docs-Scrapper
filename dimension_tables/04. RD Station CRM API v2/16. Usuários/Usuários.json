@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/users",
+        "method": "GET",
+        "resource": "user",
+        "parameters": "filter (string), page (object), (filter) is:active (Boolean), (filter) is:visible (Boolean), (page) page[number], (page) page[size]",
+        "response_fields": "data (array), id, name, email, phone, created_at, updated_at, links (object), first, prev, self, next, last",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "",
+        "produto": "RD Station CRM",
+        "categoria": "Usuários",
+        "versao_api": "V2",
+        "descricao": "Listar usuários da conta."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/users/{id}",
+        "method": "GET",
+        "resource": "user",
+        "parameters": "id (path, string, required)",
+        "response_fields": "data (object), id, name, email, phone, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "",
+        "produto": "RD Station CRM",
+        "categoria": "Usuários",
+        "versao_api": "V2",
+        "descricao": "Obter usuário específico pelo seu ID."
+    }
+]

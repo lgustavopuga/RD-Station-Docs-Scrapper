@@ -1,0 +1,30 @@
+[
+  {
+    "endpoint_id": 1,
+    "path": "/platform/workflows",
+    "method": "GET",
+    "resource": "workflow",
+    "parameters": "page_size, page, ids, order",
+    "response_fields": "wokflows (id, name, user_email_created, created_at, user_email_updated, updated_at)",
+    "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+    "related_endpoints": "/platform/workflows/{id}",
+    "produto": "RD Station Marketing",
+    "categoria": "Fluxos de automação",
+    "versao_api": "V1",
+    "descricao": "Retorna uma lista com os fluxos de automação"
+  },
+  {
+    "endpoint_id": 2,
+    "path": "/platform/workflows/{id}",
+    "method": "GET",
+    "resource": "workflow",
+    "parameters": "id",
+    "response_fields": "workflow_info (id, name, status, created_at, updated_at), actions (id, type)",
+    "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+    "related_endpoints": "/platform/workflows",
+    "produto": "RD Station Marketing",
+    "categoria": "Fluxos de automação",
+    "versao_api": "V1",
+    "descricao": "Consultar dados de um fluxo a partir de um id"
+  }
+]

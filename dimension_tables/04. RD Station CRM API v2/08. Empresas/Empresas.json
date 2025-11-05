@@ -1,0 +1,34 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/organizations",
+        "method": "GET",
+        "resource": "organization",
+        "parameters": "filter, sort, page",
+        "response_fields": "data, links, id, name, description, url, address, segment_ids, follower_ids, owner_id, custom_fields, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/crm/v2/organizations/{id}"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Empresas",
+        "versao_api": "V2",
+        "descricao": "Recupera uma lista paginada de todas as empresas na conta."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/organizations/{id}",
+        "method": "GET",
+        "resource": "organization",
+        "parameters": "id",
+        "response_fields": "data, id, name, description, url, address, segment_ids, follower_ids, owner_id, custom_fields, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/crm/v2/organizations"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Empresas",
+        "versao_api": "V2",
+        "descricao": "Obter empresa específica pelo seu ID."
+    }
+]

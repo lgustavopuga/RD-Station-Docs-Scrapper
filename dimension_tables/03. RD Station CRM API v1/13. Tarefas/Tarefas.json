@@ -1,0 +1,34 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/products",
+        "method": "GET",
+        "resource": "product",
+        "parameters": "page, limit",
+        "response_fields": "has_more, total, products._id, products.base_price, products.created_at, products.description, products.name, products.updated_at, products.visible, products.product_custom_fields.id, products.product_custom_fields.custom_field_id, products.product_custom_fields.value",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/products/{product_id}"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Produtos",
+        "versao_api": "V1",
+        "descricao": "Listar produtos"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/products/{product_id}",
+        "method": "GET",
+        "resource": "product",
+        "parameters": "product_id",
+        "response_fields": "_id, base_price, created_at, description, name, updated_at, visible, product_custom_fields.id, product_custom_fields.custom_field_id, product_custom_fields.value",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/products"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Produtos",
+        "versao_api": "V1",
+        "descricao": "Obter produto"
+    }
+]

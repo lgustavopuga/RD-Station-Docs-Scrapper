@@ -1,0 +1,30 @@
+[
+  {
+    "endpoint_id": 1,
+    "path": "/platform/emails/{id}",
+    "method": "GET",
+    "resource": "email",
+    "parameters": "id",
+    "response_fields": "id, name, created_at, updated_at, send_at, leads_count, status, type, is_predictive_sending, sending_is_imminent, behavior_score_info, campaign_id, component_template_id",
+    "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+    "related_endpoints": "/platform/emails",
+    "produto": "RD Station Marketing",
+    "categoria": "Email",
+    "versao_api": "V1",
+    "descricao": "Consultar um email a partir de um id"
+  },
+  {
+    "endpoint_id": 2,
+    "path": "/platform/emails",
+    "method": "GET",
+    "resource": "email",
+    "parameters": "page_size, page, query, ids, types",
+    "response_fields": "items, total, items.id, items.name, items.created_at, items.updated_at, items.send_at, items.leads_count, items.status, items.type, items.is_predictive_sending, items.sending_is_imminent, items.behavior_score_info, items.campaign_id, items.component_template_id",
+    "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+    "related_endpoints": "/platform/emails/{id}",
+    "produto": "RD Station Marketing",
+    "categoria": "Email",
+    "versao_api": "V1",
+    "descricao": "Consultar lista de emails"
+  }
+]

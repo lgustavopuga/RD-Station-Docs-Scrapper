@@ -1,0 +1,46 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/deals",
+        "method": "GET",
+        "resource": "deal",
+        "parameters": "page, limit, order, direction, name, win, user_id, closed_at, closed_at_period, created_at_period, prediction_date_period, start_date, end_date, campaign_id, deal_stage_id, deal_lost_reason_id, deal_pipeline_id, organization, hold, product_presence, next_page",
+        "response_fields": "deals, has_more, next_page, total",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [],
+        "produto": "RD Station CRM",
+        "categoria": "Negociações",
+        "versao_api": "V1",
+        "descricao": "Listar negociações"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/deals/{deal_id}",
+        "method": "GET",
+        "resource": "deal",
+        "parameters": "deal_id",
+        "response_fields": "_id, amount_montly, amount_total, amount_unique, best_moment_to_touch, campaign, campaign_id, closed_at, created_at, deal_custom_fields, deal_lost_reason_id, deal_pipeline, deal_pipeline_relation, deal_products, deal_source, deal_source_id, deal_stage, deal_stage_histories, hold, id, interactions, last_note_content, name, prediction_date, rating, stop_time_limit, updated_at, user, win",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [],
+        "produto": "RD Station CRM",
+        "categoria": "Negociações",
+        "versao_api": "V1",
+        "descricao": "Obter negociação"
+    },
+    {
+        "endpoint_id": 3,
+        "path": "/deals/{deal_id}/contacts",
+        "method": "GET",
+        "resource": "contact",
+        "parameters": "deal_id, page, limit",
+        "response_fields": "contacts, has_more, total",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/deals/{deal_id}"
+        ],
+        "produto": "RD Station CRM",
+        "categoria": "Negociações",
+        "versao_api": "V1",
+        "descricao": "Listar contatos da negociação"
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/campaigns",
+        "method": "GET",
+        "resource": "campaign",
+        "parameters": "start_date, end_date, page_size, page, order, ids, search",
+        "response_fields": "campaigns, id, name, status, created_at, updated_at, total_items, user, links",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/platform/campaigns/{id}"
+        ],
+        "produto": "RD Station Marketing",
+        "categoria": "Campanhas",
+        "versao_api": "V1",
+        "descricao": "Retorna uma lista com todas as campanhas criadas no App Gerenciador de Campanhas"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/platform/campaigns/{id}",
+        "method": "GET",
+        "resource": "campaign",
+        "parameters": "id",
+        "response_fields": "campaign, id, name, status, created_at, updated_at, total_items, user, links",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/platform/campaigns",
+            "/platform/campaigns/{id}/items"
+        ],
+        "produto": "RD Station Marketing",
+        "categoria": "Campanhas",
+        "versao_api": "V1",
+        "descricao": "Retorna uma campanha específica criada no App Gerenciador de Campanhas"
+    },
+    {
+        "endpoint_id": 3,
+        "path": "/platform/campaigns/{id}/items",
+        "method": "GET",
+        "resource": "campaign_item",
+        "parameters": "id, page_size, page, order, ids, item_type",
+        "response_fields": "items, platform_item_id, campaign_item_id, item_type, added_at, links",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/platform/campaigns/{id}"
+        ],
+        "produto": "RD Station Marketing",
+        "categoria": "Campanhas",
+        "versao_api": "V1",
+        "descricao": "Retorna os itens presentes em uma campanha específica criada no App Gerenciador de Campanhas"
+    }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "endpoint_id": 1,
+    "path": "/platform/contacts/{identifier}:{value}",
+    "method": "GET",
+    "resource": "contact",
+    "parameters": "identifier (path), value (path)",
+    "response_fields": "uuid, name, email, job_title, birthdate, bio, website, personal_phone, mobile_phone, city, state, country, twitter, facebook, linkedin, tags, extra_emails, legal_bases, links",
+    "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+    "related_endpoints": "/platform/contacts/{uuid}/events, /platform/contacts/{identifier}:{value}/funnels/default, patch /platform/contacts/{identifier}:{value}, delete /platform/contacts/{identifier}:{value}",
+    "produto": "RD Station Marketing",
+    "categoria": "Contatos",
+    "versao_api": "V2",
+    "descricao": "Retorna dados padrão e personalizados de um contato específico."
+  },
+  {
+    "endpoint_id": 2,
+    "path": "/platform/contacts/{uuid}/events",
+    "method": "GET",
+    "resource": "contact",
+    "parameters": "uuid (path), event_type (query), order (query), direction (query), page (query)",
+    "response_fields": "event_type, event_family, event_identifier, event_timestamp, payload",
+    "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+    "related_endpoints": "/platform/contacts/{identifier}:{value}",
+    "produto": "RD Station Marketing",
+    "categoria": "Contatos",
+    "versao_api": "V2",
+    "descricao": "Retorna uma lista de eventos associados ao contato."
+  }
+]
