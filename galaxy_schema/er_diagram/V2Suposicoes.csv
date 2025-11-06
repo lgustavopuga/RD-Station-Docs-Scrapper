@@ -1,0 +1,8 @@
+﻿Suposição
+As entidades e atributos foram consolidados a partir de múltiplas versões de API (V1, V2) e diferentes arquivos JSON para a mesma entidade.
+A entidade 'Segments' e a tabela de junção 'Organization_Segments' foram adicionadas para modelar o relacionamento Muitos-para-Muitos identificado pelo campo 'segment_ids' na entidade 'Organizations'.
+Chaves primárias (PK) foram inferidas como 'id' ou 'uuid' quando presentes. Chaves estrangeiras (FK) foram inferidas de campos como 'deal_id', 'organization_id', etc.
+Relacionamentos Muitos-para-Muitos (N:N) foram identificados e modelados com tabelas de junção (ex: Deal_Products, Team_Users, Task_Owners, Deal_Contacts).
+A cardinalidade foi assumida com base em lógicas de negócio comuns (ex: uma Negociação deve pertencer a uma Organização, mas uma Organização pode ter zero ou muitas Negociações).
+Entidades de 'Análise' (Analytics) foram omitidas por representarem dados agregados e não entidades transacionais primárias.
+Entidades como 'Landing Pages', 'Forms', 'Webhooks' foram consideradas externas ao modelo de dados central do CRM/Marketing e omitidas para manter o foco no núcleo do sistema.

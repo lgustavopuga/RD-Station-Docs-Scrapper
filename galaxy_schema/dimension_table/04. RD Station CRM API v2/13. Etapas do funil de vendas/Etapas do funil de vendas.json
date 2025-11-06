@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/pipelines/{pipeline_id}/stages",
+        "method": "GET",
+        "resource": "stage",
+        "parameters": "pipeline_id, sort, page",
+        "response_fields": "data (id, name, description, objective, order, created_at, updated_at), links (first, prev, self, next, last)",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "(2) /pipelines/{pipeline_id}/stages/{id}",
+        "produto": "RD Station CRM",
+        "categoria": "Etapas do funil de vendas",
+        "versao_api": "V2",
+        "descricao": "Listar etapas de um funil de vendas específico."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/pipelines/{pipeline_id}/stages/{id}",
+        "method": "GET",
+        "resource": "stage",
+        "parameters": "pipeline_id, id",
+        "response_fields": "data (id, name, description, objective, order, created_at, updated_at)",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "(1) /pipelines/{pipeline_id}/stages",
+        "produto": "RD Station CRM",
+        "categoria": "Etapas do funil de vendas",
+        "versao_api": "V2",
+        "descricao": "Obter etapa do funil de vendas específica."
+    }
+]

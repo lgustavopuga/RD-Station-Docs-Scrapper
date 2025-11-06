@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/api/v1/activities",
+        "method": "GET",
+        "resource": "Anotação",
+        "parameters": "deal_id, page, limit, start_date, end_date",
+        "response_fields": "_id, date, deal_id, id, text, user_id",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/api/v1/activities (POST)",
+        "produto": "RD Station CRM",
+        "categoria": "Anotações",
+        "versao_api": "v1",
+        "descricao": "Listar anotações"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/api/v1/activities",
+        "method": "POST",
+        "resource": "Anotação",
+        "parameters": "{ 'deal_id': 'ID', 'text': 'Texto' }",
+        "response_fields": "_id, date, deal_id, id, text, user_id",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/api/v1/activities (GET)",
+        "produto": "RD Station CRM",
+        "categoria": "Anotações",
+        "versao_api": "v1",
+        "descricao": "Criar anotação"
+    }
+]

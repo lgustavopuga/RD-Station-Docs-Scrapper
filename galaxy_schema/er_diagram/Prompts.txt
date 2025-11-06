@@ -1,0 +1,61 @@
+Liste para mim todos os campos de input e output dessa API:
+
+'RD Station Marketing API' >>> 'Campos personalizados'
+'Consultar campo personalizado'
+
+---
+
+Crie uma estrutura de lista de objetos JSON, onde cada objeto representa um endpoint.
+
+```{Markdown}
+*   **`endpoint_id`**
+    *   Obrigatório
+    *   Preencha com um número sequencial único (ex: 1, 2, 3)
+    *   Deve ser numérico e não se repetir
+
+*   **`path`**
+    *   Obrigatório
+    *   Copie exatamente o caminho do endpoint conforme a documentação (ex: `/platform/contacts/{uuid}`)
+
+*   **`method`**
+    *   Obrigatório
+    *   Use letras maiúsculas (ex: `GET`, `POST`, `PUT`)
+    *   Refere-se ao tipo de requisição HTTP
+
+*   **`resource`**
+    *   Obrigatório
+    *   Informe o nome principal do recurso (ex: `contacts`, `deals`)
+    *   Preferencialmente no singular
+
+*   **`parameters`**
+    *   Recomendado
+    *   Liste os parâmetros da requisição separados por vírgula ou em formato JSON (ex: `uuid, email, page`)
+
+*   **`response_fields`**
+    *   Recomendado
+    *   Liste os campos retornados na resposta da API (ex: `uuid, name, email, events`)
+
+*   **`metrics`**
+    *   Recomendado
+    *   Informe métricas úteis para monitoramento (ex: `qtd_chamadas`, `latencia_ms`, `taxa_erro`)
+
+*   **`related_endpoints`**
+    *   Opcional
+    *   Liste endpoints relacionados que fazem referência a este (ex: `/deals/{id}/contacts`)
+
+*   **`produto`**
+    *   Recomendado
+    *   Nome do produto ou módulo ao qual o endpoint pertence (ex: `RD Station Marketing`)
+
+*   **`categoria`**
+    *   Opcional
+    *   Agrupamento funcional ou área de negócio (ex: `Contatos e Funis`)
+
+*   **`versao_api`**
+    *   Recomendado
+    *   Informe a versão da API (ex: `V1`, `V2`)
+
+*   **`descricao`**
+    *   Opcional
+    *   Descreva brevemente a funcionalidade do endpoint em linguagem natural (ex: `Lista contatos por email`)
+```

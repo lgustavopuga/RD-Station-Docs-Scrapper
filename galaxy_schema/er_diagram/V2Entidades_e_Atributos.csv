@@ -1,0 +1,132 @@
+﻿Entidade.Nome;Entidade.Descricao;Atributo.Nome;Atributo.TipoDado;Atributo.Restricoes
+Deals;Representa as negociações comerciais.;id;INT;PK
+Deals;Representa as negociações comerciais.;name;VARCHAR(255);NOT NULL
+Deals;Representa as negociações comerciais.;organization_id;INT;FK
+Deals;Representa as negociações comerciais.;owner_id;INT;FK
+Deals;Representa as negociações comerciais.;pipeline_id;INT;FK
+Deals;Representa as negociações comerciais.;stage_id;INT;FK
+Deals;Representa as negociações comerciais.;lost_reason_id;INT;FK
+Deals;Representa as negociações comerciais.;lost_reason_id;INT;NULL
+Deals;Representa as negociações comerciais.;source_id;INT;FK
+Deals;Representa as negociações comerciais.;campaign_id;INT;FK
+Deals;Representa as negociações comerciais.;campaign_id;INT;NULL
+Deals;Representa as negociações comerciais.;total_price;DECIMAL;
+Deals;Representa as negociações comerciais.;status;VARCHAR(50);
+Deals;Representa as negociações comerciais.;win;BOOLEAN;
+Deals;Representa as negociações comerciais.;created_at;DATETIME;
+Deals;Representa as negociações comerciais.;updated_at;DATETIME;
+Deals;Representa as negociações comerciais.;closed_at;DATETIME;
+Contacts;Representa os contatos (leads ou clientes).;id;INT;PK
+Contacts;Representa os contatos (leads ou clientes).;uuid;VARCHAR(36);UNIQUE
+Contacts;Representa os contatos (leads ou clientes).;name;VARCHAR(255);NOT NULL
+Contacts;Representa os contatos (leads ou clientes).;email;VARCHAR(255);UNIQUE
+Contacts;Representa os contatos (leads ou clientes).;organization_id;INT;FK
+Contacts;Representa os contatos (leads ou clientes).;organization_id;INT;NULL
+Contacts;Representa os contatos (leads ou clientes).;job_title;VARCHAR(255);
+Contacts;Representa os contatos (leads ou clientes).;created_at;DATETIME;
+Contacts;Representa os contatos (leads ou clientes).;updated_at;DATETIME;
+Organizations;Representa as empresas ou contas clientes.;id;INT;PK
+Organizations;Representa as empresas ou contas clientes.;name;VARCHAR(255);NOT NULL
+Organizations;Representa as empresas ou contas clientes.;owner_id;INT;FK
+Organizations;Representa as empresas ou contas clientes.;owner_id;INT;NULL
+Organizations;Representa as empresas ou contas clientes.;address;TEXT;
+Organizations;Representa as empresas ou contas clientes.;url;VARCHAR(255);
+Organizations;Representa as empresas ou contas clientes.;created_at;DATETIME;
+Organizations;Representa as empresas ou contas clientes.;updated_at;DATETIME;
+Segments;Representa os segmentos de mercado que podem ser atribuídos a empresas.;id;INT;PK
+Segments;Representa os segmentos de mercado que podem ser atribuídos a empresas.;name;VARCHAR(255);NOT NULL
+Segments;Representa os segmentos de mercado que podem ser atribuídos a empresas.;created_at;DATETIME;
+Segments;Representa os segmentos de mercado que podem ser atribuídos a empresas.;updated_at;DATETIME;
+Organization_Segments;Tabela de junção para o relacionamento N:N entre Empresas e Segmentos.;organization_id;INT;PK
+Organization_Segments;Tabela de junção para o relacionamento N:N entre Empresas e Segmentos.;organization_id;INT;FK
+Organization_Segments;Tabela de junção para o relacionamento N:N entre Empresas e Segmentos.;segment_id;INT;PK
+Organization_Segments;Tabela de junção para o relacionamento N:N entre Empresas e Segmentos.;segment_id;INT;FK
+Products;Catálogo de produtos ou serviços oferecidos.;id;INT;PK
+Products;Catálogo de produtos ou serviços oferecidos.;name;VARCHAR(255);NOT NULL
+Products;Catálogo de produtos ou serviços oferecidos.;description;TEXT;
+Products;Catálogo de produtos ou serviços oferecidos.;price;DECIMAL;
+Products;Catálogo de produtos ou serviços oferecidos.;visible;BOOLEAN;
+Products;Catálogo de produtos ou serviços oferecidos.;created_at;DATETIME;
+Products;Catálogo de produtos ou serviços oferecidos.;updated_at;DATETIME;
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;deal_product_id;INT;PK
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;deal_id;INT;FK
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;deal_id;INT;NOT NULL
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;product_id;INT;FK
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;product_id;INT;NOT NULL
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;quantity;INT;
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;price;DECIMAL;
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;discount;DECIMAL;
+Deal_Products;Tabela de junção para o relacionamento N:N entre Negociações e Produtos.;total_price;DECIMAL;
+Users;Usuários do sistema (vendedores, gestores, etc.).;id;INT;PK
+Users;Usuários do sistema (vendedores, gestores, etc.).;name;VARCHAR(255);NOT NULL
+Users;Usuários do sistema (vendedores, gestores, etc.).;email;VARCHAR(255);UNIQUE
+Users;Usuários do sistema (vendedores, gestores, etc.).;email;VARCHAR(255);NOT NULL
+Users;Usuários do sistema (vendedores, gestores, etc.).;phone;VARCHAR(50);
+Users;Usuários do sistema (vendedores, gestores, etc.).;active;BOOLEAN;
+Users;Usuários do sistema (vendedores, gestores, etc.).;created_at;DATETIME;
+Users;Usuários do sistema (vendedores, gestores, etc.).;updated_at;DATETIME;
+Tasks;Tarefas associadas a negociações ou contatos.;id;INT;PK
+Tasks;Tarefas associadas a negociações ou contatos.;name;VARCHAR(255);NOT NULL
+Tasks;Tarefas associadas a negociações ou contatos.;deal_id;INT;FK
+Tasks;Tarefas associadas a negociações ou contatos.;deal_id;INT;NULL
+Tasks;Tarefas associadas a negociações ou contatos.;created_by_id;INT;FK
+Tasks;Tarefas associadas a negociações ou contatos.;status;VARCHAR(50);
+Tasks;Tarefas associadas a negociações ou contatos.;due_date;DATETIME;
+Tasks;Tarefas associadas a negociações ou contatos.;completed_at;DATETIME;
+Tasks;Tarefas associadas a negociações ou contatos.;created_at;DATETIME;
+Task_Owners;Tabela de junção para o relacionamento N:N entre Tarefas e Usuários (responsáveis).;task_id;INT;PK
+Task_Owners;Tabela de junção para o relacionamento N:N entre Tarefas e Usuários (responsáveis).;task_id;INT;FK
+Task_Owners;Tabela de junção para o relacionamento N:N entre Tarefas e Usuários (responsáveis).;user_id;INT;PK
+Task_Owners;Tabela de junção para o relacionamento N:N entre Tarefas e Usuários (responsáveis).;user_id;INT;FK
+Notes;Anotações e atividades registradas em negociações.;id;INT;PK
+Notes;Anotações e atividades registradas em negociações.;deal_id;INT;FK
+Notes;Anotações e atividades registradas em negociações.;deal_id;INT;NOT NULL
+Notes;Anotações e atividades registradas em negociações.;user_id;INT;FK
+Notes;Anotações e atividades registradas em negociações.;user_id;INT;NOT NULL
+Notes;Anotações e atividades registradas em negociações.;description;TEXT;
+Notes;Anotações e atividades registradas em negociações.;registered_at;DATETIME;
+Pipelines;Funis de vendas que contêm etapas.;id;INT;PK
+Pipelines;Funis de vendas que contêm etapas.;name;VARCHAR(255);NOT NULL
+Pipelines;Funis de vendas que contêm etapas.;order;INT;
+Pipelines;Funis de vendas que contêm etapas.;created_at;DATETIME;
+Pipelines;Funis de vendas que contêm etapas.;updated_at;DATETIME;
+Stages;Etapas dentro de um funil de vendas.;id;INT;PK
+Stages;Etapas dentro de um funil de vendas.;pipeline_id;INT;FK
+Stages;Etapas dentro de um funil de vendas.;pipeline_id;INT;NOT NULL
+Stages;Etapas dentro de um funil de vendas.;name;VARCHAR(255);NOT NULL
+Stages;Etapas dentro de um funil de vendas.;order;INT;
+Stages;Etapas dentro de um funil de vendas.;created_at;DATETIME;
+Stages;Etapas dentro de um funil de vendas.;updated_at;DATETIME;
+Campaigns;Campanhas de marketing ou vendas.;id;INT;PK
+Campaigns;Campanhas de marketing ou vendas.;name;VARCHAR(255);NOT NULL
+Campaigns;Campanhas de marketing ou vendas.;status;VARCHAR(50);
+Campaigns;Campanhas de marketing ou vendas.;created_at;DATETIME;
+Campaigns;Campanhas de marketing ou vendas.;updated_at;DATETIME;
+Teams;Equipes de usuários.;id;INT;PK
+Teams;Equipes de usuários.;name;VARCHAR(255);NOT NULL
+Teams;Equipes de usuários.;created_at;DATETIME;
+Teams;Equipes de usuários.;updated_at;DATETIME;
+Team_Users;Tabela de junção para o relacionamento N:N entre Equipes e Usuários.;team_id;INT;PK
+Team_Users;Tabela de junção para o relacionamento N:N entre Equipes e Usuários.;team_id;INT;FK
+Team_Users;Tabela de junção para o relacionamento N:N entre Equipes e Usuários.;user_id;INT;PK
+Team_Users;Tabela de junção para o relacionamento N:N entre Equipes e Usuários.;user_id;INT;FK
+Lost_Reasons;Motivos de perda para negociações.;id;INT;PK
+Lost_Reasons;Motivos de perda para negociações.;name;VARCHAR(255);NOT NULL
+Lost_Reasons;Motivos de perda para negociações.;created_at;DATETIME;
+Lost_Reasons;Motivos de perda para negociações.;updated_at;DATETIME;
+Sources;Fontes de origem das negociações.;id;INT;PK
+Sources;Fontes de origem das negociações.;name;VARCHAR(255);NOT NULL
+Sources;Fontes de origem das negociações.;description;TEXT;
+Sources;Fontes de origem das negociações.;created_at;DATETIME;
+Sources;Fontes de origem das negociações.;updated_at;DATETIME;
+Custom_Fields;Campos personalizados para diversas entidades.;id;INT;PK
+Custom_Fields;Campos personalizados para diversas entidades.;name;VARCHAR(255);NOT NULL
+Custom_Fields;Campos personalizados para diversas entidades.;slug;VARCHAR(255);UNIQUE
+Custom_Fields;Campos personalizados para diversas entidades.;entity;VARCHAR(50);
+Custom_Fields;Campos personalizados para diversas entidades.;type;VARCHAR(50);
+Custom_Fields;Campos personalizados para diversas entidades.;created_at;DATETIME;
+Custom_Fields;Campos personalizados para diversas entidades.;updated_at;DATETIME;
+Deal_Contacts;Tabela de junção para o relacionamento N:N entre Negociações e Contatos.;deal_id;INT;PK
+Deal_Contacts;Tabela de junção para o relacionamento N:N entre Negociações e Contatos.;deal_id;INT;FK
+Deal_Contacts;Tabela de junção para o relacionamento N:N entre Negociações e Contatos.;contact_id;INT;PK
+Deal_Contacts;Tabela de junção para o relacionamento N:N entre Negociações e Contatos.;contact_id;INT;FK

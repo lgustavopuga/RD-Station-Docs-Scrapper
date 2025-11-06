@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/deal_stages/{deal_stage_id}",
+        "method": "GET",
+        "resource": "deal_stage",
+        "parameters": "deal_stage_id",
+        "response_fields": "_id, configuration, created_at, deal_pipeline, id, instance_id, name, nickname, order, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/deal_stages",
+        "produto": "RD Station CRM",
+        "categoria": "Funil de Vendas",
+        "versao_api": "V1",
+        "descricao": "Obter etapa do funil de vendas"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/deal_stages",
+        "method": "GET",
+        "resource": "deal_stage",
+        "parameters": "deal_pipeline_id, limit, page",
+        "response_fields": "deal_stages, has_more, total",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/deal_stages/{deal_stage_id}",
+        "produto": "RD Station CRM",
+        "categoria": "Funil de Vendas",
+        "versao_api": "V1",
+        "descricao": "Listar etapas do funil de vendas"
+    }
+]

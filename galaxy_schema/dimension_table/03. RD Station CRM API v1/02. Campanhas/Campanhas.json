@@ -1,0 +1,44 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/campaigns",
+        "method": "GET",
+        "resource": "campaign",
+        "parameters": "limit, page, q",
+        "response_fields": "campaigns, has_more, total, campaigns._id, campaigns.created_at, campaigns.description, campaigns.id, campaigns.instance_id, campaigns.name, campaigns.updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "Criar campanha (POST), Obter campanha (GET), Atualizar campanha (PUT)",
+        "produto": "RD Station CRM",
+        "categoria": "Campanhas",
+        "versao_api": "v1",
+        "descricao": "Listar campanhas"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/campaigns",
+        "method": "POST",
+        "resource": "campaign",
+        "parameters": null,
+        "response_fields": null,
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "Listar campanhas (GET), Obter campanha (GET), Atualizar campanha (PUT)",
+        "produto": "RD Station CRM",
+        "categoria": "Campanhas",
+        "versao_api": "v1",
+        "descricao": "Criar campanha"
+    },
+    {
+        "endpoint_id": 3,
+        "path": "/campaigns/{id}",
+        "method": "GET",
+        "resource": "campaign",
+        "parameters": "id",
+        "response_fields": null,
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "Listar campanhas (GET), Criar campanha (POST), Atualizar campanha (PUT)",
+        "produto": "RD Station CRM",
+        "categoria": "Campanhas",
+        "versao_api": "v1",
+        "descricao": "Obter campanha"
+    }
+]

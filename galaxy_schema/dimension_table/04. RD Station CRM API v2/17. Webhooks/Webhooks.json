@@ -1,0 +1,34 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/webhooks",
+        "method": "GET",
+        "resource": "webhook",
+        "parameters": "page, per_page",
+        "response_fields": "data, id, name, event_name, http_method, url, status, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/crm/v2/webhooks/{id}"
+        ],
+        "produto": "CRM",
+        "categoria": "Webhooks",
+        "versao_api": "V2",
+        "descricao": "Lista os webhooks."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/webhooks/{id}",
+        "method": "GET",
+        "resource": "webhook",
+        "parameters": "id",
+        "response_fields": "data, id, name, event_name, http_method, url, status, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [
+            "/crm/v2/webhooks"
+        ],
+        "produto": "CRM",
+        "categoria": "Webhooks",
+        "versao_api": "V2",
+        "descricao": "Recupera um webhook específico."
+    }
+]

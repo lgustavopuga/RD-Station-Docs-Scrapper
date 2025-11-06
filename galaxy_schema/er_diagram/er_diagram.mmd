@@ -1,0 +1,208 @@
+---
+config:
+  layout: dagre
+  theme: default
+---
+erDiagram
+    %% --- NÚCLEO ESTRUTURAL ---
+    Organizations {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        INT owner_id FK "NULL"
+        TEXT address
+        VARCHAR(255) url
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Contacts {
+        INT id PK
+        VARCHAR(36) uuid "UNIQUE"
+        VARCHAR(255) name "NOT NULL"
+        VARCHAR(255) email "UNIQUE"
+        INT organization_id FK "NULL"
+        VARCHAR(255) job_title
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Users {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        VARCHAR(255) email "UNIQUE, NOT NULL"
+        VARCHAR(50) phone
+        BOOLEAN active
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Teams {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        DATETIME created_at
+        DATETIME updated_at
+    }
+
+    %% --- PROCESSO DE VENDAS (CORE) ---
+    Deals {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        INT organization_id FK
+        INT owner_id FK
+        INT pipeline_id FK
+        INT stage_id FK
+        INT lost_reason_id FK "NULL"
+        INT source_id FK
+        INT campaign_id FK "NULL"
+        DECIMAL total_price
+        VARCHAR(50) status
+        BOOLEAN win
+        DATETIME created_at
+        DATETIME updated_at
+        DATETIME closed_at
+    }
+    Pipelines {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        INT order
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Stages {
+        INT id PK
+        INT pipeline_id FK "NOT NULL"
+        VARCHAR(255) name "NOT NULL"
+        INT order
+        DATETIME created_at
+        DATETIME updated_at
+    }
+
+    %% --- ATIVIDADES E PRODUTOS ---
+    Tasks {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        INT deal_id FK "NULL"
+        INT created_by_id FK
+        VARCHAR(50) status
+        DATETIME due_date
+        DATETIME completed_at
+        DATETIME created_at
+    }
+    Notes {
+        INT id PK
+        INT deal_id FK "NOT NULL"
+        INT user_id FK "NOT NULL"
+        TEXT description
+        DATETIME registered_at
+    }
+    Products {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        TEXT description
+        DECIMAL price
+        BOOLEAN visible
+        DATETIME created_at
+        DATETIME updated_at
+    }
+
+    %% --- QUALIFICADORES E AUXILIARES ---
+    Sources {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        TEXT description
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Campaigns {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        VARCHAR(50) status
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Lost_Reasons {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Segments {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    Custom_Fields {
+        INT id PK
+        VARCHAR(255) name "NOT NULL"
+        VARCHAR(255) slug "UNIQUE"
+        VARCHAR(50) entity
+        VARCHAR(50) type
+        DATETIME created_at
+        DATETIME updated_at
+    }
+
+    %% --- TABELAS DE JUNÇÃO (N:N) ---
+    Organization_Segments {
+        INT organization_id PK,FK
+        INT segment_id PK,FK
+    }
+    Deal_Products {
+        INT deal_product_id PK
+        INT deal_id FK "NOT NULL"
+        INT product_id FK "NOT NULL"
+        INT quantity
+        DECIMAL price
+        DECIMAL discount
+        DECIMAL total_price
+    }
+    Deal_Contacts {
+        INT deal_id PK,FK
+        INT contact_id PK,FK
+    }
+    Task_Owners {
+        INT task_id PK,FK
+        INT user_id PK,FK
+    }
+    Team_Users {
+        INT team_id PK,FK
+        INT user_id PK,FK
+    }
+
+    %% ================= RELACIONAMENTOS =================
+    %% Organizados do mais geral para o mais específico para ajudar o layout
+
+    %% Estrutura Organizacional e Usuários
+    Teams ||--|{ Team_Users : "Compõe"
+    Users ||--o{ Team_Users : "É Membro de"
+
+    %% Clientes (Organizations & Contacts)
+    Organizations ||--o{ Contacts : "Possui"
+    Organizations ||--o{ Organization_Segments : "Tem segmentos"
+    Segments ||--o{ Organization_Segments : "Classifica"
+
+    %% Estrutura do Funil
+    Pipelines ||--|{ Stages : "Contém"
+
+    %% Núcleo da Negociação (Deals)
+    Organizations ||--o{ Deals : "Cliente de"
+    Users ||--o{ Deals : "Responsável por"
+    Pipelines ||--o{ Deals : "Contém"
+    Stages ||--o{ Deals : "Estágio atual de"
+
+    %% Detalhes da Negociação (N:N e Qualificadores)
+    Deals ||--o{ Deal_Contacts : "Envolve"
+    Contacts ||--o{ Deal_Contacts : "Participa de"
+    Deals ||--o{ Deal_Products : "Possui itens"
+    Products ||--o{ Deal_Products : "Listado em"
+    Sources ||--o{ Deals : "Origina"
+    Campaigns |o--o{ Deals : "Influencia"
+    Lost_Reasons |o--o{ Deals : "Justifica perda de"
+
+    %% Atividades (Tasks & Notes)
+    Deals ||--o{ Tasks : "Tem agendado"
+    Users ||--o{ Tasks : "Criou"
+    Tasks ||--|{ Task_Owners : "Atribuída a"
+    Users ||--o{ Task_Owners : "Executa"
+    Deals ||--o{ Notes : "Possui histórico"
+    Users ||--o{ Notes : "Registrou"
+
+    %% Relacionamentos adicionais de Usuários
+    Users ||--o{ Organizations : "Responsável por"

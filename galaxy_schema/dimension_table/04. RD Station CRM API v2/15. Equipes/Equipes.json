@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/crm/v2/teams",
+        "method": "GET",
+        "resource": "team",
+        "parameters": "page",
+        "response_fields": "data, team_id, name, user_ids, created_at, updated_at, links, first, prev, self, next, last",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/crm/v2/teams/{id}",
+        "produto": "RD Station CRM",
+        "categoria": "Equipes",
+        "versao_api": "V2",
+        "descricao": "Listar equipes, incluindo seus nomes e IDs."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/crm/v2/teams/{id}",
+        "method": "GET",
+        "resource": "team",
+        "parameters": "id",
+        "response_fields": "data, team_id, name, user_ids, created_at, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/crm/v2/teams",
+        "produto": "RD Station CRM",
+        "categoria": "Equipes",
+        "versao_api": "V2",
+        "descricao": "Obter equipe específica pelo seu ID, incluindo a lista de IDs dos usuários que são membros da equipe."
+    }
+]

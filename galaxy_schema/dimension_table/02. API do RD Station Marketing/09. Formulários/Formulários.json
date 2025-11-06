@@ -1,0 +1,16 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/embeddables",
+        "method": "GET",
+        "resource": "form",
+        "parameters": "page_size, page, search, ids, order",
+        "response_fields": "id, title, created_at, upated_at, conversion_identifier, status",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": [],
+        "produto": "RD Station Marketing",
+        "categoria": "Formulários",
+        "versao_api": "V1",
+        "descricao": "Retorna uma lista com todos os formulários de uma conta"
+    }
+]

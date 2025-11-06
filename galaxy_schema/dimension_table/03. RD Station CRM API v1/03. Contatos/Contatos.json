@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/contacts/{contact_id}",
+        "method": "GET",
+        "resource": "contact",
+        "parameters": "contact_id",
+        "response_fields": "_id, birthday, contact_c_f, contact_custom_fields, created_at, deal_ids, emails, facebook, id, legal_bases, linkedin, name, notes, organization, organization_id, phones, skype, title, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/contacts",
+        "produto": "RD Station CRM",
+        "categoria": "Contatos",
+        "versao_api": "V1",
+        "descricao": "Obter contato"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/contacts",
+        "method": "GET",
+        "resource": "contact",
+        "parameters": "page, limit, order, direction, email, q, phone, title",
+        "response_fields": "contacts, has_more, total",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/contacts/{contact_id}",
+        "produto": "RD Station CRM",
+        "categoria": "Contatos",
+        "versao_api": "V1",
+        "descricao": "Listar contatos"
+    }
+]

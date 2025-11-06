@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/custom_fields/{custom_field_id}",
+        "method": "GET",
+        "resource": "custom_field",
+        "parameters": "custom_field_id",
+        "response_fields": "_id, allow_new, created_at, for, id, label, opts, order, required, required_rules, type, unique, updated_at, visible",
+        "metrics": null,
+        "related_endpoints": null,
+        "produto": "RD Station CRM",
+        "categoria": "Campos personalizados",
+        "versao_api": "v1",
+        "descricao": "Obter campo personalizado"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/custom_fields",
+        "method": "GET",
+        "resource": "custom_field",
+        "parameters": "for",
+        "response_fields": "_id, allow_new, created_at, for, id, label, opts, order, required, required_rules, type, unique, updated_at, visible",
+        "metrics": null,
+        "related_endpoints": null,
+        "produto": "RD Station CRM",
+        "categoria": "Campos personalizados",
+        "versao_api": "v1",
+        "descricao": "Listar campos personalizados"
+    }
+]

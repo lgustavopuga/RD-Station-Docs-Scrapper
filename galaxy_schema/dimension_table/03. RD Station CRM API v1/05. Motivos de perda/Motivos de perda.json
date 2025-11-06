@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/deal_lost_reasons",
+        "method": "GET",
+        "resource": "deal_lost_reason",
+        "parameters": "limit, page, q, order",
+        "response_fields": "deal_lost_reasons, has_more, total, _id, created_at, instance_id, name, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "",
+        "produto": "RD Station CRM",
+        "categoria": "Motivos de perda",
+        "versao_api": "V1",
+        "descricao": "Listar motivos de perda"
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/deal_lost_reasons/{deal_lost_reason_id}",
+        "method": "GET",
+        "resource": "deal_lost_reason",
+        "parameters": "deal_lost_reason_id",
+        "response_fields": "_id, created_at, instance_id, name, updated_at",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "",
+        "produto": "RD Station CRM",
+        "categoria": "Motivos de perda",
+        "versao_api": "V1",
+        "descricao": "Obter motivo de perda"
+    }
+]

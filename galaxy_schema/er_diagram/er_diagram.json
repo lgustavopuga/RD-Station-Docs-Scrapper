@@ -1,0 +1,1040 @@
+{
+  "diagrama_erd": {
+    "titulo": "Diagrama ER (Crow's Foot) gerado a partir do JSON de entrada",
+    "entidades": [
+      {
+        "nome": "Deals",
+        "descricao": "Representa as negociações comerciais.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "organization_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK"
+            ]
+          },
+          {
+            "nome": "owner_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK"
+            ]
+          },
+          {
+            "nome": "pipeline_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK"
+            ]
+          },
+          {
+            "nome": "stage_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK"
+            ]
+          },
+          {
+            "nome": "lost_reason_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NULL"
+            ]
+          },
+          {
+            "nome": "source_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK"
+            ]
+          },
+          {
+            "nome": "campaign_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NULL"
+            ]
+          },
+          {
+            "nome": "total_price",
+            "tipo_dado": "DECIMAL",
+            "restricoes": []
+          },
+          {
+            "nome": "status",
+            "tipo_dado": "VARCHAR(50)",
+            "restricoes": []
+          },
+          {
+            "nome": "win",
+            "tipo_dado": "BOOLEAN",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "closed_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Contacts",
+        "descricao": "Representa os contatos (leads ou clientes).",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "uuid",
+            "tipo_dado": "VARCHAR(36)",
+            "restricoes": [
+              "UNIQUE"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "email",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "UNIQUE"
+            ]
+          },
+          {
+            "nome": "organization_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NULL"
+            ]
+          },
+          {
+            "nome": "job_title",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Organizations",
+        "descricao": "Representa as empresas ou contas clientes.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "owner_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NULL"
+            ]
+          },
+          {
+            "nome": "address",
+            "tipo_dado": "TEXT",
+            "restricoes": []
+          },
+          {
+            "nome": "url",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Segments",
+        "descricao": "Representa os segmentos de mercado que podem ser atribuídos a empresas.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Organization_Segments",
+        "descricao": "Tabela de junção para o relacionamento N:N entre Empresas e Segmentos.",
+        "atributos": [
+          {
+            "nome": "organization_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          },
+          {
+            "nome": "segment_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Products",
+        "descricao": "Catálogo de produtos ou serviços oferecidos.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "description",
+            "tipo_dado": "TEXT",
+            "restricoes": []
+          },
+          {
+            "nome": "price",
+            "tipo_dado": "DECIMAL",
+            "restricoes": []
+          },
+          {
+            "nome": "visible",
+            "tipo_dado": "BOOLEAN",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Deal_Products",
+        "descricao": "Tabela de junção para o relacionamento N:N entre Negociações e Produtos.",
+        "atributos": [
+          {
+            "nome": "deal_product_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "deal_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "product_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "quantity",
+            "tipo_dado": "INT",
+            "restricoes": []
+          },
+          {
+            "nome": "price",
+            "tipo_dado": "DECIMAL",
+            "restricoes": []
+          },
+          {
+            "nome": "discount",
+            "tipo_dado": "DECIMAL",
+            "restricoes": []
+          },
+          {
+            "nome": "total_price",
+            "tipo_dado": "DECIMAL",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Users",
+        "descricao": "Usuários do sistema (vendedores, gestores, etc.).",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "email",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "UNIQUE",
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "phone",
+            "tipo_dado": "VARCHAR(50)",
+            "restricoes": []
+          },
+          {
+            "nome": "active",
+            "tipo_dado": "BOOLEAN",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Tasks",
+        "descricao": "Tarefas associadas a negociações ou contatos.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "deal_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NULL"
+            ]
+          },
+          {
+            "nome": "created_by_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK"
+            ]
+          },
+          {
+            "nome": "status",
+            "tipo_dado": "VARCHAR(50)",
+            "restricoes": []
+          },
+          {
+            "nome": "due_date",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "completed_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Task_Owners",
+        "descricao": "Tabela de junção para o relacionamento N:N entre Tarefas e Usuários (responsáveis).",
+        "atributos": [
+          {
+            "nome": "task_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          },
+          {
+            "nome": "user_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Notes",
+        "descricao": "Anotações e atividades registradas em negociações.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "deal_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "user_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "description",
+            "tipo_dado": "TEXT",
+            "restricoes": []
+          },
+          {
+            "nome": "registered_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Pipelines",
+        "descricao": "Funis de vendas que contêm etapas.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "order",
+            "tipo_dado": "INT",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Stages",
+        "descricao": "Etapas dentro de um funil de vendas.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "pipeline_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "FK",
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "order",
+            "tipo_dado": "INT",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Campaigns",
+        "descricao": "Campanhas de marketing ou vendas.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "status",
+            "tipo_dado": "VARCHAR(50)",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Teams",
+        "descricao": "Equipes de usuários.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Team_Users",
+        "descricao": "Tabela de junção para o relacionamento N:N entre Equipes e Usuários.",
+        "atributos": [
+          {
+            "nome": "team_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          },
+          {
+            "nome": "user_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Lost_Reasons",
+        "descricao": "Motivos de perda para negociações.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Sources",
+        "descricao": "Fontes de origem das negociações.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "description",
+            "tipo_dado": "TEXT",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Custom_Fields",
+        "descricao": "Campos personalizados para diversas entidades.",
+        "atributos": [
+          {
+            "nome": "id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK"
+            ]
+          },
+          {
+            "nome": "name",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "NOT NULL"
+            ]
+          },
+          {
+            "nome": "slug",
+            "tipo_dado": "VARCHAR(255)",
+            "restricoes": [
+              "UNIQUE"
+            ]
+          },
+          {
+            "nome": "entity",
+            "tipo_dado": "VARCHAR(50)",
+            "restricoes": []
+          },
+          {
+            "nome": "type",
+            "tipo_dado": "VARCHAR(50)",
+            "restricoes": []
+          },
+          {
+            "nome": "created_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          },
+          {
+            "nome": "updated_at",
+            "tipo_dado": "DATETIME",
+            "restricoes": []
+          }
+        ]
+      },
+      {
+        "nome": "Deal_Contacts",
+        "descricao": "Tabela de junção para o relacionamento N:N entre Negociações e Contatos.",
+        "atributos": [
+          {
+            "nome": "deal_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          },
+          {
+            "nome": "contact_id",
+            "tipo_dado": "INT",
+            "restricoes": [
+              "PK",
+              "FK"
+            ]
+          }
+        ]
+      }
+    ],
+    "relacionamentos": [
+      {
+        "nome_relacionamento": "Possui",
+        "entidade_origem": "Organizations",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Pertence a",
+        "entidade_origem": "Organizations",
+        "entidade_destino": "Contacts",
+        "cardinalidade_origem": "0..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Contacts"
+      },
+      {
+        "nome_relacionamento": "É classificada em",
+        "entidade_origem": "Organizations",
+        "entidade_destino": "Organization_Segments",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Organization_Segments"
+      },
+      {
+        "nome_relacionamento": "Aplica-se a",
+        "entidade_origem": "Segments",
+        "entidade_destino": "Organization_Segments",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Organization_Segments"
+      },
+      {
+        "nome_relacionamento": "É Proprietário de",
+        "entidade_origem": "Users",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Está em",
+        "entidade_origem": "Pipelines",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Está em",
+        "entidade_origem": "Stages",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Contém",
+        "entidade_origem": "Pipelines",
+        "entidade_destino": "Stages",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "1..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Stages"
+      },
+      {
+        "nome_relacionamento": "Justifica Perda",
+        "entidade_origem": "Lost_Reasons",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "0..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Origina",
+        "entidade_origem": "Sources",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Influencia",
+        "entidade_origem": "Campaigns",
+        "entidade_destino": "Deals",
+        "cardinalidade_origem": "0..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deals"
+      },
+      {
+        "nome_relacionamento": "Contém Item",
+        "entidade_origem": "Deals",
+        "entidade_destino": "Deal_Products",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Deal_Products"
+      },
+      {
+        "nome_relacionamento": "É Item de",
+        "entidade_origem": "Products",
+        "entidade_destino": "Deal_Products",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deal_Products"
+      },
+      {
+        "nome_relacionamento": "Associada a",
+        "entidade_origem": "Deals",
+        "entidade_destino": "Tasks",
+        "cardinalidade_origem": "0..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Tasks"
+      },
+      {
+        "nome_relacionamento": "Criada por",
+        "entidade_origem": "Users",
+        "entidade_destino": "Tasks",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Tasks"
+      },
+      {
+        "nome_relacionamento": "Atribuída a",
+        "entidade_origem": "Tasks",
+        "entidade_destino": "Task_Owners",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "1..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Task_Owners"
+      },
+      {
+        "nome_relacionamento": "É Responsável por",
+        "entidade_origem": "Users",
+        "entidade_destino": "Task_Owners",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Task_Owners"
+      },
+      {
+        "nome_relacionamento": "Possui",
+        "entidade_origem": "Deals",
+        "entidade_destino": "Notes",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Notes"
+      },
+      {
+        "nome_relacionamento": "Cria",
+        "entidade_origem": "Users",
+        "entidade_destino": "Notes",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Notes"
+      },
+      {
+        "nome_relacionamento": "Compõe",
+        "entidade_origem": "Teams",
+        "entidade_destino": "Team_Users",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "1..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Team_Users"
+      },
+      {
+        "nome_relacionamento": "É Membro de",
+        "entidade_origem": "Users",
+        "entidade_destino": "Team_Users",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Team_Users"
+      },
+      {
+        "nome_relacionamento": "Associado a",
+        "entidade_origem": "Deals",
+        "entidade_destino": "Deal_Contacts",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Identificante",
+        "chave_estrangeira_em": "Deal_Contacts"
+      },
+      {
+        "nome_relacionamento": "Participa de",
+        "entidade_origem": "Contacts",
+        "entidade_destino": "Deal_Contacts",
+        "cardinalidade_origem": "1..1",
+        "cardinalidade_destino": "0..N",
+        "tipo": "Não Identificante",
+        "chave_estrangeira_em": "Deal_Contacts"
+      }
+    ],
+    "suposicoes_feitas": [
+      "As entidades e atributos foram consolidados a partir de múltiplas versões de API (V1, V2) e diferentes arquivos JSON para a mesma entidade.",
+      "A entidade 'Segments' e a tabela de junção 'Organization_Segments' foram adicionadas para modelar o relacionamento Muitos-para-Muitos identificado pelo campo 'segment_ids' na entidade 'Organizations'.",
+      "Chaves primárias (PK) foram inferidas como 'id' ou 'uuid' quando presentes. Chaves estrangeiras (FK) foram inferidas de campos como 'deal_id', 'organization_id', etc.",
+      "Relacionamentos Muitos-para-Muitos (N:N) foram identificados e modelados com tabelas de junção (ex: Deal_Products, Team_Users, Task_Owners, Deal_Contacts).",
+      "A cardinalidade foi assumida com base em lógicas de negócio comuns (ex: uma Negociação deve pertencer a uma Organização, mas uma Organização pode ter zero ou muitas Negociações).",
+      "Entidades de 'Análise' (Analytics) foram omitidas por representarem dados agregados e não entidades transacionais primárias.",
+      "Entidades como 'Landing Pages', 'Forms', 'Webhooks' foram consideradas externas ao modelo de dados central do CRM/Marketing e omitidas para manter o foco no núcleo do sistema."
+    ]
+  }
+}

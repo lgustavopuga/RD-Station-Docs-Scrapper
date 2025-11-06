@@ -1,0 +1,16 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/contacts/{identifier}:{value}/funnels/default",
+        "method": "GET",
+        "resource": "funnel",
+        "parameters": "identifier, value",
+        "response_fields": "lifecycle_stage, opportunity, contact_owner_email, fit, interest",
+        "metrics": null,
+        "related_endpoints": [],
+        "produto": "RD Station Marketing",
+        "categoria": "Funis de Contatos",
+        "versao_api": null,
+        "descricao": "Retorna uma lista de Funis associados ao contato."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "endpoint_id": 1,
+        "path": "/platform/contacts/fields",
+        "method": "GET",
+        "resource": "field",
+        "parameters": null,
+        "response_fields": "fields, uuid, api_identifier, custom_field, data_type, name, label, presentation_type, validation_rules",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/platform/contacts/fields (POST), /platform/contacts/fields/{uuid} (PATCH), /platform/contacts/fields/{uuid} (DELETE)",
+        "produto": "RD Station Marketing",
+        "categoria": "Campos personalizados",
+        "versao_api": null,
+        "descricao": "Retorna os campos e seus atributos."
+    },
+    {
+        "endpoint_id": 2,
+        "path": "/platform/contacts/fields",
+        "method": "POST",
+        "resource": "field",
+        "parameters": "api_identifier, data_type, name, label, presentation_type, validation_rules",
+        "response_fields": "uuid, api_identifier, custom_field, data_type, name, label, presentation_type, validation_rules",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/platform/contacts/fields (GET)",
+        "produto": "RD Station Marketing",
+        "categoria": "Campos personalizados",
+        "versao_api": null,
+        "descricao": "Criar campo personalizado."
+    },
+    {
+        "endpoint_id": 3,
+        "path": "/platform/contacts/fields/{uuid}",
+        "method": "PATCH",
+        "resource": "field",
+        "parameters": "uuid (path), name, label, validation_rules",
+        "response_fields": "uuid, api_identifier, custom_field, data_type, name, label, presentation_type, validation_rules",
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/platform/contacts/fields (GET)",
+        "produto": "RD Station Marketing",
+        "categoria": "Campos personalizados",
+        "versao_api": null,
+        "descricao": "Atualizar campo personalizado."
+    },
+    {
+        "endpoint_id": 4,
+        "path": "/platform/contacts/fields/{uuid}",
+        "method": "DELETE",
+        "resource": "field",
+        "parameters": "uuid (path)",
+        "response_fields": null,
+        "metrics": "qtd_chamadas, latencia_ms, taxa_erro",
+        "related_endpoints": "/platform/contacts/fields (GET)",
+        "produto": "RD Station Marketing",
+        "categoria": "Campos personalizados",
+        "versao_api": null,
+        "descricao": "Excluir campo personalizado."
+    }
+]

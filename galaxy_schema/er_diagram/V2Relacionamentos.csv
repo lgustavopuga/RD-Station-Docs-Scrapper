@@ -1,0 +1,24 @@
+﻿Relacionamento;Origem;Destino;Cardinalidade Origem;Cardinalidade Destino;Tipo;Chave Estrangeira Em
+Possui;Organizations;Deals;1..1;0..N;Não Identificante;Deals
+Pertence a;Organizations;Contacts;0..1;0..N;Não Identificante;Contacts
+É classificada em;Organizations;Organization_Segments;1..1;0..N;Identificante;Organization_Segments
+Aplica-se a;Segments;Organization_Segments;1..1;0..N;Identificante;Organization_Segments
+É Proprietário de;Users;Deals;1..1;0..N;Não Identificante;Deals
+Está em;Pipelines;Deals;1..1;0..N;Não Identificante;Deals
+Está em;Stages;Deals;1..1;0..N;Não Identificante;Deals
+Contém;Pipelines;Stages;1..1;1..N;Não Identificante;Stages
+Justifica Perda;Lost_Reasons;Deals;0..1;0..N;Não Identificante;Deals
+Origina;Sources;Deals;1..1;0..N;Não Identificante;Deals
+Influencia;Campaigns;Deals;0..1;0..N;Não Identificante;Deals
+Contém Item;Deals;Deal_Products;1..1;0..N;Identificante;Deal_Products
+É Item de;Products;Deal_Products;1..1;0..N;Não Identificante;Deal_Products
+Associada a;Deals;Tasks;0..1;0..N;Não Identificante;Tasks
+Criada por;Users;Tasks;1..1;0..N;Não Identificante;Tasks
+Atribuída a;Tasks;Task_Owners;1..1;1..N;Identificante;Task_Owners
+É Responsável por;Users;Task_Owners;1..1;0..N;Não Identificante;Task_Owners
+Possui;Deals;Notes;1..1;0..N;Identificante;Notes
+Cria;Users;Notes;1..1;0..N;Não Identificante;Notes
+Compõe;Teams;Team_Users;1..1;1..N;Identificante;Team_Users
+É Membro de;Users;Team_Users;1..1;0..N;Não Identificante;Team_Users
+Associado a;Deals;Deal_Contacts;1..1;0..N;Identificante;Deal_Contacts
+Participa de;Contacts;Deal_Contacts;1..1;0..N;Não Identificante;Deal_Contacts
